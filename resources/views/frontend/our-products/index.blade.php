@@ -274,7 +274,7 @@
                     </span>
 
                     <div class="overview-shape">
-                        <img src="https://templates.envytheme.com/coze/default/assets/images/overview/overview-shape.png" alt="image">
+                        <img src="{{ asset('frontend/assets/img/overview-shape.png') }}" alt="image">
                     </div>
                 </div>
             </div>
@@ -287,7 +287,7 @@
                     </span>
 
                     <div class="overview-shape">
-                        <img src="https://templates.envytheme.com/coze/default/assets/images/overview/overview-shape.png" alt="image">
+                        <img src="{{ asset('frontend/assets/img/overview-shape.png') }}" alt="image">
                     </div>
                 </div>
             </div>
@@ -300,7 +300,7 @@
                     </span>
 
                     <div class="overview-shape">
-                        <img src="https://templates.envytheme.com/coze/default/assets/images/overview/overview-shape.png" alt="image">
+                        <img src="{{ asset('frontend/assets/img/overview-shape.png') }}" alt="image">
                     </div>
                 </div>
             </div>
@@ -311,7 +311,7 @@
                     <span>413 North Las Vegas, NV 89032</span>
 
                     <div class="overview-shape">
-                        <img src="https://templates.envytheme.com/coze/default/assets/images/overview/overview-shape.png" alt="image">
+                        <img src="{{ asset('frontend/assets/img/overview-shape.png') }}" alt="image">
                     </div>
                 </div>
             </div>

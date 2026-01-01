@@ -51,13 +51,13 @@
     </div>
 
     <div class="hero-shape-1">
-        <img src="https://templates.envytheme.com/coze/default/assets/images/main-hero/slides-shape-1.png" alt="image">
+        <img src="{{ asset('frontend/assets/img/slides-shape-1.png') }}" alt="image">
     </div>
     <div class="hero-shape-2">
-        <img src="https://templates.envytheme.com/coze/default/assets/images/main-hero/slides-shape-2.png" alt="image">
+        <img src="{{ asset('frontend/assets/img/slides-shape-2.png') }}" alt="image">
     </div>
     <div class="hero-shape-3">
-        <img src="https://templates.envytheme.com/coze/default/assets/images/main-hero/slides-shape-3.png" alt="image">
+        <img src="{{ asset('frontend/assets/img/slides-shape-3.png') }}" alt="image">
     </div>
 </div>
 <!-- End Main Hero Area -->
@@ -68,7 +68,7 @@
         <div class="row align-items-center">
             <div class="col-lg-6 col-md-12">
                 <div class="about-image" data-tilt>
-                    <img src="https://templates.envytheme.com/coze/default/assets/images/about/about-2.png" alt="image" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                    <img src="{{ asset('frontend/assets/img/about-2.png') }}" alt="image" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
                 </div>
             </div>
             <div class="col-lg-6 col-md-12">
@@ -85,7 +85,7 @@
         </div>
     </div>
     <div class="about-shape-1">
-        <img src="https://templates.envytheme.com/coze/default/assets/images/about/about-shape.png" alt="image">
+        <img src="{{ asset('frontend/assets/img/about-shape.png') }}" alt="image">
     </div>
 </div>
 <!-- End About Area -->
@@ -103,7 +103,7 @@
             <div class="col-lg-3 col-md-6">
                 <div class="single-choose-card" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
                     <div class="choose-image" data-tilt>
-                        <a href="services-details.html"><img src="https://templates.envytheme.com/coze/default/assets/images/choose/choose-1.png" alt="image"></a>
+                        <a href="services-details.html"><img src="{{ asset('frontend/assets/img/choose-1.png') }}" alt="image"></a>
                     </div>
                     <div class="choose-content">
                         <h3>
@@ -117,7 +117,7 @@
             <div class="col-lg-3 col-md-6">
                 <div class="single-choose-card" data-aos="fade-up" data-aos-delay="60" data-aos-duration="600" data-aos-once="true">
                     <div class="choose-image" data-tilt>
-                        <a href="services-details.html"><img src="https://templates.envytheme.com/coze/default/assets/images/choose/choose-2.png" alt="image"></a>
+                        <a href="services-details.html"><img src="{{ asset('frontend/assets/img/choose-2.png') }}" alt="image"></a>
                     </div>
                     <div class="choose-content">
                         <h3>
@@ -131,7 +131,7 @@
             <div class="col-lg-3 col-md-6">
                 <div class="single-choose-card" data-aos="fade-up" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
                     <div class="choose-image" data-tilt>
-                        <a href="services-details.html"><img src="https://templates.envytheme.com/coze/default/assets/images/choose/choose-3.png" alt="image"></a>
+                        <a href="services-details.html"><img src="{{ asset('frontend/assets/img/choose-3.png') }}" alt="image"></a>
                     </div>
                     <div class="choose-content">
                         <h3>
@@ -145,7 +145,7 @@
             <div class="col-lg-3 col-md-6">
                 <div class="single-choose-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
                     <div class="choose-image" data-tilt>
-                        <a href="services-details.html"><img src="https://templates.envytheme.com/coze/default/assets/images/choose/choose-4.png" alt="image"></a>
+                        <a href="services-details.html"><img src="{{ asset('frontend/assets/img/choose-4.png') }}" alt="image"></a>
                     </div>
                     <div class="choose-content">
                         <h3>
@@ -159,10 +159,10 @@
     </div>
 
     <div class="choose-shape-1">
-        <img src="https://templates.envytheme.com/coze/default/assets/images/choose/choose-shape.png" alt="image">
+        <img src="{{ asset('frontend/assets/img/choose-shape.png') }}" alt="image">
     </div>
     <div class="choose-shape-2">
-        <img src="https://templates.envytheme.com/coze/default/assets/images/choose/choose-shape-2.png" alt="image">
+        <img src="{{ asset('frontend/assets/img/choose-shape-2.png') }}" alt="image">
     </div>
 </div>
 <!-- End Choose Area -->
@@ -244,13 +244,13 @@
 
             <div class="col-lg-6 col-md-12">
                 <div class="skill-image" data-aos="fade-left" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
-                    <img src="https://templates.envytheme.com/coze/default/assets/images/skill/skill-1.png" alt="image" data-tilt>
+                    <img src="{{ asset('frontend/assets/img/skill-1.png') }}" alt="image" data-tilt>
 
                     <div class="skill-shape-1">
-                        <img src="https://templates.envytheme.com/coze/default/assets/images/skill/skill-shape-1.png" alt="image">
+                        <img src="{{ asset('frontend/assets/img/skill-shape-1.png') }}" alt="image">
                     </div>
                     <div class="skill-shape-2">
-                        <img src="https://templates.envytheme.com/coze/default/assets/images/skill/skill-shape-2.png" alt="image">
+                        <img src="{{ asset('frontend/assets/img/skill-shape-2.png') }}" alt="image">
                     </div>
                 </div>
             </div>
@@ -258,7 +258,7 @@
     </div>
 
     <div class="skill-bg-shape">
-        <img src="https://templates.envytheme.com/coze/default/assets/images/skill/skill-bg-shape.png" alt="image">
+        <img src="{{ asset('frontend/assets/img/skill-bg-shape.png') }}" alt="image">
     </div>
 </div>
 <!-- End Skill Area -->
@@ -276,7 +276,7 @@
             <div class="col-lg-3 col-md-6">
                 <div class="services-item">
                     <div class="services-image">
-                        <a href="services-details.html"><img src="https://templates.envytheme.com/coze/default/assets/images/services/services-1.jpg" alt="image"></a>
+                        <a href="services-details.html"><img src="{{ asset('frontend/assets/img/services-1.jpg') }}" alt="image"></a>
                     </div>
                     <div class="services-content">
                         <h3>
@@ -291,7 +291,7 @@
             <div class="col-lg-3 col-md-6">
                 <div class="services-item">
                     <div class="services-image">
-                        <a href="services-details.html"><img src="https://templates.envytheme.com/coze/default/assets/images/services/services-2.jpg" alt="image"></a>
+                        <a href="services-details.html"><img src="{{ asset('frontend/assets/img/services-1.jpg') }}" alt="image"></a>
                     </div>
                     <div class="services-content">
                         <h3>
@@ -306,7 +306,7 @@
             <div class="col-lg-3 col-md-6">
                 <div class="services-item">
                     <div class="services-image">
-                        <a href="services-details.html"><img src="https://templates.envytheme.com/coze/default/assets/images/services/services-3.jpg" alt="image"></a>
+                        <a href="services-details.html"><img src="{{ asset('frontend/assets/img/services-1.jpg') }}" alt="image"></a>
                     </div>
                     <div class="services-content">
                         <h3>
@@ -321,7 +321,7 @@
             <div class="col-lg-3 col-md-6">
                 <div class="services-item">
                     <div class="services-image">
-                        <a href="services-details.html"><img src="https://templates.envytheme.com/coze/default/assets/images/services/services-4.jpg" alt="image"></a>
+                        <a href="services-details.html"><img src="{{ asset('frontend/assets/img/services-1.jpg') }}" alt="image"></a>
                     </div>
                     <div class="services-content">
                         <h3>
@@ -340,10 +340,10 @@
     </div>
 
     <div class="services-shape-1">
-        <img src="https://templates.envytheme.com/coze/default/assets/images/services/services-shape-1.png" alt="image">
+        <img src="{{ asset('frontend/assets/img/services-shape-1.png') }}" alt="image">
     </div>
     <div class="services-shape-2">
-        <img src="https://templates.envytheme.com/coze/default/assets/images/services/services-shape-2.png" alt="image">
+        <img src="{{ asset('frontend/assets/img/services-shape-2.png') }}" alt="image">
     </div>
 </div>
 <!-- End Services Area -->
@@ -368,7 +368,7 @@
             <div class="col-lg-4 col-md-6 mix mobile development web-design">
                 <div class="single-projects-item" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
                     <div class="projects-image">
-                        <a href="projects-details.html"><img src="https://templates.envytheme.com/coze/default/assets/images/projects-two/projects-1.jpg" alt="image"></a>
+                        <a href="projects-details.html"><img src="{{ asset('frontend/assets/img/projects-1.jpg') }}" alt="image"></a>
                     </div>
                     <div class="projects-content">
                         <h3>
@@ -380,7 +380,7 @@
 
                 <div class="single-projects-item" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
                     <div class="projects-image">
-                        <a href="projects-details.html"><img src="https://templates.envytheme.com/coze/default/assets/images/projects-two/projects-2.jpg" alt="image"></a>
+                        <a href="projects-details.html"><img src="{{ asset('frontend/assets/img/projects-1.jpg') }}" alt="image"></a>
                     </div>
                     <div class="projects-content">
                         <h3>
@@ -393,7 +393,7 @@
             <div class="col-lg-4 col-md-6 mix development product-design">
                 <div class="single-projects-item" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
                     <div class="projects-image">
-                        <a href="projects-details.html"><img src="https://templates.envytheme.com/coze/default/assets/images/projects-two/projects-3.jpg" alt="image"></a>
+                        <a href="projects-details.html"><img src="{{ asset('frontend/assets/img/projects-1.jpg') }}" alt="image"></a>
                     </div>
                     <div class="projects-content">
                         <h3>
@@ -406,7 +406,7 @@
             <div class="col-lg-4 col-md-6 mix web-design mobile product-design">
                 <div class="single-projects-item" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
                     <div class="projects-image">
-                        <a href="projects-details.html"><img src="https://templates.envytheme.com/coze/default/assets/images/projects-two/projects-4.jpg" alt="image"></a>
+                        <a href="projects-details.html"><img src="{{ asset('frontend/assets/img/projects-1.jpg') }}" alt="image"></a>
                     </div>
                     <div class="projects-content">
                         <h3>
@@ -418,7 +418,7 @@
 
                 <div class="single-projects-item" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
                     <div class="projects-image">
-                        <a href="projects-details.html"><img src="https://templates.envytheme.com/coze/default/assets/images/projects-two/projects-5.jpg" alt="image"></a>
+                        <a href="projects-details.html"><img src="{{ asset('frontend/assets/img/projects-1.jpg') }}" alt="image"></a>
                     </div>
                     <div class="projects-content">
                         <h3>
@@ -432,7 +432,7 @@
     </div>
 
     <div class="projects-bg-shape-1">
-        <img src="https://templates.envytheme.com/coze/default/assets/images/projects/projects-bg-shape.png" alt="image">
+        <img src="{{ asset('frontend/assets/img/projects-bg-shape.png') }}" alt="image">
     </div>
 </div>
 <!-- End Projects Area -->
@@ -504,13 +504,13 @@
     </div>
 
     <div class="pricing-bg-shape-1">
-        <img src="https://templates.envytheme.com/coze/default/assets/images/pricing/pricing-bg-shape.png" alt="image">
+        <img src="{{ asset('frontend/assets/img/pricing-bg-shape.png') }}" alt="image">
     </div>
     <div class="pricing-shape-1">
-        <img src="https://templates.envytheme.com/coze/default/assets/images/pricing/pricing-shape-1.png" alt="image">
+        <img src="{{ asset('frontend/assets/img/pricing-shape-1.png') }}" alt="image">
     </div>
     <div class="pricing-shape-2">
-        <img src="https://templates.envytheme.com/coze/default/assets/images/pricing/pricing-shape-2.png" alt="image">
+        <img src="{{ asset('frontend/assets/img/pricing-shape-2.png') }}" alt="image">
     </div>
 </div>
 <!-- End Pricing Area -->
@@ -528,7 +528,7 @@
                 <p>We look and sound so good! I am still in shock at how smooth this process was. The professionalism, collaboration and the design they come up is great.</p>
 
                 <div class="info-item-box">
-                    <img src="https://templates.envytheme.com/coze/default/assets/images/testimonials/testimonials-4.jpg" class="rounded-circle" alt="image">
+                    <img src="{{ asset('frontend/assets/img/testimonials-4.jpg') }}" class="rounded-circle" alt="image">
                     <h4>Bradly Doe, <span>Founder of Medizo</span></h4>
                     <ul class="rating-list">
                         <li><i class="ri-star-fill"></i></li>
@@ -544,7 +544,7 @@
                 <p>The professionalism, collaboration and the design they come up with is pheno-menal. Thanks a lot the Coze Team.</p>
 
                 <div class="info-item-box">
-                    <img src="https://templates.envytheme.com/coze/default/assets/images/testimonials/testimonials-5.jpg" class="rounded-circle" alt="image">
+                    <img src="{{ asset('frontend/assets/img/testimonials-5.jpg') }}" class="rounded-circle" alt="image">
                     <h4>Daniel John, <span>Solit Team</span></h4>
                     <ul class="rating-list">
                         <li><i class="ri-star-fill"></i></li>
@@ -560,7 +560,7 @@
                 <p>We look and sound so good! I am still in shock at how smooth this process was. The professionalism, collaboration and the design they come up is great.</p>
 
                 <div class="info-item-box">
-                    <img src="https://templates.envytheme.com/coze/default/assets/images/testimonials/testimonials-6.jpg" class="rounded-circle" alt="image">
+                    <img src="{{ asset('frontend/assets/img/testimonials-6.jpg') }}" class="rounded-circle" alt="image">
                     <h4>Jennifer Smith, <span>Spix Team</span></h4>
                     <ul class="rating-list">
                         <li><i class="ri-star-fill"></i></li>
@@ -576,7 +576,7 @@
                 <p>The professionalism, collaboration and the design they come up with is pheno-menal. Thanks a lot the Coze Team.</p>
 
                 <div class="info-item-box">
-                    <img src="https://templates.envytheme.com/coze/default/assets/images/testimonials/testimonials-7.jpg" class="rounded-circle" alt="image">
+                    <img src="{{ asset('frontend/assets/img/testimonials-7.jpg') }}" class="rounded-circle" alt="image">
                     <h4>Sarp Karahan, <span>Benzo Team</span></h4>
                     <ul class="rating-list">
                         <li><i class="ri-star-fill"></i></li>
@@ -592,7 +592,7 @@
                 <p>We look and sound so good! I am still in shock at how smooth this process was. The professionalism, collaboration and the design they come up is great.</p>
 
                 <div class="info-item-box">
-                    <img src="https://templates.envytheme.com/coze/default/assets/images/testimonials/testimonials-8.jpg" class="rounded-circle" alt="image">
+                    <img src="{{ asset('frontend/assets/img/testimonials-8.jpg') }}" class="rounded-circle" alt="image">
                     <h4>Jane Ronan, <span>Lebu Team</span></h4>
                     <ul class="rating-list">
                         <li><i class="ri-star-fill"></i></li>
@@ -614,38 +614,38 @@
         <div class="partner-slides owl-carousel owl-theme">
             <div class="partner-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
                 <a href="#">
-                    <img src="https://templates.envytheme.com/coze/default/assets/images/partner/partner-1.png" alt="partner">
-                    <img src="https://templates.envytheme.com/coze/default/assets/images/partner/partner-hover-1.png" alt="partner">
+                    <img src="{{ asset('frontend/assets/img/partner-1.png') }}" alt="partner">
+                    <img src="{{ asset('frontend/assets/img/partner-hover-1.png') }}" alt="partner">
                 </a>
             </div>
             <div class="partner-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
                 <a href="#">
-                    <img src="https://templates.envytheme.com/coze/default/assets/images/partner/partner-2.png" alt="partner">
-                    <img src="https://templates.envytheme.com/coze/default/assets/images/partner/partner-hover-2.png" alt="partner">
+                    <img src="{{ asset('frontend/assets/img/partner-2.png') }}" alt="partner">
+                    <img src="{{ asset('frontend/assets/img/partner-hover-2.png') }}" alt="partner">
                 </a>
             </div>
             <div class="partner-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
                 <a href="#">
-                    <img src="https://templates.envytheme.com/coze/default/assets/images/partner/partner-3.png" alt="partner">
-                    <img src="https://templates.envytheme.com/coze/default/assets/images/partner/partner-hover-3.png" alt="partner">
+                    <img src="{{ asset('frontend/assets/img/partner-3.png') }}" alt="partner">
+                    <img src="{{ asset('frontend/assets/img/partner-hover-3.png') }}" alt="partner">
                 </a>
             </div>
             <div class="partner-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
                 <a href="#">
-                    <img src="https://templates.envytheme.com/coze/default/assets/images/partner/partner-4.png" alt="partner">
-                    <img src="https://templates.envytheme.com/coze/default/assets/images/partner/partner-hover-4.png" alt="partner">
+                    <img src="{{ asset('frontend/assets/img/partner-4.png') }}" alt="partner">
+                    <img src="{{ asset('frontend/assets/img/partner-hover-4.png') }}" alt="partner">
                 </a>
             </div>
             <div class="partner-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
                 <a href="#">
-                    <img src="https://templates.envytheme.com/coze/default/assets/images/partner/partner-5.png" alt="partner">
-                    <img src="https://templates.envytheme.com/coze/default/assets/images/partner/partner-hover-5.png" alt="partner">
+                    <img src="{{ asset('frontend/assets/img/partner-5.png') }}" alt="partner">
+                    <img src="{{ asset('frontend/assets/img/partner-hover-5.png') }}" alt="partner">
                 </a>
             </div>
             <div class="partner-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
                 <a href="#">
-                    <img src="https://templates.envytheme.com/coze/default/assets/images/partner/partner-6.png" alt="partner">
-                    <img src="https://templates.envytheme.com/coze/default/assets/images/partner/partner-hover-6.png" alt="partner">
+                    <img src="{{ asset('frontend/assets/img/partner-6.png') }}" alt="partner">
+                    <img src="{{ asset('frontend/assets/img/partner-hover-6.png') }}" alt="partner">
                 </a>
             </div>
         </div>
@@ -666,7 +666,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6">
                         <div class="blog-image">
-                            <a href="single-blog-1.html"><img src="https://templates.envytheme.com/coze/default/assets/images/blog/blog-1.jpg" alt="image"></a>
+                            <a href="single-blog-1.html"><img src="{{ asset('frontend/assets/img/blog-1.jpg') }}" alt="image"></a>
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -686,7 +686,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6">
                         <div class="blog-image">
-                            <a href="single-blog-1.html"><img src="https://templates.envytheme.com/coze/default/assets/images/blog/blog-2.jpg" alt="image"></a>
+                            <a href="single-blog-1.html"><img src="{{ asset('frontend/assets/img/blog-2.jpg') }}" alt="image"></a>
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -706,7 +706,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6">
                         <div class="blog-image">
-                            <a href="single-blog-1.html"><img src="https://templates.envytheme.com/coze/default/assets/images/blog/blog-1.jpg" alt="image"></a>
+                            <a href="single-blog-1.html"><img src="{{ asset('frontend/assets/img/blog-1.jpg') }}" alt="image"></a>
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -726,7 +726,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6">
                         <div class="blog-image">
-                            <a href="single-blog-1.html"><img src="https://templates.envytheme.com/coze/default/assets/images/blog/blog-2.jpg" alt="image"></a>
+                            <a href="single-blog-1.html"><img src="{{ asset('frontend/assets/img/blog-2.jpg') }}" alt="image"></a>
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -745,7 +745,7 @@
     </div>
 
     <div class="blog-shape-1">
-        <img src="https://templates.envytheme.com/coze/default/assets/images/blog/blog-shape-1.png" alt="image">
+        <img src="{{ asset('frontend/assets/img/blog-shape-1.png') }}" alt="image">
     </div>
 </div>
 <!-- End Blog Area -->

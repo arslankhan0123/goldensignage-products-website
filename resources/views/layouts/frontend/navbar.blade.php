@@ -4,7 +4,7 @@
             <div class="main-responsive-menu">
                 <div class="logo">
                     <a href="{{ route('home') }}">
-                        <img src="https://templates.envytheme.com/coze/default/assets/images/logo.png" alt="image">
+                        <img src="{{ asset('frontend/assets/img/logo.png') }}" alt="image">
                     </a>
                 </div>
             </div>
@@ -15,7 +15,7 @@
         <div class="container-fluid">
             <nav class="navbar navbar-expand-md navbar-light">
                 <a class="navbar-brand" href="{{ route('home') }}">
-                    <img src="https://templates.envytheme.com/coze/default/assets/images/logo.png" alt="image">
+                    <img src="{{ asset('frontend/assets/img/logo.png') }}" alt="image">
                 </a>
 
                 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">

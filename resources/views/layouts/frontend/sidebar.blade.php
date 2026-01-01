@@ -5,8 +5,8 @@
 
             <div class="modal-body">
                 <a href="index.html">
-                    <img src="https://templates.envytheme.com/coze/default/assets/images/black-logo.png" class="black-logo" alt="image">
-                    <img src="https://templates.envytheme.com/coze/default/assets/images/logo.png" class="white-logo" alt="image">
+                    <img src="{{ asset('frontend/assets/img/black-logo.png') }}" class="black-logo" alt="image">
+                    <img src="{{ asset('frontend/assets/img/logo.png') }}" class="white-logo" alt="image">
                 </a>
                 <div class="sidebar-content">
                     <h3>About Us</h3>

@@ -94,12 +94,12 @@
         </div>
     </div>
     <div class="footer-shape-1">
-        <img src="https://templates.envytheme.com/coze/default/assets/images/footer/footer-shape-1.png" alt="image">
+        <img src="{{ asset('frontend/assets/img/footer-shape-1.png') }}" alt="image">
     </div>
     <div class="footer-shape-2">
-        <img src="https://templates.envytheme.com/coze/default/assets/images/footer/footer-shape-2.png" alt="image">
+        <img src="{{ asset('frontend/assets/img/footer-shape-2.png') }}" alt="image">
     </div>
     <div class="footer-shape-3">
-        <img src="https://templates.envytheme.com/coze/default/assets/images/footer/footer-shape-3.png" alt="image">
+        <img src="{{ asset('frontend/assets/img/footer-shape-3.png') }}" alt="image">
     </div>
 </footer>

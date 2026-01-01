@@ -27,15 +27,15 @@
                         </button>
                         <div class="dropdown-menu language-dropdown-menu">
                             <a class="dropdown-item" href="#">
-                                <img src="https://templates.envytheme.com/coze/default/assets/images/uk.png" alt="flag">
+                                <img src="{{ asset('frontend/assets/img/uk.png') }}" alt="flag">
                                 ENG
                             </a>
                             <a class="dropdown-item" href="#">
-                                <img src="https://templates.envytheme.com/coze/default/assets/images/china.png" alt="flag">
+                                <img src="{{ asset('frontend/assets/img/china.png') }}" alt="flag">
                                 简体中文
                             </a>
                             <a class="dropdown-item" href="#">
-                                <img src="https://templates.envytheme.com/coze/default/assets/images/uae.png" alt="flag">
+                                <img src="{{ asset('frontend/assets/img/uae.png') }}" alt="flag">
                                 العربيّة
                             </a>
                         </div>

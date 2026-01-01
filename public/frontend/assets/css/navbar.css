@@ -2,7 +2,7 @@
 Topbar Area CSS
 =================================================*/
 .topbar-area {
-    background-image: url(../../assets/images/topbar-bg.jpg);
+    background-image: url('/frontend/assets/img/topbar-bg.jpg');
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;

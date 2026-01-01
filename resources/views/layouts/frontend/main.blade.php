@@ -98,28 +98,50 @@
 
     <!-- Links of JS files -->
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script src="https://templates.envytheme.com/coze/default/assets/js/jquery.min.js"></script>
-    <script src="https://templates.envytheme.com/coze/default/assets/js/bootstrap.bundle.min.js"></script>
-    <script src="https://templates.envytheme.com/coze/default/assets/js/jquery.meanmenu.js"></script>
-    <script src="https://templates.envytheme.com/coze/default/assets/js/owl.carousel.min.js"></script>
-    <script src="https://templates.envytheme.com/coze/default/assets/js/jquery.appear.js"></script>
-    <script src="https://templates.envytheme.com/coze/default/assets/js/odometer.min.js"></script>
-    <script src="https://templates.envytheme.com/coze/default/assets/js/jquery.magnific-popup.min.js"></script>
-    <script src="https://templates.envytheme.com/coze/default/assets/js/fancybox.min.js"></script>
-    <script src="https://templates.envytheme.com/coze/default/assets/js/tweenmax.min.js"></script>
-    <script src="https://templates.envytheme.com/coze/default/assets/js/ScrollMagic.min.js"></script>
-    <script src="https://templates.envytheme.com/coze/default/assets/js/animation.gsap.min.js"></script>
-    <script src="https://templates.envytheme.com/coze/default/assets/js/debug.addIndicators.min.js"></script>
-    <script src="https://templates.envytheme.com/coze/default/assets/js/mixitup.min.js"></script>
-    <script src="https://templates.envytheme.com/coze/default/assets/js/nice-select.min.js"></script>
-    <script src="https://templates.envytheme.com/coze/default/assets/js/tilt.jquery.min.js"></script>
-    <script src="https://templates.envytheme.com/coze/default/assets/js/parallax.min.js"></script>
-    <script src="https://templates.envytheme.com/coze/default/assets/js/jquery.ajaxchimp.min.js"></script>
-    <script src="https://templates.envytheme.com/coze/default/assets/js/form-validator.min.js"></script>
-    <script src="https://templates.envytheme.com/coze/default/assets/js/contact-form-script.js"></script>
-    <script src="https://templates.envytheme.com/coze/default/assets/js/aos.js"></script>
-    <script src="https://templates.envytheme.com/coze/default/assets/js/wow.min.js"></script>
-    <script src="https://templates.envytheme.com/coze/default/assets/js/main.js"></script>
+    <!-- <script src="https://templates.envytheme.com/coze/default/assets/js/jquery.min.js"></script> -->
+    <script src="{{ asset('frontend/assets/js/jquery.min.js') }}"></script>
+    <!-- <script src="https://templates.envytheme.com/coze/default/assets/js/bootstrap.bundle.min.js"></script> -->
+    <script src="{{ asset('frontend/assets/js/bootstrap.bundle.min.js') }}"></script>
+    <!-- <script src="https://templates.envytheme.com/coze/default/assets/js/jquery.meanmenu.js"></script> -->
+    <script src="{{ asset('frontend/assets/js/jquery.meanmenu.js') }}"></script>
+    <!-- <script src="https://templates.envytheme.com/coze/default/assets/js/owl.carousel.min.js"></script> -->
+    <script src="{{ asset('frontend/assets/js/owl.carousel.min.js') }}"></script>
+    <!-- <script src="https://templates.envytheme.com/coze/default/assets/js/jquery.appear.js"></script> -->
+    <script src="{{ asset('frontend/assets/js/jquery.appear.js') }}"></script>
+    <!-- <script src="https://templates.envytheme.com/coze/default/assets/js/odometer.min.js"></script> -->
+    <script src="{{ asset('frontend/assets/js/odometer.min.js') }}"></script>
+    <!-- <script src="https://templates.envytheme.com/coze/default/assets/js/jquery.magnific-popup.min.js"></script> -->
+    <script src="{{ asset('frontend/assets/js/jquery.magnific-popup.min.js') }}"></script>
+    <!-- <script src="https://templates.envytheme.com/coze/default/assets/js/fancybox.min.js"></script> -->
+    <script src="{{ asset('frontend/assets/js/fancybox.min.js') }}"></script>
+    <!-- <script src="https://templates.envytheme.com/coze/default/assets/js/tweenmax.min.js"></script> -->
+    <script src="{{ asset('frontend/assets/js/tweenmax.min.js') }}"></script>
+    <!-- <script src="https://templates.envytheme.com/coze/default/assets/js/ScrollMagic.min.js"></script> -->
+    <script src="{{ asset('frontend/assets/js/ScrollMagic.min.js') }}"></script>
+    <!-- <script src="https://templates.envytheme.com/coze/default/assets/js/animation.gsap.min.js"></script> -->
+    <script src="{{ asset('frontend/assets/js/animation.gsap.min.js') }}"></script>
+    <!-- <script src="https://templates.envytheme.com/coze/default/assets/js/debug.addIndicators.min.js"></script> -->
+    <script src="{{ asset('frontend/assets/js/debug.addIndicators.min.js') }}"></script>
+    <!-- <script src="https://templates.envytheme.com/coze/default/assets/js/mixitup.min.js"></script> -->
+    <script src="{{ asset('frontend/assets/js/mixitup.min.js') }}"></script>
+    <!-- <script src="https://templates.envytheme.com/coze/default/assets/js/nice-select.min.js"></script> -->
+    <script src="{{ asset('frontend/assets/js/nice-select.min.js') }}"></script>
+    <!-- <script src="https://templates.envytheme.com/coze/default/assets/js/tilt.jquery.min.js"></script> -->
+    <script src="{{ asset('frontend/assets/js/tilt.jquery.min.js') }}"></script>
+    <!-- <script src="https://templates.envytheme.com/coze/default/assets/js/parallax.min.js"></script> -->
+    <script src="{{ asset('frontend/assets/js/parallax.min.js') }}"></script>
+    <!-- <script src="https://templates.envytheme.com/coze/default/assets/js/jquery.ajaxchimp.min.js"></script> -->
+    <script src="{{ asset('frontend/assets/js/jquery.ajaxchimp.min.js') }}"></script>
+    <!-- <script src="https://templates.envytheme.com/coze/default/assets/js/form-validator.min.js"></script> -->
+    <script src="{{ asset('frontend/assets/js/form-validator.min.js') }}"></script>
+    <!-- <script src="https://templates.envytheme.com/coze/default/assets/js/contact-form-script.js"></script> -->
+    <script src="{{ asset('frontend/assets/js/contact-form-script.js') }}"></script>
+    <!-- <script src="https://templates.envytheme.com/coze/default/assets/js/aos.js"></script> -->
+    <script src="{{ asset('frontend/assets/js/aos.js') }}"></script>
+    <!-- <script src="https://templates.envytheme.com/coze/default/assets/js/wow.min.js"></script> -->
+    <script src="{{ asset('frontend/assets/js/wow.min.js') }}"></script>
+    <!-- <script src="https://templates.envytheme.com/coze/default/assets/js/main.js"></script> -->
+    <script src="{{ asset('frontend/assets/js/main.js') }}"></script>
     <script>
         (function() {
             function c() {

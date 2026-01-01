@@ -34,11 +34,11 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="single-choose-card" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
                     <div class="choose-image" data-tilt>
-                        <a href="services-details.html"><img src="https://templates.envytheme.com/coze/default/assets/images/choose/choose-1.png" alt="image"></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/img/choose-1.png') }}" alt="image"></a>
                     </div>
                     <div class="choose-content">
                         <h3>
-                            <a href="services-details.html">Mobile Apps</a>
+                            <a href="#">Mobile Apps</a>
                         </h3>
                         <p>Lorem ipsum dolor sit amet conset sadipscing elitr sed diam nonumy eirm od tempor invidunt ut labore.</p>
                     </div>
@@ -48,11 +48,11 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="single-choose-card" data-aos="fade-up" data-aos-delay="60" data-aos-duration="600" data-aos-once="true">
                     <div class="choose-image" data-tilt>
-                        <a href="services-details.html"><img src="https://templates.envytheme.com/coze/default/assets/images/choose/choose-2.png" alt="image"></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/img/choose-2.png') }}" alt="image"></a>
                     </div>
                     <div class="choose-content">
                         <h3>
-                            <a href="services-details.html">Branding Strategy</a>
+                            <a href="#">Branding Strategy</a>
                         </h3>
                         <p>Lorem ipsum dolor sit amet conset sadipscing elitr sed diam nonumy eirm od tempor invidunt ut labore.</p>
                     </div>
@@ -62,11 +62,11 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="single-choose-card" data-aos="fade-up" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
                     <div class="choose-image" data-tilt>
-                        <a href="services-details.html"><img src="https://templates.envytheme.com/coze/default/assets/images/choose/choose-3.png" alt="image"></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/img/choose-3.png') }}" alt="image"></a>
                     </div>
                     <div class="choose-content">
                         <h3>
-                            <a href="services-details.html">Graphic Design</a>
+                            <a href="#">Graphic Design</a>
                         </h3>
                         <p>Lorem ipsum dolor sit amet conset sadipscing elitr sed diam nonumy eirm od tempor invidunt ut labore.</p>
                     </div>
@@ -76,11 +76,11 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="single-choose-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
                     <div class="choose-image" data-tilt>
-                        <a href="services-details.html"><img src="https://templates.envytheme.com/coze/default/assets/images/choose/choose-4.png" alt="image"></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/img/choose-4.png') }}" alt="image"></a>
                     </div>
                     <div class="choose-content">
                         <h3>
-                            <a href="services-details.html">Search Optimization</a>
+                            <a href="#">Search Optimization</a>
                         </h3>
                         <p>Lorem ipsum dolor sit amet conset sadipscing elitr sed diam nonumy eirm od tempor invidunt ut labore.</p>
                     </div>
@@ -90,10 +90,10 @@
     </div>
 
     <div class="choose-shape-1">
-        <img src="https://templates.envytheme.com/coze/default/assets/images/choose/choose-shape.png" alt="image">
+        <img src="{{ asset('frontend/assets/img/choose-shape.png') }}" alt="image">
     </div>
     <div class="choose-shape-2">
-        <img src="https://templates.envytheme.com/coze/default/assets/images/choose/choose-shape-2.png" alt="image">
+        <img src="{{ asset('frontend/assets/img/choose-shape-2.png') }}" alt="image">
     </div>
 </div>
 <!-- End Choose Area -->
@@ -111,14 +111,14 @@
             <div class="col-lg-4 col-md-6">
                 <div class="services-item">
                     <div class="services-image">
-                        <a href="services-details.html"><img src="https://templates.envytheme.com/coze/default/assets/images/services/services-1.jpg" alt="image"></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/img/services-1.jpg') }}" alt="image"></a>
                     </div>
                     <div class="services-content">
                         <h3>
-                            <a href="services-details.html">Software Development</a>
+                            <a href="#">Software Development</a>
                         </h3>
                         <p>Lorem ipsum dolor sit amet con setetur sadipscing elitr sed…</p>
-                        <a href="services-details.html" class="services-btn">View More</a>
+                        <a href="#" class="services-btn">View More</a>
                     </div>
                 </div>
             </div>
@@ -126,14 +126,14 @@
             <div class="col-lg-4 col-md-6">
                 <div class="services-item">
                     <div class="services-image">
-                        <a href="services-details.html"><img src="https://templates.envytheme.com/coze/default/assets/images/services/services-2.jpg" alt="image"></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/img/services-1.jpg') }}" alt="image"></a>
                     </div>
                     <div class="services-content">
                         <h3>
-                            <a href="services-details.html">App Development</a>
+                            <a href="#">App Development</a>
                         </h3>
                         <p>Lorem ipsum dolor sit amet con setetur sadipscing elitr sed…</p>
-                        <a href="services-details.html" class="services-btn">View More</a>
+                        <a href="#" class="services-btn">View More</a>
                     </div>
                 </div>
             </div>
@@ -141,14 +141,14 @@
             <div class="col-lg-4 col-md-6">
                 <div class="services-item">
                     <div class="services-image">
-                        <a href="services-details.html"><img src="https://templates.envytheme.com/coze/default/assets/images/services/services-3.jpg" alt="image"></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/img/services-1.jpg') }}" alt="image"></a>
                     </div>
                     <div class="services-content">
                         <h3>
-                            <a href="services-details.html">Web Development</a>
+                            <a href="#">Web Development</a>
                         </h3>
                         <p>Lorem ipsum dolor sit amet con setetur sadipscing elitr sed…</p>
-                        <a href="services-details.html" class="services-btn">View More</a>
+                        <a href="#" class="services-btn">View More</a>
                     </div>
                 </div>
             </div>
@@ -156,14 +156,14 @@
             <div class="col-lg-4 col-md-6">
                 <div class="services-item">
                     <div class="services-image">
-                        <a href="services-details.html"><img src="https://templates.envytheme.com/coze/default/assets/images/services/services-4.jpg" alt="image"></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/img/services-1.jpg') }}" alt="image"></a>
                     </div>
                     <div class="services-content">
                         <h3>
-                            <a href="services-details.html">Analytic Solutions</a>
+                            <a href="#">Analytic Solutions</a>
                         </h3>
                         <p>Lorem ipsum dolor sit amet con setetur sadipscing elitr sed…</p>
-                        <a href="services-details.html" class="services-btn">View More</a>
+                        <a href="#" class="services-btn">View More</a>
                     </div>
                 </div>
             </div>
@@ -171,14 +171,14 @@
             <div class="col-lg-4 col-md-6">
                 <div class="services-item">
                     <div class="services-image">
-                        <a href="services-details.html"><img src="https://templates.envytheme.com/coze/default/assets/images/services/services-5.jpg" alt="image"></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/img/services-1.jpg') }}" alt="image"></a>
                     </div>
                     <div class="services-content">
                         <h3>
-                            <a href="services-details.html">Database Administrator</a>
+                            <a href="#">Database Administrator</a>
                         </h3>
                         <p>Lorem ipsum dolor sit amet con setetur sadipscing elitr sed…</p>
-                        <a href="services-details.html" class="services-btn">View More</a>
+                        <a href="#" class="services-btn">View More</a>
                     </div>
                 </div>
             </div>
@@ -186,14 +186,14 @@
             <div class="col-lg-4 col-md-6">
                 <div class="services-item">
                     <div class="services-image">
-                        <a href="services-details.html"><img src="https://templates.envytheme.com/coze/default/assets/images/services/services-6.jpg" alt="image"></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/img/services-1.jpg') }}" alt="image"></a>
                     </div>
                     <div class="services-content">
                         <h3>
-                            <a href="services-details.html">Product Design</a>
+                            <a href="#">Product Design</a>
                         </h3>
                         <p>Lorem ipsum dolor sit amet con setetur sadipscing elitr sed…</p>
-                        <a href="services-details.html" class="services-btn">View More</a>
+                        <a href="#" class="services-btn">View More</a>
                     </div>
                 </div>
             </div>
@@ -211,10 +211,10 @@
     </div>
 
     <div class="services-shape-1">
-        <img src="https://templates.envytheme.com/coze/default/assets/images/services/services-shape-1.png" alt="image">
+        <img src="{{ asset('frontend/assets/img/services-shape-1.png') }}" alt="image">
     </div>
     <div class="services-shape-2">
-        <img src="https://templates.envytheme.com/coze/default/assets/images/services/services-shape-2.png" alt="image">
+        <img src="{{ asset('frontend/assets/img/services-shape-2.png') }}" alt="image">
     </div>
 </div>
 <!-- End Services Area -->
@@ -231,102 +231,102 @@
         <div class="services-slides-two owl-carousel owl-theme">
             <div class="services-item">
                 <div class="services-image">
-                    <a href="services-details.html"><img src="https://templates.envytheme.com/coze/default/assets/images/services/services-1.jpg" alt="image"></a>
+                    <a href="#"><img src="{{ asset('frontend/assets/img/services-1.jpg') }}" alt="image"></a>
                 </div>
                 <div class="services-content">
                     <h3>
-                        <a href="services-details.html">Database Administrator</a>
+                        <a href="#">Database Administrator</a>
                     </h3>
                     <p>Lorem ipsum dolor sit amet con setetur sadipscing elitr sed…</p>
-                    <a href="services-details.html" class="services-btn">View More</a>
+                    <a href="#" class="services-btn">View More</a>
                 </div>
             </div>
 
             <div class="services-item">
                 <div class="services-image">
-                    <a href="services-details.html"><img src="https://templates.envytheme.com/coze/default/assets/images/services/services-2.jpg" alt="image"></a>
+                    <a href="#"><img src="{{ asset('frontend/assets/img/services-1.jpg') }}" alt="image"></a>
                 </div>
                 <div class="services-content">
                     <h3>
-                        <a href="services-details.html">Software Development</a>
+                        <a href="#">Software Development</a>
                     </h3>
                     <p>Lorem ipsum dolor sit amet con setetur sadipscing elitr sed…</p>
-                    <a href="services-details.html" class="services-btn">View More</a>
+                    <a href="#" class="services-btn">View More</a>
                 </div>
             </div>
 
             <div class="services-item">
                 <div class="services-image">
-                    <a href="services-details.html"><img src="https://templates.envytheme.com/coze/default/assets/images/services/services-3.jpg" alt="image"></a>
+                    <a href="#"><img src="{{ asset('frontend/assets/img/services-1.jpg') }}" alt="image"></a>
                 </div>
                 <div class="services-content">
                     <h3>
-                        <a href="services-details.html">App Development</a>
+                        <a href="#">App Development</a>
                     </h3>
                     <p>Lorem ipsum dolor sit amet con setetur sadipscing elitr sed…</p>
-                    <a href="services-details.html" class="services-btn">View More</a>
+                    <a href="#" class="services-btn">View More</a>
                 </div>
             </div>
 
             <div class="services-item">
                 <div class="services-image">
-                    <a href="services-details.html"><img src="https://templates.envytheme.com/coze/default/assets/images/services/services-4.jpg" alt="image"></a>
+                    <a href="#"><img src="{{ asset('frontend/assets/img/services-1.jpg') }}" alt="image"></a>
                 </div>
                 <div class="services-content">
                     <h3>
-                        <a href="services-details.html">Web Development</a>
+                        <a href="#">Web Development</a>
                     </h3>
                     <p>Lorem ipsum dolor sit amet con setetur sadipscing elitr sed…</p>
-                    <a href="services-details.html" class="services-btn">View More</a>
+                    <a href="#" class="services-btn">View More</a>
                 </div>
             </div>
 
             <div class="services-item">
                 <div class="services-image">
-                    <a href="services-details.html"><img src="https://templates.envytheme.com/coze/default/assets/images/services/services-5.jpg" alt="image"></a>
+                    <a href="#"><img src="{{ asset('frontend/assets/img/services-1.jpg') }}" alt="image"></a>
                 </div>
                 <div class="services-content">
                     <h3>
-                        <a href="services-details.html">Analytic Solutions</a>
+                        <a href="#">Analytic Solutions</a>
                     </h3>
                     <p>Lorem ipsum dolor sit amet con setetur sadipscing elitr sed…</p>
-                    <a href="services-details.html" class="services-btn">View More</a>
+                    <a href="#" class="services-btn">View More</a>
                 </div>
             </div>
 
             <div class="services-item">
                 <div class="services-image">
-                    <a href="services-details.html"><img src="https://templates.envytheme.com/coze/default/assets/images/services/services-5.jpg" alt="image"></a>
+                    <a href="#"><img src="{{ asset('frontend/assets/img/services-1.jpg') }}" alt="image"></a>
                 </div>
                 <div class="services-content">
                     <h3>
-                        <a href="services-details.html">Product Design</a>
+                        <a href="#">Product Design</a>
                     </h3>
                     <p>Lorem ipsum dolor sit amet con setetur sadipscing elitr sed…</p>
-                    <a href="services-details.html" class="services-btn">View More</a>
+                    <a href="#" class="services-btn">View More</a>
                 </div>
             </div>
 
             <div class="services-item">
                 <div class="services-image">
-                    <a href="services-details.html"><img src="https://templates.envytheme.com/coze/default/assets/images/services/services-1.jpg" alt="image"></a>
+                    <a href="#"><img src="{{ asset('frontend/assets/img/services-1.jpg') }}" alt="image"></a>
                 </div>
                 <div class="services-content">
                     <h3>
                         <a href="#">Cloud & DevOps</a>
                     </h3>
                     <p>Lorem ipsum dolor sit amet con setetur sadipscing elitr sed…</p>
-                    <a href="services-details.html" class="services-btn">View More</a>
+                    <a href="#" class="services-btn">View More</a>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="services-shape-1">
-        <img src="https://templates.envytheme.com/coze/default/assets/images/services/services-shape-1.png" alt="image">
+        <img src="{{ asset('frontend/assets/img/services-shape-1.png') }}" alt="image">
     </div>
     <div class="services-shape-2">
-        <img src="https://templates.envytheme.com/coze/default/assets/images/services/services-shape-2.png" alt="image">
+        <img src="{{ asset('frontend/assets/img/services-shape-2.png') }}" alt="image">
     </div>
 </div>
 <!-- End Services Area -->
@@ -337,10 +337,10 @@
         <div class="row align-items-center">
             <div class="col-lg-6 col-md-12">
                 <div class="talk-image" data-tilt>
-                    <img src="https://templates.envytheme.com/coze/default/assets/images/talk/talk-2.png" alt="image">
+                    <img src="{{ asset('frontend/assets/img/talk-2.png') }}" alt="image">
 
                     <div class="talk-circle">
-                        <img src="https://templates.envytheme.com/coze/default/assets/images/talk/talk-circle.png" alt="image">
+                        <img src="{{ asset('frontend/assets/img/talk-circle.png') }}" alt="image">
                     </div>
                 </div>
             </div>
@@ -400,7 +400,7 @@
                     </span>
 
                     <div class="overview-shape">
-                        <img src="https://templates.envytheme.com/coze/default/assets/images/overview/overview-shape.png" alt="image">
+                        <img src="{{ asset('frontend/assets/img/overview-shape.png') }}" alt="image">
                     </div>
                 </div>
             </div>
@@ -413,7 +413,7 @@
                     </span>
 
                     <div class="overview-shape">
-                        <img src="https://templates.envytheme.com/coze/default/assets/images/overview/overview-shape.png" alt="image">
+                        <img src="{{ asset('frontend/assets/img/overview-shape.png') }}" alt="image">
                     </div>
                 </div>
             </div>
@@ -426,7 +426,7 @@
                     </span>
 
                     <div class="overview-shape">
-                        <img src="https://templates.envytheme.com/coze/default/assets/images/overview/overview-shape.png" alt="image">
+                        <img src="{{ asset('frontend/assets/img/overview-shape.png') }}" alt="image">
                     </div>
                 </div>
             </div>
@@ -437,7 +437,7 @@
                     <span>413 North Las Vegas, NV 89032</span>
 
                     <div class="overview-shape">
-                        <img src="https://templates.envytheme.com/coze/default/assets/images/overview/overview-shape.png" alt="image">
+                        <img src="{{ asset('frontend/assets/img/overview-shape.png') }}" alt="image">
                     </div>
                 </div>
             </div>

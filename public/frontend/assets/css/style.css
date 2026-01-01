@@ -4342,23 +4342,23 @@ Page Banner Area CSS
 }
 
 .page-banner-area.bg-2 {
-    background-image: url(../../assets/images/page-banner/banner-bg-2.jpg);
+    background-image: url('/frontend/assets/img/banner-bg-2.jpg');
 }
 
 .page-banner-area.bg-3 {
-    background-image: url(../../assets/images/page-banner/banner-bg-3.jpg);
+    background-image: url('/frontend/assets/img/banner-bg-3.jpg');
 }
 
 .page-banner-area.bg-4 {
-    background-image: url(../../assets/images/page-banner/banner-bg-4.jpg);
+    background-image: url('/frontend/assets/img/banner-bg-4.jpg');
 }
 
 .page-banner-area.bg-5 {
-    background-image: url(../../assets/images/page-banner/banner-bg-5.jpg);
+    background-image: url('/frontend/assets/img/banner-bg-5.jpg');
 }
 
 .page-banner-area.bg-6 {
-    background-image: url(../../assets/images/page-banner/banner-bg-6.jpg);
+    background-image: url('/frontend/assets/img/banner-bg-6.jpg');
     background-attachment: fixed;
 }
 

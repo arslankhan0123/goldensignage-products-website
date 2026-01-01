@@ -3,7 +3,7 @@
         <div class="container">
             <div class="main-responsive-menu">
                 <div class="logo">
-                    <a href="index.html">
+                    <a href="{{ route('home') }}">
                         <img src="https://templates.envytheme.com/coze/default/assets/images/logo.png" alt="image">
                     </a>
                 </div>
@@ -14,32 +14,14 @@
     <div class="main-navbar navbar-with-black-color">
         <div class="container-fluid">
             <nav class="navbar navbar-expand-md navbar-light">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="{{ route('home') }}">
                     <img src="https://templates.envytheme.com/coze/default/assets/images/logo.png" alt="image">
                 </a>
 
                 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a href="#" class="nav-link active">
-                                Home
-                                <i class="ri-arrow-down-s-line"></i>
-                            </a>
-
-                            <ul class="dropdown-menu">
-                                <li class="nav-item">
-                                    <a href="index.html" class="nav-link">Home Demo - 1</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="index-2.html" class="nav-link active">Home Demo - 2</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="index-3.html" class="nav-link">Home Demo - 3</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="index-4.html" class="nav-link">Home Demo - 4</a>
-                                </li>
-                            </ul>
+                            <a href="{{ route('home') }}" class="nav-link">Home</a>
                         </li>
 
                         <!-- <li class="nav-item">

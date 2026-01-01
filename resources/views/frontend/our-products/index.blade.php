@@ -57,7 +57,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="single-products-card">
                     <div class="products-image">
-                        <a href="products-details.html"><img src="https://templates.envytheme.com/coze/default/assets/images/products/products-1.jpg" alt="image"></a>
+                        <a href="products-details.html"><img src="{{ asset('frontend/assets/img/products-1.jpg') }}" alt="image"></a>
 
                         <div class="heart-line">
                             <a href="wishlist.html"><i class="ri-heart-line"></i></a>
@@ -81,7 +81,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="single-products-card">
                     <div class="products-image">
-                        <a href="products-details.html"><img src="https://templates.envytheme.com/coze/default/assets/images/products/products-2.jpg" alt="image"></a>
+                        <a href="products-details.html"><img src="{{ asset('frontend/assets/img/products-2.jpg') }}" alt="image"></a>
 
                         <div class="heart-line">
                             <a href="wishlist.html"><i class="ri-heart-line"></i></a>
@@ -105,7 +105,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="single-products-card">
                     <div class="products-image">
-                        <a href="products-details.html"><img src="https://templates.envytheme.com/coze/default/assets/images/products/products-3.jpg" alt="image"></a>
+                        <a href="products-details.html"><img src="{{ asset('frontend/assets/img/products-3.jpg') }}" alt="image"></a>
 
                         <div class="heart-line">
                             <a href="wishlist.html"><i class="ri-heart-line"></i></a>
@@ -130,7 +130,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="single-products-card">
                     <div class="products-image">
-                        <a href="products-details.html"><img src="https://templates.envytheme.com/coze/default/assets/images/products/products-4.jpg" alt="image"></a>
+                        <a href="products-details.html"><img src="{{ asset('frontend/assets/img/products-4.jpg') }}" alt="image"></a>
 
                         <div class="heart-line">
                             <a href="wishlist.html"><i class="ri-heart-line"></i></a>
@@ -154,7 +154,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="single-products-card">
                     <div class="products-image">
-                        <a href="products-details.html"><img src="https://templates.envytheme.com/coze/default/assets/images/products/products-5.jpg" alt="image"></a>
+                        <a href="products-details.html"><img src="{{ asset('frontend/assets/img/products-5.jpg') }}" alt="image"></a>
 
                         <div class="heart-line">
                             <a href="wishlist.html"><i class="ri-heart-line"></i></a>
@@ -178,7 +178,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="single-products-card">
                     <div class="products-image">
-                        <a href="products-details.html"><img src="https://templates.envytheme.com/coze/default/assets/images/products/products-6.jpg" alt="image"></a>
+                        <a href="products-details.html"><img src="{{ asset('frontend/assets/img/products-6.jpg') }}" alt="image"></a>
 
                         <div class="heart-line">
                             <a href="wishlist.html"><i class="ri-heart-line"></i></a>
@@ -203,7 +203,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="single-products-card">
                     <div class="products-image">
-                        <a href="products-details.html"><img src="https://templates.envytheme.com/coze/default/assets/images/products/products-7.jpg" alt="image"></a>
+                        <a href="products-details.html"><img src="{{ asset('frontend/assets/img/products-7.jpg') }}" alt="image"></a>
 
                         <div class="heart-line">
                             <a href="wishlist.html"><i class="ri-heart-line"></i></a>
@@ -227,7 +227,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="single-products-card">
                     <div class="products-image">
-                        <a href="products-details.html"><img src="https://templates.envytheme.com/coze/default/assets/images/products/products-8.jpg" alt="image"></a>
+                        <a href="products-details.html"><img src="{{ asset('frontend/assets/img/products-8.jpg') }}" alt="image"></a>
 
                         <div class="heart-line">
                             <a href="wishlist.html"><i class="ri-heart-line"></i></a>

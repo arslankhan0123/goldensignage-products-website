@@ -12,7 +12,7 @@
 
             <ul>
                 <li>
-                    <a href="index.html">Home</a>
+                    <a href="{{ route('home') }}">Home</a>
                 </li>
                 <li>About Us</li>
             </ul>
@@ -27,7 +27,7 @@
         <div class="row align-items-center">
             <div class="col-lg-6 col-md-12">
                 <div class="about-wrap-image" data-tilt>
-                    <img src="assets/images/about/about-3.jpg" alt="image" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                    <img src="{{ asset('frontend/assets/img/about-3.jpg') }}" alt="image" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
                 </div>
             </div>
             <div class="col-lg-6 col-md-12">
@@ -63,7 +63,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-about-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
                         <div class="card-image" data-tilt>
-                            <img src="assets/images/about/about-4.jpg" alt="image">
+                            <img src="{{ asset('frontend/assets/img/about-4.jpg') }}" alt="image">
                         </div>
                     </div>
                 </div>
@@ -72,7 +72,7 @@
     </div>
 
     <div class="about-circle-shape">
-        <img src="assets/images/about/about-circle.png" alt="image">
+        <img src="{{ asset('frontend/assets/img/about-circle.png') }}" alt="image">
     </div>
 </div>
 <!-- End About Area -->
@@ -91,7 +91,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="single-choose-card" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
                     <div class="choose-image" data-tilt>
-                        <a href="services-details.html"><img src="assets/images/choose/choose-1.png" alt="image"></a>
+                        <a href="services-details.html"><img src="{{ asset('frontend/assets/img/choose-1.png') }}" alt="image"></a>
 
                         <div class="number">1</div>
                     </div>
@@ -107,7 +107,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="single-choose-card" data-aos="fade-up" data-aos-delay="60" data-aos-duration="600" data-aos-once="true">
                     <div class="choose-image" data-tilt>
-                        <a href="services-details.html"><img src="assets/images/choose/choose-2.png" alt="image"></a>
+                        <a href="services-details.html"><img src="{{ asset('frontend/assets/img/choose-2.png') }}" alt="image"></a>
 
                         <div class="number">2</div>
                     </div>
@@ -123,7 +123,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="single-choose-card" data-aos="fade-up" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
                     <div class="choose-image" data-tilt>
-                        <a href="services-details.html"><img src="assets/images/choose/choose-3.png" alt="image"></a>
+                        <a href="services-details.html"><img src="{{ asset('frontend/assets/img/choose-3.png') }}" alt="image"></a>
 
                         <div class="number">3</div>
                     </div>
@@ -139,7 +139,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="single-choose-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
                     <div class="choose-image" data-tilt>
-                        <a href="services-details.html"><img src="assets/images/choose/choose-4.png" alt="image"></a>
+                        <a href="services-details.html"><img src="{{ asset('frontend/assets/img/choose-4.png') }}" alt="image"></a>
 
                         <div class="number">4</div>
                     </div>
@@ -161,7 +161,7 @@
     <div class="container">
         <div class="video-view-content" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
             <div class="video-image">
-                <img src="assets/images/video/video.jpg" alt="image">
+                <img src="{{ asset('frontend/assets/img/video.jpg') }}" alt="image">
             </div>
 
             <a href="https://www.youtube.com/watch?v=ODfy2YIKS1M" class="video-btn popup-youtube">
@@ -186,7 +186,7 @@
                 <p>We look and sound so good! I am still in shock at how smooth this process was. The professionalism, collaboration and the design they come up is great.</p>
 
                 <div class="info-item-box">
-                    <img src="assets/images/testimonials/testimonials-4.jpg" class="rounded-circle" alt="image">
+                    <img src="{{ asset('frontend/assets/img/testimonials-4.jpg') }}" class="rounded-circle" alt="image">
                     <h4>Bradly Doe, <span>Founder of Medizo</span></h4>
                     <ul class="rating-list">
                         <li><i class="ri-star-fill"></i></li>
@@ -202,7 +202,7 @@
                 <p>The professionalism, collaboration and the design they come up with is pheno-menal. Thanks a lot the Coze Team.</p>
 
                 <div class="info-item-box">
-                    <img src="assets/images/testimonials/testimonials-5.jpg" class="rounded-circle" alt="image">
+                    <img src="{{ asset('frontend/assets/img/testimonials-5.jpg') }}" class="rounded-circle" alt="image">
                     <h4>Daniel John, <span>Solit Team</span></h4>
                     <ul class="rating-list">
                         <li><i class="ri-star-fill"></i></li>
@@ -218,7 +218,7 @@
                 <p>We look and sound so good! I am still in shock at how smooth this process was. The professionalism, collaboration and the design they come up is great.</p>
 
                 <div class="info-item-box">
-                    <img src="assets/images/testimonials/testimonials-6.jpg" class="rounded-circle" alt="image">
+                    <img src="{{ asset('frontend/assets/img/testimonials-6.jpg') }}" class="rounded-circle" alt="image">
                     <h4>Jennifer Smith, <span>Spix Team</span></h4>
                     <ul class="rating-list">
                         <li><i class="ri-star-fill"></i></li>
@@ -234,7 +234,7 @@
                 <p>The professionalism, collaboration and the design they come up with is pheno-menal. Thanks a lot the Coze Team.</p>
 
                 <div class="info-item-box">
-                    <img src="assets/images/testimonials/testimonials-7.jpg" class="rounded-circle" alt="image">
+                    <img src="{{ asset('frontend/assets/img/testimonials-7.jpg') }}" class="rounded-circle" alt="image">
                     <h4>Sarp Karahan, <span>Benzo Team</span></h4>
                     <ul class="rating-list">
                         <li><i class="ri-star-fill"></i></li>
@@ -250,7 +250,7 @@
                 <p>We look and sound so good! I am still in shock at how smooth this process was. The professionalism, collaboration and the design they come up is great.</p>
 
                 <div class="info-item-box">
-                    <img src="assets/images/testimonials/testimonials-8.jpg" class="rounded-circle" alt="image">
+                    <img src="{{ asset('frontend/assets/img/testimonials-8.jpg') }}" class="rounded-circle" alt="image">
                     <h4>Jane Ronan, <span>Lebu Team</span></h4>
                     <ul class="rating-list">
                         <li><i class="ri-star-fill"></i></li>
@@ -333,13 +333,13 @@
     </div>
 
     <div class="pricing-bg-shape-1">
-        <img src="assets/images/pricing/pricing-bg-shape.png" alt="image">
+        <img src="{{ asset('frontend/assets/img/pricing-bg-shape.png') }}" alt="image">
     </div>
     <div class="pricing-shape-1">
-        <img src="assets/images/pricing/pricing-shape-1.png" alt="image">
+        <img src="{{ asset('frontend/assets/img/pricing-shape-1.png') }}" alt="image">
     </div>
     <div class="pricing-shape-2">
-        <img src="assets/images/pricing/pricing-shape-2.png" alt="image">
+        <img src="{{ asset('frontend/assets/img/pricing-shape-2.png') }}" alt="image">
     </div>
 </div>
 <!-- End Pricing Area -->
@@ -358,7 +358,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="single-team-card">
                     <div class="team-image" data-tilt>
-                        <img src="assets/images/team/team-1.png" alt="image">
+                        <img src="{{ asset('frontend/assets/img/team-1.png') }}" alt="image">
 
                         <ul class="team-social">
                             <li>
@@ -390,7 +390,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="single-team-card">
                     <div class="team-image" data-tilt>
-                        <img src="assets/images/team/team-2.png" alt="image">
+                        <img src="{{ asset('frontend/assets/img/team-2.png') }}" alt="image">
 
                         <ul class="team-social">
                             <li>
@@ -422,7 +422,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="single-team-card">
                     <div class="team-image" data-tilt>
-                        <img src="assets/images/team/team-3.png" alt="image">
+                        <img src="{{ asset('frontend/assets/img/team-3.png') }}" alt="image">
 
                         <ul class="team-social">
                             <li>
@@ -454,7 +454,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="single-team-card">
                     <div class="team-image" data-tilt>
-                        <img src="assets/images/team/team-4.png" alt="image">
+                        <img src="{{ asset('frontend/assets/img/team-4.png') }}" alt="image">
 
                         <ul class="team-social">
                             <li>
@@ -493,10 +493,10 @@
         <div class="row align-items-center">
             <div class="col-lg-6 col-md-12">
                 <div class="talk-image" data-tilt>
-                    <img src="assets/images/talk/talk.png" alt="image">
+                    <img src="{{ asset('frontend/assets/img/talk.png') }}" alt="image">
 
                     <div class="talk-circle">
-                        <img src="assets/images/talk/talk-circle.png" alt="image">
+                        <img src="{{ asset('frontend/assets/img/talk-circle.png') }}" alt="image">
                     </div>
                 </div>
             </div>

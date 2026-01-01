@@ -7,27 +7,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Links of CSS files -->
-    <link rel="stylesheet" href="https://templates.envytheme.com/coze/default/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://templates.envytheme.com/coze/default/assets/css/aos.css">
-    <link rel="stylesheet" href="https://templates.envytheme.com/coze/default/assets/css/animate.min.css">
-    <link rel="stylesheet" href="https://templates.envytheme.com/coze/default/assets/css/meanmenu.css">
-    <link rel="stylesheet" href="https://templates.envytheme.com/coze/default/assets/css/remixicon.css">
-    <link rel="stylesheet" href="https://templates.envytheme.com/coze/default/assets/css/odometer.min.css">
-    <link rel="stylesheet" href="https://templates.envytheme.com/coze/default/assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://templates.envytheme.com/coze/default/assets/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="https://templates.envytheme.com/coze/default/assets/css/magnific-popup.min.css">
-    <link rel="stylesheet" href="https://templates.envytheme.com/coze/default/assets/css/fancybox.css">
-    <link rel="stylesheet" href="https://templates.envytheme.com/coze/default/assets/css/nice-select.min.css">
+    <!-- <link rel="stylesheet" href="https://templates.envytheme.com/coze/default/assets/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/bootstrap.min.css') }}">
+    <!-- <link rel="stylesheet" href="https://templates.envytheme.com/coze/default/assets/css/aos.css"> -->
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/aos.css') }}">
+    <!-- <link rel="stylesheet" href="https://templates.envytheme.com/coze/default/assets/css/animate.min.css"> -->
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/animate.min.css') }}">
+    <!-- <link rel="stylesheet" href="https://templates.envytheme.com/coze/default/assets/css/meanmenu.css"> -->
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/meanmenu.css') }}">
+    <!-- <link rel="stylesheet" href="https://templates.envytheme.com/coze/default/assets/css/remixicon.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/remixicon.css') }}">
+    <!-- <link rel="stylesheet" href="https://templates.envytheme.com/coze/default/assets/css/odometer.min.css"> -->
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/odometer.min.css') }}">
+    <!-- <link rel="stylesheet" href="https://templates.envytheme.com/coze/default/assets/css/owl.carousel.min.css"> -->
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/owl.carousel.min.css') }}">
+    <!-- <link rel="stylesheet" href="https://templates.envytheme.com/coze/default/assets/css/owl.theme.default.min.css"> -->
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/owl.theme.default.min.css') }}">
+    <!-- <link rel="stylesheet" href="https://templates.envytheme.com/coze/default/assets/css/magnific-popup.min.css"> -->
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/magnific-popup.min.css') }}">
+    <!-- <link rel="stylesheet" href="https://templates.envytheme.com/coze/default/assets/css/fancybox.css"> -->
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/fancybox.css') }}">
+    <!-- <link rel="stylesheet" href="https://templates.envytheme.com/coze/default/assets/css/nice-select.min.css"> -->
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/nice-select.min.css') }}">
     <!-- <link rel="stylesheet" href="https://templates.envytheme.com/coze/default/assets/css/style.css"> -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/style.css') }}">
-    <link rel="stylesheet" href="https://templates.envytheme.com/coze/default/assets/css/navbar.css">
-    <link rel="stylesheet" href="https://templates.envytheme.com/coze/default/assets/css/footer.css">
-    <link rel="stylesheet" href="https://templates.envytheme.com/coze/default/assets/css/dark.css">
-    <link rel="stylesheet" href="https://templates.envytheme.com/coze/default/assets/css/responsive.css">
+    <!-- <link rel="stylesheet" href="https://templates.envytheme.com/coze/default/assets/css/navbar.css"> -->
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/navbar.css') }}">
+    <!-- <link rel="stylesheet" href="https://templates.envytheme.com/coze/default/assets/css/footer.css"> -->
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/footer.css') }}">
+    <!-- <link rel="stylesheet" href="https://templates.envytheme.com/coze/default/assets/css/dark.css"> -->
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/dark.css') }}">
+    <!-- <link rel="stylesheet" href="https://templates.envytheme.com/coze/default/assets/css/responsive.css"> -->
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/responsive.css') }}">
 
     <title>@yield('title', 'Home')</title>
 
-    <link rel="icon" type="image/png" href="https://templates.envytheme.com/coze/default/assets/images/favicon.png">
+    <!-- <link rel="icon" type="image/png" href="https://templates.envytheme.com/coze/default/assets/images/favicon.png"> -->
+    <link rel="icon" type="image/png" href="{{ asset('frontend/assets/img/favicon.png') }}">
 </head>
 
 <body>

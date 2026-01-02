@@ -1,5 +1,5 @@
 @extends('layouts.backend.main')
-@section('title', 'Products')
+@section('title', 'Services')
 @section('meta')
 <meta name="description" content="Quick News Global AI - Stay informed with AI-powered news summaries in under 9 seconds. Get verified, concise news updates without the noise." />
 <meta name="robots" content="index, follow" />

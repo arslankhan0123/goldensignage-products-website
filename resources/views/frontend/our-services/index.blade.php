@@ -4,6 +4,25 @@
 @endsection
 
 @section('content')
+<!-- Inline styles to make service images uniform -->
+<style>
+    /* Ensure service images have consistent size and crop rather than stretch */
+    .services-image img,
+    .services-slides-two .services-image img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        display: block;
+    }
+
+    /* Slightly smaller on small screens */
+    @media (max-width: 768px) {
+        .services-image img,
+        .services-slides-two .services-image img {
+            height: 160px;
+        }
+    }
+</style>
 <!-- Start Page Banner Area -->
 <div class="page-banner-area bg-2 jarallax" data-jarallax='{"speed": 0.3}'>
     <div class="container">

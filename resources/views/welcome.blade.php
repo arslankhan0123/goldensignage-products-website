@@ -4,6 +4,33 @@
 @endsection
 
 @section('content')
+<!-- Inline styles to make homepage/blog/product images uniform -->
+<style>
+    /* Ensure blog and product/service images have consistent size and crop rather than stretch */
+    .blog-image img,
+    .services-image img,
+    .projects-image img,
+    .single-projects-item .projects-image img,
+    .about-image img,
+    .skill-image img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        display: block;
+    }
+
+    /* Slightly smaller on small screens */
+    @media (max-width: 768px) {
+        .blog-image img,
+        .services-image img,
+        .projects-image img,
+        .single-projects-item .projects-image img,
+        .about-image img,
+        .skill-image img {
+            height: 160px;
+        }
+    }
+</style>
 <!-- Start Main Hero Area -->
 <div class="main-hero-area">
     <div class="hero-slides owl-carousel owl-theme">
@@ -670,22 +697,7 @@
 <!-- End Partner Area -->
 
 <!-- Start Blog Area -->
-<style>
-    .blog-image {
-        width: 100%;
-        height: 250px;
-        /* fixed height (adjust if needed) */
-        overflow: hidden;
-    }
 
-    .blog-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        /* fills area, crops extra */
-        object-position: center;
-    }
-</style>
 <div class="blog-area pt-100 pb-75">
     <div class="container">
         <div class="section-title">

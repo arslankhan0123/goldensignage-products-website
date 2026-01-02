@@ -8,6 +8,7 @@ use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\ProductCategoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ServicesController;
 use App\Models\Blog;
 use App\Models\Product;
 use Illuminate\Support\Facades\Route;
@@ -55,6 +56,16 @@ Route::middleware('auth')->group(function () {
             Route::post('/update-order', [ProductCategoryController::class, 'updateOrder'])->name('categories.update-order');
             Route::delete('/bulk-delete', [ProductCategoryController::class, 'bulkDelete'])->name('categories.bulk-delete');
         });
+    });
+
+    Route::prefix('services')->group(function () {
+        Route::get('/', [ServicesController::class, 'index'])->name('services.index');
+        Route::get('/create', [ServicesController::class, 'create'])->name('services.create');
+        Route::post('/store', [ServicesController::class, 'store'])->name('services.store');
+        Route::get('/edit/{id}', [ServicesController::class, 'edit'])->name('services.edit');
+        Route::post('/update/{id}', [ServicesController::class, 'update'])->name('services.update');
+        Route::get('/delete/{id}', [ServicesController::class, 'destroy'])->name('services.delete');
+        Route::delete('/bulk-delete', [ServicesController::class, 'bulkDelete'])->name('services.bulk-delete');
     });
 
     Route::prefix('/admin/details')->group(function () {

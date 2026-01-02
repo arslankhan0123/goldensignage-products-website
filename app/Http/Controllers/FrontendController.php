@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\AdminDetail;
 use App\Models\Contact;
 use App\Models\Product;
+use App\Models\Service;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
@@ -38,8 +39,9 @@ class FrontendController extends Controller
 
     public function ourServices()
     {
+        $services = Service::latest()->get();
         $adminDetails = AdminDetail::first();
-        return view('frontend.our-services.index', compact('adminDetails'));
+        return view('frontend.our-services.index', compact('services', 'adminDetails'));
     }
 
     public function contactDetailStore(Request $request)

@@ -139,6 +139,12 @@
                 </a>
             </li>
             <li>
+                <a href="{{route('services.index')}}">
+                    <iconify-icon icon="solar:box-bold" class="menu-icon"></iconify-icon>
+                    <span>Services</span>
+                </a>
+            </li>
+            <li>
                 <a href="{{route('blogs.index')}}">
                     <iconify-icon icon="solar:document-bold" class="menu-icon"></iconify-icon>
                     <span>Blogs</span>

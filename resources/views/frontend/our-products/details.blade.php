@@ -4,6 +4,63 @@
 @endsection
 
 @section('content')
+<!-- Inline styles to control product details and related images -->
+<style>
+    /* Main product image: fixed-height centered container (matches screenshot) */
+    .products-details-image {
+        width: 100%;
+        height: 520px; /* desired visual height */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        padding: 20px 0;
+    }
+
+    .products-details-image img {
+        max-height: 100%;
+        width: auto;
+        object-fit: cover;
+        display: block;
+        border-radius: 18px; /* rounded corners like screenshot */
+    }
+
+    /* Related product cards: keep width full and a shorter uniform height so cards sit closer to content */
+    .products-area .products-image img,
+    .single-products-card .products-image img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        display: block;
+    }
+
+    /* Responsive adjustments: reduce heights on smaller screens */
+    @media (max-width: 992px) {
+        .products-details-image {
+            height: 420px;
+        }
+        .products-details-image img {
+            max-height: 100%;
+        }
+        .products-area .products-image img,
+        .single-products-card .products-image img {
+            height: 160px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .products-details-image {
+            height: 320px;
+        }
+        .products-details-image img {
+            max-height: 100%;
+        }
+        .products-area .products-image img,
+        .single-products-card .products-image img {
+            height: 140px;
+        }
+    }
+</style>
 <!-- Start Page Banner Area -->
 <div class="page-banner-area bg-5 jarallax" data-jarallax='{"speed": 0.3}'>
     <div class="container">

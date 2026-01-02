@@ -4,6 +4,23 @@
 @endsection
 
 @section('content')
+<!-- Inline styles to make product grid images uniform -->
+<style>
+    /* Ensure product images fill the card and are cropped, not stretched */
+    .products-image img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        display: block;
+    }
+
+    /* Slightly shorter on smaller screens */
+    @media (max-width: 768px) {
+        .products-image img {
+            height: 200px;
+        }
+    }
+</style>
 <!-- Start Page Banner Area -->
 <div class="page-banner-area bg-4 jarallax" data-jarallax='{"speed": 0.3}'>
     <div class="container">

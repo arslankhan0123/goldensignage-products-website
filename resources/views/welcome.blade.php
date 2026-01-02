@@ -6,7 +6,7 @@
 @section('content')
 <!-- Inline styles to make homepage/blog/product images uniform -->
 <style>
-    /* Ensure blog and product/service images have consistent size and crop rather than stretch */
+    /* Base: ensure images fill width and are cropped (not stretched) */
     .blog-image img,
     .services-image img,
     .projects-image img,
@@ -14,20 +14,30 @@
     .about-image img,
     .skill-image img {
         width: 100%;
-        height: 220px;
         object-fit: cover;
         display: block;
+    }
+
+    /* Blog/service default height */
+    .blog-image img,
+    .services-image img {
+        height: 220px;
+    }
+
+    /* Make product grid images (homepage products) a bit taller */
+    .services-area .services-image img {
+        height: 260px;
     }
 
     /* Slightly smaller on small screens */
     @media (max-width: 768px) {
         .blog-image img,
-        .services-image img,
-        .projects-image img,
-        .single-projects-item .projects-image img,
-        .about-image img,
-        .skill-image img {
+        .services-image img {
             height: 160px;
+        }
+
+        .services-area .services-image img {
+            height: 180px;
         }
     }
 </style>

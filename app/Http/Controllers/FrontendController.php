@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
@@ -18,7 +19,15 @@ class FrontendController extends Controller
 
     public function ourProducts()
     {
-        return view('frontend.our-products.index');
+        $products = Product::latest()->get();
+        return view('frontend.our-products.index', compact('products'));
+    }
+
+    public function productDetails($id)
+    {
+        $product = Product::findOrFail($id);
+        $recent_products = Product::where('id', '!=', $id)->latest()->take(4)->get();
+        return view('frontend.our-products.details', compact('product', 'recent_products'));
     }
 
     public function ourServices()

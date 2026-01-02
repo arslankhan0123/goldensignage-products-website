@@ -267,13 +267,29 @@
 <div class="services-area bg-with-14042C-color ptb-100">
     <div class="container">
         <div class="section-title">
-            <span>SERVICES</span>
-            <h2>We Provide the Best Quality <b>Services</b> <span class="overlay"></span></h2>
-            <p>We are technology solutions providing company all over the world doing over 40 years. lorem ipsum dolor sit amet.</p>
+            <span>PRODUCTS</span>
+            <h2>We Offer High-Quality <b>Products</b> <span class="overlay"></span></h2>
+            <p>We deliver premium products designed to meet modern needs, ensuring quality, reliability, and customer satisfaction.</p>
         </div>
 
         <div class="row justify-content-center">
+            @foreach ($products as $product)
             <div class="col-lg-3 col-md-6">
+                <div class="services-item">
+                    <div class="services-image">
+                        <a href="services-details.html"><img src="{{asset($product->image)}}" alt="image"></a>
+                    </div>
+                    <div class="services-content">
+                        <h3>
+                            <a href="services-details.html">{{ $product->name }}</a>
+                        </h3>
+                        <p>{{ \Illuminate\Support\Str::limit($product->short_description, 60) }}</p>
+                        <a href="services-details.html" class="services-btn">View More</a>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+            <!-- <div class="col-lg-3 col-md-6">
                 <div class="services-item">
                     <div class="services-image">
                         <a href="services-details.html"><img src="{{ asset('frontend/assets/img/services-1.jpg') }}" alt="image"></a>
@@ -286,9 +302,9 @@
                         <a href="services-details.html" class="services-btn">View More</a>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="col-lg-3 col-md-6">
+            <!-- <div class="col-lg-3 col-md-6">
                 <div class="services-item">
                     <div class="services-image">
                         <a href="services-details.html"><img src="{{ asset('frontend/assets/img/services-1.jpg') }}" alt="image"></a>
@@ -301,9 +317,9 @@
                         <a href="services-details.html" class="services-btn">View More</a>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="col-lg-3 col-md-6">
+            <!-- <div class="col-lg-3 col-md-6">
                 <div class="services-item">
                     <div class="services-image">
                         <a href="services-details.html"><img src="{{ asset('frontend/assets/img/services-1.jpg') }}" alt="image"></a>
@@ -316,9 +332,9 @@
                         <a href="services-details.html" class="services-btn">View More</a>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="col-lg-3 col-md-6">
+            <!-- <div class="col-lg-3 col-md-6">
                 <div class="services-item">
                     <div class="services-image">
                         <a href="services-details.html"><img src="{{ asset('frontend/assets/img/services-1.jpg') }}" alt="image"></a>
@@ -331,7 +347,7 @@
                         <a href="services-details.html" class="services-btn">View More</a>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
 
         <div class="services-all-btn">
@@ -349,7 +365,7 @@
 <!-- End Services Area -->
 
 <!-- Start Projects Area -->
-<div class="projects-area pt-100 pb-75">
+<!-- <div class="projects-area pt-100 pb-75">
     <div class="container">
         <div class="section-title">
             <span>PROJECTS</span>
@@ -434,11 +450,11 @@
     <div class="projects-bg-shape-1">
         <img src="{{ asset('frontend/assets/img/projects-bg-shape.png') }}" alt="image">
     </div>
-</div>
+</div> -->
 <!-- End Projects Area -->
 
 <!-- Start Pricing Area -->
-<div class="pricing-area with-black-background margin-zero pt-100 pb-75">
+<!-- <div class="pricing-area with-black-background margin-zero pt-100 pb-75">
     <div class="container">
         <div class="section-title">
             <span>PRICING</span>
@@ -512,7 +528,7 @@
     <div class="pricing-shape-2">
         <img src="{{ asset('frontend/assets/img/pricing-shape-2.png') }}" alt="image">
     </div>
-</div>
+</div> -->
 <!-- End Pricing Area -->
 
 <!-- Start Testimonials Area -->
@@ -609,7 +625,7 @@
 <!-- End Testimonials Area -->
 
 <!-- Start Partner Area -->
-<div class="partner-area ptb-100">
+<!-- <div class="partner-area ptb-100">
     <div class="container">
         <div class="partner-slides owl-carousel owl-theme">
             <div class="partner-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
@@ -650,10 +666,26 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- End Partner Area -->
 
 <!-- Start Blog Area -->
+<style>
+    .blog-image {
+        width: 100%;
+        height: 250px;
+        /* fixed height (adjust if needed) */
+        overflow: hidden;
+    }
+
+    .blog-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* fills area, crops extra */
+        object-position: center;
+    }
+</style>
 <div class="blog-area pt-100 pb-75">
     <div class="container">
         <div class="section-title">
@@ -662,7 +694,30 @@
         </div>
 
         <div class="blog-slides owl-carousel owl-theme">
+            @foreach ($blogs as $blog)
             <div class="blog-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="blog-image">
+                            <a href="#"><img src="{{asset($blog->image)}}" alt="image"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="blog-content">
+                            <div class="date">
+                                {{ \Carbon\Carbon::parse($blog->created_at)->format('jS F, Y') }}
+                            </div>
+                            <h3>
+                                <a href="#">{{ \Illuminate\Support\Str::limit($blog->title, 60) }}</a>
+                            </h3>
+                            <p>{!! \Illuminate\Support\Str::limit(strip_tags($blog->short_description), 100) !!}</p>
+                            <a href="#" class="blog-btn">View More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+            <!-- <div class="blog-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
                 <div class="row align-items-center">
                     <div class="col-lg-6">
                         <div class="blog-image">
@@ -680,9 +735,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="blog-card" data-aos="fade-up" data-aos-delay="890" data-aos-duration="900" data-aos-once="true">
+            <!-- <div class="blog-card" data-aos="fade-up" data-aos-delay="890" data-aos-duration="900" data-aos-once="true">
                 <div class="row align-items-center">
                     <div class="col-lg-6">
                         <div class="blog-image">
@@ -700,9 +755,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="blog-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+            <!-- <div class="blog-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
                 <div class="row align-items-center">
                     <div class="col-lg-6">
                         <div class="blog-image">
@@ -720,9 +775,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="blog-card" data-aos="fade-up" data-aos-delay="90" data-aos-duration="900" data-aos-once="true">
+            <!-- <div class="blog-card" data-aos="fade-up" data-aos-delay="90" data-aos-duration="900" data-aos-once="true">
                 <div class="row align-items-center">
                     <div class="col-lg-6">
                         <div class="blog-image">
@@ -740,7 +795,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 

@@ -2,26 +2,34 @@
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\ProductCategoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
+use App\Models\Blog;
+use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    $products = Product::latest()->take(4)->get();
+    $blogs = Blog::latest()->take(3)->get();
+    return view('welcome', compact('products', 'blogs'));
 })->name('home');
 
 Route::prefix('/frontend')->group(function () {
     Route::get('/about', [FrontendController::class, 'about'])->name('frontend.about');
     Route::get('/contact', [FrontendController::class, 'contact'])->name('frontend.contact');
     Route::get('/our-products', [FrontendController::class, 'ourProducts'])->name('frontend.our-products');
+    Route::get('/our-products/{id}', [FrontendController::class, 'productDetails'])->name('frontend.product-details');
     Route::get('/our-services', [FrontendController::class, 'ourServices'])->name('frontend.our-services');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard/filtered-data', [DashboardController::class, 'getFilteredData'])->middleware(['auth', 'verified'])->name('dashboard.filtered-data');
 
 Route::middleware('auth')->group(function () {
 

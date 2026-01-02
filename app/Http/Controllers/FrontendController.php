@@ -33,7 +33,7 @@ class FrontendController extends Controller
     {
         $product = Product::findOrFail($id);
         $adminDetails = AdminDetail::first();
-        $recent_products = Product::latest()->take(4)->get();
+        $recent_products = Product::where('id', '!=', $id)->latest()->take(4)->get();
         return view('frontend.our-products.details', compact('product', 'recent_products', 'adminDetails'));
     }
 

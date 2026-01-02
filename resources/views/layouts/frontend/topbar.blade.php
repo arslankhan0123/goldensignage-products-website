@@ -5,15 +5,19 @@
                 <ul class="topbar-information">
                     <li>
                         <i class="ri-phone-line"></i>
-                        <span>Phone: <a href="tel:9901234567">+990-123-4567</a></span>
+                        <span>Phone:
+                            <a href="tel:{{ preg_replace('/\D+/', '', ($adminDetails->phone ?? '+9901234567')) }}">{{ $adminDetails->phone ?? '+990-123-4567' }}</a>
+                        </span>
                     </li>
                     <li>
                         <i class="ri-mail-line"></i>
-                        <span>Mail: <a href="/cdn-cgi/l/email-protection#b2dadbd1ddc8d7f2d5dfd3dbde9cd1dddf"><span class="__cf_email__" data-cfemail="caa2a3a9a5b0af8aada7aba3a6e4a9a5a7">[email&#160;protected]</span></a></span>
+                        <span>Mail:
+                            <a href="mailto:{{ $adminDetails->email ?? 'info@example.com' }}">{{ $adminDetails->email ?? 'info@example.com' }}</a>
+                        </span>
                     </li>
                     <li>
                         <i class="ri-map-pin-line"></i>
-                        <span>Address:</span> 413 North Las Vegas, NV 89032
+                        <span>Address: {{ $adminDetails->address ?? '413 North Las Vegas, NV 89032' }}</span>
                     </li>
                 </ul>
             </div>

@@ -150,6 +150,12 @@
                     <span>Contacts</span>
                 </a>
             </li>
+            <li>
+                <a href="{{route('admin.details')}}">
+                    <iconify-icon icon="solar:document-bold" class="menu-icon"></iconify-icon>
+                    <span>Admin Details</span>
+                </a>
+            </li>
         </ul>
     </div>
 </aside>

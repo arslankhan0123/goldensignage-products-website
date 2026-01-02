@@ -396,7 +396,7 @@
                 <div class="overview-card">
                     <h3>Call Us</h3>
                     <span>
-                        <a href="tel:9901234567">+990-123-4567</a>
+                        <a href="tel:{{ $adminDetails->phone }}">{{ $adminDetails->phone }}</a>
                     </span>
 
                     <div class="overview-shape">
@@ -409,7 +409,7 @@
                 <div class="overview-card">
                     <h3>Email Us</h3>
                     <span>
-                        <a href="/cdn-cgi/l/email-protection#761e1f15190c1336111b171f1a5815191b"><span class="__cf_email__" data-cfemail="85edece6eaffe0c5e2e8e4ece9abe6eae8">[email&#160;protected]</span></a>
+                        <a href="mailto:{{ $adminDetails->email }}">{{ $adminDetails->email }}</a>
                     </span>
 
                     <div class="overview-shape">
@@ -422,7 +422,7 @@
                 <div class="overview-card">
                     <h3>Tech Support</h3>
                     <span>
-                        <a href="tel:15143125678">+1 (514) 312-5678</a>
+                        <a href="tel:{{ $adminDetails->support }}">{{ $adminDetails->support }}</a>
                     </span>
 
                     <div class="overview-shape">
@@ -434,7 +434,7 @@
             <div class="col-lg-3 col-md-6">
                 <div class="overview-card">
                     <h3>Visit Us</h3>
-                    <span>413 North Las Vegas, NV 89032</span>
+                    <span>{{ $adminDetails->address }}</span>
 
                     <div class="overview-shape">
                         <img src="{{ asset('frontend/assets/img/overview-shape.png') }}" alt="image">

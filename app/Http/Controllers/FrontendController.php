@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AdminDetail;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -9,29 +10,34 @@ class FrontendController extends Controller
 {
     public function about()
     {
-        return view('frontend.about.index');
+        $adminDetails = AdminDetail::first();
+        return view('frontend.about.index', compact('adminDetails'));
     }
 
     public function contact()
     {
-        return view('frontend.contact.index');
+        $adminDetails = AdminDetail::first();
+        return view('frontend.contact.index', compact('adminDetails'));
     }
 
     public function ourProducts()
     {
         $products = Product::latest()->get();
-        return view('frontend.our-products.index', compact('products'));
+        $adminDetails = AdminDetail::first();
+        return view('frontend.our-products.index', compact('products', 'adminDetails'));
     }
 
     public function productDetails($id)
     {
         $product = Product::findOrFail($id);
+        $adminDetails = AdminDetail::first();
         $recent_products = Product::where('id', '!=', $id)->latest()->take(4)->get();
-        return view('frontend.our-products.details', compact('product', 'recent_products'));
+        return view('frontend.our-products.details', compact('product', 'recent_products', 'adminDetails'));
     }
 
     public function ourServices()
     {
-        return view('frontend.our-services.index');
+        $adminDetails = AdminDetail::first();
+        return view('frontend.our-services.index', compact('adminDetails'));
     }
 }

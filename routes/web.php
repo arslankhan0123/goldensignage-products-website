@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminDetailsController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardController;
@@ -53,6 +54,12 @@ Route::middleware('auth')->group(function () {
             Route::post('/update-order', [ProductCategoryController::class, 'updateOrder'])->name('categories.update-order');
             Route::delete('/bulk-delete', [ProductCategoryController::class, 'bulkDelete'])->name('categories.bulk-delete');
         });
+    });
+
+    Route::prefix('/admin/details')->group(function () {
+        Route::get('/', [AdminDetailsController::class, 'index'])->name('admin.details');
+        Route::get('/edit', [AdminDetailsController::class, 'edit'])->name('admin.details.edit');
+        Route::post('/update', [AdminDetailsController::class, 'update'])->name('admin.details.update');
     });
 
     Route::prefix('/admin')->group(function () {

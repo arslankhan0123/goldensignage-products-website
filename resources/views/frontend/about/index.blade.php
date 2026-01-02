@@ -8,7 +8,7 @@
 <div class="page-banner-area bg-3 jarallax" data-jarallax='{"speed": 0.3}'>
     <div class="container">
         <div class="page-banner-content" data-aos="fade-right" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
-            <h2>About Style Three</h2>
+            <h2>About Us</h2>
 
             <ul>
                 <li>
@@ -20,6 +20,44 @@
     </div>
 </div>
 <!-- End Page Banner Area -->
+
+<!-- Success/Error Messages -->
+@if(session('success'))
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Success!</strong> {{ session('success') }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+@endif
+
+@if(request()->get('deleted') == 'success')
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Success!</strong>
+    @php
+    $count = request()->get('count', 1);
+    @endphp
+    {{ $count > 1 ? $count . ' contacts deleted successfully.' : 'Contact deleted successfully.' }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+@endif
+
+@if(session('error'))
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <strong>Error!</strong> {{ session('error') }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+@endif
+
+@if($errors->any())
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <strong>Error!</strong>
+    <ul class="mb-0">
+        @foreach($errors->all() as $error)
+        <li>{{ $error }}</li>
+        @endforeach
+    </ul>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+@endif
 
 <!-- Start About Area -->
 <div class="about-area border-none pt-100 pb-75">
@@ -48,7 +86,7 @@
                         <p>Lorem ipsum dolor sit amet consetetur sadip scing elitr sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyamei erat sed diam voluptua at vero eos et accusam et justo duo.</p>
 
                         <div class="about-btn">
-                            <a href="about-style-1.html" class="default-btn">Know More About Us</a>
+                            <a href="{{ route('frontend.contact') }}" class="default-btn">Contact Us for More Information</a>
                         </div>
                     </div>
                 </div>
@@ -267,7 +305,7 @@
 <!-- End Testimonials Area -->
 
 <!-- Start Pricing Area -->
-<div class="pricing-area with-black-background margin-zero pt-100 pb-75">
+<!-- <div class="pricing-area with-black-background margin-zero pt-100 pb-75">
     <div class="container">
         <div class="section-title">
             <span>PRICING</span>
@@ -341,7 +379,7 @@
     <div class="pricing-shape-2">
         <img src="{{ asset('frontend/assets/img/pricing-shape-2.png') }}" alt="image">
     </div>
-</div>
+</div> -->
 <!-- End Pricing Area -->
 
 <!-- Start Team Area -->
@@ -362,19 +400,19 @@
 
                         <ul class="team-social">
                             <li>
-                                <a href="https://www.facebook.com/EnvyTheme" target="_blank">
+                                <a href="#" target="_blank">
                                     <i class="ri-facebook-fill"></i>
                                 </a>
                             </li>
 
                             <li>
-                                <a href="https://twitter.com/?lang=en" target="_blank">
+                                <a href="#" target="_blank">
                                     <i class="ri-twitter-fill"></i>
                                 </a>
                             </li>
 
                             <li>
-                                <a href="https://www.instagram.com/" target="_blank">
+                                <a href="#" target="_blank">
                                     <i class="ri-instagram-line"></i>
                                 </a>
                             </li>
@@ -394,19 +432,19 @@
 
                         <ul class="team-social">
                             <li>
-                                <a href="https://www.facebook.com/EnvyTheme" target="_blank">
+                                <a href="#" target="_blank">
                                     <i class="ri-facebook-fill"></i>
                                 </a>
                             </li>
 
                             <li>
-                                <a href="https://twitter.com/?lang=en" target="_blank">
+                                <a href="#" target="_blank">
                                     <i class="ri-twitter-fill"></i>
                                 </a>
                             </li>
 
                             <li>
-                                <a href="https://www.instagram.com/" target="_blank">
+                                <a href="#" target="_blank">
                                     <i class="ri-instagram-line"></i>
                                 </a>
                             </li>
@@ -426,19 +464,19 @@
 
                         <ul class="team-social">
                             <li>
-                                <a href="https://www.facebook.com/EnvyTheme" target="_blank">
+                                <a href="#" target="_blank">
                                     <i class="ri-facebook-fill"></i>
                                 </a>
                             </li>
 
                             <li>
-                                <a href="https://twitter.com/?lang=en" target="_blank">
+                                <a href="#" target="_blank">
                                     <i class="ri-twitter-fill"></i>
                                 </a>
                             </li>
 
                             <li>
-                                <a href="https://www.instagram.com/" target="_blank">
+                                <a href="#" target="_blank">
                                     <i class="ri-instagram-line"></i>
                                 </a>
                             </li>
@@ -458,19 +496,19 @@
 
                         <ul class="team-social">
                             <li>
-                                <a href="https://www.facebook.com/EnvyTheme" target="_blank">
+                                <a href="#" target="_blank">
                                     <i class="ri-facebook-fill"></i>
                                 </a>
                             </li>
 
                             <li>
-                                <a href="https://twitter.com/?lang=en" target="_blank">
+                                <a href="#" target="_blank">
                                     <i class="ri-twitter-fill"></i>
                                 </a>
                             </li>
 
                             <li>
-                                <a href="https://www.instagram.com/" target="_blank">
+                                <a href="#" target="_blank">
                                     <i class="ri-instagram-line"></i>
                                 </a>
                             </li>
@@ -506,35 +544,43 @@
                     <div class="talk-bg-text">LET'S TALK</div>
                     <span>LET'S TALK</span>
                     <h3>We Would Like To Hear From You Any Question <span class="overlay"></span></h3>
-                    <p>Lorem ipsum dolor sit amet consetetur sadipscing elitre sed diam non umy eirmod tempor invidunt ut labore.</p>
+                    <!-- <p>Lorem ipsum dolor sit amet consetetur sadipscing elitre sed diam non umy eirmod tempor invidunt ut labore.</p> -->
 
-                    <form id="contactFormTwo">
+                    <form id="contactFormTwo" method="POST" action="{{ route('contact.details.store') }}">
+                        @csrf
                         <div class="row">
                             <div class="col-lg-6 col-md-6">
                                 <div class="form-group">
-                                    <input type="text" name="name" class="form-control" required data-error="Please enter your name" placeholder="Your name">
-                                    <div class="help-block with-errors"></div>
+                                    <input type="text" name="name" class="form-control" required placeholder="Your name">
                                 </div>
                             </div>
 
                             <div class="col-lg-6 col-md-6">
                                 <div class="form-group">
-                                    <input type="email" name="email" class="form-control" required data-error="Please enter your email" placeholder="Your email address">
-                                    <div class="help-block with-errors"></div>
+                                    <input type="email" name="email" class="form-control" required placeholder="Your email address">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6">
+                                <div class="form-group">
+                                    <input type="text" name="msg_subject" class="form-control" required placeholder="Your Subject">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6">
+                                <div class="form-group">
+                                    <input type="number" name="phone_number" class="form-control" required placeholder="Your Phone">
                                 </div>
                             </div>
 
                             <div class="col-lg-12 col-md-12">
                                 <div class="form-group">
-                                    <textarea name="message" class="form-control" cols="30" rows="6" required data-error="Please enter your message" placeholder="Write your message..."></textarea>
-                                    <div class="help-block with-errors"></div>
+                                    <textarea name="message" class="form-control" rows="6" required placeholder="Your message..."></textarea>
                                 </div>
                             </div>
 
                             <div class="col-lg-12 col-md-12">
                                 <button type="submit" class="default-btn">Send Message<span></span></button>
-                                <div id="msgSubmitTwo" class="h3 text-center hidden"></div>
-                                <div class="clearfix"></div>
                             </div>
                         </div>
                     </form>

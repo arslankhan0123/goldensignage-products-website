@@ -21,6 +21,44 @@
 </div>
 <!-- End Page Banner Area -->
 
+<!-- Success/Error Messages -->
+@if(session('success'))
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Success!</strong> {{ session('success') }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+@endif
+
+@if(request()->get('deleted') == 'success')
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Success!</strong>
+    @php
+    $count = request()->get('count', 1);
+    @endphp
+    {{ $count > 1 ? $count . ' contacts deleted successfully.' : 'Contact deleted successfully.' }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+@endif
+
+@if(session('error'))
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <strong>Error!</strong> {{ session('error') }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+@endif
+
+@if($errors->any())
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <strong>Error!</strong>
+    <ul class="mb-0">
+        @foreach($errors->all() as $error)
+        <li>{{ $error }}</li>
+        @endforeach
+    </ul>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+@endif
+
 <!-- Start Overview Area -->
 <div class="overview-area pt-100 pb-75">
     <div class="container">
@@ -94,47 +132,41 @@
                     <span>LET'S TALK</span>
                     <h3>We Would Like To Hear From You Anytime <span class="overlay"></span></h3>
 
-                    <form id="contactFormTwo">
+                    <form id="contactFormTwo" method="POST" action="{{ route('contact.details.store') }}">
+                        @csrf
                         <div class="row">
                             <div class="col-lg-6 col-md-6">
                                 <div class="form-group">
-                                    <input type="text" name="name" class="form-control" required data-error="Please enter your name" placeholder="Your name">
-                                    <div class="help-block with-errors"></div>
+                                    <input type="text" name="name" class="form-control" required placeholder="Your name">
                                 </div>
                             </div>
 
                             <div class="col-lg-6 col-md-6">
                                 <div class="form-group">
-                                    <input type="email" name="email" class="form-control" required data-error="Please enter your email" placeholder="Your email address">
-                                    <div class="help-block with-errors"></div>
+                                    <input type="email" name="email" class="form-control" required placeholder="Your email address">
                                 </div>
                             </div>
 
                             <div class="col-lg-6 col-md-6">
                                 <div class="form-group">
-                                    <input type="text" name="email" class="form-control" required data-error="Please enter your subject" placeholder="Your Subject">
-                                    <div class="help-block with-errors"></div>
+                                    <input type="text" name="msg_subject" class="form-control" required placeholder="Your Subject">
                                 </div>
                             </div>
 
                             <div class="col-lg-6 col-md-6">
                                 <div class="form-group">
-                                    <input type="number" name="email" class="form-control" required data-error="Please enter your phone" placeholder="Your Phone">
-                                    <div class="help-block with-errors"></div>
+                                    <input type="number" name="phone_number" class="form-control" required placeholder="Your Phone">
                                 </div>
                             </div>
 
                             <div class="col-lg-12 col-md-12">
                                 <div class="form-group">
-                                    <textarea name="message" class="form-control" cols="30" rows="6" required data-error="Please enter your message" placeholder="Your message..."></textarea>
-                                    <div class="help-block with-errors"></div>
+                                    <textarea name="message" class="form-control" rows="6" required placeholder="Your message..."></textarea>
                                 </div>
                             </div>
 
                             <div class="col-lg-12 col-md-12">
                                 <button type="submit" class="default-btn">Send Message<span></span></button>
-                                <div id="msgSubmitTwo" class="h3 text-center hidden"></div>
-                                <div class="clearfix"></div>
                             </div>
                         </div>
                     </form>

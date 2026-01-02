@@ -24,6 +24,7 @@ Route::prefix('/frontend')->group(function () {
     Route::get('/our-products', [FrontendController::class, 'ourProducts'])->name('frontend.our-products');
     Route::get('/our-products/{id}', [FrontendController::class, 'productDetails'])->name('frontend.product-details');
     Route::get('/our-services', [FrontendController::class, 'ourServices'])->name('frontend.our-services');
+    Route::post('/contact-store', [FrontendController::class, 'contactDetailStore'])->name('contact.details.store');
 });
 
 // Route::get('/dashboard', function () {

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\AdminDetail;
+use App\Models\Contact;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -39,5 +40,26 @@ class FrontendController extends Controller
     {
         $adminDetails = AdminDetail::first();
         return view('frontend.our-services.index', compact('adminDetails'));
+    }
+
+    public function contactDetailStore(Request $request)
+    {
+        $request->validate([
+            'name'         => 'required|string|max:255',
+            'email'        => 'required|email|max:255',
+            'phone_number' => 'required|string|max:20',
+            'msg_subject'  => 'required|string|max:255',
+            'message'      => 'required|string',
+        ]);
+
+        Contact::create($request->only([
+            'name',
+            'email',
+            'phone_number',
+            'msg_subject',
+            'message',
+        ]));
+
+        return back()->with('success', 'Message sent successfully!');
     }
 }

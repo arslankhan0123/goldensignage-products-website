@@ -89,6 +89,7 @@
                             </th>
                             <th scope="col" style="width: 50px;">Order</th>
                             <th scope="col">Name</th>
+                            <th scope="col">Type</th>
                             <th scope="col">Description</th>
                             <th scope="col">Action</th>
                         </tr>
@@ -127,6 +128,7 @@
                             </div>
                         </td> -->
                             <td>{{$productCategory->name}}</td>
+                            <td>{{$productCategory->type}}</td>
                             <td>{{$productCategory->description ?? 'N/A'}}</td>
                             <td>
                                 <a

@@ -171,6 +171,66 @@
                                 @enderror
                             </div>
                         </div>
+
+                        <!-- Gallery Section -->
+                        <div class="col-md-12">
+                            <label class="form-label fw-bold">Product Gallery <span class="text-danger">*</span></label>
+                            <small class="d-block text-muted mb-3">Add multiple images with titles for your product</small>
+                            
+                            <div id="gallery-container">
+                                <!-- Initial Gallery Item -->
+                                <div class="gallery-item card mb-3 p-3" data-index="0">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <h6 class="mb-0 text-primary">Gallery Item #<span class="item-number">1</span></h6>
+                                        <button type="button" class="btn btn-danger btn-sm remove-gallery-item" style="display: none;">
+                                            <iconify-icon icon="solar:trash-bin-minimalistic-bold" class="icon"></iconify-icon>
+                                            Remove
+                                        </button>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label class="form-label">Image <span class="text-danger">*</span></label>
+                                            <input 
+                                                type="file" 
+                                                name="gallery_images[]" 
+                                                class="form-control gallery-image-input" 
+                                                accept="image/*"
+                                                required>
+                                            <div class="gallery-preview mt-2" style="display: none;">
+                                                <img src="" alt="Preview" style="max-width: 150px; height: auto; border-radius: 8px; border: 1px solid #e0e0e0;">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label class="form-label">Title <span class="text-danger">*</span></label>
+                                            <input 
+                                                type="text" 
+                                                name="gallery_titles[]" 
+                                                class="form-control" 
+                                                placeholder="Enter image title"
+                                                required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="button" id="add-more-gallery" class="btn btn-success btn-sm">
+                                <iconify-icon icon="solar:add-circle-bold" class="icon"></iconify-icon>
+                                Add More Image
+                            </button>
+
+                            @error('gallery_images')
+                                <div class="invalid-feedback d-block">
+                                    {{$message}}
+                                </div>
+                            @enderror
+                            @error('gallery_titles')
+                                <div class="invalid-feedback d-block">
+                                    {{$message}}
+                                </div>
+                            @enderror
+                        </div>
+
                         <div class="col-md-12">
                             <label class="form-label fw-bold text-neutral-900">Long Description</label>
                             <div class="border border-neutral-200 radius-8 overflow-hidden">
@@ -346,6 +406,115 @@
             document.getElementById('imagePreview').style.display = 'none';
         }
     });
+
+    // Gallery Management
+    let galleryIndex = 1;
+
+    // Add More Gallery Item
+    document.getElementById('add-more-gallery').addEventListener('click', function() {
+        const container = document.getElementById('gallery-container');
+        const newItem = createGalleryItem(galleryIndex);
+        container.insertAdjacentHTML('beforeend', newItem);
+        galleryIndex++;
+        updateGalleryNumbers();
+        attachGalleryEvents();
+    });
+
+    // Create Gallery Item HTML
+    function createGalleryItem(index) {
+        return `
+            <div class="gallery-item card mb-3 p-3" data-index="${index}">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h6 class="mb-0 text-primary">Gallery Item #<span class="item-number">${index + 1}</span></h6>
+                    <button type="button" class="btn btn-danger btn-sm remove-gallery-item">
+                        <iconify-icon icon="solar:trash-bin-minimalistic-bold" class="icon"></iconify-icon>
+                        Remove
+                    </button>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Image <span class="text-danger">*</span></label>
+                        <input 
+                            type="file" 
+                            name="gallery_images[]" 
+                            class="form-control gallery-image-input" 
+                            accept="image/*"
+                            required>
+                        <div class="gallery-preview mt-2" style="display: none;">
+                            <img src="" alt="Preview" style="max-width: 150px; height: auto; border-radius: 8px; border: 1px solid #e0e0e0;">
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Title <span class="text-danger">*</span></label>
+                        <input 
+                            type="text" 
+                            name="gallery_titles[]" 
+                            class="form-control" 
+                            placeholder="Enter image title"
+                            required>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    // Attach events to gallery items
+    function attachGalleryEvents() {
+        // Remove gallery item
+        document.querySelectorAll('.remove-gallery-item').forEach(btn => {
+            btn.onclick = function() {
+                this.closest('.gallery-item').remove();
+                updateGalleryNumbers();
+                toggleRemoveButtons();
+            };
+        });
+
+        // Gallery image preview
+        document.querySelectorAll('.gallery-image-input').forEach(input => {
+            input.onchange = function(e) {
+                const file = e.target.files[0];
+                const preview = this.parentElement.querySelector('.gallery-preview');
+                const previewImg = preview.querySelector('img');
+                
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        previewImg.src = e.target.result;
+                        preview.style.display = 'block';
+                    };
+                    reader.readAsDataURL(file);
+                } else {
+                    preview.style.display = 'none';
+                }
+            };
+        });
+    }
+
+    // Update gallery item numbers
+    function updateGalleryNumbers() {
+        document.querySelectorAll('.gallery-item').forEach((item, index) => {
+            item.querySelector('.item-number').textContent = index + 1;
+        });
+        toggleRemoveButtons();
+    }
+
+    // Toggle remove buttons visibility
+    function toggleRemoveButtons() {
+        const items = document.querySelectorAll('.gallery-item');
+        items.forEach((item, index) => {
+            const removeBtn = item.querySelector('.remove-gallery-item');
+            if (items.length === 1) {
+                removeBtn.style.display = 'none';
+            } else {
+                removeBtn.style.display = 'inline-block';
+            }
+        });
+    }
+
+    // Initialize gallery events
+    attachGalleryEvents();
+    toggleRemoveButtons();
 
     // Load products by category
     document.getElementById('category_id')?.addEventListener('change', function() {

@@ -67,7 +67,7 @@
                 <div class="overview-card">
                     <h3>Call Us</h3>
                     <span>
-                        <a href="tel:{{ $adminDetails->phone }}">{{ $adminDetails->phone }}</a>
+                        <a href="tel:{{ $adminDetails->phone ?? '' }}">{{ $adminDetails->phone ?? '' }}</a>
                     </span>
 
                     <div class="overview-shape">
@@ -80,7 +80,7 @@
                 <div class="overview-card">
                     <h3>Email Us</h3>
                     <span>
-                        <a href="mailto:{{ $adminDetails->email }}">{{ $adminDetails->email }}</a>
+                        <a href="mailto:{{ $adminDetails->email ?? '' }}">{{ $adminDetails->email ?? '' }}</a>
                     </span>
 
                     <div class="overview-shape">
@@ -93,7 +93,7 @@
                 <div class="overview-card">
                     <h3>Tech Support</h3>
                     <span>
-                        <a href="tel:{{ $adminDetails->support }}">{{ $adminDetails->support }}</a>
+                        <a href="tel:{{ $adminDetails->support ?? '' }}">{{ $adminDetails->support ?? '' }}</a>
                     </span>
 
                     <div class="overview-shape">
@@ -105,7 +105,7 @@
             <div class="col-lg-3 col-md-6">
                 <div class="overview-card">
                     <h3>Visit Us</h3>
-                    <span>{{ $adminDetails->address }}</span>
+                    <span>{{ $adminDetails->address ?? '' }}</span>
 
                     <div class="overview-shape">
                         <img src="{{ asset('frontend/assets/img/overview-shape.png') }}" alt="image">

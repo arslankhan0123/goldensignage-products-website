@@ -55,13 +55,30 @@
                                     value="{{old('name', $category->name)}}"
                                     required />
                                 @error('name')
-                                    <div class="invalid-feedback">
-                                        {{$message}}
-                                    </div>
+                                <div class="invalid-feedback">
+                                    {{$message}}
+                                </div>
                                 @else
-                                    <div class="invalid-feedback">
-                                        Please provide category name
-                                    </div>
+                                <div class="invalid-feedback">
+                                    Please provide category name
+                                </div>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <label class="form-label">Type</label>
+                            <div class="has-validation">
+                                <input
+                                    type="text"
+                                    name="type"
+                                    class="form-control @error('type') is-invalid @enderror"
+                                    placeholder="Enter Category type"
+                                    value="{{old('type', $category->type)}}"
+                                    required />
+                                @error('type')
+                                <div class="invalid-feedback">
+                                    {{$message}}
+                                </div>
                                 @enderror
                             </div>
                         </div>
@@ -74,18 +91,18 @@
                                     rows="4"
                                     placeholder="Enter category description">{{old('description', $category->description)}}</textarea>
                                 @error('description')
-                                    <div class="invalid-feedback">
-                                        {{$message}}
-                                    </div>
+                                <div class="invalid-feedback">
+                                    {{$message}}
+                                </div>
                                 @enderror
                             </div>
                         </div>
                         <div class="col-md-12">
                             <label class="form-label">Category Image</label>
                             @if($category->image)
-                                <div class="mb-2" id="currentImage">
-                                    <img src="{{asset($category->image)}}" alt="{{$category->name}}" style="max-width: 200px; height: auto; border-radius: 8px; border: 1px solid #e0e0e0;">
-                                </div>
+                            <div class="mb-2" id="currentImage">
+                                <img src="{{asset($category->image)}}" alt="{{$category->name}}" style="max-width: 200px; height: auto; border-radius: 8px; border: 1px solid #e0e0e0;">
+                            </div>
                             @endif
                             <div id="newImagePreview" class="mb-2" style="display: none;">
                                 <img id="previewImg" src="" alt="Preview" style="max-width: 200px; height: auto; border-radius: 8px; border: 1px solid #e0e0e0;">
@@ -100,9 +117,9 @@
                                     accept="image/*" />
                                 <small class="text-muted">Leave empty to keep current image</small>
                                 @error('image')
-                                    <div class="invalid-feedback">
-                                        {{$message}}
-                                    </div>
+                                <div class="invalid-feedback">
+                                    {{$message}}
+                                </div>
                                 @enderror
                             </div>
                         </div>
@@ -158,5 +175,3 @@
     });
 </script>
 @endsection
-
-

@@ -4,22 +4,79 @@
 @endsection
 
 @section('content')
+<!-- Inline styles to make service images uniform -->
+<style>
+    /* Ensure service images have consistent size and crop rather than stretch */
+    .services-image img,
+    .services-slides-two .services-image img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        display: block;
+    }
+
+    /* Slightly smaller on small screens */
+    @media (max-width: 768px) {
+        .services-image img,
+        .services-slides-two .services-image img {
+            height: 160px;
+        }
+    }
+</style>
 <!-- Start Page Banner Area -->
 <div class="page-banner-area bg-2 jarallax" data-jarallax='{"speed": 0.3}'>
     <div class="container">
         <div class="page-banner-content" data-aos="fade-right" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
-            <h2>Services Style One</h2>
+            <h2>Our Services</h2>
 
             <ul>
                 <li>
                     <a href="{{ route('home') }}">Home</a>
                 </li>
-                <li>Services Style One</li>
+                <li>Our Services</li>
             </ul>
         </div>
     </div>
 </div>
 <!-- End Page Banner Area -->
+
+<!-- Success/Error Messages -->
+@if(session('success'))
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Success!</strong> {{ session('success') }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+@endif
+
+@if(request()->get('deleted') == 'success')
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Success!</strong>
+    @php
+    $count = request()->get('count', 1);
+    @endphp
+    {{ $count > 1 ? $count . ' contacts deleted successfully.' : 'Contact deleted successfully.' }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+@endif
+
+@if(session('error'))
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <strong>Error!</strong> {{ session('error') }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+@endif
+
+@if($errors->any())
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <strong>Error!</strong>
+    <ul class="mb-0">
+        @foreach($errors->all() as $error)
+        <li>{{ $error }}</li>
+        @endforeach
+    </ul>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+@endif
 
 <!-- Start Choose Area -->
 <div class="choose-area pt-100 pb-75">
@@ -108,22 +165,24 @@
         </div>
 
         <div class="row justify-content-center">
+            @foreach ($services as $servics)
             <div class="col-lg-4 col-md-6">
                 <div class="services-item">
                     <div class="services-image">
-                        <a href="#"><img src="{{ asset('frontend/assets/img/services-1.jpg') }}" alt="image"></a>
+                        <a href="#"><img src="{{ asset($servics->image) }}" alt="image"></a>
                     </div>
                     <div class="services-content">
                         <h3>
-                            <a href="#">Software Development</a>
+                            <a href="#">{{ $servics->name }}</a>
                         </h3>
-                        <p>Lorem ipsum dolor sit amet con setetur sadipscing elitr sed…</p>
+                        <p>{{ $servics->short_description }}</p>
                         <a href="#" class="services-btn">View More</a>
                     </div>
                 </div>
             </div>
+            @endforeach
 
-            <div class="col-lg-4 col-md-6">
+            <!-- <div class="col-lg-4 col-md-6">
                 <div class="services-item">
                     <div class="services-image">
                         <a href="#"><img src="{{ asset('frontend/assets/img/services-1.jpg') }}" alt="image"></a>
@@ -136,9 +195,9 @@
                         <a href="#" class="services-btn">View More</a>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="col-lg-4 col-md-6">
+            <!-- <div class="col-lg-4 col-md-6">
                 <div class="services-item">
                     <div class="services-image">
                         <a href="#"><img src="{{ asset('frontend/assets/img/services-1.jpg') }}" alt="image"></a>
@@ -151,9 +210,9 @@
                         <a href="#" class="services-btn">View More</a>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="col-lg-4 col-md-6">
+            <!-- <div class="col-lg-4 col-md-6">
                 <div class="services-item">
                     <div class="services-image">
                         <a href="#"><img src="{{ asset('frontend/assets/img/services-1.jpg') }}" alt="image"></a>
@@ -166,9 +225,9 @@
                         <a href="#" class="services-btn">View More</a>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="col-lg-4 col-md-6">
+            <!-- <div class="col-lg-4 col-md-6">
                 <div class="services-item">
                     <div class="services-image">
                         <a href="#"><img src="{{ asset('frontend/assets/img/services-1.jpg') }}" alt="image"></a>
@@ -181,9 +240,9 @@
                         <a href="#" class="services-btn">View More</a>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="col-lg-4 col-md-6">
+            <!-- <div class="col-lg-4 col-md-6">
                 <div class="services-item">
                     <div class="services-image">
                         <a href="#"><img src="{{ asset('frontend/assets/img/services-1.jpg') }}" alt="image"></a>
@@ -196,9 +255,9 @@
                         <a href="#" class="services-btn">View More</a>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="col-lg-12 col-md-12">
+            <!-- <div class="col-lg-12 col-md-12">
                 <div class="pagination-area">
                     <a href="#" class="prev page-numbers"><i class="ri-arrow-left-s-line"></i></a>
                     <span class="page-numbers current" aria-current="page">1</span>
@@ -206,7 +265,7 @@
                     <a href="#" class="page-numbers">3</a>
                     <a href="#" class="next page-numbers"><i class="ri-arrow-right-s-line"></i></a>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 
@@ -229,20 +288,22 @@
         </div>
 
         <div class="services-slides-two owl-carousel owl-theme">
+            @foreach ($services as $servics)
             <div class="services-item">
                 <div class="services-image">
-                    <a href="#"><img src="{{ asset('frontend/assets/img/services-1.jpg') }}" alt="image"></a>
+                    <a href="#"><img src="{{ asset($servics->image) }}" alt="image"></a>
                 </div>
                 <div class="services-content">
                     <h3>
-                        <a href="#">Database Administrator</a>
+                        <a href="#">{{ $servics->title }}</a>
                     </h3>
-                    <p>Lorem ipsum dolor sit amet con setetur sadipscing elitr sed…</p>
+                    <p>{{ $servics->short_description }}</p>
                     <a href="#" class="services-btn">View More</a>
                 </div>
             </div>
+            @endforeach
 
-            <div class="services-item">
+            <!-- <div class="services-item">
                 <div class="services-image">
                     <a href="#"><img src="{{ asset('frontend/assets/img/services-1.jpg') }}" alt="image"></a>
                 </div>
@@ -253,9 +314,9 @@
                     <p>Lorem ipsum dolor sit amet con setetur sadipscing elitr sed…</p>
                     <a href="#" class="services-btn">View More</a>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="services-item">
+            <!-- <div class="services-item">
                 <div class="services-image">
                     <a href="#"><img src="{{ asset('frontend/assets/img/services-1.jpg') }}" alt="image"></a>
                 </div>
@@ -266,9 +327,9 @@
                     <p>Lorem ipsum dolor sit amet con setetur sadipscing elitr sed…</p>
                     <a href="#" class="services-btn">View More</a>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="services-item">
+            <!-- <div class="services-item">
                 <div class="services-image">
                     <a href="#"><img src="{{ asset('frontend/assets/img/services-1.jpg') }}" alt="image"></a>
                 </div>
@@ -279,9 +340,9 @@
                     <p>Lorem ipsum dolor sit amet con setetur sadipscing elitr sed…</p>
                     <a href="#" class="services-btn">View More</a>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="services-item">
+            <!-- <div class="services-item">
                 <div class="services-image">
                     <a href="#"><img src="{{ asset('frontend/assets/img/services-1.jpg') }}" alt="image"></a>
                 </div>
@@ -292,9 +353,9 @@
                     <p>Lorem ipsum dolor sit amet con setetur sadipscing elitr sed…</p>
                     <a href="#" class="services-btn">View More</a>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="services-item">
+            <!-- <div class="services-item">
                 <div class="services-image">
                     <a href="#"><img src="{{ asset('frontend/assets/img/services-1.jpg') }}" alt="image"></a>
                 </div>
@@ -305,9 +366,9 @@
                     <p>Lorem ipsum dolor sit amet con setetur sadipscing elitr sed…</p>
                     <a href="#" class="services-btn">View More</a>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="services-item">
+            <!-- <div class="services-item">
                 <div class="services-image">
                     <a href="#"><img src="{{ asset('frontend/assets/img/services-1.jpg') }}" alt="image"></a>
                 </div>
@@ -318,7 +379,7 @@
                     <p>Lorem ipsum dolor sit amet con setetur sadipscing elitr sed…</p>
                     <a href="#" class="services-btn">View More</a>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 
@@ -351,33 +412,41 @@
                     <h3>We Would Like To Hear From You Any Question <span class="overlay"></span></h3>
                     <p>Lorem ipsum dolor sit amet consetetur sadipscing elitre sed diam non umy eirmod tempor invidunt ut labore.</p>
 
-                    <form id="contactFormTwo">
+                    <form id="contactFormTwo" method="POST" action="{{ route('contact.details.store') }}">
+                        @csrf
                         <div class="row">
                             <div class="col-lg-6 col-md-6">
                                 <div class="form-group">
-                                    <input type="text" name="name" class="form-control" required data-error="Please enter your name" placeholder="Your name">
-                                    <div class="help-block with-errors"></div>
+                                    <input type="text" name="name" class="form-control" required placeholder="Your name">
                                 </div>
                             </div>
 
                             <div class="col-lg-6 col-md-6">
                                 <div class="form-group">
-                                    <input type="email" name="email" class="form-control" required data-error="Please enter your email" placeholder="Your email address">
-                                    <div class="help-block with-errors"></div>
+                                    <input type="email" name="email" class="form-control" required placeholder="Your email address">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6">
+                                <div class="form-group">
+                                    <input type="text" name="msg_subject" class="form-control" required placeholder="Your Subject">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6">
+                                <div class="form-group">
+                                    <input type="number" name="phone_number" class="form-control" required placeholder="Your Phone">
                                 </div>
                             </div>
 
                             <div class="col-lg-12 col-md-12">
                                 <div class="form-group">
-                                    <textarea name="message" class="form-control" cols="30" rows="6" required data-error="Please enter your message" placeholder="Write your message..."></textarea>
-                                    <div class="help-block with-errors"></div>
+                                    <textarea name="message" class="form-control" rows="6" required placeholder="Your message..."></textarea>
                                 </div>
                             </div>
 
                             <div class="col-lg-12 col-md-12">
                                 <button type="submit" class="default-btn">Send Message<span></span></button>
-                                <div id="msgSubmitTwo" class="h3 text-center hidden"></div>
-                                <div class="clearfix"></div>
                             </div>
                         </div>
                     </form>
@@ -396,7 +465,7 @@
                 <div class="overview-card">
                     <h3>Call Us</h3>
                     <span>
-                        <a href="tel:9901234567">+990-123-4567</a>
+                        <a href="tel:{{ $adminDetails->phone }}">{{ $adminDetails->phone }}</a>
                     </span>
 
                     <div class="overview-shape">
@@ -409,7 +478,7 @@
                 <div class="overview-card">
                     <h3>Email Us</h3>
                     <span>
-                        <a href="/cdn-cgi/l/email-protection#761e1f15190c1336111b171f1a5815191b"><span class="__cf_email__" data-cfemail="85edece6eaffe0c5e2e8e4ece9abe6eae8">[email&#160;protected]</span></a>
+                        <a href="mailto:{{ $adminDetails->email }}">{{ $adminDetails->email }}</a>
                     </span>
 
                     <div class="overview-shape">
@@ -422,7 +491,7 @@
                 <div class="overview-card">
                     <h3>Tech Support</h3>
                     <span>
-                        <a href="tel:15143125678">+1 (514) 312-5678</a>
+                        <a href="tel:{{ $adminDetails->support }}">{{ $adminDetails->support }}</a>
                     </span>
 
                     <div class="overview-shape">
@@ -434,7 +503,7 @@
             <div class="col-lg-3 col-md-6">
                 <div class="overview-card">
                     <h3>Visit Us</h3>
-                    <span>413 North Las Vegas, NV 89032</span>
+                    <span>{{ $adminDetails->address }}</span>
 
                     <div class="overview-shape">
                         <img src="{{ asset('frontend/assets/img/overview-shape.png') }}" alt="image">

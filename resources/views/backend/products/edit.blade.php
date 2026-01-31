@@ -185,8 +185,111 @@
                                 @enderror
                             </div>
                         </div>
+
+                        <!-- Gallery Section -->
                         <div class="col-md-12">
-                            <label class="form-label fw-bold text-neutral-900">Long Description</label>
+                            <label class="form-label fw-bold">Product Gallery <span class="text-danger">*</span></label>
+                            <small class="d-block text-muted mb-3">Add multiple images with titles for your product</small>
+                            
+                            <div id="gallery-container">
+                                @php
+                                    $existingGallery = [];
+                                    if ($product->gallery) {
+                                        $existingGallery = json_decode($product->gallery, true) ?? [];
+                                    }
+                                @endphp
+
+                                @if(!empty($existingGallery))
+                                    @foreach($existingGallery as $index => $galleryItem)
+                                        <div class="gallery-item card mb-3 p-3" data-index="existing_{{ $index }}">
+                                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                                <h6 class="mb-0 text-primary">Gallery Item #<span class="item-number">{{ $index + 1 }}</span></h6>
+                                                <button type="button" class="btn btn-danger btn-sm remove-existing-gallery-item" data-index="{{ $index }}">
+                                                    <iconify-icon icon="solar:trash-bin-minimalistic-bold" class="icon"></iconify-icon>
+                                                    Remove
+                                                </button>
+                                            </div>
+                                            
+                                            <div class="row">
+                                                <div class="col-md-6 mb-3">
+                                                    <label class="form-label">Current Image</label>
+                                                    <div class="mb-2">
+                                                        <img src="{{ asset($galleryItem['image']) }}" alt="{{ $galleryItem['title'] }}" style="max-width: 150px; height: auto; border-radius: 8px; border: 1px solid #e0e0e0;">
+                                                    </div>
+                                                    <input type="hidden" name="existing_gallery_images[]" value="{{ $galleryItem['image'] }}">
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <label class="form-label">Title <span class="text-danger">*</span></label>
+                                                    <input 
+                                                        type="text" 
+                                                        name="existing_gallery_titles[]" 
+                                                        class="form-control" 
+                                                        value="{{ $galleryItem['title'] }}"
+                                                        placeholder="Enter image title"
+                                                        required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                @else
+                                    <!-- Initial Gallery Item if no existing gallery -->
+                                    <div class="gallery-item card mb-3 p-3" data-index="0">
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <h6 class="mb-0 text-primary">Gallery Item #<span class="item-number">1</span></h6>
+                                            <button type="button" class="btn btn-danger btn-sm remove-gallery-item" style="display: none;">
+                                                <iconify-icon icon="solar:trash-bin-minimalistic-bold" class="icon"></iconify-icon>
+                                                Remove
+                                            </button>
+                                        </div>
+                                        
+                                        <div class="row">
+                                            <div class="col-md-6 mb-3">
+                                                <label class="form-label">Image <span class="text-danger">*</span></label>
+                                                <input 
+                                                    type="file" 
+                                                    name="gallery_images[]" 
+                                                    class="form-control gallery-image-input" 
+                                                    accept="image/*"
+                                                    required>
+                                                <div class="gallery-preview mt-2" style="display: none;">
+                                                    <img src="" alt="Preview" style="max-width: 150px; height: auto; border-radius: 8px; border: 1px solid #e0e0e0;">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <label class="form-label">Title <span class="text-danger">*</span></label>
+                                                <input 
+                                                    type="text" 
+                                                    name="gallery_titles[]" 
+                                                    class="form-control" 
+                                                    placeholder="Enter image title"
+                                                    required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endif
+                            </div>
+
+                            <button type="button" id="add-more-gallery" class="btn btn-success btn-sm">
+                                <iconify-icon icon="solar:add-circle-bold" class="icon"></iconify-icon>
+                                Add More Image
+                            </button>
+
+                            <input type="hidden" name="existing_gallery" id="existing_gallery" value="">
+
+                            @error('gallery_images')
+                                <div class="invalid-feedback d-block">
+                                    {{$message}}
+                                </div>
+                            @enderror
+                            @error('gallery_titles')
+                                <div class="invalid-feedback d-block">
+                                    {{$message}}
+                                </div>
+                            @enderror
+                        </div>
+
+                        <div class="col-md-12">
+                            <label class="form-label fw-bold text-neutral-900">Description <span class="text-muted">(Rich Text)</span></label>
                             <div class="border border-neutral-200 radius-8 overflow-hidden">
                                 <div class="height-200">
                                     <!-- Editor Toolbar Start -->
@@ -240,7 +343,7 @@
                                     <!-- Editor Container End -->
                                 </div>
                             </div>
-                            <textarea name="long_description" id="long_description" style="display: none;">{{old('long_description', $product->long_description)}}</textarea>
+                            <textarea name="long_description" id="long_description" style="display: none;"></textarea>
                             @error('long_description')
                                 <div class="invalid-feedback d-block">
                                     {{$message}}
@@ -304,11 +407,13 @@
                 theme: 'snow',
             });
 
-            // Set initial content
+            // Set initial content from product or old input
             @if(old('long_description', $product->long_description))
                 const oldContent = {!! json_encode(old('long_description', $product->long_description)) !!};
-                quillLongDescription.root.innerHTML = oldContent;
-                document.getElementById('long_description').value = oldContent;
+                if (oldContent) {
+                    quillLongDescription.root.innerHTML = oldContent;
+                    document.getElementById('long_description').value = oldContent;
+                }
             @endif
 
             // Update hidden textarea on content change
@@ -360,6 +465,148 @@
             document.getElementById('newImagePreview').style.display = 'none';
         }
     });
+
+    // Gallery Management for Edit Form
+    let galleryIndex = {{ count($existingGallery ?? []) }};
+    let existingGalleryData = @json($existingGallery ?? []);
+
+    // Add More Gallery Item
+    document.getElementById('add-more-gallery').addEventListener('click', function() {
+        const container = document.getElementById('gallery-container');
+        const newItem = createGalleryItem(galleryIndex);
+        container.insertAdjacentHTML('beforeend', newItem);
+        galleryIndex++;
+        updateGalleryNumbers();
+        attachGalleryEvents();
+    });
+
+    // Create Gallery Item HTML
+    function createGalleryItem(index) {
+        return `
+            <div class="gallery-item card mb-3 p-3" data-index="${index}">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h6 class="mb-0 text-primary">Gallery Item #<span class="item-number">${index + 1}</span></h6>
+                    <button type="button" class="btn btn-danger btn-sm remove-gallery-item">
+                        <iconify-icon icon="solar:trash-bin-minimalistic-bold" class="icon"></iconify-icon>
+                        Remove
+                    </button>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Image <span class="text-danger">*</span></label>
+                        <input 
+                            type="file" 
+                            name="gallery_images[]" 
+                            class="form-control gallery-image-input" 
+                            accept="image/*"
+                            required>
+                        <div class="gallery-preview mt-2" style="display: none;">
+                            <img src="" alt="Preview" style="max-width: 150px; height: auto; border-radius: 8px; border: 1px solid #e0e0e0;">
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Title <span class="text-danger">*</span></label>
+                        <input 
+                            type="text" 
+                            name="gallery_titles[]" 
+                            class="form-control" 
+                            placeholder="Enter image title"
+                            required>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    // Remove existing gallery item
+    document.querySelectorAll('.remove-existing-gallery-item').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const indexToRemove = parseInt(this.getAttribute('data-index'));
+            existingGalleryData.splice(indexToRemove, 1);
+            this.closest('.gallery-item').remove();
+            updateGalleryNumbers();
+            updateExistingGalleryInput();
+            
+            // Re-attach event listeners for remaining items
+            document.querySelectorAll('.remove-existing-gallery-item').forEach((btn, newIndex) => {
+                btn.setAttribute('data-index', newIndex);
+            });
+        });
+    });
+
+    // Attach events to new gallery items
+    function attachGalleryEvents() {
+        // Remove gallery item
+        document.querySelectorAll('.remove-gallery-item').forEach(btn => {
+            btn.onclick = function() {
+                this.closest('.gallery-item').remove();
+                updateGalleryNumbers();
+            };
+        });
+
+        // Gallery image preview
+        document.querySelectorAll('.gallery-image-input').forEach(input => {
+            input.onchange = function(e) {
+                const file = e.target.files[0];
+                const preview = this.parentElement.querySelector('.gallery-preview');
+                const previewImg = preview.querySelector('img');
+                
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        previewImg.src = e.target.result;
+                        preview.style.display = 'block';
+                    };
+                    reader.readAsDataURL(file);
+                } else {
+                    preview.style.display = 'none';
+                }
+            };
+        });
+    }
+
+    // Update gallery item numbers
+    function updateGalleryNumbers() {
+        document.querySelectorAll('.gallery-item').forEach((item, index) => {
+            item.querySelector('.item-number').textContent = index + 1;
+        });
+    }
+
+    // Build existing_gallery JSON from DOM: jo items abhi form mein hain (remove kiye hue exclude). Backend ko yahi value milegi.
+    function updateExistingGalleryInput() {
+        const existingItems = [];
+        const imageInputs = document.querySelectorAll('[name="existing_gallery_images[]"]');
+        const titleInputs = document.querySelectorAll('[name="existing_gallery_titles[]"]');
+        
+        imageInputs.forEach((input, index) => {
+            const titleInput = titleInputs[index];
+            if (input && titleInput && input.value) {
+                existingItems.push({
+                    image: input.value.trim(),
+                    title: (titleInput.value || '').trim()
+                });
+            }
+        });
+        
+        const hiddenInput = document.getElementById('existing_gallery');
+        if (hiddenInput) {
+            hiddenInput.value = JSON.stringify(existingItems);
+        }
+    }
+
+    // Update existing gallery on form submit (so backend gets current state: kept items + edited titles, deleted items excluded)
+    document.querySelector('form').addEventListener('submit', function(e) {
+        updateExistingGalleryInput();
+    });
+
+    // On page load: set existing_gallery hidden input so backend receives current gallery (remaining items after any remove)
+    document.addEventListener('DOMContentLoaded', function() {
+        updateExistingGalleryInput();
+    });
+
+    // Initialize gallery events
+    attachGalleryEvents();
 
     // Load products by category
     document.getElementById('category_id')?.addEventListener('change', function() {

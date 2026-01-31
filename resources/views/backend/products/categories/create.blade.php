@@ -66,6 +66,23 @@
                             </div>
                         </div>
                         <div class="col-md-12">
+                            <label class="form-label">Type</label>
+                            <div class="has-validation">
+                                <input
+                                    type="text"
+                                    name="type"
+                                    class="form-control @error('type') is-invalid @enderror"
+                                    placeholder="Enter Category type"
+                                    value="{{old('type')}}"
+                                    required />
+                                @error('type')
+                                    <div class="invalid-feedback">
+                                        {{$message}}
+                                    </div>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="col-md-12">
                             <label class="form-label">Description</label>
                             <div class="has-validation">
                                 <textarea

@@ -21,7 +21,7 @@ return new class extends Migration
             $table->text('short_description')->nullable();
             $table->longText('long_description')->nullable();
             $table->text('description')->nullable();
-            $table->text('gallery')->nullable();
+            $table->longText('gallery')->nullable();
 
             $table->unsignedBigInteger('category_id');
             $table->foreign('category_id')->references('id')->on('product_categories')->onDelete('cascade')->onUpdate('cascade');

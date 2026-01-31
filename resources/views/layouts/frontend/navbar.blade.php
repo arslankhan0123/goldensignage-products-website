@@ -70,52 +70,35 @@
                             </ul>
                         </li> -->
 
-                        <!-- <li class="nav-item">
+                        @if(isset($signageCategories) && $signageCategories->isNotEmpty())
+                        <li class="nav-item">
                             <a href="#" class="nav-link">
-                                Blog
+                                Signage
                                 <i class="ri-arrow-down-s-line"></i>
                             </a>
                             <ul class="dropdown-menu">
-                                <li class="nav-item">
-                                    <a href="blog-style-1.html" class="nav-link">Blog Style One</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="blog-style-2.html" class="nav-link">Blog Style Two</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="blog-right-sidebar.html" class="nav-link">Blog Right Sidebar</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="author.html" class="nav-link">Author</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="categories.html" class="nav-link">Categories</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="tags.html" class="nav-link">Tags</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="search-page.html" class="nav-link">Search Page</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        Single Post
-                                        <i class="ri-arrow-down-s-line"></i>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li class="nav-item">
-                                            <a href="single-blog-1.html" class="nav-link">Default</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="single-blog-2.html" class="nav-link">With Video</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="single-blog-3.html" class="nav-link">With Image Slider</a>
-                                        </li>
-                                    </ul>
-                                </li>
+                                @foreach($signageCategories as $category)
+                                    <li class="nav-item">
+                                        @if($category->products->isNotEmpty())
+                                            <a href="{{ route('frontend.our-products', ['category' => $category->id]) }}" class="nav-link">
+                                                {{ $category->name }}
+                                                <i class="ri-arrow-down-s-line"></i>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                @foreach($category->products as $product)
+                                                    <li class="nav-item">
+                                                        <a href="{{ route('frontend.product-details', $product->id) }}" class="nav-link">{{ $product->name }}</a>
+                                                    </li>
+                                                @endforeach
+                                            </ul>
+                                        @else
+                                            <a href="{{ route('frontend.our-products', ['category' => $category->id]) }}" class="nav-link">{{ $category->name }}</a>
+                                        @endif
+                                    </li>
+                                @endforeach
                             </ul>
-                        </li> -->
+                        </li>
+                        @endif
 
                         <li class="nav-item">
                             <a href="{{ route('frontend.our-services') }}" class="nav-link">Our Services</a>

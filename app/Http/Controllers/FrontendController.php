@@ -22,9 +22,15 @@ class FrontendController extends Controller
         return view('frontend.contact.index', compact('adminDetails'));
     }
 
-    public function ourProducts()
+    public function ourProducts(Request $request)
     {
-        $products = Product::latest()->get();
+        $query = Product::query();
+
+        if ($request->has('category') && $request->category) {
+            $query->where('category_id', $request->category);
+        }
+
+        $products = $query->latest()->get();
         $adminDetails = AdminDetail::first();
         return view('frontend.our-products.index', compact('products', 'adminDetails'));
     }
@@ -33,7 +39,7 @@ class FrontendController extends Controller
     {
         $product = Product::findOrFail($id);
         $adminDetails = AdminDetail::first();
-        $recent_products = Product::where('id', '!=', $id)->latest()->take(4)->get();
+        $recent_products = Product::where('id', '!=', $id)->where('category_id', $product->category_id)->latest()->take(4)->get();
         return view('frontend.our-products.details', compact('product', 'recent_products', 'adminDetails'));
     }
 

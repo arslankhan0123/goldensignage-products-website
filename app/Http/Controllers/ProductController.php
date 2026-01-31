@@ -34,7 +34,7 @@ class ProductController extends Controller
     {
         $validated = $request->validate([
             'name' => 'required|string|max:255',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif',
+            'image' => 'nullable|image',
             'type' => 'nullable|string|max:255',
             'short_description' => 'nullable|string',
             'long_description' => 'nullable|string',
@@ -100,7 +100,7 @@ class ProductController extends Controller
         
         $validated = $request->validate([
             'name' => 'required|string|max:255',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif',
+            'image' => 'nullable|image',
             'type' => 'nullable|string|max:255',
             'short_description' => 'nullable|string',
             'long_description' => 'nullable|string',

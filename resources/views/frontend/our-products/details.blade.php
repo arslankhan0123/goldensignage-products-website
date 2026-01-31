@@ -14,11 +14,18 @@
         padding: 60px 0 80px;
         background: #fff;
     }
+    .product-detail-hero .headings-row {
+        margin-bottom: 1.5rem;
+    }
     .product-detail-hero .product-title {
         font-size: 2rem;
         font-weight: 700;
         color: #1a1a1a;
-        margin-bottom: 2rem;
+    }
+    .product-detail-hero .about-heading {
+        font-size: 1.35rem;
+        font-weight: 700;
+        color: #1a1a1a;
     }
     .product-detail-hero .main-image-wrap {
         width: 100%;
@@ -36,13 +43,8 @@
         display: block;
         vertical-align: top;
     }
-    .product-detail-about h3 {
-        font-size: 1.35rem;
-        font-weight: 700;
-        color: #1a1a1a;
-        margin-bottom: 1rem;
-    }
     .product-detail-about .about-content {
+        margin-top: 0;
         color: #444;
         line-height: 1.7;
         margin-bottom: 1.5rem;
@@ -182,8 +184,15 @@
 <!-- Start Product Detail Hero (Image + About) -->
 <section class="product-detail-hero">
     <div class="container">
-        <h1 class="product-title">{{ $product->name }}</h1>
-        <div class="row align-items-start">
+        <div class="row headings-row align-items-end">
+            <div class="col-lg-6 col-md-12">
+                <h1 class="product-title mb-0">{{ $product->name }}</h1>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <h1 class="product-title mb-0">About</h1>
+            </div>
+        </div>
+        <div class="row align-items-start content-row">
             <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
                 <div class="main-image-wrap">
                     <a data-fancybox="gallery" href="{{ asset($product->image) }}">
@@ -193,7 +202,6 @@
             </div>
             <div class="col-lg-6 col-md-12">
                 <div class="product-detail-about">
-                    <h3>About</h3>
                     <div class="about-content">
                         {!! $product->long_description !!}
                     </div>

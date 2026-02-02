@@ -4,13 +4,13 @@
             <div class="col-lg-3 col-md-6">
                 <div class="single-footer-widget" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
                     <div class="widget-logo">
-                        <a href="index.html"><img src="https://templates.envytheme.com/coze/default/assets/images/logo.png" alt="image"></a>
+                        <a href="{{ route('home') }}"><img src="{{ asset('logo.png') }}" alt="image"></a>
                     </div>
-                    <p>Lorem ipsum dolor sit amet consetetur sadi scing elitr sed diam nonumy.</p>
+                    <p>We are leading technology solutions providing company all over the world doing over 40 years.</p>
 
                     <ul class="widget-social">
                         <li>
-                            <a href="https://www.facebook.com/EnvyTheme" target="_blank">
+                            <a href="https://www.facebook.com" target="_blank">
                                 <i class="ri-facebook-fill"></i>
                             </a>
                         </li>
@@ -46,11 +46,9 @@
                     <h3>Links</h3>
 
                     <ul class="quick-links">
-                        <li><a href="about-style-1.html">About Us</a></li>
-                        <li><a href="services-style-2.html">Services</a></li>
-                        <li><a href="blog-style-1.html">News</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="{{ route('frontend.our-services') }}">Services</a></li>
+                        <li><a href="{{ route('frontend.about') }}">About Us</a></li>
+                        <li><a href="{{ route('frontend.contact') }}">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
@@ -60,11 +58,8 @@
                     <h3>Pages</h3>
 
                     <ul class="quick-links">
-                        <li><a href="contact.html">Contact Us</a></li>
-                        <li><a href="purchase-guide.html">Purchase Guide</a></li>
-                        <li><a href="faq.html">FAQ's</a></li>
-                        <li><a href="terms-of-service.html">Terms of Service</a></li>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="{{ route('frontend.our-products') }}">Products</a></li>
+                        <li><a href="{{ route('frontend.management') }}">Management</a></li>
                     </ul>
                 </div>
             </div>
@@ -88,7 +83,7 @@
         <div class="container">
             <div class="copyright-area-content">
                 <p>
-                    Copyright <strong>Coze</strong> All Rights Reserved by <a href="https://envytheme.com/" target="_blank"> EnvyTheme</a>
+                    Copyright <strong>Coze</strong> All Rights Reserved by <a href="https://goldensignage.ae/" target="_blank"> Golden Signage</a>
                 </p>
             </div>
         </div>

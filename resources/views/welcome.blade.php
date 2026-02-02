@@ -49,7 +49,7 @@
                 <div class="main-hero-content">
                     <span data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">WE ARE LEADING TECHNOLOGY SOLUTIONS PROVIDING COMPANY</span>
                     <h1 data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">We Are Digital Agency & Tech Solution <span class="overlay"></span></h1>
-                    <p data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">We are leading technology solutions providing company all over the world doing over 40 years. Lorem ipsum dolor sit amet consetetur sadipscing elitr sed diam nonumy eirmod tempor.</p>
+                    <p data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">We are leading technology solutions providing company all over the world doing over 40 years.</p>
 
                     <div class="slides-btn" data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
                         <a href="contact.html" class="default-btn">Get Started</a>

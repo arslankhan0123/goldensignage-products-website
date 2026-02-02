@@ -9,6 +9,7 @@ use App\Http\Controllers\ProductCategoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServicesController;
+use App\Models\AdminDetail;
 use App\Models\Blog;
 use App\Models\Product;
 use Illuminate\Support\Facades\Route;
@@ -16,7 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     $products = Product::latest()->take(4)->get();
     $blogs = Blog::latest()->take(3)->get();
-    return view('welcome', compact('products', 'blogs'));
+    $adminDetails = AdminDetail::first();
+    return view('welcome', compact('products', 'blogs', 'adminDetails'));
 })->name('home');
 
 Route::prefix('/frontend')->group(function () {

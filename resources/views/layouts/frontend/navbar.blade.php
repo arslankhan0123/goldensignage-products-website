@@ -163,7 +163,7 @@
                         @if(isset($officeStoreCategories) && $officeStoreCategories->isNotEmpty())
                         <li class="nav-item">
                             <a href="#" class="nav-link">
-                                Office/Store Branding
+                                Store Branding
                                 <i class="ri-arrow-down-s-line"></i>
                             </a>
                             <ul class="dropdown-menu">
@@ -223,7 +223,7 @@
                         @if(isset($corporateGiftsBagsCategories) && $corporateGiftsBagsCategories->isNotEmpty())
                         <li class="nav-item">
                             <a href="#" class="nav-link">
-                                Corporate Gifts/Bags
+                                Gifts/Bags
                                 <i class="ri-arrow-down-s-line"></i>
                             </a>
                             <ul class="dropdown-menu">
@@ -258,8 +258,12 @@
                             <a href="{{ route('frontend.our-products') }}" class="nav-link">Our Products</a>
                         </li> -->
 
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a href="{{ route('frontend.about') }}" class="nav-link">About</a>
+                        </li> -->
+
+                        <li class="nav-item">
+                            <a href="{{ route('frontend.management') }}" class="nav-link">Management</a>
                         </li>
 
                         <li class="nav-item">

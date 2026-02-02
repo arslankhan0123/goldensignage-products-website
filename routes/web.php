@@ -22,6 +22,7 @@ Route::get('/', function () {
 Route::prefix('/frontend')->group(function () {
     Route::get('/about', [FrontendController::class, 'about'])->name('frontend.about');
     Route::get('/contact', [FrontendController::class, 'contact'])->name('frontend.contact');
+    Route::get('/management', [FrontendController::class, 'management'])->name('frontend.management');
     Route::get('/our-products', [FrontendController::class, 'ourProducts'])->name('frontend.our-products');
     Route::get('/our-products/{id}', [FrontendController::class, 'productDetails'])->name('frontend.product-details');
     Route::get('/our-services', [FrontendController::class, 'ourServices'])->name('frontend.our-services');

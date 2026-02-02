@@ -160,6 +160,36 @@
                         </li>
                         @endif
 
+                        @if(isset($officeStoreCategories) && $officeStoreCategories->isNotEmpty())
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                Office & Store Branding
+                                <i class="ri-arrow-down-s-line"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                @foreach($officeStoreCategories as $category)
+                                    <li class="nav-item">
+                                        @if($category->products->isNotEmpty())
+                                            <a href="{{ route('frontend.our-products', ['category' => $category->id]) }}" class="nav-link">
+                                                {{ $category->name }}
+                                                <i class="ri-arrow-down-s-line"></i>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                @foreach($category->products as $product)
+                                                    <li class="nav-item">
+                                                        <a href="{{ route('frontend.product-details', $product->id) }}" class="nav-link">{{ $product->name }}</a>
+                                                    </li>
+                                                @endforeach
+                                            </ul>
+                                        @else
+                                            <a href="{{ route('frontend.our-products', ['category' => $category->id]) }}" class="nav-link">{{ $category->name }}</a>
+                                        @endif
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </li>
+                        @endif
+
                         <!-- <li class="nav-item">
                             <a href="{{ route('frontend.our-services') }}" class="nav-link">Our Services</a>
                         </li> -->

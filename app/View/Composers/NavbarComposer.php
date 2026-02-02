@@ -35,11 +35,19 @@ class NavbarComposer
                 $query->orderBy('id');
             }])
             ->get();
+
+        $officeStoreCategories = ProductCategory::whereRaw('LOWER(type) = ?', ['officestore'])
+            ->orderBy('order', 'asc')
+            ->with(['products' => function ($query) {
+                $query->orderBy('id');
+            }])
+            ->get();
             
         $view->with([
             'signageCategories' => $signageCategories,
             'flagsCategories'   => $flagsCategories,
             'printingCategories'   => $printingCategories,
+            'officeStoreCategories'   => $officeStoreCategories,
         ]);
     }
 }

@@ -42,12 +42,29 @@ class NavbarComposer
                 $query->orderBy('id');
             }])
             ->get();
-            
+
+        $backdropsExhibitionCategories = ProductCategory::whereRaw('LOWER(type) = ?', ['BackdropsExhibition'])
+            ->orderBy('order', 'asc')
+            ->with(['products' => function ($query) {
+                $query->orderBy('id');
+            }])
+            ->get();
+
+
+        $corporateGiftsBagsCategories = ProductCategory::whereRaw('LOWER(type) = ?', ['CorporateGiftsBags'])
+            ->orderBy('order', 'asc')
+            ->with(['products' => function ($query) {
+                $query->orderBy('id');
+            }])
+            ->get();
+
         $view->with([
             'signageCategories' => $signageCategories,
             'flagsCategories'   => $flagsCategories,
             'printingCategories'   => $printingCategories,
             'officeStoreCategories'   => $officeStoreCategories,
+            'backdropsExhibitionCategories'   => $backdropsExhibitionCategories,
+            'corporateGiftsBagsCategories'   => $corporateGiftsBagsCategories,
         ]);
     }
 }

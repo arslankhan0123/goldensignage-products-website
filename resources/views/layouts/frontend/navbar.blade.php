@@ -133,7 +133,7 @@
                         @if(isset($printingCategories) && $printingCategories->isNotEmpty())
                         <li class="nav-item">
                             <a href="#" class="nav-link">
-                                Printing & Marketing
+                                Printing
                                 <i class="ri-arrow-down-s-line"></i>
                             </a>
                             <ul class="dropdown-menu">
@@ -163,7 +163,7 @@
                         @if(isset($officeStoreCategories) && $officeStoreCategories->isNotEmpty())
                         <li class="nav-item">
                             <a href="#" class="nav-link">
-                                Office & Store Branding
+                                Office/Store Branding
                                 <i class="ri-arrow-down-s-line"></i>
                             </a>
                             <ul class="dropdown-menu">
@@ -190,6 +190,66 @@
                         </li>
                         @endif
 
+                        @if(isset($backdropsExhibitionCategories) && $backdropsExhibitionCategories->isNotEmpty())
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                Exhibition
+                                <i class="ri-arrow-down-s-line"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                @foreach($backdropsExhibitionCategories as $category)
+                                    <li class="nav-item">
+                                        @if($category->products->isNotEmpty())
+                                            <a href="{{ route('frontend.our-products', ['category' => $category->id]) }}" class="nav-link">
+                                                {{ $category->name }}
+                                                <i class="ri-arrow-down-s-line"></i>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                @foreach($category->products as $product)
+                                                    <li class="nav-item">
+                                                        <a href="{{ route('frontend.product-details', $product->id) }}" class="nav-link">{{ $product->name }}</a>
+                                                    </li>
+                                                @endforeach
+                                            </ul>
+                                        @else
+                                            <a href="{{ route('frontend.our-products', ['category' => $category->id]) }}" class="nav-link">{{ $category->name }}</a>
+                                        @endif
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </li>
+                        @endif
+
+                        @if(isset($corporateGiftsBagsCategories) && $corporateGiftsBagsCategories->isNotEmpty())
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                Corporate Gifts/Bags
+                                <i class="ri-arrow-down-s-line"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                @foreach($corporateGiftsBagsCategories as $category)
+                                    <li class="nav-item">
+                                        @if($category->products->isNotEmpty())
+                                            <a href="{{ route('frontend.our-products', ['category' => $category->id]) }}" class="nav-link">
+                                                {{ $category->name }}
+                                                <i class="ri-arrow-down-s-line"></i>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                @foreach($category->products as $product)
+                                                    <li class="nav-item">
+                                                        <a href="{{ route('frontend.product-details', $product->id) }}" class="nav-link">{{ $product->name }}</a>
+                                                    </li>
+                                                @endforeach
+                                            </ul>
+                                        @else
+                                            <a href="{{ route('frontend.our-products', ['category' => $category->id]) }}" class="nav-link">{{ $category->name }}</a>
+                                        @endif
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </li>
+                        @endif
+                        
                         <!-- <li class="nav-item">
                             <a href="{{ route('frontend.our-services') }}" class="nav-link">Our Services</a>
                         </li> -->

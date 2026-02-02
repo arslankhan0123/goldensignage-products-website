@@ -21,6 +21,17 @@ class NavbarComposer
             }])
             ->get();
 
-        $view->with('signageCategories', $signageCategories);
+
+        $flagsCategories = ProductCategory::whereRaw('LOWER(type) = ?', ['flags'])
+            ->orderBy('order', 'asc')
+            ->with(['products' => function ($query) {
+                $query->orderBy('id');
+            }])
+            ->get();
+            
+        $view->with([
+            'signageCategories' => $signageCategories,
+            'flagsCategories'   => $flagsCategories,
+        ]);
     }
 }

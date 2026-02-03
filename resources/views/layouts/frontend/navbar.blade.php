@@ -4,7 +4,7 @@
             <div class="main-responsive-menu">
                 <div class="logo">
                     <a href="{{ route('home') }}">
-                        <img src="{{ asset('logo.png') }}" alt="image">
+                        <img src="{{ asset('logo.png') }}" alt="image" class="site-logo">
                     </a>
                 </div>
             </div>
@@ -15,7 +15,7 @@
         <div class="container-fluid">
             <nav class="navbar navbar-expand-md navbar-light">
                 <a class="navbar-brand" href="{{ route('home') }}">
-                    <img src="{{ asset('logo.png') }}" alt="Golden Signage" style="height:80px; width:auto;">
+                    <img src="{{ asset('logo.png') }}" alt="Golden Signage" class="site-logo">
                 </a>
 
                 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">

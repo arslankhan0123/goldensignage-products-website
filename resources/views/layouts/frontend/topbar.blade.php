@@ -6,13 +6,13 @@
                     <li>
                         <i class="ri-phone-line"></i>
                         <span>Phone:
-                            <a href="tel:{{ preg_replace('/\D+/', '', ($adminDetails->phone ?? '+9901234567')) }}">{{ $adminDetails->phone ?? '+990-123-4567' }}</a>
+                            <a href="tel:{{ preg_replace('/\D+/', '', ($adminDetails->phone ?? '')) }}">{{ $adminDetails->phone ?? '' }}</a>
                         </span>
                     </li>
                     <li>
                         <i class="ri-mail-line"></i>
                         <span>Mail:
-                            <a href="mailto:{{ $adminDetails->email ?? 'info@example.com' }}">{{ $adminDetails->email ?? 'info@example.com' }}</a>
+                            <a href="mailto:{{ $adminDetails->email ?? '' }}">{{ $adminDetails->email ?? 'info@example.com' }}</a>
                         </span>
                     </li>
                     <li>

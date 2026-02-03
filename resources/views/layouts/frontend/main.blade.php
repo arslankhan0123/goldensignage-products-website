@@ -174,6 +174,24 @@
             }
         })();
     </script>
+    <style>
+        .site-logo {
+            height: 80px;
+            width: auto;
+        }
+
+        @media (max-width: 1200px) {
+            .site-logo {
+                height: auto;
+                display: inline-block;
+                max-width: 50% !important;
+            }
+
+            .topbar-area {
+                display: none !important;
+            }
+        }
+    </style>
 </body>
 
 </html>

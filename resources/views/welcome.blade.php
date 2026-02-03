@@ -49,10 +49,10 @@
                 <div class="main-hero-content">
                     <span data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">WE ARE LEADING TECHNOLOGY SOLUTIONS PROVIDING COMPANY</span>
                     <h1 data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">We Are Digital Agency & Tech Solution <span class="overlay"></span></h1>
-                    <p data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">We are leading technology solutions providing company all over the world doing over 40 years.</p>
+                    <p data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">Golden Signage is a professional signage and branding solutions company based in Dubai, UAE, dedicated to helping businesses stand out with impactful visual communication. We specialize in designing and delivering high-quality custom signage, including 3D signs, neon signs, indoor and outdoor branding, and illuminated and non-illuminated displays.</p>
 
                     <div class="slides-btn" data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
-                        <a href="contact.html" class="default-btn">Get Started</a>
+                        <a href="{{ route('frontend.contact') }}" class="default-btn">Get Started</a>
                     </div>
                 </div>
             </div>
@@ -63,10 +63,10 @@
                 <div class="main-hero-content">
                     <span data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">WE ARE LEADING TECHNOLOGY SOLUTIONS PROVIDING COMPANY</span>
                     <h1 data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">Excellent IT Services For Your Success <span class="overlay"></span></h1>
-                    <p data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">We are leading technology solutions providing company all over the world doing over 40 years. Lorem ipsum dolor sit amet consetetur sadipscing elitr sed diam nonumy eirmod tempor.</p>
+                    <p data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">Golden Signage is a professional signage and branding solutions company based in Dubai, UAE, dedicated to helping businesses stand out with impactful visual communication. We specialize in designing and delivering high-quality custom signage, including 3D signs, neon signs, indoor and outdoor branding, and illuminated and non-illuminated displays.</p>
 
                     <div class="slides-btn" data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
-                        <a href="contact.html" class="default-btn">Get Started</a>
+                        <a href="{{ route('frontend.contact') }}" class="default-btn">Get Started</a>
                     </div>
                 </div>
             </div>
@@ -77,10 +77,10 @@
                 <div class="main-hero-content">
                     <span data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">WE ARE LEADING TECHNOLOGY SOLUTIONS PROVIDING COMPANY</span>
                     <h1 data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">Get The Best IT Solution From Us <span class="overlay"></span></h1>
-                    <p data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">We are leading technology solutions providing company all over the world doing over 40 years. Lorem ipsum dolor sit amet consetetur sadipscing elitr sed diam nonumy eirmod tempor.</p>
+                    <p data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">Golden Signage is a professional signage and branding solutions company based in Dubai, UAE, dedicated to helping businesses stand out with impactful visual communication. We specialize in designing and delivering high-quality custom signage, including 3D signs, neon signs, indoor and outdoor branding, and illuminated and non-illuminated displays.</p>
 
                     <div class="slides-btn" data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
-                        <a href="contact.html" class="default-btn">Get Started</a>
+                        <a href="{{ route('frontend.contact') }}" class="default-btn">Get Started</a>
                     </div>
                 </div>
             </div>
@@ -112,10 +112,9 @@
                 <div class="about-content" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
                     <span>WHO WE ARE</span>
                     <h3>We Are All In One IT Solution & Technology Company <span class="overlay"></span></h3>
-                    <p>We are leading technology solutions providing company all over the world doing over 40 years lorem ipsum dolor sit amet.</p>
-                    <p>We are leading technology solutions providing company all over the world doing over 40 years. Lorem ipsum dolor sit amet consetetur sadipscing elitr sed diam non umy eirmod tempor invidunt ut labore.</p>
+                    <p>Golden Signage is a professional signage and branding solutions company based in Dubai, UAE, dedicated to helping businesses stand out with impactful visual communication. We specialize in designing and delivering high-quality custom signage, including 3D signs, neon signs, indoor and outdoor branding, and illuminated and non-illuminated displays.</p>
                     <div class="about-btn">
-                        <a href="about-style-1.html" class="default-btn">Know More About Us</a>
+                        <a href="{{ route('frontend.about') }}" class="default-btn">Know More About Us</a>
                     </div>
                 </div>
             </div>
@@ -140,11 +139,11 @@
             <div class="col-lg-3 col-md-6">
                 <div class="single-choose-card" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
                     <div class="choose-image" data-tilt>
-                        <a href="services-details.html"><img src="{{ asset('frontend/assets/img/choose-1.png') }}" alt="image"></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/img/choose-1.png') }}" alt="image"></a>
                     </div>
                     <div class="choose-content">
                         <h3>
-                            <a href="services-details.html">Mobile Apps</a>
+                            <a href="#">Mobile Apps</a>
                         </h3>
                         <p>Lorem ipsum dolor sit amet conset sadipscing elitr sed diam nonumy eirm od tempor invidunt ut labore.</p>
                     </div>
@@ -154,11 +153,11 @@
             <div class="col-lg-3 col-md-6">
                 <div class="single-choose-card" data-aos="fade-up" data-aos-delay="60" data-aos-duration="600" data-aos-once="true">
                     <div class="choose-image" data-tilt>
-                        <a href="services-details.html"><img src="{{ asset('frontend/assets/img/choose-2.png') }}" alt="image"></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/img/choose-2.png') }}" alt="image"></a>
                     </div>
                     <div class="choose-content">
                         <h3>
-                            <a href="services-details.html">Branding Strategy</a>
+                            <a href="#">Branding Strategy</a>
                         </h3>
                         <p>Lorem ipsum dolor sit amet conset sadipscing elitr sed diam nonumy eirm od tempor invidunt ut labore.</p>
                     </div>
@@ -168,11 +167,11 @@
             <div class="col-lg-3 col-md-6">
                 <div class="single-choose-card" data-aos="fade-up" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
                     <div class="choose-image" data-tilt>
-                        <a href="services-details.html"><img src="{{ asset('frontend/assets/img/choose-3.png') }}" alt="image"></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/img/choose-3.png') }}" alt="image"></a>
                     </div>
                     <div class="choose-content">
                         <h3>
-                            <a href="services-details.html">Graphic Design</a>
+                            <a href="#">Graphic Design</a>
                         </h3>
                         <p>Lorem ipsum dolor sit amet conset sadipscing elitr sed diam nonumy eirm od tempor invidunt ut labore.</p>
                     </div>
@@ -182,11 +181,11 @@
             <div class="col-lg-3 col-md-6">
                 <div class="single-choose-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
                     <div class="choose-image" data-tilt>
-                        <a href="services-details.html"><img src="{{ asset('frontend/assets/img/choose-4.png') }}" alt="image"></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/img/choose-4.png') }}" alt="image"></a>
                     </div>
                     <div class="choose-content">
                         <h3>
-                            <a href="services-details.html">Search Optimization</a>
+                            <a href="#">Search Optimization</a>
                         </h3>
                         <p>Lorem ipsum dolor sit amet conset sadipscing elitr sed diam nonumy eirm od tempor invidunt ut labore.</p>
                     </div>
@@ -275,7 +274,7 @@
                 </div>
 
                 <div class="skill-bar-btn" data-aos="fade-up" data-aos-delay="90" data-aos-duration="900" data-aos-once="true">
-                    <a href="about-style-1.html" class="default-btn">Explore More</a>
+                    <a href="{{ route('frontend.about') }}" class="default-btn">Explore More</a>
                 </div>
             </div>
 
@@ -314,14 +313,14 @@
             <div class="col-lg-3 col-md-6">
                 <div class="services-item">
                     <div class="services-image">
-                        <a href="services-details.html"><img src="{{asset($product->image)}}" alt="image"></a>
+                        <a href="#"><img src="{{asset($product->image)}}" alt="image"></a>
                     </div>
                     <div class="services-content">
                         <h3>
-                            <a href="services-details.html">{{ $product->name }}</a>
+                            <a href="#">{{ $product->name }}</a>
                         </h3>
                         <p>{{ \Illuminate\Support\Str::limit($product->short_description, 60) }}</p>
-                        <a href="services-details.html" class="services-btn">View More</a>
+                        <a href="{{ route('frontend.product-details', $product->id) }}" class="services-btn">View More</a>
                     </div>
                 </div>
             </div>
@@ -329,14 +328,14 @@
             <!-- <div class="col-lg-3 col-md-6">
                 <div class="services-item">
                     <div class="services-image">
-                        <a href="services-details.html"><img src="{{ asset('frontend/assets/img/services-1.jpg') }}" alt="image"></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/img/services-1.jpg') }}" alt="image"></a>
                     </div>
                     <div class="services-content">
                         <h3>
-                            <a href="services-details.html">Software Development</a>
+                            <a href="#">Software Development</a>
                         </h3>
                         <p>Lorem ipsum dolor sit amet con setetur sadipscing elitr sed…</p>
-                        <a href="services-details.html" class="services-btn">View More</a>
+                        <a href="#" class="services-btn">View More</a>
                     </div>
                 </div>
             </div> -->
@@ -344,14 +343,14 @@
             <!-- <div class="col-lg-3 col-md-6">
                 <div class="services-item">
                     <div class="services-image">
-                        <a href="services-details.html"><img src="{{ asset('frontend/assets/img/services-1.jpg') }}" alt="image"></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/img/services-1.jpg') }}" alt="image"></a>
                     </div>
                     <div class="services-content">
                         <h3>
-                            <a href="services-details.html">App Development</a>
+                            <a href="#">App Development</a>
                         </h3>
                         <p>Lorem ipsum dolor sit amet con setetur sadipscing elitr sed…</p>
-                        <a href="services-details.html" class="services-btn">View More</a>
+                        <a href="#" class="services-btn">View More</a>
                     </div>
                 </div>
             </div> -->
@@ -359,14 +358,14 @@
             <!-- <div class="col-lg-3 col-md-6">
                 <div class="services-item">
                     <div class="services-image">
-                        <a href="services-details.html"><img src="{{ asset('frontend/assets/img/services-1.jpg') }}" alt="image"></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/img/services-1.jpg') }}" alt="image"></a>
                     </div>
                     <div class="services-content">
                         <h3>
-                            <a href="services-details.html">Web Development</a>
+                            <a href="#">Web Development</a>
                         </h3>
                         <p>Lorem ipsum dolor sit amet con setetur sadipscing elitr sed…</p>
-                        <a href="services-details.html" class="services-btn">View More</a>
+                        <a href="#" class="services-btn">View More</a>
                     </div>
                 </div>
             </div> -->
@@ -374,21 +373,21 @@
             <!-- <div class="col-lg-3 col-md-6">
                 <div class="services-item">
                     <div class="services-image">
-                        <a href="services-details.html"><img src="{{ asset('frontend/assets/img/services-1.jpg') }}" alt="image"></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/img/services-1.jpg') }}" alt="image"></a>
                     </div>
                     <div class="services-content">
                         <h3>
-                            <a href="services-details.html">Analytic Solutions</a>
+                            <a href="#">Analytic Solutions</a>
                         </h3>
                         <p>Lorem ipsum dolor sit amet con setetur sadipscing elitr sed…</p>
-                        <a href="services-details.html" class="services-btn">View More</a>
+                        <a href="#" class="services-btn">View More</a>
                     </div>
                 </div>
             </div> -->
         </div>
 
         <div class="services-all-btn">
-            <a href="services-style-1.html" class="default-btn">Explore All Services</a>
+            <a href="{{ route('frontend.our-products') }}" class="default-btn">Explore All Products</a>
         </div>
     </div>
 

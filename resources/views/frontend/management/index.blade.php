@@ -1,10 +1,13 @@
 @extends('layouts.frontend.main')
-@section('title', 'About Us')
+
+@section('title', 'Management Team')
+
 @section('meta')
 @endsection
 
 @section('content')
-<!-- Start Page Banner Area -->
+
+<!-- ================= Page Banner ================= -->
 <div class="page-banner-area bg-3 jarallax" data-jarallax='{"speed": 0.3}'>
     <div class="container">
         <div class="page-banner-content" data-aos="fade-right" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
@@ -16,15 +19,14 @@
         </div>
     </div>
 </div>
-<!-- End Page Banner Area -->
+<!-- ================= End Page Banner ================= -->
 
-<!-- Start Team Section -->
 @php
 $teamMembers = [
 [
 'name' => 'Amir Riaz',
 'title' => 'CEO',
-'image' => 'https://randomuser.me/api/portraits/men/32.jpg',
+'image' => 'https://carewellsigns.ae/wp-content/uploads/2025/07/18242648-1236-4b11-ba0e-83b49c4cf40c-229x300-removebg-preview.png',
 'description' => 'Visionary leader driving innovation and strategic growth.',
 'experience' => '15+ Years',
 'specialization' => 'Business Strategy, Leadership'
@@ -64,87 +66,162 @@ $teamMembers = [
 ];
 @endphp
 
-<div class="team-section py-5" style="background: #f8f9fa;">
+<!-- ================= Team Section ================= -->
+<div class="team-section py-5" style="background:#f8f9fa;">
     <div class="container">
         <h2 class="text-center mb-5 fw-bold">Meet Our Team</h2>
 
         @foreach($teamMembers as $member)
         <div class="card mb-5 border-0 shadow-lg team-card">
-            <div class="row g-0 align-items-center p-3">
-                <!-- Image Left -->
-                <div class="col-md-4 text-center">
-                    <!-- Update your image style -->
-                    <img src="{{ $member['image'] }}" alt="{{ $member['name'] }}" class="team-img img-fluid rounded-circle shadow-lg">
+            <div class="row g-0 align-items-center p-3 team-row">
+
+                <!-- Image -->
+                <div class="col-md-4 text-center mb-3 mb-md-0">
+                    <img src="{{ $member['image'] }}"
+                        alt="{{ $member['name'] }}"
+                        class="team-img img-fluid">
                 </div>
 
-                <!-- Details Right -->
-                <div class="col-md-8">
+                <!-- Content -->
+                <div class="col-md-8 text-center text-md-start">
                     <div class="card-body">
-                        <h4 class="card-title fw-bold mb-1">{{ $member['name'] }}</h4>
-                        <h6 class="card-subtitle mb-2 text-primary fw-semibold">{{ $member['title'] }}</h6>
-                        <p class="mb-2 text-muted">{{ $member['description'] }}</p>
+                        <h4 class="fw-bold mb-1">{{ $member['name'] }}</h4>
+                        <h6 class="text-primary fw-semibold mb-2">{{ $member['title'] }}</h6>
+                        <p class="text-muted mb-3">{{ $member['description'] }}</p>
 
-                        <div class="d-flex flex-wrap gap-3 mt-3">
-                            <span class="badge bg-secondary">Experience: {{ $member['experience'] }}</span>
-                            <span class="badge bg-info text-dark">Specialization: {{ $member['specialization'] }}</span>
+                        <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-md-start">
+                            <!-- <span class="badge bg-secondary" style="padding: 8px 12px; text-align:center">Experience: {{ $member['experience'] }}</span> -->
+                            <div class="experience">
+                                Experience: {{ $member['experience'] }}
+                            </div>
+                            <div class="specialization">
+                                Specialization: WordPress, WooCommerce, Plugin Development
+                            </div>
+
                         </div>
 
-                        <!-- Optional Social Icons -->
+                        <!-- Social Icons -->
                         <div class="mt-3">
-                            <a href="#" class="me-3 text-decoration-none text-dark"><i class="bi bi-linkedin fs-5"></i></a>
-                            <a href="#" class="me-3 text-decoration-none text-dark"><i class="bi bi-twitter fs-5"></i></a>
-                            <a href="#" class="text-decoration-none text-dark"><i class="bi bi-facebook fs-5"></i></a>
+                            <a href="#" class="me-3 text-dark"><i class="bi bi-linkedin fs-5"></i></a>
+                            <a href="#" class="me-3 text-dark"><i class="bi bi-twitter fs-5"></i></a>
+                            <a href="#" class="text-dark"><i class="bi bi-facebook fs-5"></i></a>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
         @endforeach
     </div>
 </div>
 
-<!-- Custom CSS for Hover & Card -->
+<!-- ================= Responsive CSS ================= -->
 <style>
     .team-card {
-        transition: transform 0.3s, box-shadow 0.3s;
+        border-radius: 16px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .team-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        transform: translateY(-6px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
     }
 
-    .team-card .badge {
-        font-size: 0.85rem;
-        padding: 0.45em 0.7em;
-    }
-</style>
-<style>
     .team-img {
         width: 200px;
-        /* fixed width */
         height: 200px;
-        /* fixed height */
         object-fit: cover;
-        /* crop/fit the image nicely */
         border-radius: 50%;
-        /* circle */
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-        transition: transform 0.3s, box-shadow 0.3s;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
     }
 
-    .team-card {
-        transition: transform 0.3s, box-shadow 0.3s;
+    /* Mobile */
+    @media (max-width: 768px) {
+        .team-img {
+            width: 140px;
+            height: 140px;
+        }
+
+        .team-card {
+            text-align: center;
+        }
+
+        .team-card .card-body {
+            padding-top: 0.5rem;
+        }
     }
 
-    .team-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    @media (max-width: 576px) {
+        .team-img {
+            width: 120px;
+            height: 120px;
+        }
+
+        .team-card h4 {
+            font-size: 1.1rem;
+        }
+
+        .team-card h6 {
+            font-size: 0.95rem;
+        }
+
+        .team-card p {
+            font-size: 0.9rem;
+        }
     }
 
-    .team-card .badge {
-        font-size: 0.85rem;
-        padding: 0.45em 0.7em;
+    @media (max-width: 480px) {
+        .specialization {
+            font-size: 12px;
+            padding: 6px 10px;
+        }
+    }
+
+
+    .specialization {
+        background: #00cfe8;
+        color: #000;
+        font-size: 14px;
+        font-weight: 600;
+
+        padding: 8px 12px;
+        border-radius: 6px;
+
+        text-align: center;
+
+        /* 🔥 RESPONSIVE FIX */
+        white-space: normal;
+        /* allow wrap */
+        word-break: break-word;
+        /* break long words */
+        overflow-wrap: anywhere;
+        /* force wrap if needed */
+        line-height: 1.4;
+
+        max-width: 100%;
+    }
+
+    .experience {
+        background: #6c757d;
+        color: white;
+        font-size: 14px;
+        font-weight: 600;
+
+        padding: 8px 12px;
+        border-radius: 6px;
+
+        text-align: center;
+
+        /* 🔥 RESPONSIVE FIX */
+        white-space: normal;
+        /* allow wrap */
+        word-break: break-word;
+        /* break long words */
+        overflow-wrap: anywhere;
+        /* force wrap if needed */
+        line-height: 1.4;
+
+        max-width: 100%;
     }
 </style>
 

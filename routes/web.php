@@ -24,7 +24,14 @@ Route::get('/', function () {
     ->latest()
     ->take(12)
     ->get();
-    return view('welcome', compact('products', 'blogs', 'adminDetails', 'SignageProducts'));
+
+    $PrintingMarketingProducts = Product::whereHas('category', function ($query) {
+        $query->where('type', 'Printing/Marketing');
+    })
+    ->latest()
+    ->take(4)
+    ->get();
+    return view('welcome', compact('products', 'blogs', 'adminDetails', 'SignageProducts', 'PrintingMarketingProducts'));
 })->name('home');
 
 Route::prefix('/frontend')->group(function () {

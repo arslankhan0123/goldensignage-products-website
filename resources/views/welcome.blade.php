@@ -205,7 +205,7 @@
 <!-- End Choose Area -->
 
 <!-- Start Skill Area -->
-<div class="skill-area ptb-100">
+<!-- <div class="skill-area ptb-100">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 col-md-12">
@@ -297,20 +297,104 @@
     <div class="skill-bg-shape">
         <img src="{{ asset('frontend/assets/img/skill-bg-shape.png') }}" alt="image">
     </div>
-</div>
+</div> -->
 <!-- End Skill Area -->
+
+
+<!-- Trade Shows Section -->
+<section class="trade-shows-section">
+    <div class="container">
+        <div class="section-header mb-4">
+            <h2>SIGNAGE PRODUCTS</h2>
+            <!-- <h2>High-Impact Signage for Your Business <span class="overlay"></span></h2> -->
+            <!-- <p>Discover our premium range of signage products designed to enhance your brand visibility. Crafted with precision, durability, and modern aesthetics for lasting impact.</p> -->
+            <span class="underline"></span>
+        </div>
+
+        <div class="row">
+            @foreach ($SignageProducts as $product)
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 mb-4">
+                <div class="trade-card h-100">
+                    <div class="trade-image">
+                        <img src="{{ asset($product->image) }}" alt="{{ $product->name }}">
+                    </div>
+                    <h3>{{ $product->name }}</h3>
+                    <a href="{{ route('frontend.product-details', $product->id) }}">View more</a>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+<style>
+    .trade-shows-section {
+        padding: 60px 0;
+    }
+
+    .section-header h2 {
+        font-size: 26px;
+        font-weight: 600;
+        margin-bottom: 6px;
+    }
+
+    .section-header .underline {
+        width: 60px;
+        height: 3px;
+        background: #ff4d00;
+        display: block;
+    }
+
+    .trade-card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .trade-image {
+        background: #f3f3f3;
+        height: 220px;
+        /* Same image box height */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+    }
+
+    .trade-image img {
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: contain;
+        /* Image distort nahi hogi */
+    }
+
+    .trade-card h3 {
+        margin: 15px 0 5px;
+        font-size: 18px;
+    }
+
+    .trade-card a {
+        color: #ff4d00;
+        font-size: 14px;
+        text-decoration: none;
+    }
+
+    .trade-card a:hover {
+        text-decoration: underline;
+    }
+</style>
+
 
 <!-- Start Choose Area -->
 <div class="choose-area bg-with-F5F5F5-color pt-100 pb-75">
     <div class="container">
         <div class="section-title">
-            <span>SIGNAGE PRODUCTS</span>
-            <h2>High-Impact Signage for Your Business <span class="overlay"></span></h2>
-            <p>Discover our premium range of signage products designed to enhance your brand visibility. Crafted with precision, durability, and modern aesthetics for lasting impact.</p>
+            <span>Printing & Marketing Products</span>
+            <h2>High-Impact Printing & Marketing for Your Business <span class="overlay"></span></h2>
+            <p>Discover our premium range of printing and marketing products designed to enhance your brand visibility. Crafted with precision, durability, and modern aesthetics for lasting impact.</p>
         </div>
 
         <div class="row justify-content-center">
-            @foreach ($SignageProducts as $product)
+            @foreach ($PrintingMarketingProducts as $product)
             <div class="col-lg-3 col-md-6">
                 <div class="services-item">
                     <div class="services-image">

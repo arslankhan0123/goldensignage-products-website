@@ -31,6 +31,7 @@
 
     /* Slightly smaller on small screens */
     @media (max-width: 768px) {
+
         .blog-image img,
         .services-image img {
             height: 160px;
@@ -127,7 +128,7 @@
 <!-- End About Area -->
 
 <!-- Start Choose Area -->
-<div class="choose-area bg-with-F5F5F5-color pt-100 pb-75">
+<!-- <div class="choose-area bg-with-F5F5F5-color pt-100 pb-75">
     <div class="container">
         <div class="section-title">
             <span>WHY CHOOSE US</span>
@@ -200,7 +201,7 @@
     <div class="choose-shape-2">
         <img src="{{ asset('frontend/assets/img/choose-shape-2.png') }}" alt="image">
     </div>
-</div>
+</div> -->
 <!-- End Choose Area -->
 
 <!-- Start Skill Area -->
@@ -298,6 +299,44 @@
     </div>
 </div>
 <!-- End Skill Area -->
+
+<!-- Start Choose Area -->
+<div class="choose-area bg-with-F5F5F5-color pt-100 pb-75">
+    <div class="container">
+        <div class="section-title">
+            <span>SIGNAGE PRODUCTS</span>
+            <h2>High-Impact Signage for Your Business <span class="overlay"></span></h2>
+            <p>Discover our premium range of signage products designed to enhance your brand visibility. Crafted with precision, durability, and modern aesthetics for lasting impact.</p>
+        </div>
+
+        <div class="row justify-content-center">
+            @foreach ($SignageProducts as $product)
+            <div class="col-lg-3 col-md-6">
+                <div class="services-item">
+                    <div class="services-image">
+                        <a href="#"><img src="{{asset($product->image)}}" alt="image"></a>
+                    </div>
+                    <div class="services-content">
+                        <h3>
+                            <a href="#">{{ $product->name }}</a>
+                        </h3>
+                        <p>{{ \Illuminate\Support\Str::limit($product->short_description, 60) }}</p>
+                        <a href="{{ route('frontend.product-details', $product->id) }}" class="services-btn">View More</a>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
+
+    <div class="choose-shape-1">
+        <img src="{{ asset('frontend/assets/img/choose-shape.png') }}" alt="image">
+    </div>
+    <div class="choose-shape-2">
+        <img src="{{ asset('frontend/assets/img/choose-shape-2.png') }}" alt="image">
+    </div>
+</div>
+<!-- End Choose Area -->
 
 <!-- Start Services Area -->
 <div class="services-area bg-with-14042C-color ptb-100">
@@ -576,12 +615,12 @@
         </div>
 
         <div class="testimonials-slides owl-carousel owl-theme">
-            <div class="single-testimonials-card" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
-                <p>We look and sound so good! I am still in shock at how smooth this process was. The professionalism, collaboration and the design they come up is great.</p>
 
+            <div class="single-testimonials-card" data-aos="fade-up" data-aos-delay="50">
+                <p>The entire experience was smooth and well-organized. The team maintained clear communication and delivered results that truly reflected professionalism and quality.</p>
                 <div class="info-item-box">
                     <img src="{{ asset('frontend/assets/img/testimonials-4.jpg') }}" class="rounded-circle" alt="image">
-                    <h4>Bradly Doe, <span>Founder of Medizo</span></h4>
+                    <h4>Bradly Doe, <span>Business Owner</span></h4>
                     <ul class="rating-list">
                         <li><i class="ri-star-fill"></i></li>
                         <li><i class="ri-star-fill"></i></li>
@@ -592,12 +631,11 @@
                 </div>
             </div>
 
-            <div class="single-testimonials-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
-                <p>The professionalism, collaboration and the design they come up with is pheno-menal. Thanks a lot the Coze Team.</p>
-
+            <div class="single-testimonials-card" data-aos="fade-up" data-aos-delay="80">
+                <p>We were impressed by the attention to detail and the structured approach. Everything was handled efficiently, making the collaboration stress-free.</p>
                 <div class="info-item-box">
                     <img src="{{ asset('frontend/assets/img/testimonials-5.jpg') }}" class="rounded-circle" alt="image">
-                    <h4>Daniel John, <span>Solit Team</span></h4>
+                    <h4>Daniel John, <span>Project Lead</span></h4>
                     <ul class="rating-list">
                         <li><i class="ri-star-fill"></i></li>
                         <li><i class="ri-star-fill"></i></li>
@@ -608,12 +646,11 @@
                 </div>
             </div>
 
-            <div class="single-testimonials-card" data-aos="fade-up" data-aos-delay="60" data-aos-duration="600" data-aos-once="true">
-                <p>We look and sound so good! I am still in shock at how smooth this process was. The professionalism, collaboration and the design they come up is great.</p>
-
+            <div class="single-testimonials-card" data-aos="fade-up" data-aos-delay="60">
+                <p>The professionalism shown throughout the process was outstanding. Timelines were respected, and the final outcome met our expectations perfectly.</p>
                 <div class="info-item-box">
                     <img src="{{ asset('frontend/assets/img/testimonials-6.jpg') }}" class="rounded-circle" alt="image">
-                    <h4>Jennifer Smith, <span>Spix Team</span></h4>
+                    <h4>Jennifer Smith, <span>Operations Manager</span></h4>
                     <ul class="rating-list">
                         <li><i class="ri-star-fill"></i></li>
                         <li><i class="ri-star-fill"></i></li>
@@ -624,12 +661,11 @@
                 </div>
             </div>
 
-            <div class="single-testimonials-card" data-aos="fade-up" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
-                <p>The professionalism, collaboration and the design they come up with is pheno-menal. Thanks a lot the Coze Team.</p>
-
+            <div class="single-testimonials-card" data-aos="fade-up" data-aos-delay="70">
+                <p>A reliable and dedicated team that understands requirements clearly. The entire workflow felt organized and highly professional.</p>
                 <div class="info-item-box">
                     <img src="{{ asset('frontend/assets/img/testimonials-7.jpg') }}" class="rounded-circle" alt="image">
-                    <h4>Sarp Karahan, <span>Benzo Team</span></h4>
+                    <h4>Sarp Karahan, <span>Company Director</span></h4>
                     <ul class="rating-list">
                         <li><i class="ri-star-fill"></i></li>
                         <li><i class="ri-star-fill"></i></li>
@@ -640,12 +676,11 @@
                 </div>
             </div>
 
-            <div class="single-testimonials-card" data-aos="fade-up" data-aos-delay="90" data-aos-duration="900" data-aos-once="true">
-                <p>We look and sound so good! I am still in shock at how smooth this process was. The professionalism, collaboration and the design they come up is great.</p>
-
+            <div class="single-testimonials-card" data-aos="fade-up" data-aos-delay="90">
+                <p>Everything was handled with care and precision. The communication was clear, and the results reflected a strong commitment to quality.</p>
                 <div class="info-item-box">
                     <img src="{{ asset('frontend/assets/img/testimonials-8.jpg') }}" class="rounded-circle" alt="image">
-                    <h4>Jane Ronan, <span>Lebu Team</span></h4>
+                    <h4>Jane Ronan, <span>Marketing Head</span></h4>
                     <ul class="rating-list">
                         <li><i class="ri-star-fill"></i></li>
                         <li><i class="ri-star-fill"></i></li>
@@ -655,6 +690,37 @@
                     </ul>
                 </div>
             </div>
+
+            <div class="single-testimonials-card" data-aos="fade-up">
+                <p>The team delivered exactly what was promised. Their professionalism and structured workflow made the entire experience seamless.</p>
+                <div class="info-item-box">
+                    <img src="{{ asset('frontend/assets/img/testimonials-5.jpg') }}" class="rounded-circle" alt="image">
+                    <h4>Michael Lee, <span>Entrepreneur</span></h4>
+                    <ul class="rating-list">
+                        <li><i class="ri-star-fill"></i></li>
+                        <li><i class="ri-star-fill"></i></li>
+                        <li><i class="ri-star-fill"></i></li>
+                        <li><i class="ri-star-fill"></i></li>
+                        <li><i class="ri-star-line"></i></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="single-testimonials-card" data-aos="fade-up">
+                <p>A very smooth and transparent process from start to finish. The dedication and professionalism were evident throughout.</p>
+                <div class="info-item-box">
+                    <img src="{{ asset('frontend/assets/img/testimonials-6.jpg') }}" class="rounded-circle" alt="image">
+                    <h4>Emily Carter, <span>Team Lead</span></h4>
+                    <ul class="rating-list">
+                        <li><i class="ri-star-fill"></i></li>
+                        <li><i class="ri-star-fill"></i></li>
+                        <li><i class="ri-star-fill"></i></li>
+                        <li><i class="ri-star-fill"></i></li>
+                        <li><i class="ri-star-line"></i></li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>

@@ -64,6 +64,7 @@
                                 </div>
                             </div>
 
+                            
                             <div class="col-lg-12 col-md-12">
                                 <div class="form-group">
                                     <textarea name="message" class="form-control" rows="6" required placeholder="Your message..."></textarea>

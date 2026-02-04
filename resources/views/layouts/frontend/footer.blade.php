@@ -83,7 +83,7 @@
         <div class="container">
             <div class="copyright-area-content">
                 <p>
-                    Copyright <strong>Coze</strong> All Rights Reserved by <a href="https://goldensignage.ae/" target="_blank"> Golden Signage</a>
+                    Copyright <strong>Golden Signage</strong> All Rights Reserved by <a href="https://goldensignage.ae/" target="_blank"> Golden Signage</a>
                 </p>
             </div>
         </div>

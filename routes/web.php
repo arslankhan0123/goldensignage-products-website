@@ -18,7 +18,13 @@ Route::get('/', function () {
     $products = Product::latest()->take(4)->get();
     $blogs = Blog::latest()->take(3)->get();
     $adminDetails = AdminDetail::first();
-    return view('welcome', compact('products', 'blogs', 'adminDetails'));
+    $SignageProducts = Product::whereHas('category', function ($query) {
+        $query->where('type', 'Signage');
+    })
+    ->latest()
+    ->take(12)
+    ->get();
+    return view('welcome', compact('products', 'blogs', 'adminDetails', 'SignageProducts'));
 })->name('home');
 
 Route::prefix('/frontend')->group(function () {

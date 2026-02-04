@@ -20,11 +20,16 @@ class Product extends Model
         'parent_id',
     ];
 
-    public function category()
+    public function category1()
     {
         return $this->belongsTo(ProductCategory::class, 'category_id');
     }
 
+    public function category()
+    {
+        return $this->belongsTo(ProductCategory::class);
+    }
+    
     public function parent()
     {
         return $this->belongsTo(Product::class, 'parent_id');

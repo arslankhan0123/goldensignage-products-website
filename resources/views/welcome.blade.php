@@ -42,62 +42,109 @@
         }
     }
 </style>
+<style>
+    .home-banner {
+        width: 100%;
+        background: #f7f7f7;
+    }
+
+    .banner-slide {
+        position: relative;
+        text-align: center;
+    }
+
+    .banner-slide img {
+        width: 100%;
+        height: 420px;
+        object-fit: contain;
+        /* screenshot jaisa */
+        background: #f7f7f7;
+    }
+
+    /* Center overlay text */
+    .banner-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(255, 255, 255, 0.85);
+        padding: 20px 40px;
+        border-radius: 6px;
+    }
+
+    .banner-overlay h2 {
+        font-size: 28px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        margin: 0;
+        color: #111;
+    }
+
+    /* Dots style */
+    .home-banner-carousel .owl-dots {
+        margin-top: 15px;
+    }
+
+    .home-banner-carousel .owl-dot span {
+        width: 10px;
+        height: 10px;
+        background: #ccc;
+    }
+
+    .home-banner-carousel .owl-dot.active span {
+        background: #111;
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+        .banner-slide img {
+            height: 260px;
+        }
+
+        .banner-overlay h2 {
+            font-size: 18px;
+            padding: 10px 20px;
+        }
+    }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
 <!-- Start Main Hero Area -->
-<div class="main-hero-area">
-    <div class="hero-slides owl-carousel owl-theme">
-        <div class="main-hero-item jarallax" data-jarallax='{"speed": 0.3}'>
-            <div class="container-fluid">
-                <div class="main-hero-content">
-                    <span data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">We craft modern, visually impactful designs built to perform under various conditions.</span>
-                    <h1 data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">3D Signage <span class="overlay"></span></h1>
-                    <p data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">Golden Signage specializes in premium, non-illuminated 3D signage solutions for businesses across Dubai, UAE. Our team works closely with clients to understand their vision and deliver customized signage tailored to their specific business needs. From detailed logo designs to large-scale display installations, our versatile signage is suitable for both indoor and outdoor applications.</p>
+<div class="home-banner">
+    <div class="home-banner-carousel owl-carousel owl-theme">
 
-                    <div class="slides-btn" data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
-                        <a href="{{ route('frontend.contact') }}" class="default-btn">Get Started</a>
-                    </div>
-                </div>
-            </div>
+        <!-- Slide 1 -->
+        <div class="banner-slide">
+            <img src="https://www.dlxprint.com/images/carousel-images/signages_banner.webp" alt="Backdrop Exhibition">
+            <!-- <div class="banner-overlay">
+                <h2>3D Signage & Outdoor Signage</h2>
+            </div> -->
         </div>
 
-        <div class="main-hero-item item-bg-2 jarallax" data-jarallax='{"speed": 0.3}'>
-            <div class="container-fluid">
-                <div class="main-hero-content">
-                    <span data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">We utilize only top-quality materials such as acrylic, aluminum, and stainless steel to ensure durability.</span>
-                    <h1 data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">Outlit 3D Signage <span class="overlay"></span></h1>
-                    <p data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">At Golden Signage, we provide premium Outlit 3D Signage solutions that bring a refined and distinctive character to any environment. Featuring strategically placed lighting around the edges, our outlit 3D signs produce an elegant halo effect that enhances visibility and captures attention both day and night. These signs are perfectly suited for storefronts, office buildings, and high-traffic locations, delivering a modern, polished, and professional appearance.</p>
-
-                    <div class="slides-btn" data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
-                        <a href="{{ route('frontend.contact') }}" class="default-btn">Get Started</a>
-                    </div>
-                </div>
-            </div>
+        <!-- Slide 2 -->
+        <div class="banner-slide">
+            <img src="https://www.dlxprint.com/images/carousel-images/print_and_marketing_banner.webp" alt="Roll Up Banner">
         </div>
 
-        <div class="main-hero-item item-bg-3 jarallax" data-jarallax='{"speed": 0.3}'>
-            <div class="container-fluid">
-                <div class="main-hero-content">
-                    <span data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">WE ARE LEADING TECHNOLOGY SOLUTIONS PROVIDING COMPANY</span>
-                    <h1 data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">Get The Best IT Solution From Us <span class="overlay"></span></h1>
-                    <p data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">Golden Signage is a professional signage and branding solutions company based in Dubai, UAE, dedicated to helping businesses stand out with impactful visual communication. We specialize in designing and delivering high-quality custom signage, including 3D signs, neon signs, indoor and outdoor branding, and illuminated and non-illuminated displays.</p>
-
-                    <div class="slides-btn" data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
-                        <a href="{{ route('frontend.contact') }}" class="default-btn">Get Started</a>
-                    </div>
-                </div>
-            </div>
+        <!-- Slide 3 -->
+        <div class="banner-slide">
+            <img src="https://www.dlxprint.com/images/carousel-images/office_and_store_branding.webp" alt="Standee Banner">
         </div>
-    </div>
 
-    <div class="hero-shape-1">
-        <img src="{{ asset('frontend/assets/img/slides-shape-1.png') }}" alt="image">
-    </div>
-    <div class="hero-shape-2">
-        <img src="{{ asset('frontend/assets/img/slides-shape-2.png') }}" alt="image">
-    </div>
-    <div class="hero-shape-3">
-        <img src="{{ asset('frontend/assets/img/slides-shape-3.png') }}" alt="image">
+        <!-- Slide 4 -->
+        <div class="banner-slide">
+            <img src="https://www.dlxprint.com/images/carousel-images/backdrops_and_exhibition_banner.webp" alt="Promotional Banner">
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="banner-slide">
+            <img src="https://www.dlxprint.com/images/carousel-images/flags_banner.webp" alt="Promotional Banner">
+        </div>
+
     </div>
 </div>
+
 <!-- End Main Hero Area -->
 
 <!-- Start About Area -->
@@ -976,3 +1023,20 @@
 </div>
 <!-- End Blog Area -->
 @endsection
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $('.home-banner-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: false,
+            dots: true,
+            autoplay: true,
+            autoplayTimeout: 4000,
+            smartSpeed: 900,
+            items: 1
+        });
+    });
+</script>

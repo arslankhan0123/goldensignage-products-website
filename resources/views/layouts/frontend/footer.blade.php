@@ -88,13 +88,13 @@
             </div>
         </div>
     </div>
-    <div class="footer-shape-1">
+    <!-- <div class="footer-shape-1">
         <img src="{{ asset('frontend/assets/img/footer-shape-1.png') }}" alt="image">
-    </div>
-    <div class="footer-shape-2">
+    </div> -->
+    <!-- <div class="footer-shape-2">
         <img src="{{ asset('frontend/assets/img/footer-shape-2.png') }}" alt="image">
-    </div>
-    <div class="footer-shape-3">
+    </div> -->
+    <!-- <div class="footer-shape-3">
         <img src="{{ asset('frontend/assets/img/footer-shape-3.png') }}" alt="image">
-    </div>
+    </div> -->
 </footer>

@@ -44,7 +44,7 @@
     <title>@yield('title', 'Home')</title>
 
     <!-- <link rel="icon" type="image/png" href="https://templates.envytheme.com/coze/default/assets/images/favicon.png"> -->
-    <link rel="icon" type="image/png" href="{{ asset('frontend/assets/img/favicon.png') }}">
+    <link rel="icon" type="image/png" href="{{ asset('logo.png') }}">
 </head>
 
 <body>

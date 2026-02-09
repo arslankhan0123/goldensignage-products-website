@@ -106,6 +106,26 @@
             padding: 10px 20px;
         }
     }
+
+    .order-btn {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 18px;
+        background: #ff4d00;
+        color: #fff !important;
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration: none;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        text-align: center;
+    }
+
+    .order-btn:hover {
+        background: #e04300;
+        color: #fff;
+        transform: translateY(-2px);
+    }
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
@@ -148,7 +168,7 @@
 <!-- End Main Hero Area -->
 
 <!-- Start About Area -->
-<div class="about-area ptb-100">
+<!-- <div class="about-area ptb-100">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 col-md-12">
@@ -171,7 +191,7 @@
     <div class="about-shape-1">
         <img src="{{ asset('frontend/assets/img/about-shape.png') }}" alt="image">
     </div>
-</div>
+</div> -->
 <!-- End About Area -->
 
 <!-- Start Choose Area -->
@@ -366,7 +386,9 @@
                         <img src="{{ asset($product->image) }}" alt="{{ $product->name }}">
                     </div>
                     <h3>{{ $product->name }}</h3>
-                    <a href="{{ route('frontend.product-details', $product->id) }}">View more</a>
+                    <a href="{{ route('frontend.product-details', $product->id) }}" class="order-btn">
+                        Order Now
+                    </a>
                 </div>
             </div>
             @endforeach
@@ -435,8 +457,8 @@
 <div class="choose-area bg-with-F5F5F5-color pt-100 pb-75">
     <div class="container">
         <div class="section-title">
-            <span>Printing & Marketing Products</span>
-            <h2>High-Impact Printing & Marketing for Your Business <span class="overlay"></span></h2>
+            <!-- <span>Printing & Marketing Products</span> -->
+            <h2>Printing & Marketing Products <span class="overlay"></span></h2>
             <p>Discover our premium range of printing and marketing products designed to enhance your brand visibility. Crafted with precision, durability, and modern aesthetics for lasting impact.</p>
         </div>
 
@@ -449,10 +471,13 @@
                     </div>
                     <div class="services-content">
                         <h3>
-                            <a href="#">{{ $product->name }}</a>
+                            <a href="{{ route('frontend.product-details', $product->id) }}">{{ $product->name }}</a>
                         </h3>
                         <p>{{ \Illuminate\Support\Str::limit($product->short_description, 60) }}</p>
-                        <a href="{{ route('frontend.product-details', $product->id) }}" class="services-btn">View More</a>
+                        <!-- <a href="{{ route('frontend.product-details', $product->id) }}" class="services-btn">View More</a> -->
+                        <a href="{{ route('frontend.product-details', $product->id) }}" class="order-btn">
+                            Order Now
+                        </a>
                     </div>
                 </div>
             </div>
@@ -473,24 +498,27 @@
 <div class="services-area bg-with-14042C-color ptb-100">
     <div class="container">
         <div class="section-title">
-            <span>PRODUCTS</span>
-            <h2>We Offer High-Quality <b>Products</b> <span class="overlay"></span></h2>
+            <!-- <span>PRODUCTS</span> -->
+            <h2>Office & Store Brandings <span class="overlay"></span></h2>
             <p>We deliver premium products designed to meet modern needs, ensuring quality, reliability, and customer satisfaction.</p>
         </div>
 
         <div class="row justify-content-center">
-            @foreach ($products as $product)
+            @foreach ($OfficeStoreProducts as $product)
             <div class="col-lg-3 col-md-6">
                 <div class="services-item">
                     <div class="services-image">
-                        <a href="#"><img src="{{asset($product->image)}}" alt="image"></a>
+                        <a href="{{ route('frontend.product-details', $product->id) }}"><img src="{{asset($product->image)}}" alt="image"></a>
                     </div>
                     <div class="services-content">
                         <h3>
-                            <a href="#">{{ $product->name }}</a>
+                            <a href="{{ route('frontend.product-details', $product->id) }}">{{ $product->name }}</a>
                         </h3>
                         <p>{{ \Illuminate\Support\Str::limit($product->short_description, 60) }}</p>
-                        <a href="{{ route('frontend.product-details', $product->id) }}" class="services-btn">View More</a>
+                        <!-- <a href="{{ route('frontend.product-details', $product->id) }}" class="services-btn">View More</a> -->
+                        <a href="{{ route('frontend.product-details', $product->id) }}" class="order-btn">
+                            Order Now
+                        </a>
                     </div>
                 </div>
             </div>
@@ -561,12 +589,12 @@
         </div>
     </div>
 
-    <div class="services-shape-1">
+    <!-- <div class="services-shape-1">
         <img src="{{ asset('frontend/assets/img/services-shape-1.png') }}" alt="image">
-    </div>
-    <div class="services-shape-2">
+    </div> -->
+    <!-- <div class="services-shape-2">
         <img src="{{ asset('frontend/assets/img/services-shape-2.png') }}" alt="image">
-    </div>
+    </div> -->
 </div>
 <!-- End Services Area -->
 
@@ -904,7 +932,7 @@
 
 <!-- Start Blog Area -->
 
-<div class="blog-area pt-100 pb-75">
+<!-- <div class="blog-area pt-100 pb-75">
     <div class="container">
         <div class="section-title">
             <span>ARTICLE</span>
@@ -935,92 +963,13 @@
                 </div>
             </div>
             @endforeach
-            <!-- <div class="blog-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <div class="blog-image">
-                            <a href="single-blog-1.html"><img src="{{ asset('frontend/assets/img/blog-1.jpg') }}" alt="image"></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="blog-content">
-                            <div class="date">9th July, 2024</div>
-                            <h3>
-                                <a href="single-blog-1.html">How Technology Dominate In The new World In 2024</a>
-                            </h3>
-                            <p>Lorem ipsum dolor sit amet conset sadipscing elitr sed diam nonumy eir m od tempor invidunt ut labore.</p>
-                            <a href="single-blog-1.html" class="blog-btn">View More</a>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-
-            <!-- <div class="blog-card" data-aos="fade-up" data-aos-delay="890" data-aos-duration="900" data-aos-once="true">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <div class="blog-image">
-                            <a href="single-blog-1.html"><img src="{{ asset('frontend/assets/img/blog-2.jpg') }}" alt="image"></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="blog-content">
-                            <div class="date">7th July, 2024</div>
-                            <h3>
-                                <a href="single-blog-1.html">Top 10 Most Famous Technology Trend In 2024</a>
-                            </h3>
-                            <p>Lorem ipsum dolor sit amet conset sadipscing elitr sed diam nonumy eir m od tempor invidunt ut labore.</p>
-                            <a href="single-blog-1.html" class="blog-btn">View More</a>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-
-            <!-- <div class="blog-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <div class="blog-image">
-                            <a href="single-blog-1.html"><img src="{{ asset('frontend/assets/img/blog-1.jpg') }}" alt="image"></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="blog-content">
-                            <div class="date">9th July, 2024</div>
-                            <h3>
-                                <a href="single-blog-1.html">How Technology Dominate In The new World In 2024</a>
-                            </h3>
-                            <p>Lorem ipsum dolor sit amet conset sadipscing elitr sed diam nonumy eir m od tempor invidunt ut labore.</p>
-                            <a href="single-blog-1.html" class="blog-btn">View More</a>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-
-            <!-- <div class="blog-card" data-aos="fade-up" data-aos-delay="90" data-aos-duration="900" data-aos-once="true">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <div class="blog-image">
-                            <a href="single-blog-1.html"><img src="{{ asset('frontend/assets/img/blog-2.jpg') }}" alt="image"></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="blog-content">
-                            <div class="date">7th July, 2024</div>
-                            <h3>
-                                <a href="single-blog-1.html">Top 10 Most Famous Technology Trend In 2024</a>
-                            </h3>
-                            <p>Lorem ipsum dolor sit amet conset sadipscing elitr sed diam nonumy eir m od tempor invidunt ut labore.</p>
-                            <a href="single-blog-1.html" class="blog-btn">View More</a>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
         </div>
     </div>
 
     <div class="blog-shape-1">
         <img src="{{ asset('frontend/assets/img/blog-shape-1.png') }}" alt="image">
     </div>
-</div>
+</div> -->
 <!-- End Blog Area -->
 @endsection
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

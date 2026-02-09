@@ -29,9 +29,17 @@ Route::get('/', function () {
         $query->where('type', 'Printing/Marketing');
     })
     ->latest()
-    ->take(4)
+    ->take(12)
     ->get();
-    return view('welcome', compact('products', 'blogs', 'adminDetails', 'SignageProducts', 'PrintingMarketingProducts'));
+    
+    $OfficeStoreProducts = Product::whereHas('category', function ($query) {
+        $query->where('type', 'OfficeStore');
+    })
+    ->latest()
+    ->take(12)
+    ->get();
+
+    return view('welcome', compact('products', 'blogs', 'adminDetails', 'SignageProducts', 'PrintingMarketingProducts', 'OfficeStoreProducts'));
 })->name('home');
 
 Route::prefix('/frontend')->group(function () {

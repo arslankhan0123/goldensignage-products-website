@@ -8,7 +8,7 @@ Footer Area CSS
 }
 
 .footer-area.with-black-background {
-    background-color: var(--black-color);
+    background-color: #262424;
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 10px;

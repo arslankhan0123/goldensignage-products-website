@@ -158,7 +158,7 @@ Navbar Area CSS
 }
 
 .main-navbar.navbar-with-black-color {
-    background-color: var(--black-color);
+    background-color: #262424;
 }
 
 .main-navbar .container-fluid {

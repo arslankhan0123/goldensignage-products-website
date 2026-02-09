@@ -100,36 +100,6 @@
                         </li>
                         @endif
 
-                        @if(isset($flagsCategories) && $flagsCategories->isNotEmpty())
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                Flags
-                                <i class="ri-arrow-down-s-line"></i>
-                            </a>
-                            <ul class="dropdown-menu">
-                                @foreach($flagsCategories as $category)
-                                    <li class="nav-item">
-                                        @if($category->products->isNotEmpty())
-                                            <a href="{{ route('frontend.our-products', ['category' => $category->id]) }}" class="nav-link">
-                                                {{ $category->name }}
-                                                <i class="ri-arrow-down-s-line"></i>
-                                            </a>
-                                            <ul class="dropdown-menu">
-                                                @foreach($category->products as $product)
-                                                    <li class="nav-item">
-                                                        <a href="{{ route('frontend.product-details', $product->id) }}" class="nav-link">{{ $product->name }}</a>
-                                                    </li>
-                                                @endforeach
-                                            </ul>
-                                        @else
-                                            <a href="{{ route('frontend.our-products', ['category' => $category->id]) }}" class="nav-link">{{ $category->name }}</a>
-                                        @endif
-                                    </li>
-                                @endforeach
-                            </ul>
-                        </li>
-                        @endif
-
                         @if(isset($printingCategories) && $printingCategories->isNotEmpty())
                         <li class="nav-item">
                             <a href="#" class="nav-link">
@@ -228,6 +198,36 @@
                             </a>
                             <ul class="dropdown-menu">
                                 @foreach($corporateGiftsBagsCategories as $category)
+                                    <li class="nav-item">
+                                        @if($category->products->isNotEmpty())
+                                            <a href="{{ route('frontend.our-products', ['category' => $category->id]) }}" class="nav-link">
+                                                {{ $category->name }}
+                                                <i class="ri-arrow-down-s-line"></i>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                @foreach($category->products as $product)
+                                                    <li class="nav-item">
+                                                        <a href="{{ route('frontend.product-details', $product->id) }}" class="nav-link">{{ $product->name }}</a>
+                                                    </li>
+                                                @endforeach
+                                            </ul>
+                                        @else
+                                            <a href="{{ route('frontend.our-products', ['category' => $category->id]) }}" class="nav-link">{{ $category->name }}</a>
+                                        @endif
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </li>
+                        @endif
+                        
+                        @if(isset($flagsCategories) && $flagsCategories->isNotEmpty())
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                Flags
+                                <i class="ri-arrow-down-s-line"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                @foreach($flagsCategories as $category)
                                     <li class="nav-item">
                                         @if($category->products->isNotEmpty())
                                             <a href="{{ route('frontend.our-products', ['category' => $category->id]) }}" class="nav-link">

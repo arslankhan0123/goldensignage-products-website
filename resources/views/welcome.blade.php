@@ -48,9 +48,9 @@
         <div class="main-hero-item jarallax" data-jarallax='{"speed": 0.3}'>
             <div class="container-fluid">
                 <div class="main-hero-content">
-                    <span data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">WE ARE LEADING TECHNOLOGY SOLUTIONS PROVIDING COMPANY</span>
-                    <h1 data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">We Are Digital Agency & Tech Solution <span class="overlay"></span></h1>
-                    <p data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">Golden Signage is a professional signage and branding solutions company based in Dubai, UAE, dedicated to helping businesses stand out with impactful visual communication. We specialize in designing and delivering high-quality custom signage, including 3D signs, neon signs, indoor and outdoor branding, and illuminated and non-illuminated displays.</p>
+                    <span data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">We craft modern, visually impactful designs built to perform under various conditions.</span>
+                    <h1 data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">3D Signage <span class="overlay"></span></h1>
+                    <p data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">Golden Signage specializes in premium, non-illuminated 3D signage solutions for businesses across Dubai, UAE. Our team works closely with clients to understand their vision and deliver customized signage tailored to their specific business needs. From detailed logo designs to large-scale display installations, our versatile signage is suitable for both indoor and outdoor applications.</p>
 
                     <div class="slides-btn" data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
                         <a href="{{ route('frontend.contact') }}" class="default-btn">Get Started</a>
@@ -62,9 +62,9 @@
         <div class="main-hero-item item-bg-2 jarallax" data-jarallax='{"speed": 0.3}'>
             <div class="container-fluid">
                 <div class="main-hero-content">
-                    <span data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">WE ARE LEADING TECHNOLOGY SOLUTIONS PROVIDING COMPANY</span>
-                    <h1 data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">Excellent IT Services For Your Success <span class="overlay"></span></h1>
-                    <p data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">Golden Signage is a professional signage and branding solutions company based in Dubai, UAE, dedicated to helping businesses stand out with impactful visual communication. We specialize in designing and delivering high-quality custom signage, including 3D signs, neon signs, indoor and outdoor branding, and illuminated and non-illuminated displays.</p>
+                    <span data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">We utilize only top-quality materials such as acrylic, aluminum, and stainless steel to ensure durability.</span>
+                    <h1 data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">Outlit 3D Signage <span class="overlay"></span></h1>
+                    <p data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">At Golden Signage, we provide premium Outlit 3D Signage solutions that bring a refined and distinctive character to any environment. Featuring strategically placed lighting around the edges, our outlit 3D signs produce an elegant halo effect that enhances visibility and captures attention both day and night. These signs are perfectly suited for storefronts, office buildings, and high-traffic locations, delivering a modern, polished, and professional appearance.</p>
 
                     <div class="slides-btn" data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
                         <a href="{{ route('frontend.contact') }}" class="default-btn">Get Started</a>

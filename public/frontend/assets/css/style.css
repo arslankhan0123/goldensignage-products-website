@@ -647,7 +647,8 @@ Main Hero Area CSS
 }
 
 .main-hero-item {
-    background-image: url('/frontend/assets/img/hero-bg-1.jpg');
+    /* background-image: url('/frontend/assets/img/hero-bg-1.jpg'); */
+    background-image: url('/images/products/1769812094_310b4f66f19cd5e71ed75370804c2e32.jpg');
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -658,7 +659,8 @@ Main Hero Area CSS
 }
 
 .main-hero-item.item-bg-2 {
-    background-image: url('/frontend/assets/img/hero-bg-2.jpg');
+    /* background-image: url('/frontend/assets/img/hero-bg-2.jpg'); */
+    background-image: url('/images/products/1769887534_i-1.webp');
 }
 
 .main-hero-item.item-bg-3 {

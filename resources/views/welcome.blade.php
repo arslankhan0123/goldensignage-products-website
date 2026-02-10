@@ -1122,6 +1122,21 @@
 </div> -->
 <!-- End Pricing Area -->
 
+<style>
+    .testimonials-slides .owl-stage {
+        display: flex;
+    }
+
+    .single-testimonials-card {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .single-testimonials-card p {
+        flex-grow: 1;
+    }
+</style>
 <!-- Start Testimonials Area -->
 <div class="testimonials-area ptb-100">
     <div class="container-fluid">

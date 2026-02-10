@@ -129,42 +129,72 @@
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+<style>
+    .home-banner {
+        width: 100%;
+        background: #f7f7f7;
+    }
 
+    .banner-slide {
+        position: relative;
+        text-align: center;
+    }
+
+    .banner-slide img {
+        width: 100%;
+        height: 100vh;
+        /* full screen height */
+        object-fit: cover;
+        /* fills container and crops */
+        display: block;
+    }
+</style>
 <!-- Start Main Hero Area -->
 <div class="home-banner">
     <div class="home-banner-carousel owl-carousel owl-theme">
 
         <!-- Slide 1 -->
         <div class="banner-slide">
-            <img src="https://www.dlxprint.com/images/carousel-images/signages_banner.webp" alt="Backdrop Exhibition">
-            <!-- <div class="banner-overlay">
+            <img src="https://png.pngtree.com/thumb_back/fh260/background/20230617/pngtree-3d-rendered-shop-signage-empty-black-rectangle-mockup-image_3627444.jpg" alt="Backdrop Exhibition">
+            <div class="banner-overlay">
                 <h2>3D Signage & Outdoor Signage</h2>
-            </div> -->
+            </div>
         </div>
 
         <!-- Slide 2 -->
         <div class="banner-slide">
-            <img src="https://www.dlxprint.com/images/carousel-images/print_and_marketing_banner.webp" alt="Roll Up Banner">
+            <img src="https://graphicsfamily.com/wp-content/uploads/edd/2024/11/Free-Download-Storefront-and-Outdoor-Sign-3D-Logo-Mockup--scaled.jpg" alt="Roll Up Banner">
+            <div class="banner-overlay">
+                <h2>Outlit 3D Signage</h2>
+            </div>
         </div>
 
         <!-- Slide 3 -->
         <div class="banner-slide">
-            <img src="https://www.dlxprint.com/images/carousel-images/office_and_store_branding.webp" alt="Standee Banner">
+            <img src="https://www.signsnw.co.uk/wp-content/uploads/2017/07/lavelle-flex-face.jpg" alt="Standee Banner">
+            <div class="banner-overlay">
+                <h2>Flex Face Signage</h2>
+            </div>
         </div>
 
         <!-- Slide 4 -->
         <div class="banner-slide">
-            <img src="https://www.dlxprint.com/images/carousel-images/backdrops_and_exhibition_banner.webp" alt="Promotional Banner">
+            <img src="https://png.pngtree.com/thumb_back/fh260/background/20201012/pngtree-envelope-christmas-background-design-image_410605.jpg" alt="Promotional Banner">
+            <div class="banner-overlay">
+                <h2>Custom Envelopes</h2>
+            </div>
         </div>
 
         <!-- Slide 5 -->
         <div class="banner-slide">
-            <img src="https://www.dlxprint.com/images/carousel-images/flags_banner.webp" alt="Promotional Banner">
+            <img src="https://img.pikbest.com/backgrounds/20190326/red-business-business-card-background_1881180.jpg!w700wp" alt="Promotional Banner">
+            <div class="banner-overlay">
+                <h2>Business Cards</h2>
+            </div>
         </div>
 
     </div>
 </div>
-
 <!-- End Main Hero Area -->
 
 <!-- Start About Area -->
@@ -632,7 +662,8 @@
     }
 
     /* ARROW CONTAINER */
-    .workspace-carousel .owl-nav, .printing-marketing-carousel .owl-nav {
+    .workspace-carousel .owl-nav,
+    .printing-marketing-carousel .owl-nav {
         position: absolute;
         top: 40%;
         width: 100%;
@@ -642,7 +673,8 @@
     }
 
     /* ARROW BUTTONS */
-    .workspace-carousel .owl-nav button, .printing-marketing-carousel .owl-nav button {
+    .workspace-carousel .owl-nav button,
+    .printing-marketing-carousel .owl-nav button {
         width: 45px;
         height: 45px;
         background: #ff4d00 !important;
@@ -657,16 +689,19 @@
     }
 
     /* LEFT & RIGHT SPACING */
-    .workspace-carousel .owl-nav .owl-prev, .printing-marketing-carousel .owl-nav .owl-prev {
+    .workspace-carousel .owl-nav .owl-prev,
+    .printing-marketing-carousel .owl-nav .owl-prev {
         margin-left: -20px;
     }
 
-    .workspace-carousel .owl-nav .owl-next, .printing-marketing-carousel .owl-nav .owl-next {
+    .workspace-carousel .owl-nav .owl-next,
+    .printing-marketing-carousel .owl-nav .owl-next {
         margin-right: -20px;
     }
 
     /* HOVER EFFECT */
-    .workspace-carousel .owl-nav button:hover, .printing-marketing-carousel .owl-nav button:hover {
+    .workspace-carousel .owl-nav button:hover,
+    .printing-marketing-carousel .owl-nav button:hover {
         background: #e64400 !important;
         transform: scale(1.1);
     }

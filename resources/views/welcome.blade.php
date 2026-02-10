@@ -369,12 +369,12 @@
 
 
 <!-- Trade Shows Section -->
-<section class="trade-shows-section">
+<!-- <section class="trade-shows-section">
     <div class="container">
         <div class="section-header mb-4">
             <h2>SIGNAGE PRODUCTS</h2>
-            <!-- <h2>High-Impact Signage for Your Business <span class="overlay"></span></h2> -->
-            <!-- <p>Discover our premium range of signage products designed to enhance your brand visibility. Crafted with precision, durability, and modern aesthetics for lasting impact.</p> -->
+            <h2>High-Impact Signage for Your Business <span class="overlay"></span></h2>
+            <p>Discover our premium range of signage products designed to enhance your brand visibility. Crafted with precision, durability, and modern aesthetics for lasting impact.</p>
             <span class="underline"></span>
         </div>
 
@@ -394,7 +394,7 @@
             @endforeach
         </div>
     </div>
-</section>
+</section> -->
 <style>
     .trade-shows-section {
         padding: 60px 0;
@@ -452,6 +452,204 @@
     }
 </style>
 
+<section class="workspace-branding">
+    <div class="container">
+        <h2 class="section-title">SIGNAGE PRODUCTS</h2>
+
+        <div class="workspace-carousel owl-carousel owl-theme">
+
+            @foreach ($SignageProducts as $product)
+            <div class="workspace-item">
+                <img src="{{ asset($product->image) }}" alt="{{ $product->name }}">
+
+                <p class="product-title">{{ $product->name }}</p>
+
+                <a href="{{ route('frontend.product-details', $product->id) }}"
+                    class="order-btn">
+                    Order Now
+                </a>
+            </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+<style>
+    .workspace-branding {
+        padding: 60px 0;
+        background: #fff;
+    }
+
+    .section-title {
+        font-size: 26px;
+        font-weight: 600;
+        margin-bottom: 25px;
+    }
+
+    .workspace-item {
+        text-align: center;
+    }
+
+    .workspace-item img {
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+        border-radius: 6px;
+    }
+
+    .workspace-item p {
+        margin-top: 12px;
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .order-btn {
+        display: block;
+        /* full width enable */
+        width: 100%;
+        margin-top: 10px;
+        padding: 10px 0;
+        font-size: 14px;
+        font-weight: 600;
+        color: #fff;
+        background: #ff4d00;
+        border-radius: 5px;
+        text-decoration: none;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+
+    .order-btn:hover {
+        background: #e64400;
+        color: #fff;
+    }
+</style>
+
+<section class="workspace-branding">
+    <div class="container">
+        <h2 class="section-title">Office & Store Brandings</h2>
+
+        <div class="row">
+            @foreach ($OfficeStoreProducts->take(12) as $product)
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="workspace-card h-100">
+                    <div class="image-box">
+                        <img src="{{ asset($product->image) }}" alt="{{ $product->name }}">
+                    </div>
+
+                    <p class="product-title">{{ $product->name }}</p>
+
+                    <a href="{{ route('frontend.product-details', $product->id) }}" class="order-btn">
+                        Order Now
+                    </a>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+<style>
+    .workspace-card {
+        background: #fff;
+        border-radius: 8px;
+        padding: 12px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    /* FIXED IMAGE AREA */
+    .image-box {
+        width: 100%;
+        height: 220px;
+        /* SAME HEIGHT FOR ALL */
+        background: #f5f5f5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .image-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* no distortion */
+    }
+
+    /* TITLE SAME HEIGHT */
+    .product-title {
+        margin: 12px 0;
+        font-size: 15px;
+        font-weight: 600;
+        min-height: 40px;
+        /* equal titles */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    /* BUTTON ALWAYS BOTTOM */
+    .order-btn {
+        margin-top: auto;
+        width: 100%;
+        padding: 10px 0;
+        font-size: 14px;
+        font-weight: 600;
+        color: #fff;
+        background: #ff4d00;
+        border-radius: 6px;
+        text-decoration: none;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .order-btn:hover {
+        background: #e64400;
+    }
+
+    /* ARROW CONTAINER */
+    .workspace-carousel .owl-nav {
+        position: absolute;
+        top: 40%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        pointer-events: none;
+    }
+
+    /* ARROW BUTTONS */
+    .workspace-carousel .owl-nav button {
+        width: 45px;
+        height: 45px;
+        background: #ff4d00 !important;
+        border-radius: 50%;
+        color: #fff !important;
+        font-size: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: all;
+        transition: all 0.3s ease;
+    }
+
+    /* LEFT & RIGHT SPACING */
+    .workspace-carousel .owl-nav .owl-prev {
+        margin-left: -20px;
+    }
+
+    .workspace-carousel .owl-nav .owl-next {
+        margin-right: -20px;
+    }
+
+    /* HOVER EFFECT */
+    .workspace-carousel .owl-nav button:hover {
+        background: #e64400 !important;
+        transform: scale(1.1);
+    }
+</style>
+
 
 <!-- Start Choose Area -->
 <div class="choose-area bg-with-F5F5F5-color pt-100 pb-75">
@@ -495,10 +693,10 @@
 <!-- End Choose Area -->
 
 <!-- Start Services Area -->
-<div class="services-area bg-with-14042C-color ptb-100">
+<!-- <div class="services-area bg-with-14042C-color ptb-100">
     <div class="container">
         <div class="section-title">
-            <!-- <span>PRODUCTS</span> -->
+            <span>PRODUCTS</span>
             <h2>Office & Store Brandings <span class="overlay"></span></h2>
             <p>We deliver premium products designed to meet modern needs, ensuring quality, reliability, and customer satisfaction.</p>
         </div>
@@ -515,7 +713,6 @@
                             <a href="{{ route('frontend.product-details', $product->id) }}">{{ $product->name }}</a>
                         </h3>
                         <p>{{ \Illuminate\Support\Str::limit($product->short_description, 60) }}</p>
-                        <!-- <a href="{{ route('frontend.product-details', $product->id) }}" class="services-btn">View More</a> -->
                         <a href="{{ route('frontend.product-details', $product->id) }}" class="order-btn">
                             Order Now
                         </a>
@@ -523,79 +720,13 @@
                 </div>
             </div>
             @endforeach
-            <!-- <div class="col-lg-3 col-md-6">
-                <div class="services-item">
-                    <div class="services-image">
-                        <a href="#"><img src="{{ asset('frontend/assets/img/services-1.jpg') }}" alt="image"></a>
-                    </div>
-                    <div class="services-content">
-                        <h3>
-                            <a href="#">Software Development</a>
-                        </h3>
-                        <p>Lorem ipsum dolor sit amet con setetur sadipscing elitr sed…</p>
-                        <a href="#" class="services-btn">View More</a>
-                    </div>
-                </div>
-            </div> -->
-
-            <!-- <div class="col-lg-3 col-md-6">
-                <div class="services-item">
-                    <div class="services-image">
-                        <a href="#"><img src="{{ asset('frontend/assets/img/services-1.jpg') }}" alt="image"></a>
-                    </div>
-                    <div class="services-content">
-                        <h3>
-                            <a href="#">App Development</a>
-                        </h3>
-                        <p>Lorem ipsum dolor sit amet con setetur sadipscing elitr sed…</p>
-                        <a href="#" class="services-btn">View More</a>
-                    </div>
-                </div>
-            </div> -->
-
-            <!-- <div class="col-lg-3 col-md-6">
-                <div class="services-item">
-                    <div class="services-image">
-                        <a href="#"><img src="{{ asset('frontend/assets/img/services-1.jpg') }}" alt="image"></a>
-                    </div>
-                    <div class="services-content">
-                        <h3>
-                            <a href="#">Web Development</a>
-                        </h3>
-                        <p>Lorem ipsum dolor sit amet con setetur sadipscing elitr sed…</p>
-                        <a href="#" class="services-btn">View More</a>
-                    </div>
-                </div>
-            </div> -->
-
-            <!-- <div class="col-lg-3 col-md-6">
-                <div class="services-item">
-                    <div class="services-image">
-                        <a href="#"><img src="{{ asset('frontend/assets/img/services-1.jpg') }}" alt="image"></a>
-                    </div>
-                    <div class="services-content">
-                        <h3>
-                            <a href="#">Analytic Solutions</a>
-                        </h3>
-                        <p>Lorem ipsum dolor sit amet con setetur sadipscing elitr sed…</p>
-                        <a href="#" class="services-btn">View More</a>
-                    </div>
-                </div>
-            </div> -->
         </div>
 
         <div class="services-all-btn">
             <a href="{{ route('frontend.our-products') }}" class="default-btn">Explore All Products</a>
         </div>
     </div>
-
-    <!-- <div class="services-shape-1">
-        <img src="{{ asset('frontend/assets/img/services-shape-1.png') }}" alt="image">
-    </div> -->
-    <!-- <div class="services-shape-2">
-        <img src="{{ asset('frontend/assets/img/services-shape-2.png') }}" alt="image">
-    </div> -->
-</div>
+</div> -->
 <!-- End Services Area -->
 
 <!-- Start Projects Area -->
@@ -986,6 +1117,33 @@
             autoplayTimeout: 4000,
             smartSpeed: 900,
             items: 1
+        });
+    });
+</script>
+<script>
+    $(document).ready(function() {
+        $('.workspace-carousel').owlCarousel({
+            loop: true,
+            margin: 20,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            autoplayHoverPause: true,
+            nav: true, // 👈 arrows ON
+            dots: true,
+            responsive: {
+                0: {
+                    items: 2
+                },
+                576: {
+                    items: 2
+                },
+                768: {
+                    items: 3
+                },
+                1200: {
+                    items: 4
+                }
+            }
         });
     });
 </script>

@@ -155,25 +155,33 @@
 
         <!-- Slide 1 -->
         <div class="banner-slide">
-            <img src="https://png.pngtree.com/thumb_back/fh260/background/20230617/pngtree-3d-rendered-shop-signage-empty-black-rectangle-mockup-image_3627444.jpg" alt="Backdrop Exhibition">
-            <div class="banner-overlay">
-                <h2>3D Signage & Outdoor Signage</h2>
-            </div>
-        </div>
-
-        <!-- Slide 2 -->
-        <div class="banner-slide">
             <img src="https://graphicsfamily.com/wp-content/uploads/edd/2024/11/Free-Download-Storefront-and-Outdoor-Sign-3D-Logo-Mockup--scaled.jpg" alt="Roll Up Banner">
             <div class="banner-overlay">
                 <h2>Outlit 3D Signage</h2>
             </div>
         </div>
 
-        <!-- Slide 3 -->
+        <!-- Slide 2 -->
         <div class="banner-slide">
             <img src="https://www.signsnw.co.uk/wp-content/uploads/2017/07/lavelle-flex-face.jpg" alt="Standee Banner">
             <div class="banner-overlay">
                 <h2>Flex Face Signage</h2>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="banner-slide">
+            <img src="https://png.pngtree.com/thumb_back/fh260/background/20230617/pngtree-3d-rendered-shop-signage-empty-black-rectangle-mockup-image_3627444.jpg" alt="Backdrop Exhibition">
+            <div class="banner-overlay">
+                <h2>3D Signage & Outdoor Signage</h2>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="banner-slide">
+            <img src="https://www.shutterstock.com/shutterstock/videos/1045272481/thumb/11.jpg?ip=x480" alt="Backdrop Exhibition">
+            <div class="banner-overlay">
+                <h2>Neon Signage</h2>
             </div>
         </div>
 
@@ -551,6 +559,167 @@
     .order-btn:hover {
         background: #e64400;
         color: #fff;
+    }
+</style>
+
+<section class="signage-showcase">
+    <div class="container">
+        <div class="signage-grid">
+
+            <!-- Left Large Banner -->
+            <div class="signage-large">
+                <img src="https://gregory1.com/images/flexface-signage-gregory-inc-e44o55.png"
+                    alt="Flex Face Signage">
+                <div class="overlay">
+                    <!-- <h2>Transform Your Sales with</h2> -->
+                    <h1>Flex Face Signage</h1>
+                    <p>Where Innovation Meets Visibility!</p>
+                    <a href="#" class="explore-btn">Discover →</a>
+                </div>
+            </div>
+
+            <!-- Right Side Cards -->
+            <div class="signage-right">
+
+                <div class="signage-card">
+                    <img src="https://wsgprint.co.uk/wp-content/uploads/2020/01/shop-signs-north-east-face-lit-sign.jpg"
+                        alt="Signages">
+                    <div class="card-overlay">
+                        <h3>SIGNAGES</h3>
+                        <span>Explore →</span>
+                    </div>
+                </div>
+
+                <div class="signage-card">
+                    <img src="https://www.shutterstock.com/shutterstock/videos/1045272481/thumb/11.jpg?ip=x480"
+                        alt="Neon Signages">
+                    <div class="card-overlay">
+                        <h3>NEON SIGNAGES</h3>
+                        <span>Explore →</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+<style>
+    .signage-showcase {
+        padding: 60px 0;
+        background: #fff;
+    }
+
+    .signage-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 20px;
+    }
+
+    .signage-large,
+    .signage-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 14px;
+    }
+
+    .signage-large img,
+    .signage-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    /* Left Banner */
+    .signage-large {
+        height: 420px;
+    }
+
+    .signage-large .overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.1));
+        color: #fff;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .signage-large h2 {
+        font-size: 20px;
+        margin-bottom: 5px;
+        color: white;
+    }
+
+    .signage-large h1 {
+        font-size: 32px;
+        font-weight: 700;
+        color: white;
+    }
+
+    .signage-large p {
+        margin: 10px 0 18px;
+        color: white;
+    }
+
+    .explore-btn {
+        display: inline-block;
+        background: #ff4d00;
+        color: #fff;
+        padding: 10px 22px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 600;
+        width: fit-content;
+    }
+
+    /* Right Cards */
+    .signage-right {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .signage-card {
+        height: 200px;
+    }
+
+    .card-overlay {
+        position: absolute;
+        inset: 0;
+        /* background: rgba(255, 255, 255, 0.75); */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(2px);
+        text-align: center;
+        color: white;
+    }
+
+    .card-overlay h3 {
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 6px;
+        color: white;
+    }
+
+    .card-overlay span {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    /* Responsive */
+    @media (max-width: 991px) {
+        .signage-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .signage-large {
+            height: 320px;
+        }
     }
 </style>
 

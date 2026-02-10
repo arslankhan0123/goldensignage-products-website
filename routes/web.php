@@ -21,8 +21,8 @@ Route::get('/', function () {
     $SignageProducts = Product::whereHas('category', function ($query) {
         $query->where('type', 'Signage');
     })
-    ->latest()
-    ->take(12)
+    // ->latest()
+    // ->take(12)
     ->get();
 
     $PrintingMarketingProducts = Product::whereHas('category', function ($query) {

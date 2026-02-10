@@ -526,6 +526,28 @@
 
 <section class="workspace-branding">
     <div class="container">
+        <h2 class="section-title">PRINTING $ MARKETING PRODUCTS</h2>
+
+        <div class="printing-marketing-carousel owl-carousel owl-theme">
+
+            @foreach ($PrintingMarketingProducts as $product)
+            <div class="workspace-item">
+                <img src="{{ asset($product->image) }}" alt="{{ $product->name }}">
+
+                <p class="product-title">{{ $product->name }}</p>
+
+                <a href="{{ route('frontend.product-details', $product->id) }}"
+                    class="order-btn">
+                    Order Now
+                </a>
+            </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+
+<section class="workspace-branding">
+    <div class="container">
         <h2 class="section-title">Office & Store Brandings</h2>
 
         <div class="row">
@@ -610,7 +632,7 @@
     }
 
     /* ARROW CONTAINER */
-    .workspace-carousel .owl-nav {
+    .workspace-carousel .owl-nav, .printing-marketing-carousel .owl-nav {
         position: absolute;
         top: 40%;
         width: 100%;
@@ -620,7 +642,7 @@
     }
 
     /* ARROW BUTTONS */
-    .workspace-carousel .owl-nav button {
+    .workspace-carousel .owl-nav button, .printing-marketing-carousel .owl-nav button {
         width: 45px;
         height: 45px;
         background: #ff4d00 !important;
@@ -635,16 +657,16 @@
     }
 
     /* LEFT & RIGHT SPACING */
-    .workspace-carousel .owl-nav .owl-prev {
+    .workspace-carousel .owl-nav .owl-prev, .printing-marketing-carousel .owl-nav .owl-prev {
         margin-left: -20px;
     }
 
-    .workspace-carousel .owl-nav .owl-next {
+    .workspace-carousel .owl-nav .owl-next, .printing-marketing-carousel .owl-nav .owl-next {
         margin-right: -20px;
     }
 
     /* HOVER EFFECT */
-    .workspace-carousel .owl-nav button:hover {
+    .workspace-carousel .owl-nav button:hover, .printing-marketing-carousel .owl-nav button:hover {
         background: #e64400 !important;
         transform: scale(1.1);
     }
@@ -652,10 +674,10 @@
 
 
 <!-- Start Choose Area -->
-<div class="choose-area bg-with-F5F5F5-color pt-100 pb-75">
+<!-- <div class="choose-area bg-with-F5F5F5-color pt-100 pb-75">
     <div class="container">
         <div class="section-title">
-            <!-- <span>Printing & Marketing Products</span> -->
+            <span>Printing & Marketing Products</span>
             <h2>Printing & Marketing Products <span class="overlay"></span></h2>
             <p>Discover our premium range of printing and marketing products designed to enhance your brand visibility. Crafted with precision, durability, and modern aesthetics for lasting impact.</p>
         </div>
@@ -672,7 +694,7 @@
                             <a href="{{ route('frontend.product-details', $product->id) }}">{{ $product->name }}</a>
                         </h3>
                         <p>{{ \Illuminate\Support\Str::limit($product->short_description, 60) }}</p>
-                        <!-- <a href="{{ route('frontend.product-details', $product->id) }}" class="services-btn">View More</a> -->
+                        <a href="{{ route('frontend.product-details', $product->id) }}" class="services-btn">View More</a>
                         <a href="{{ route('frontend.product-details', $product->id) }}" class="order-btn">
                             Order Now
                         </a>
@@ -689,7 +711,7 @@
     <div class="choose-shape-2">
         <img src="{{ asset('frontend/assets/img/choose-shape-2.png') }}" alt="image">
     </div>
-</div>
+</div> -->
 <!-- End Choose Area -->
 
 <!-- Start Services Area -->
@@ -899,7 +921,7 @@
 <!-- Start Testimonials Area -->
 <div class="testimonials-area ptb-100">
     <div class="container-fluid">
-        <div class="section-title">
+        <div class="section-title" style="margin: 0 auto 45px; text-align: center;">
             <span>TESTIMONIALS</span>
             <h2>Some <b>Sweet Talk</b> Of Our Happy Clients <span class="overlay"></span></h2>
         </div>
@@ -1126,10 +1148,34 @@
             loop: true,
             margin: 20,
             autoplay: true,
-            autoplayTimeout: 3000,
+            autoplayTimeout: 2000,
             autoplayHoverPause: true,
             nav: true, // 👈 arrows ON
-            dots: true,
+            dots: false,
+            responsive: {
+                0: {
+                    items: 2
+                },
+                576: {
+                    items: 2
+                },
+                768: {
+                    items: 3
+                },
+                1200: {
+                    items: 4
+                }
+            }
+        });
+
+        $('.printing-marketing-carousel').owlCarousel({
+            loop: true,
+            margin: 20,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: true,
+            nav: true, // 👈 arrows ON
+            dots: false,
             responsive: {
                 0: {
                     items: 2

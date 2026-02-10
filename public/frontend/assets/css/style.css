@@ -241,8 +241,8 @@ Section Title CSS
 =================================================*/
 .section-title {
     max-width: 630px;
-    margin: 0 auto 45px;
-    text-align: center;
+    /* margin: 0 auto 45px; */
+    /* text-align: center; */
     position: relative;
 }
 

@@ -308,42 +308,4 @@
 </div>
 @endif
 <!-- End Overview Area -->
-
-<!-- Floating Contact Buttons (Phone, WhatsApp, Email) -->
-<div class="floating-contact-wrap">
-    <div class="floating-contact-buttons is-hidden" id="floatingContactButtons">
-        <a href="tel:+923044727900" class="floating-contact-btn-phone" title="Call Us" aria-label="Call">
-            <i class="ri-phone-fill"></i>
-        </a>
-        <a href="https://wa.me/923044627900" target="_blank" rel="noopener noreferrer" class="floating-contact-btn-whatsapp" title="WhatsApp" aria-label="WhatsApp">
-            <i class="ri-whatsapp-fill"></i>
-        </a>
-        <a href="mailto:arslan.devsspace@gmail.com" class="floating-contact-btn-email" title="Email Us" aria-label="Email">
-            <i class="ri-mail-fill"></i>
-        </a>
-        <button type="button" class="floating-contact-close" id="floatingContactClose" title="Close" aria-label="Close">
-            <i class="ri-close-line"></i>
-        </button>
-    </div>
-    <button type="button" class="floating-contact-toggle" id="floatingContactToggle" title="Contact Options" aria-label="Open contact options">
-        <i class="ri-chat-smile-2-fill"></i>
-    </button>
-</div>
-<script>
-(function() {
-    var toggle = document.getElementById('floatingContactToggle');
-    var panel = document.getElementById('floatingContactButtons');
-    var closeBtn = document.getElementById('floatingContactClose');
-    if (toggle && panel) {
-        toggle.addEventListener('click', function() {
-            panel.classList.toggle('is-hidden');
-        });
-        if (closeBtn) {
-            closeBtn.addEventListener('click', function() {
-                panel.classList.add('is-hidden');
-            });
-        }
-    }
-})();
-</script>
 @endsection

@@ -46,6 +46,7 @@
                     <h3>Links</h3>
 
                     <ul class="quick-links">
+                        <li><a href="{{ route('home') }}">Home</a></li>
                         <li><a href="{{ route('frontend.our-services') }}">Services</a></li>
                         <li><a href="{{ route('frontend.about') }}">About Us</a></li>
                         <li><a href="{{ route('frontend.contact') }}">Contact Us</a></li>
@@ -58,22 +59,37 @@
                     <h3>Pages</h3>
 
                     <ul class="quick-links">
-                        <li><a href="{{ route('frontend.our-products') }}">Products</a></li>
-                        <li><a href="{{ route('frontend.management') }}">Management</a></li>
+                        @foreach ($categories as $category)
+                            <li><a href="{{ route('frontend.our-products') }}?id={{ $category->id }}">{{ $category->name }}</a></li>
+                        @endforeach
+                        <!-- <li><a href="{{ route('frontend.our-products') }}">Products</a></li> -->
+                        <!-- <li><a href="{{ route('frontend.management') }}">Management</a></li> -->
                     </ul>
                 </div>
             </div>
 
             <div class="col-lg-3 col-md-6">
                 <div class="single-footer-widget" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
-                    <h3>Subscribe Newsletter</h3>
+                    <h3>Our Location</h3>
+
+                    <div class="footer-map" style="margin-top:15px;">
+                        <iframe
+                            src="https://www.google.com/maps?q=Office%20No%20M3-02%20Key%20Business%20Center%2022A%20Street%20Al%20Khubaisi%20Next%20To%20Hyundai%20Showroom%20Dubai&output=embed"
+                            width="100%"
+                            height="200"
+                            style="border:0; border-radius:8px;"
+                            allowfullscreen=""
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    <!-- <h3>Subscribe Newsletter</h3>
 
                     <form class="newsletter-form" data-bs-toggle="validator">
                         <input type="email" class="input-newsletter" placeholder="Enter your email" name="EMAIL" required autocomplete="off">
 
                         <button type="submit" class="default-btn">Subscribe</button>
                         <div id="validator-newsletter" class="form-result"></div>
-                    </form>
+                    </form> -->
                 </div>
             </div>
         </div>

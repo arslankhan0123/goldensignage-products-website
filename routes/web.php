@@ -12,6 +12,7 @@ use App\Http\Controllers\ServicesController;
 use App\Models\AdminDetail;
 use App\Models\Blog;
 use App\Models\Product;
+use App\Models\ProductCategory;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -39,6 +40,9 @@ Route::get('/', function () {
     ->take(12)
     ->get();
 
+    $categories = ProductCategory::where('type', 'Signage')->get();
+
+// dd($categories->pluck('name')->unique());
     return view('welcome', compact('products', 'blogs', 'adminDetails', 'SignageProducts', 'PrintingMarketingProducts', 'OfficeStoreProducts'));
 })->name('home');
 

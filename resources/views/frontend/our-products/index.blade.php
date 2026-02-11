@@ -84,7 +84,7 @@
                             <a href="#"><i class="ri-heart-fill"></i></a>
                         </div>
                         <div class="add-to-cart-btn">
-                            <a href="{{ route('frontend.contact') }}" class="default-btn">Contact Us</a>
+                            <a href="https://wa.me/971543569914" target="_blank" class="default-btn">Contact Us</a>
                         </div>
                     </div>
                     <div class="products-content">

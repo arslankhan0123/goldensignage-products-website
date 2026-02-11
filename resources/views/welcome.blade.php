@@ -129,6 +129,7 @@
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
     .home-banner {
         width: 100%;
@@ -179,7 +180,7 @@
 
         <!-- Slide 3 -->
         <div class="banner-slide">
-            <img src="https://www.shutterstock.com/shutterstock/videos/1045272481/thumb/11.jpg?ip=x480" alt="Backdrop Exhibition">
+            <img src="https://t4.ftcdn.net/jpg/02/24/03/49/360_F_224034986_vWUKsRU4ay23YK9sCADOsz2E0cOUivRT.jpg" alt="Backdrop Exhibition">
             <div class="banner-overlay">
                 <h2>Neon Signage</h2>
             </div>
@@ -187,7 +188,7 @@
 
         <!-- Slide 4 -->
         <div class="banner-slide">
-            <img src="https://png.pngtree.com/thumb_back/fh260/background/20201012/pngtree-envelope-christmas-background-design-image_410605.jpg" alt="Promotional Banner">
+            <img src="https://img.freepik.com/premium-photo/old-brown-paper-envelope-grunge-vintage-paper-brown-background_123827-27752.jpg" alt="Promotional Banner">
             <div class="banner-overlay">
                 <h2>Custom Envelopes</h2>
             </div>
@@ -195,12 +196,67 @@
 
         <!-- Slide 5 -->
         <div class="banner-slide">
-            <img src="https://img.pikbest.com/backgrounds/20190326/red-business-business-card-background_1881180.jpg!w700wp" alt="Promotional Banner">
+            <img src="https://t4.ftcdn.net/jpg/03/90/94/61/360_F_390946110_XTezYxpYC8AHloVFQHY7hQoydO7A1NYO.jpg" alt="Promotional Banner">
             <div class="banner-overlay">
                 <h2>Business Cards</h2>
             </div>
         </div>
 
+        <!-- Slide 6 -->
+        <div class="banner-slide">
+            <img src="https://www.dlxprint.com/images/signages/fabric_light_Box_dubai.webp" alt="Roll Up Banner">
+            <div class="banner-overlay">
+                <h2>Fabric Light Box Signage</h2>
+            </div>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="banner-slide">
+            <img src="https://lh3.googleusercontent.com/proxy/sdCQGzj8hCu2VfbDiy7KNpny63aPRuUwPWIc3fQoavfwpLOr152h3HMuIMRtY65Av50btya-3orLR-YWvLMi43FZZTj9aQ3R5cICmyYIEXIwO9xz4pXZW331onSeCFqOMXb-m7x9r38xeHbBWTuFNA" alt="Roll Up Banner">
+            <div class="banner-overlay">
+                <h2>Acrylic Name Plates</h2>
+            </div>
+        </div>
+
+        <!-- Slide 7 -->
+        <div class="banner-slide">
+            <img src="https://media.istockphoto.com/id/1284992155/vector/metal-banner-realistic-iron-plate-stainless-steel-board-with-silver-shine-and-texture.jpg?s=612x612&w=0&k=20&c=yXWjQPvOvj_FSURppiI9hpcFwFy4XQZVtDkU8bo-6-k=" alt="Roll Up Banner">
+            <div class="banner-overlay">
+                <h2>Metal Name Plates</h2>
+            </div>
+        </div>
+
+        <!-- Slide 8 -->
+        <div class="banner-slide">
+            <img src="https://media.istockphoto.com/id/1404213994/photo/wooden-nameplate-or-sign-board-screwed-at-wall-background-front-view-of-name-plate.jpg?s=612x612&w=0&k=20&c=JNo2Q2he0bt9wdgqqsonAoE6g8LxdPse55MPbviepQ8=" alt="Roll Up Banner">
+            <div class="banner-overlay">
+                <h2>Wooden Name Plates</h2>
+            </div>
+        </div>
+
+        <!-- Slide 9 -->
+        <div class="banner-slide">
+            <img src="https://www.scribescolourprint.co.uk/images/templates/InvoiceBooks22.jpg" alt="Roll Up Banner">
+            <div class="banner-overlay">
+                <h2>Invoice Books</h2>
+            </div>
+        </div>
+
+        <!-- Slide 10 -->
+        <div class="banner-slide">
+            <img src="https://www.navitor.com/Assets/Catalog/Stamps/Stamp_Self-Inking_Category_540x240.png" alt="Roll Up Banner">
+            <div class="banner-overlay">
+                <h2>Self-Inking Stamps</h2>
+            </div>
+        </div>
+
+        <!-- Slide 11 -->
+        <div class="banner-slide">
+            <img src="https://t4.ftcdn.net/jpg/18/92/00/39/360_F_1892003960_PuENoHo3bf0NlW8u2ffA2wb8FmmLQ2li.jpg" alt="Roll Up Banner">
+            <div class="banner-overlay">
+                <h2>Brochures</h2>
+            </div>
+        </div>
     </div>
 </div>
 <!-- End Main Hero Area -->
@@ -559,6 +615,185 @@
     .order-btn:hover {
         background: #e64400;
         color: #fff;
+    }
+</style>
+
+<!-- Order Process Section -->
+<section class="order-process-section">
+    <div class="container">
+        <div class="section-title" style="margin: 0 auto 45px; text-align: center;">
+            <h2>Order Process</h2>
+        </div>
+
+        <div class="row text-center justify-content-center">
+
+            <!-- Step 1 -->
+            <div class="col-lg col-md-4 col-6 process-item">
+                <div class="process-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <h5>Inquiry</h5>
+                <p>Inquire with your requirements</p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="col-lg col-md-4 col-6 process-item">
+                <div class="process-icon">
+                    <i class="fas fa-file-invoice"></i>
+                </div>
+                <h5>Quotation</h5>
+                <p>Approve provided quotation</p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="col-lg col-md-4 col-6 process-item">
+                <div class="process-icon">
+                    <i class="fas fa-credit-card"></i>
+                </div>
+                <h5>Payment</h5>
+                <p>Make payment to proceed</p>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="col-lg col-md-4 col-6 process-item">
+                <div class="process-icon">
+                    <i class="fas fa-image"></i>
+                </div>
+                <h5>Mock Up</h5>
+                <p>Confirm mock-up before production</p>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="col-lg col-md-4 col-6 process-item">
+                <div class="process-icon">
+                    <i class="fas fa-industry"></i>
+                </div>
+                <h5>Production</h5>
+                <p>We fulfill your order</p>
+            </div>
+
+            <!-- Step 6 -->
+            <div class="col-lg col-md-4 col-6 process-item">
+                <div class="process-icon">
+                    <i class="fas fa-truck"></i>
+                </div>
+                <h5>Delivery Or Collection</h5>
+                <p>Receive via delivery or collect</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+<style>
+    .order-process-section {
+        background: #f2f2f2;
+        padding: 70px 0;
+    }
+
+    .section-title h2 {
+        font-size: 36px;
+        font-weight: 600;
+        margin-bottom: 50px;
+    }
+
+    .process-item {
+        margin-bottom: 40px;
+    }
+
+    .process-icon {
+        width: 70px;
+        height: 70px;
+        margin: 0 auto 15px;
+        border: 2px solid #000;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+    }
+
+    .process-item h5 {
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+
+    .process-item p {
+        font-size: 14px;
+        color: #555;
+    }
+</style>
+
+<!-- Trusted Businesses Section -->
+<section class="trusted-section">
+    <div class="container">
+        <div class="section-title text-center">
+            <h2>Businesses that Trust Deluxe Printing</h2>
+        </div>
+
+        <div class="owl-carousel trusted-carousel">
+    <div class="logo-item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/BMW.svg" alt="BMW" style="height: 80px; width: auto; margin: 0 auto;">
+    </div>
+
+    <div class="logo-item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/500px-Google_%22G%22_logo.svg.png" alt="Google" style="height: 80px; width: auto; margin: 0 auto;">
+    </div>
+
+    <div class="logo-item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft" style="height: 80px; width: auto; margin: 0 auto;">
+    </div>
+
+    <div class="logo-item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" style="height: 80px; width: auto; margin: 0 auto;">
+    </div>
+
+    <div class="logo-item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" style="height: 80px; width: auto; margin: 0 auto;">
+    </div>
+
+    <div class="logo-item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Coca-Cola_logo.svg" alt="Coca-Cola" style="height: 80px; width: auto; margin: 0 auto;">
+    </div>
+
+    <div class="logo-item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" alt="Nike" style="height: 80px; width: auto; margin: 0 auto;">
+    </div>
+
+    <div class="logo-item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Mercedes-Logo.svg/500px-Mercedes-Logo.svg.png" alt="Mercedes" style="height: 80px; width: auto; margin: 0 auto;">
+    </div>
+</div>
+    </div>
+</section>
+<style>
+    .trusted-section {
+        background: #f2f2f2;
+        padding: 60px 0;
+    }
+
+    .trusted-section h2 {
+        font-size: 36px;
+        font-weight: 600;
+        margin-bottom: 40px;
+    }
+
+    .logo-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo-item img {
+        max-height: 70px;
+        width: auto;
+        filter: grayscale(100%);
+        opacity: 0.8;
+        transition: 0.3s ease;
+    }
+
+    .logo-item img:hover {
+        filter: grayscale(0%);
+        opacity: 1;
     }
 </style>
 
@@ -1394,6 +1629,30 @@
             autoplayTimeout: 2000,
             autoplayHoverPause: true,
             nav: true, // 👈 arrows ON
+            dots: false,
+            responsive: {
+                0: {
+                    items: 2
+                },
+                576: {
+                    items: 2
+                },
+                768: {
+                    items: 3
+                },
+                1200: {
+                    items: 4
+                }
+            }
+        });
+
+        $('.trusted-carousel').owlCarousel({
+            loop: true,
+            margin: 20,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: true,
+            nav: false, // 👈 arrows ON
             dots: false,
             responsive: {
                 0: {

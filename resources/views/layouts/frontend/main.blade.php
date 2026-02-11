@@ -73,7 +73,6 @@
     <!-- End Preloader Area -->
 
     <!-- Start Topbar Area -->
-    @include('layouts.frontend.topbar')
     <!-- End Topbar Area -->
 
     <!-- Start Navbar Area -->

@@ -364,7 +364,7 @@
     .floating-contact-wrap {
         position: fixed;
         right: 20px;
-        bottom: 24px;
+        bottom: 90px;
         z-index: 9999;
         display: flex;
         flex-direction: column;

@@ -45,6 +45,54 @@
 
     <!-- <link rel="icon" type="image/png" href="https://templates.envytheme.com/coze/default/assets/images/favicon.png"> -->
     <link rel="icon" type="image/png" href="{{ asset('logo.png') }}">
+    <style>
+        /* 1. Navbar ko Bottom Bar se upar lane ke liye */
+        .navbar-area {
+            z-index: 3000 !important;
+            /* Bottom bar 2000 par hai, isay 3000 kar diya */
+        }
+
+        /* 2. Mobile Menu (MeanMenu) ko sabse upar rakhne ke liye */
+        .mean-container .mean-nav {
+            z-index: 3001 !important;
+        }
+
+        /* 3. Dropdown menus ko bhi prioritize karein */
+        .main-navbar .navbar .navbar-nav .nav-item .dropdown-menu {
+            z-index: 3002 !important;
+        }
+
+        /* 4. Agar mobile menu open ho to bottom bar ke upar aaye */
+        @media (max-width: 991px) {
+            .mean-container .mean-bar {
+                z-index: 3000 !important;
+            }
+
+            /* Mobile par jab menu khule to wo bottom bar ko cover kare */
+            .mean-container .mean-nav ul {
+                max-height: 70vh;
+                /* Menu ko screen tak mehdood rakhein */
+                overflow-y: auto;
+            }
+        }
+
+        /* Second level dropdown (products list) */
+        .navbar .dropdown-menu .dropdown-menu {
+            max-height: 220px;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        /* Smooth scroll look */
+        .navbar .dropdown-menu::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .navbar .dropdown-menu::-webkit-scrollbar-thumb {
+            background: #ff8c00;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 
 <body>

@@ -24,52 +24,6 @@
                             <a href="{{ route('home') }}" class="nav-link">Home</a>
                         </li>
 
-                        <!-- <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                Services
-                                <i class="ri-arrow-down-s-line"></i>
-                            </a>
-
-                            <ul class="dropdown-menu">
-                                <li class="nav-item">
-                                    <a href="services-style-1.html" class="nav-link">Services Style One</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="services-style-2.html" class="nav-link">Services Style Two</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="services-details.html" class="nav-link">Services Details</a>
-                                </li>
-                            </ul>
-                        </li> -->
-
-                        <!-- <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                Shop
-                                <i class="ri-arrow-down-s-line"></i>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li class="nav-item">
-                                    <a href="products.html" class="nav-link">Products</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="cart.html" class="nav-link">Cart</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="wishlist.html" class="nav-link">Wishlist</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="checkout.html" class="nav-link">Checkout</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="my-account.html" class="nav-link">My Account</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="products-details.html" class="nav-link">Products Details</a>
-                                </li>
-                            </ul>
-                        </li> -->
-
                         @if(isset($signageCategories) && $signageCategories->isNotEmpty())
                         <li class="nav-item">
                             <a href="#" class="nav-link">

@@ -98,29 +98,41 @@
     <div class="fixed-bottom-bar">
         <div class="container">
             <div class="row align-items-center text-center">
-                <div class="col-3 border-end">
-                    <span><i class="ri-phone-fill"></i> Phone:
-                        <a href="tel:{{ preg_replace('/\D+/', '', ($adminDetails->phone ?? '')) }}">{{ $adminDetails->phone ?? '' }}</a>
+
+                <div class="col-6 col-md-3 border-end">
+                    <span>
+                        <i class="ri-phone-fill"></i> Phone:
+                        <a href="tel:{{ preg_replace('/\D+/', '', ($adminDetails->phone ?? '')) }}">
+                            {{ $adminDetails->phone ?? '' }}
+                        </a>
                     </span>
                 </div>
-                <div class="col-3 border-end">
-                    <span><i class="ri-mail-fill"></i> Mail:
-                        <a href="mailto:{{ $adminDetails->email ?? '' }}">{{ $adminDetails->email ?? 'info@example.com' }}</a>
+
+                <div class="col-6 col-md-3 border-end">
+                    <span>
+                        <i class="ri-mail-fill"></i> Email:
+                        <a href="mailto:{{ $adminDetails->email ?? '' }}">
+                            {{ $adminDetails->email ?? 'info@example.com' }}
+                        </a>
                     </span>
                 </div>
-                <div class="col-3 border-end">
+
+                <div class="col-6 col-md-3 border-end">
                     <a href="#" class="btn btn-sm btn-orange">Quick Inquiry</a>
                 </div>
-                <div class="col-3 social-box">
+
+                <div class="col-6 col-md-3 social-box">
                     <p class="mb-1" style="font-size: 12px; font-weight: bold;">Follow Us</p>
                     <div class="social-icons">
-                        <a href="#" target="_blank"><i class="ri-facebook-circle-fill"></i></a>
-                        <a href="#" target="_blank"><i class="ri-instagram-line"></i></a>
-                        <a href="#" target="_blank"><i class="ri-whatsapp-line"></i></a>
-                        <a href="#" target="_blank"><i class="ri-twitter-x-fill"></i></a>
+                        <a href="#"><i class="ri-facebook-circle-fill"></i></a>
+                        <a href="#"><i class="ri-instagram-line"></i></a>
+                        <a href="#"><i class="ri-whatsapp-line"></i></a>
+                        <a href="#"><i class="ri-twitter-x-fill"></i></a>
                     </div>
                 </div>
+
             </div>
+
         </div>
     </div>
     <style>
@@ -259,162 +271,215 @@
         })();
     </script>
     <style>
-    /* Product details page - screenshot style */
-    .product-detail-hero {
-        padding: 60px 0 80px;
-        background: #fff;
-    }
-    .product-detail-hero .headings-row {
-        margin-bottom: 1.5rem;
-    }
-    .product-detail-hero .product-title {
-        font-size: 2rem;
-        font-weight: 700;
-        color: #1a1a1a;
-    }
-    .product-detail-hero .about-heading {
-        font-size: 1.35rem;
-        font-weight: 700;
-        color: #1a1a1a;
-    }
-    .product-detail-hero .main-image-wrap {
-        width: 100%;
-        border-radius: 12px;
-        overflow: hidden;
-        background: #f5f5f5;
-    }
-    .product-detail-hero .main-image-wrap a {
-        display: block;
-        width: 100%;
-    }
-    .product-detail-hero .main-image-wrap img {
-        width: 100%;
-        height: auto;
-        display: block;
-        vertical-align: top;
-    }
-    .product-detail-about .about-content {
-        margin-top: 0;
-        color: #444;
-        line-height: 1.7;
-        margin-bottom: 1.5rem;
-    }
-    .product-detail-about .about-content p {
-        margin-bottom: 1rem;
-    }
-    .product-detail-about .about-content h4,
-    .product-detail-about .about-content strong {
-        font-size: 1.05rem;
-        font-weight: 700;
-        color: #1a1a1a;
-        margin-top: 1.25rem;
-        margin-bottom: 0.35rem;
-    }
-    .product-detail-about .about-content ul {
-        margin-bottom: 1rem;
-        padding-left: 1.25rem;
-    }
-    .product-detail-about .about-content li {
-        margin-bottom: 0.25rem;
-    }
-    /* Gallery section */
-    .product-gallery-section {
-        padding: 0 0 80px;
-        background: #fff;
-    }
-    .product-gallery-section .gallery-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-    }
-    .product-gallery-section .gallery-item {
-        background: #fff;
-    }
-    .product-gallery-section .gallery-item .gallery-title {
-        font-size: 1.1rem;
-        font-weight: 600;
-        color: #1a1a1a;
-        margin-bottom: 0.75rem;
-        padding-bottom: 0.35rem;
-        border-bottom: 2px solid #c00;
-        display: inline-block;
-    }
-    .product-gallery-section .gallery-item .gallery-image {
-        width: 100%;
-        border-radius: 8px;
-        overflow: hidden;
-        background: #f5f5f5;
-    }
-    .product-gallery-section .gallery-item .gallery-image img {
-        width: 100%;
-        height: auto;
-        min-height: 220px;
-        object-fit: cover;
-        display: block;
-    }
-    @media (max-width: 991px) {
-        .product-detail-hero .product-title { font-size: 1.65rem; }
-        .product-gallery-section .gallery-grid { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 576px) {
-        .product-detail-hero { padding: 40px 0 50px; }
-        .product-gallery-section .gallery-item .gallery-image img { min-height: 180px; }
-    }
-    /* Floating contact buttons - right side stack */
-    .floating-contact-wrap {
-        position: fixed;
-        right: 20px;
-        bottom: 90px;
-        z-index: 9999;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-    .floating-contact-wrap a,
-    .floating-contact-wrap button {
-        width: 52px;
-        height: 52px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #fff;
-        text-decoration: none;
-        border: none;
-        cursor: pointer;
-        box-shadow: 0 4px 14px rgba(0,0,0,0.2);
-        transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .floating-contact-wrap a:hover,
-    .floating-contact-wrap button:hover {
-        transform: scale(1.08);
-        box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-        color: #fff;
-    }
-    .floating-contact-wrap a:focus,
-    .floating-contact-wrap button:focus {
-        outline: none;
-        color: #fff;
-    }
-    .floating-contact-btn-phone { background: #25D366; }
-    .floating-contact-btn-whatsapp { background: #25D366; }
-    .floating-contact-btn-email { background: #E84E40; }
-    .floating-contact-toggle { background: #7c3aed; }
-    .floating-contact-close { background: #a78bfa; }
-    .floating-contact-wrap .floating-contact-toggle i,
-    .floating-contact-wrap .floating-contact-close i,
-    .floating-contact-wrap a i { font-size: 1.4rem; }
-    .floating-contact-buttons {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-    .floating-contact-buttons.is-hidden {
-        display: none !important;
-    }
-</style>
+        /* Product details page - screenshot style */
+        .product-detail-hero {
+            padding: 60px 0 80px;
+            background: #fff;
+        }
+
+        .product-detail-hero .headings-row {
+            margin-bottom: 1.5rem;
+        }
+
+        .product-detail-hero .product-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        .product-detail-hero .about-heading {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        .product-detail-hero .main-image-wrap {
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #f5f5f5;
+        }
+
+        .product-detail-hero .main-image-wrap a {
+            display: block;
+            width: 100%;
+        }
+
+        .product-detail-hero .main-image-wrap img {
+            width: 100%;
+            height: auto;
+            display: block;
+            vertical-align: top;
+        }
+
+        .product-detail-about .about-content {
+            margin-top: 0;
+            color: #444;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-detail-about .about-content p {
+            margin-bottom: 1rem;
+        }
+
+        .product-detail-about .about-content h4,
+        .product-detail-about .about-content strong {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-top: 1.25rem;
+            margin-bottom: 0.35rem;
+        }
+
+        .product-detail-about .about-content ul {
+            margin-bottom: 1rem;
+            padding-left: 1.25rem;
+        }
+
+        .product-detail-about .about-content li {
+            margin-bottom: 0.25rem;
+        }
+
+        /* Gallery section */
+        .product-gallery-section {
+            padding: 0 0 80px;
+            background: #fff;
+        }
+
+        .product-gallery-section .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .product-gallery-section .gallery-item {
+            background: #fff;
+        }
+
+        .product-gallery-section .gallery-item .gallery-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.35rem;
+            border-bottom: 2px solid #c00;
+            display: inline-block;
+        }
+
+        .product-gallery-section .gallery-item .gallery-image {
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #f5f5f5;
+        }
+
+        .product-gallery-section .gallery-item .gallery-image img {
+            width: 100%;
+            height: auto;
+            min-height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+
+        @media (max-width: 991px) {
+            .product-detail-hero .product-title {
+                font-size: 1.65rem;
+            }
+
+            .product-gallery-section .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .product-detail-hero {
+                padding: 40px 0 50px;
+            }
+
+            .product-gallery-section .gallery-item .gallery-image img {
+                min-height: 180px;
+            }
+        }
+
+        /* Floating contact buttons - right side stack */
+        .floating-contact-wrap {
+            position: fixed;
+            right: 20px;
+            bottom: 90px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .floating-contact-wrap a,
+        .floating-contact-wrap button {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .floating-contact-wrap a:hover,
+        .floating-contact-wrap button:hover {
+            transform: scale(1.08);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+            color: #fff;
+        }
+
+        .floating-contact-wrap a:focus,
+        .floating-contact-wrap button:focus {
+            outline: none;
+            color: #fff;
+        }
+
+        .floating-contact-btn-phone {
+            background: #25D366;
+        }
+
+        .floating-contact-btn-whatsapp {
+            background: #25D366;
+        }
+
+        .floating-contact-btn-email {
+            background: #E84E40;
+        }
+
+        .floating-contact-toggle {
+            background: #7c3aed;
+        }
+
+        .floating-contact-close {
+            background: #a78bfa;
+        }
+
+        .floating-contact-wrap .floating-contact-toggle i,
+        .floating-contact-wrap .floating-contact-close i,
+        .floating-contact-wrap a i {
+            font-size: 1.4rem;
+        }
+
+        .floating-contact-buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .floating-contact-buttons.is-hidden {
+            display: none !important;
+        }
+    </style>
 
     <!-- Links of JS files -->
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>

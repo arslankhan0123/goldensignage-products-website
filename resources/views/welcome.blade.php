@@ -137,21 +137,26 @@
 <style>
     .home-banner {
         width: 100%;
-        background: #f7f7f7;
     }
 
     .banner-slide {
-        position: relative;
-        text-align: center;
+        width: 100%;
     }
 
     .banner-slide img {
         width: 100%;
-        height: 100vh;
-        /* full screen height */
-        object-fit: cover;
-        /* fills container and crops */
+        height: auto;
+        /* important */
         display: block;
+    }
+
+    @media (max-width: 768px) {
+        .banner-slide img {
+            height: 200px;
+            /* adjust 240–320px as you like */
+            object-fit: cover;
+            /* fill nicely */
+        }
     }
 </style>
 <!-- Start Main Hero Area -->
@@ -160,106 +165,222 @@
 
         <!-- Slide 1 -->
         <div class="banner-slide">
-            <img src="https://graphicsfamily.com/wp-content/uploads/edd/2024/11/Free-Download-Storefront-and-Outdoor-Sign-3D-Logo-Mockup--scaled.jpg" alt="Roll Up Banner">
-            <div class="banner-overlay">
+            <img src="{{ asset('/banner/1.png') }}" alt="Roll Up Banner">
+            <!-- <div class="banner-overlay">
                 <h2>Outlit 3D Signage</h2>
-            </div>
+            </div> -->
         </div>
 
         <!-- Slide 2 -->
         <div class="banner-slide">
-            <img src="https://www.signsnw.co.uk/wp-content/uploads/2017/07/lavelle-flex-face.jpg" alt="Standee Banner">
+            <img src="{{ asset('/banner/2.png') }}" alt="Standee Banner">
+            <!-- <img src="https://www.signsnw.co.uk/wp-content/uploads/2017/07/lavelle-flex-face.jpg" alt="Standee Banner">
             <div class="banner-overlay">
                 <h2>Flex Face Signage</h2>
-            </div>
+            </div> -->
         </div>
 
         <!-- Slide 3 -->
         <div class="banner-slide">
-            <img src="https://png.pngtree.com/thumb_back/fh260/background/20230617/pngtree-3d-rendered-shop-signage-empty-black-rectangle-mockup-image_3627444.jpg" alt="Backdrop Exhibition">
+            <img src="{{ asset('/banner/3.png') }}" alt="Standee Banner">
+            <!-- <img src="https://png.pngtree.com/thumb_back/fh260/background/20230617/pngtree-3d-rendered-shop-signage-empty-black-rectangle-mockup-image_3627444.jpg" alt="Backdrop Exhibition">
             <div class="banner-overlay">
                 <h2>3D Signage & Outdoor Signage</h2>
-            </div>
+            </div> -->
         </div>
 
         <!-- Slide 3 -->
         <div class="banner-slide">
-            <img src="https://t4.ftcdn.net/jpg/02/24/03/49/360_F_224034986_vWUKsRU4ay23YK9sCADOsz2E0cOUivRT.jpg" alt="Backdrop Exhibition">
+            <img src="{{ asset('/banner/4.png') }}" alt="Standee Banner">
+            <!-- <img src="https://t4.ftcdn.net/jpg/02/24/03/49/360_F_224034986_vWUKsRU4ay23YK9sCADOsz2E0cOUivRT.jpg" alt="Backdrop Exhibition">
             <div class="banner-overlay">
                 <h2>Neon Signage</h2>
-            </div>
+            </div> -->
         </div>
 
         <!-- Slide 4 -->
         <div class="banner-slide">
-            <img src="https://img.freepik.com/premium-photo/old-brown-paper-envelope-grunge-vintage-paper-brown-background_123827-27752.jpg" alt="Promotional Banner">
+            <img src="{{ asset('/banner/5.png') }}" alt="Standee Banner">
+            <!-- <img src="https://img.freepik.com/premium-photo/old-brown-paper-envelope-grunge-vintage-paper-brown-background_123827-27752.jpg" alt="Promotional Banner">
             <div class="banner-overlay">
                 <h2>Custom Envelopes</h2>
-            </div>
+            </div> -->
         </div>
 
         <!-- Slide 5 -->
         <div class="banner-slide">
-            <img src="https://t4.ftcdn.net/jpg/03/90/94/61/360_F_390946110_XTezYxpYC8AHloVFQHY7hQoydO7A1NYO.jpg" alt="Promotional Banner">
+            <img src="{{ asset('/banner/6.png') }}" alt="Standee Banner">
+            <!-- <img src="https://t4.ftcdn.net/jpg/03/90/94/61/360_F_390946110_XTezYxpYC8AHloVFQHY7hQoydO7A1NYO.jpg" alt="Promotional Banner">
             <div class="banner-overlay">
                 <h2>Business Cards</h2>
-            </div>
+            </div> -->
         </div>
 
         <!-- Slide 6 -->
         <div class="banner-slide">
-            <img src="https://www.dlxprint.com/images/signages/fabric_light_Box_dubai.webp" alt="Roll Up Banner">
+            <img src="{{ asset('/banner/7.png') }}" alt="Standee Banner">
+            <!-- <img src="https://www.dlxprint.com/images/signages/fabric_light_Box_dubai.webp" alt="Roll Up Banner">
             <div class="banner-overlay">
                 <h2>Fabric Light Box Signage</h2>
-            </div>
+            </div> -->
         </div>
 
         <!-- Slide 6 -->
         <div class="banner-slide">
-            <img src="https://lh3.googleusercontent.com/proxy/sdCQGzj8hCu2VfbDiy7KNpny63aPRuUwPWIc3fQoavfwpLOr152h3HMuIMRtY65Av50btya-3orLR-YWvLMi43FZZTj9aQ3R5cICmyYIEXIwO9xz4pXZW331onSeCFqOMXb-m7x9r38xeHbBWTuFNA" alt="Roll Up Banner">
+            <img src="{{ asset('/banner/8.png') }}" alt="Standee Banner">
+            <!-- <img src="https://lh3.googleusercontent.com/proxy/sdCQGzj8hCu2VfbDiy7KNpny63aPRuUwPWIc3fQoavfwpLOr152h3HMuIMRtY65Av50btya-3orLR-YWvLMi43FZZTj9aQ3R5cICmyYIEXIwO9xz4pXZW331onSeCFqOMXb-m7x9r38xeHbBWTuFNA" alt="Roll Up Banner">
             <div class="banner-overlay">
                 <h2>Acrylic Name Plates</h2>
-            </div>
+            </div> -->
         </div>
 
         <!-- Slide 7 -->
         <div class="banner-slide">
-            <img src="https://media.istockphoto.com/id/1284992155/vector/metal-banner-realistic-iron-plate-stainless-steel-board-with-silver-shine-and-texture.jpg?s=612x612&w=0&k=20&c=yXWjQPvOvj_FSURppiI9hpcFwFy4XQZVtDkU8bo-6-k=" alt="Roll Up Banner">
+            <img src="{{ asset('/banner/9.png') }}" alt="Standee Banner">
+            <!-- <img src="https://media.istockphoto.com/id/1284992155/vector/metal-banner-realistic-iron-plate-stainless-steel-board-with-silver-shine-and-texture.jpg?s=612x612&w=0&k=20&c=yXWjQPvOvj_FSURppiI9hpcFwFy4XQZVtDkU8bo-6-k=" alt="Roll Up Banner">
             <div class="banner-overlay">
                 <h2>Metal Name Plates</h2>
-            </div>
+            </div> -->
         </div>
 
         <!-- Slide 8 -->
         <div class="banner-slide">
-            <img src="https://media.istockphoto.com/id/1404213994/photo/wooden-nameplate-or-sign-board-screwed-at-wall-background-front-view-of-name-plate.jpg?s=612x612&w=0&k=20&c=JNo2Q2he0bt9wdgqqsonAoE6g8LxdPse55MPbviepQ8=" alt="Roll Up Banner">
+            <img src="{{ asset('/banner/10.png') }}" alt="Standee Banner">
+            <!-- <img src="https://media.istockphoto.com/id/1404213994/photo/wooden-nameplate-or-sign-board-screwed-at-wall-background-front-view-of-name-plate.jpg?s=612x612&w=0&k=20&c=JNo2Q2he0bt9wdgqqsonAoE6g8LxdPse55MPbviepQ8=" alt="Roll Up Banner">
             <div class="banner-overlay">
                 <h2>Wooden Name Plates</h2>
-            </div>
+            </div> -->
         </div>
 
         <!-- Slide 9 -->
         <div class="banner-slide">
-            <img src="https://www.scribescolourprint.co.uk/images/templates/InvoiceBooks22.jpg" alt="Roll Up Banner">
+            <img src="{{ asset('/banner/11.png') }}" alt="Standee Banner">
+            <!-- <img src="https://www.scribescolourprint.co.uk/images/templates/InvoiceBooks22.jpg" alt="Roll Up Banner">
             <div class="banner-overlay">
                 <h2>Invoice Books</h2>
-            </div>
+            </div> -->
         </div>
 
         <!-- Slide 10 -->
         <div class="banner-slide">
-            <img src="https://www.navitor.com/Assets/Catalog/Stamps/Stamp_Self-Inking_Category_540x240.png" alt="Roll Up Banner">
+            <img src="{{ asset('/banner/12.png') }}" alt="Standee Banner">
+            <!-- <img src="https://www.navitor.com/Assets/Catalog/Stamps/Stamp_Self-Inking_Category_540x240.png" alt="Roll Up Banner">
             <div class="banner-overlay">
                 <h2>Self-Inking Stamps</h2>
-            </div>
+            </div> -->
         </div>
 
         <!-- Slide 11 -->
         <div class="banner-slide">
-            <img src="https://t4.ftcdn.net/jpg/18/92/00/39/360_F_1892003960_PuENoHo3bf0NlW8u2ffA2wb8FmmLQ2li.jpg" alt="Roll Up Banner">
+            <img src="{{ asset('/banner/13.png') }}" alt="Standee Banner">
+            <!-- <img src="https://t4.ftcdn.net/jpg/18/92/00/39/360_F_1892003960_PuENoHo3bf0NlW8u2ffA2wb8FmmLQ2li.jpg" alt="Roll Up Banner">
             <div class="banner-overlay">
                 <h2>Brochures</h2>
-            </div>
+            </div> -->
+        </div>
+
+        <!-- Slide 11 -->
+        <div class="banner-slide">
+            <img src="{{ asset('/banner/14.png') }}" alt="Standee Banner">
+            <!-- <img src="https://t4.ftcdn.net/jpg/18/92/00/39/360_F_1892003960_PuENoHo3bf0NlW8u2ffA2wb8FmmLQ2li.jpg" alt="Roll Up Banner">
+            <div class="banner-overlay">
+                <h2>Brochures</h2>
+            </div> -->
+        </div>
+
+        <!-- Slide 11 -->
+        <div class="banner-slide">
+            <img src="{{ asset('/banner/15.png') }}" alt="Standee Banner">
+            <!-- <img src="https://t4.ftcdn.net/jpg/18/92/00/39/360_F_1892003960_PuENoHo3bf0NlW8u2ffA2wb8FmmLQ2li.jpg" alt="Roll Up Banner">
+            <div class="banner-overlay">
+                <h2>Brochures</h2>
+            </div> -->
+        </div>
+
+        <!-- Slide 11 -->
+        <div class="banner-slide">
+            <img src="{{ asset('/banner/16.png') }}" alt="Standee Banner">
+            <!-- <img src="https://t4.ftcdn.net/jpg/18/92/00/39/360_F_1892003960_PuENoHo3bf0NlW8u2ffA2wb8FmmLQ2li.jpg" alt="Roll Up Banner">
+            <div class="banner-overlay">
+                <h2>Brochures</h2>
+            </div> -->
+        </div>
+
+        <!-- Slide 11 -->
+        <!-- <div class="banner-slide">
+            <img src="{{ asset('/banner/17.png') }}" alt="Standee Banner">
+        </div> -->
+
+        <!-- Slide 11 -->
+        <div class="banner-slide">
+            <img src="{{ asset('/banner/18.png') }}" alt="Standee Banner">
+            <!-- <img src="https://t4.ftcdn.net/jpg/18/92/00/39/360_F_1892003960_PuENoHo3bf0NlW8u2ffA2wb8FmmLQ2li.jpg" alt="Roll Up Banner">
+            <div class="banner-overlay">
+                <h2>Brochures</h2>
+            </div> -->
+        </div>
+
+        <!-- Slide 11 -->
+        <div class="banner-slide">
+            <img src="{{ asset('/banner/19.png') }}" alt="Standee Banner">
+            <!-- <img src="https://t4.ftcdn.net/jpg/18/92/00/39/360_F_1892003960_PuENoHo3bf0NlW8u2ffA2wb8FmmLQ2li.jpg" alt="Roll Up Banner">
+            <div class="banner-overlay">
+                <h2>Brochures</h2>
+            </div> -->
+        </div>
+
+        <!-- Slide 11 -->
+        <div class="banner-slide">
+            <img src="{{ asset('/banner/20.png') }}" alt="Standee Banner">
+            <!-- <img src="https://t4.ftcdn.net/jpg/18/92/00/39/360_F_1892003960_PuENoHo3bf0NlW8u2ffA2wb8FmmLQ2li.jpg" alt="Roll Up Banner">
+            <div class="banner-overlay">
+                <h2>Brochures</h2>
+            </div> -->
+        </div>
+
+        <!-- Slide 11 -->
+        <div class="banner-slide">
+            <img src="{{ asset('/banner/21.png') }}" alt="Standee Banner">
+            <!-- <img src="https://t4.ftcdn.net/jpg/18/92/00/39/360_F_1892003960_PuENoHo3bf0NlW8u2ffA2wb8FmmLQ2li.jpg" alt="Roll Up Banner">
+            <div class="banner-overlay">
+                <h2>Brochures</h2>
+            </div> -->
+        </div>
+
+        <!-- Slide 11 -->
+        <div class="banner-slide">
+            <img src="{{ asset('/banner/22.png') }}" alt="Standee Banner">
+            <!-- <img src="https://t4.ftcdn.net/jpg/18/92/00/39/360_F_1892003960_PuENoHo3bf0NlW8u2ffA2wb8FmmLQ2li.jpg" alt="Roll Up Banner">
+            <div class="banner-overlay">
+                <h2>Brochures</h2>
+            </div> -->
+        </div>
+
+        <!-- Slide 11 -->
+        <div class="banner-slide">
+            <img src="{{ asset('/banner/23.png') }}" alt="Standee Banner">
+            <!-- <img src="https://t4.ftcdn.net/jpg/18/92/00/39/360_F_1892003960_PuENoHo3bf0NlW8u2ffA2wb8FmmLQ2li.jpg" alt="Roll Up Banner">
+            <div class="banner-overlay">
+                <h2>Brochures</h2>
+            </div> -->
+        </div>
+
+        <!-- Slide 11 -->
+        <div class="banner-slide">
+            <img src="{{ asset('/banner/24.png') }}" alt="Standee Banner">
+            <!-- <img src="https://t4.ftcdn.net/jpg/18/92/00/39/360_F_1892003960_PuENoHo3bf0NlW8u2ffA2wb8FmmLQ2li.jpg" alt="Roll Up Banner">
+            <div class="banner-overlay">
+                <h2>Brochures</h2>
+            </div> -->
+        </div>
+
+        <!-- Slide 11 -->
+        <div class="banner-slide">
+            <img src="{{ asset('/banner/25.png') }}" alt="Standee Banner">
+            <!-- <img src="https://t4.ftcdn.net/jpg/18/92/00/39/360_F_1892003960_PuENoHo3bf0NlW8u2ffA2wb8FmmLQ2li.jpg" alt="Roll Up Banner">
+            <div class="banner-overlay">
+                <h2>Brochures</h2>
+            </div> -->
         </div>
     </div>
 </div>
@@ -1632,9 +1753,9 @@
             loop: true,
             margin: 10,
             nav: false,
-            dots: true,
+            dots: false,
             autoplay: true,
-            autoplayTimeout: 4000,
+            autoplayTimeout: 2000,
             smartSpeed: 900,
             items: 1
         });

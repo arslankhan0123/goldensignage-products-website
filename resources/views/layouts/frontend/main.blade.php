@@ -138,7 +138,7 @@
     <!-- End Footer Area -->
 
     <!-- Start Go Top Area -->
-    <div class="go-top">
+    <div class="go-top" style="display: none;">
         <i class="ri-arrow-up-s-line"></i>
     </div>
     <!-- End Go Top Area -->
@@ -148,18 +148,18 @@
             <div class="row align-items-center text-center">
 
                 <div class="col-6 col-md-3 border-end">
-                    <span>
+                    <span style="color:white">
                         <i class="ri-phone-fill"></i> Phone:
-                        <a href="tel:{{ preg_replace('/\D+/', '', ($adminDetails->phone ?? '')) }}">
+                        <a style="color:white" href="tel:{{ preg_replace('/\D+/', '', ($adminDetails->phone ?? '')) }}">
                             {{ $adminDetails->phone ?? '' }}
                         </a>
                     </span>
                 </div>
 
                 <div class="col-6 col-md-3 border-end">
-                    <span>
+                    <span style="color:white">
                         <i class="ri-mail-fill"></i> Email:
-                        <a href="mailto:{{ $adminDetails->email ?? '' }}">
+                        <a style="color:white" href="mailto:{{ $adminDetails->email ?? '' }}">
                             {{ $adminDetails->email ?? 'info@example.com' }}
                         </a>
                     </span>
@@ -190,7 +190,8 @@
             bottom: 0;
             left: 0;
             width: 100%;
-            background-color: #ffffff;
+            /* background-color: #83a59a; */
+            background: linear-gradient(135deg, #6ee7ff, #7c3aed);
             /* White background */
             z-index: 2000;
             /* Taaki sabse upar rahe */
@@ -203,7 +204,7 @@
         .fixed-bottom-bar p {
             font-size: 14px;
             font-weight: 600;
-            color: #333;
+            color: white;
             margin-bottom: 5px !important;
         }
 
@@ -225,7 +226,7 @@
 
         /* Page content ko bar ke piche chhupne se bachane ke liye */
         body {
-            padding-bottom: 80px !important;
+            padding-bottom: 60px !important;
         }
 
         /* Mobile responsive adjustments */
@@ -249,7 +250,7 @@
             font-size: 20px;
             /* Icon ka size */
             margin: 0 5px;
-            color: #333;
+            color: white;
             /* Default color */
             transition: 0.3s;
             display: inline-block;

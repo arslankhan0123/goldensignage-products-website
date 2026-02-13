@@ -111,7 +111,8 @@
         display: inline-block;
         margin-top: 10px;
         padding: 10px 18px;
-        background: #ff4d00;
+        /* background: #ff4d00; */
+        background: linear-gradient(135deg, #6ee7ff, #7c3aed);
         color: #fff !important;
         font-size: 14px;
         font-weight: 600;
@@ -122,8 +123,11 @@
     }
 
     .order-btn:hover {
-        background: #e04300;
+        /* background: #e04300; */
         color: #fff;
+        /* transform: translateY(-2px); */
+        background: linear-gradient(135deg, #5bd4ff, #6d28d9);
+        box-shadow: 0 6px 18px rgba(124, 58, 237, 0.4);
         transform: translateY(-2px);
     }
 </style>
@@ -605,7 +609,8 @@
         font-size: 14px;
         font-weight: 600;
         color: #fff;
-        background: #ff4d00;
+        /* background: #ff4d00; */
+        background: linear-gradient(135deg, #6ee7ff, #7c3aed);
         border-radius: 5px;
         text-decoration: none;
         text-align: center;
@@ -613,187 +618,11 @@
     }
 
     .order-btn:hover {
-        background: #e64400;
+        /* background: #e64400; */
+        background: linear-gradient(135deg, #5bd4ff, #6d28d9);
+        box-shadow: 0 6px 18px rgba(124, 58, 237, 0.4);
+        transform: translateY(-2px);
         color: #fff;
-    }
-</style>
-
-<!-- Order Process Section -->
-<section class="order-process-section">
-    <div class="container">
-        <div class="section-title" style="margin: 0 auto 45px; text-align: center;">
-            <h2>Order Process</h2>
-        </div>
-
-        <div class="row text-center justify-content-center">
-
-            <!-- Step 1 -->
-            <div class="col-lg col-md-4 col-6 process-item">
-                <div class="process-icon">
-                    <i class="fas fa-envelope"></i>
-                </div>
-                <h5>Inquiry</h5>
-                <p>Inquire with your requirements</p>
-            </div>
-
-            <!-- Step 2 -->
-            <div class="col-lg col-md-4 col-6 process-item">
-                <div class="process-icon">
-                    <i class="fas fa-file-invoice"></i>
-                </div>
-                <h5>Quotation</h5>
-                <p>Approve provided quotation</p>
-            </div>
-
-            <!-- Step 3 -->
-            <div class="col-lg col-md-4 col-6 process-item">
-                <div class="process-icon">
-                    <i class="fas fa-credit-card"></i>
-                </div>
-                <h5>Payment</h5>
-                <p>Make payment to proceed</p>
-            </div>
-
-            <!-- Step 4 -->
-            <div class="col-lg col-md-4 col-6 process-item">
-                <div class="process-icon">
-                    <i class="fas fa-image"></i>
-                </div>
-                <h5>Mock Up</h5>
-                <p>Confirm mock-up before production</p>
-            </div>
-
-            <!-- Step 5 -->
-            <div class="col-lg col-md-4 col-6 process-item">
-                <div class="process-icon">
-                    <i class="fas fa-industry"></i>
-                </div>
-                <h5>Production</h5>
-                <p>We fulfill your order</p>
-            </div>
-
-            <!-- Step 6 -->
-            <div class="col-lg col-md-4 col-6 process-item">
-                <div class="process-icon">
-                    <i class="fas fa-truck"></i>
-                </div>
-                <h5>Delivery Or Collection</h5>
-                <p>Receive via delivery or collect</p>
-            </div>
-
-        </div>
-    </div>
-</section>
-<style>
-    .order-process-section {
-        background: #f2f2f2;
-        padding: 70px 0;
-    }
-
-    .section-title h2 {
-        font-size: 36px;
-        font-weight: 600;
-        margin-bottom: 50px;
-    }
-
-    .process-item {
-        margin-bottom: 40px;
-    }
-
-    .process-icon {
-        width: 70px;
-        height: 70px;
-        margin: 0 auto 15px;
-        border: 2px solid #000;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 28px;
-    }
-
-    .process-item h5 {
-        font-weight: 600;
-        margin-bottom: 5px;
-    }
-
-    .process-item p {
-        font-size: 14px;
-        color: #555;
-    }
-</style>
-
-<!-- Trusted Businesses Section -->
-<section class="trusted-section">
-    <div class="container">
-        <div class="section-title text-center">
-            <h2>Businesses that Trust Deluxe Printing</h2>
-        </div>
-
-        <div class="owl-carousel trusted-carousel">
-    <div class="logo-item">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/BMW.svg" alt="BMW" style="height: 80px; width: auto; margin: 0 auto;">
-    </div>
-
-    <div class="logo-item">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/500px-Google_%22G%22_logo.svg.png" alt="Google" style="height: 80px; width: auto; margin: 0 auto;">
-    </div>
-
-    <div class="logo-item">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft" style="height: 80px; width: auto; margin: 0 auto;">
-    </div>
-
-    <div class="logo-item">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" style="height: 80px; width: auto; margin: 0 auto;">
-    </div>
-
-    <div class="logo-item">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" style="height: 80px; width: auto; margin: 0 auto;">
-    </div>
-
-    <div class="logo-item">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Coca-Cola_logo.svg" alt="Coca-Cola" style="height: 80px; width: auto; margin: 0 auto;">
-    </div>
-
-    <div class="logo-item">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" alt="Nike" style="height: 80px; width: auto; margin: 0 auto;">
-    </div>
-
-    <div class="logo-item">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Mercedes-Logo.svg/500px-Mercedes-Logo.svg.png" alt="Mercedes" style="height: 80px; width: auto; margin: 0 auto;">
-    </div>
-</div>
-    </div>
-</section>
-<style>
-    .trusted-section {
-        background: #f2f2f2;
-        padding: 60px 0;
-    }
-
-    .trusted-section h2 {
-        font-size: 36px;
-        font-weight: 600;
-        margin-bottom: 40px;
-    }
-
-    .logo-item {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .logo-item img {
-        max-height: 70px;
-        width: auto;
-        filter: grayscale(100%);
-        opacity: 0.8;
-        transition: 0.3s ease;
-    }
-
-    .logo-item img:hover {
-        filter: grayscale(0%);
-        opacity: 1;
     }
 </style>
 
@@ -901,7 +730,8 @@
 
     .explore-btn {
         display: inline-block;
-        background: #ff4d00;
+        /* background: #ff4d00; */
+        background: linear-gradient(135deg, #6ee7ff, #7c3aed);
         color: #fff;
         padding: 10px 22px;
         border-radius: 30px;
@@ -1044,6 +874,7 @@
         align-items: center;
         justify-content: center;
         text-align: center;
+        color: black;
     }
 
     /* BUTTON ALWAYS BOTTOM */
@@ -1054,7 +885,8 @@
         font-size: 14px;
         font-weight: 600;
         color: #fff;
-        background: #ff4d00;
+        /* background: #ff4d00; */
+        background: linear-gradient(135deg, #6ee7ff, #7c3aed);
         border-radius: 6px;
         text-decoration: none;
         text-align: center;
@@ -1062,7 +894,10 @@
     }
 
     .order-btn:hover {
-        background: #e64400;
+        /* background: #e64400; */
+        background: linear-gradient(135deg, #5bd4ff, #6d28d9);
+        box-shadow: 0 6px 18px rgba(124, 58, 237, 0.4);
+        transform: translateY(-2px);
     }
 
     /* ARROW CONTAINER */
@@ -1081,7 +916,8 @@
     .printing-marketing-carousel .owl-nav button {
         width: 45px;
         height: 45px;
-        background: #ff4d00 !important;
+        /* background: #ff4d00 !important; */
+        background: linear-gradient(135deg, #6ee7ff, #7c3aed) !important;
         border-radius: 50%;
         color: #fff !important;
         font-size: 22px;
@@ -1106,7 +942,9 @@
     /* HOVER EFFECT */
     .workspace-carousel .owl-nav button:hover,
     .printing-marketing-carousel .owl-nav button:hover {
-        background: #e64400 !important;
+        /* background: #e64400 !important; */
+        background: linear-gradient(135deg, #5bd4ff, #6d28d9);
+        box-shadow: 0 6px 18px rgba(124, 58, 237, 0.4);
         transform: scale(1.1);
     }
 </style>
@@ -1356,6 +1194,212 @@
     </div>
 </div> -->
 <!-- End Pricing Area -->
+
+<!-- Order Process Section -->
+<section class="order-process-section">
+    <div class="container">
+        <div class="section-title" style="margin: 0 auto 45px; text-align: center;">
+            <h2>Order Process</h2>
+        </div>
+
+        <div class="row text-center justify-content-center">
+
+            <!-- Step 1 -->
+            <div class="col-lg col-md-4 col-6 process-item">
+                <div class="process-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <h5>Inquiry</h5>
+                <p>Inquire with your requirements</p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="col-lg col-md-4 col-6 process-item">
+                <div class="process-icon">
+                    <i class="fas fa-file-invoice"></i>
+                </div>
+                <h5>Quotation</h5>
+                <p>Approve provided quotation</p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="col-lg col-md-4 col-6 process-item">
+                <div class="process-icon">
+                    <i class="fas fa-credit-card"></i>
+                </div>
+                <h5>Payment</h5>
+                <p>Make payment to proceed</p>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="col-lg col-md-4 col-6 process-item">
+                <div class="process-icon">
+                    <i class="fas fa-image"></i>
+                </div>
+                <h5>Mock Up</h5>
+                <p>Confirm mock-up before production</p>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="col-lg col-md-4 col-6 process-item">
+                <div class="process-icon">
+                    <i class="fas fa-industry"></i>
+                </div>
+                <h5>Production</h5>
+                <p>We fulfill your order</p>
+            </div>
+
+            <!-- Step 6 -->
+            <div class="col-lg col-md-4 col-6 process-item">
+                <div class="process-icon">
+                    <i class="fas fa-truck"></i>
+                </div>
+                <h5>Delivery Or Collection</h5>
+                <p>Receive via delivery or collect</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+<style>
+    .order-process-section {
+        /* background: #f2f2f2; */
+        background: #7c3aed;
+        padding: 70px 0;
+    }
+
+    .section-title h2 {
+        font-size: 36px;
+        font-weight: 600;
+        margin-bottom: 50px;
+        color: white;
+    }
+
+    .process-item {
+        margin-bottom: 40px;
+    }
+
+    .process-icon {
+        width: 70px;
+        height: 70px;
+        margin: 0 auto 15px;
+        border: 2px solid #000;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        /* thora size increase */
+        background: #fff;
+    }
+
+    .process-icon {
+        background: #fff;
+        border: 2px solid #000;
+        transition: 0.3s ease;
+    }
+
+    .process-icon i {
+        color: #000;
+        font-size: 30px;
+    }
+
+    .process-item:hover .process-icon {
+        background: #000;
+    }
+
+    .process-item:hover .process-icon i {
+        color: #fff;
+    }
+
+    .process-item h5 {
+        font-weight: 600;
+        margin-bottom: 5px;
+        color: white;
+    }
+
+    .process-item p {
+        font-size: 14px;
+        color: white;
+    }
+</style>
+
+<!-- Trusted Businesses Section -->
+<section class="trusted-section">
+    <div class="container">
+        <div class="section-title text-center" style="margin: 0 auto 45px; text-align: center;">
+            <h2>Businesses that Trust Deluxe Printing</h2>
+        </div>
+
+        <div class="owl-carousel trusted-carousel">
+            <div class="logo-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/BMW.svg" alt="BMW" style="height: 80px; width: auto; margin: 0 auto;">
+            </div>
+
+            <div class="logo-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/500px-Google_%22G%22_logo.svg.png" alt="Google" style="height: 80px; width: auto; margin: 0 auto;">
+            </div>
+
+            <div class="logo-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft" style="height: 80px; width: auto; margin: 0 auto;">
+            </div>
+
+            <div class="logo-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" style="height: 80px; width: auto; margin: 0 auto;">
+            </div>
+
+            <div class="logo-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" style="height: 80px; width: auto; margin: 0 auto;">
+            </div>
+
+            <div class="logo-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Coca-Cola_logo.svg" alt="Coca-Cola" style="height: 80px; width: auto; margin: 0 auto;">
+            </div>
+
+            <div class="logo-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" alt="Nike" style="height: 80px; width: auto; margin: 0 auto;">
+            </div>
+
+            <div class="logo-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Mercedes-Logo.svg/500px-Mercedes-Logo.svg.png" alt="Mercedes" style="height: 80px; width: auto; margin: 0 auto;">
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+    .trusted-section {
+        /* background: #f2f2f2; */
+        background: #f3f3f3;
+        padding: 60px 0;
+        /* color: black; */
+    }
+
+    .trusted-section h2 {
+        font-size: 36px;
+        font-weight: 600;
+        margin-bottom: 40px;
+        color: black;
+    }
+
+    .logo-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo-item img {
+        max-height: 70px;
+        width: auto;
+        filter: grayscale(100%);
+        opacity: 0.8;
+        transition: 0.3s ease;
+    }
+
+    .logo-item img:hover {
+        filter: grayscale(0%);
+        opacity: 1;
+    }
+</style>
 
 <style>
     .testimonials-slides .owl-stage {

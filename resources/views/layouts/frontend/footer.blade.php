@@ -1,4 +1,6 @@
-<footer class="footer-area with-black-background margin-zero pt-100">
+<footer class="footer-area with-black-background margin-zero pt-100"
+    style="background: url('{{ asset('bg_footer-map.webp') }}') center center / cover no-repeat;">
+
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-3 col-md-6">

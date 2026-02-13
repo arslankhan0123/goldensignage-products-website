@@ -754,12 +754,12 @@
             <!-- Left Large Banner -->
             <div class="signage-large">
                 <img src="https://gregory1.com/images/flexface-signage-gregory-inc-e44o55.png"
-                    alt="Flex Face Signage">
+                    alt="Stationery & Corporate Identity">
                 <div class="overlay">
                     <!-- <h2>Transform Your Sales with</h2> -->
-                    <h1>Flex Face Signage</h1>
-                    <p>Where Innovation Meets Visibility!</p>
-                    <a href="#" class="explore-btn">Discover →</a>
+                    <h1>Stationery & Corporate Identity</h1>
+                    <!-- <p>Where Innovation Meets Visibility!</p> -->
+                    <a href="{{ route('frontend.our-products', ['category' => 10]) }}" class="explore-btn">Discover →</a>
                 </div>
             </div>
 
@@ -767,20 +767,28 @@
             <div class="signage-right">
 
                 <div class="signage-card">
-                    <img src="https://wsgprint.co.uk/wp-content/uploads/2020/01/shop-signs-north-east-face-lit-sign.jpg"
+                    <img src="{{ asset('/signages.png') }}"
                         alt="Signages">
                     <div class="card-overlay">
-                        <h3>SIGNAGES</h3>
-                        <span>Explore →</span>
+                        <h3>3D SIGNAGES</h3>
+                        <span>
+                            <a href="{{ route('frontend.our-products', ['category' => 1]) }}" class="explore-link">
+                                Explore →
+                            </a>
+                        </span>
                     </div>
                 </div>
 
                 <div class="signage-card">
-                    <img src="https://www.shutterstock.com/shutterstock/videos/1045272481/thumb/11.jpg?ip=x480"
-                        alt="Neon Signages">
+                    <img src="{{ asset('/name-plate.png') }}"
+                        alt="Name Plates">
                     <div class="card-overlay">
-                        <h3>NEON SIGNAGES</h3>
-                        <span>Explore →</span>
+                        <h3>Name Plates</h3>
+                        <span>
+                            <a href="{{ route('frontend.our-products', ['category' => 6]) }}" class="explore-link">
+                                Explore →
+                            </a>
+                        </span>
                     </div>
                 </div>
 
@@ -880,7 +888,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        backdrop-filter: blur(2px);
+        /* backdrop-filter: blur(2px); */
         text-align: center;
         color: white;
     }

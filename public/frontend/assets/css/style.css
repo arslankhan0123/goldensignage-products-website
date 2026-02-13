@@ -335,7 +335,8 @@ Preloader Area CSS
     width: 5px;
     height: 20px;
     border-radius: 20%;
-    background: var(--main-color);
+    background: #7c3aed;
+    /* background: var(--main-color); */
 }
 
 .preloader .lds-spinner div:nth-child(1) {

@@ -939,29 +939,25 @@
     </div>
 </section>
 
+@if(isset($OfficeStoreProducts) && $OfficeStoreProducts->isNotEmpty())
 <section class="workspace-branding">
     <div class="container">
         <h2 class="section-title">Office & Store Brandings</h2>
 
-        <div class="row">
-            @foreach ($OfficeStoreProducts->take(12) as $product)
-            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 mb-4">
-                <div class="workspace-card h-100">
-                    <div class="image-box">
-                        <img src="{{ asset($product->image) }}" alt="{{ $product->name }}">
-                    </div>
-
-                    <p class="product-title">{{ $product->name }}</p>
-
-                    <a href="{{ route('frontend.product-details', $product->id) }}" class="order-btn">
-                        Order Now
-                    </a>
-                </div>
+        <div class="officestore-carousel owl-carousel owl-theme">
+            @foreach ($OfficeStoreProducts as $product)
+            <div class="workspace-item">
+                <img src="{{ asset($product->image) }}" alt="{{ $product->name }}">
+                <p class="product-title">{{ $product->name }}</p>
+                <a href="{{ route('frontend.product-details', $product->id) }}" class="order-btn">
+                    Order Now
+                </a>
             </div>
             @endforeach
         </div>
     </div>
 </section>
+@endif
 <style>
     .workspace-card {
         background: #fff;
@@ -1031,7 +1027,9 @@
 
     /* ARROW CONTAINER */
     .workspace-carousel .owl-nav,
-    .printing-marketing-carousel .owl-nav {
+    .printing-marketing-carousel .owl-nav,
+    .officestore-carousel .owl-nav,
+    .exhibition-carousel .owl-nav {
         position: absolute;
         top: 40%;
         width: 100%;
@@ -1042,7 +1040,9 @@
 
     /* ARROW BUTTONS */
     .workspace-carousel .owl-nav button,
-    .printing-marketing-carousel .owl-nav button {
+    .printing-marketing-carousel .owl-nav button,
+    .officestore-carousel .owl-nav button,
+    .exhibition-carousel .owl-nav button {
         width: 45px;
         height: 45px;
         /* background: #ff4d00 !important; */
@@ -1059,18 +1059,24 @@
 
     /* LEFT & RIGHT SPACING */
     .workspace-carousel .owl-nav .owl-prev,
-    .printing-marketing-carousel .owl-nav .owl-prev {
+    .printing-marketing-carousel .owl-nav .owl-prev,
+    .officestore-carousel .owl-nav .owl-prev,
+    .exhibition-carousel .owl-nav .owl-prev {
         margin-left: -20px;
     }
 
     .workspace-carousel .owl-nav .owl-next,
-    .printing-marketing-carousel .owl-nav .owl-next {
+    .printing-marketing-carousel .owl-nav .owl-next,
+    .officestore-carousel .owl-nav .owl-next,
+    .exhibition-carousel .owl-nav .owl-next {
         margin-right: -20px;
     }
 
     /* HOVER EFFECT */
     .workspace-carousel .owl-nav button:hover,
-    .printing-marketing-carousel .owl-nav button:hover {
+    .printing-marketing-carousel .owl-nav button:hover,
+    .officestore-carousel .owl-nav button:hover,
+    .exhibition-carousel .owl-nav button:hover {
         /* background: #e64400 !important; */
         background: linear-gradient(135deg, #5bd4ff, #6d28d9);
         box-shadow: 0 6px 18px rgba(124, 58, 237, 0.4);
@@ -1453,6 +1459,26 @@
     }
 </style>
 
+@if(isset($backdropsExhibitionProducts) && $backdropsExhibitionProducts->isNotEmpty())
+<section class="workspace-branding">
+    <div class="container">
+        <h2 class="section-title">Backdrops & Exhibition Products</h2>
+
+        <div class="exhibition-carousel owl-carousel owl-theme">
+            @foreach ($backdropsExhibitionProducts as $product)
+            <div class="workspace-item">
+                <img src="{{ asset($product->image) }}" alt="{{ $product->name }}">
+                <p class="product-title">{{ $product->name }}</p>
+                <a href="{{ route('frontend.product-details', $product->id) }}" class="order-btn">
+                    Order Now
+                </a>
+            </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+@endif
+
 <!-- Trusted Businesses Section -->
 <section class="trusted-section">
     <div class="container">
@@ -1796,6 +1822,54 @@
         });
 
         $('.printing-marketing-carousel').owlCarousel({
+            loop: true,
+            margin: 20,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: true,
+            nav: true, // 👈 arrows ON
+            dots: false,
+            responsive: {
+                0: {
+                    items: 2
+                },
+                576: {
+                    items: 2
+                },
+                768: {
+                    items: 3
+                },
+                1200: {
+                    items: 4
+                }
+            }
+        });
+
+        $('.officestore-carousel').owlCarousel({
+            loop: true,
+            margin: 20,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: true,
+            nav: true, // 👈 arrows ON
+            dots: false,
+            responsive: {
+                0: {
+                    items: 2
+                },
+                576: {
+                    items: 2
+                },
+                768: {
+                    items: 3
+                },
+                1200: {
+                    items: 4
+                }
+            }
+        });
+
+        $('.exhibition-carousel').owlCarousel({
             loop: true,
             margin: 20,
             autoplay: true,

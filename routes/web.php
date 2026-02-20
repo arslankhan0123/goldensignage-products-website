@@ -40,10 +40,16 @@ Route::get('/', function () {
     ->take(12)
     ->get();
 
+    $backdropsExhibitionProducts = Product::whereHas('category', function ($query) {
+        $query->where('type', 'BackdropsExhibition');
+    })
+    ->latest()
+    ->get();
+
     $categories = ProductCategory::where('type', 'Signage')->get();
 
 // dd($categories->pluck('name')->unique());
-    return view('welcome', compact('products', 'blogs', 'adminDetails', 'SignageProducts', 'PrintingMarketingProducts', 'OfficeStoreProducts'));
+    return view('welcome', compact('products', 'blogs', 'adminDetails', 'SignageProducts', 'PrintingMarketingProducts', 'OfficeStoreProducts', 'backdropsExhibitionProducts'));
 })->name('home');
 
 Route::prefix('/frontend')->group(function () {

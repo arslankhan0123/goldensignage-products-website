@@ -1,0 +1,196 @@
+/* Mobile Tabbed Menu Styles */
+#mobileCustomMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 10000;
+    display: none;
+    flex-direction: column;
+}
+
+#mobileCustomMenu.active {
+    display: flex;
+}
+
+.mobile-menu-header {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+    background: #f8f9fa;
+}
+
+.mobile-menu-header img {
+    height: 35px;
+}
+
+.mobile-menu-close {
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--black-color);
+}
+
+.mobile-menu-body {
+    display: flex;
+    overflow: hidden;
+    flex: 1;
+}
+
+/* Left Sidebar for Categories */
+.mobile-menu-sidebar {
+    width: 140px;
+    background: #f4f4f4;
+    border-right: 1px solid #ddd;
+    overflow-y: auto;
+}
+
+.mobile-menu-tab {
+    padding: 15px 10px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    color: #666;
+    border-bottom: 1px solid #e0e0e0;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.mobile-menu-tab i {
+    font-size: 22px;
+}
+
+.mobile-menu-tab.active {
+    background: #fff;
+    color: #e65100;
+}
+
+.mobile-menu-tab.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: #e65100;
+}
+
+/* Right Content Area */
+.mobile-menu-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 15px;
+}
+
+.mobile-tab-content {
+    display: none;
+}
+
+.mobile-tab-content.active {
+    display: block;
+}
+
+.mobile-content-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #e65100;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.mobile-category-section {
+    margin-bottom: 25px;
+}
+
+.mobile-category-title {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mobile-products-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.mobile-product-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none !important;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.mobile-product-image {
+    width: 100%;
+    height: 110px;
+    background: #f9f9f9;
+}
+
+.mobile-product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mobile-product-info {
+    padding: 8px;
+    text-align: center;
+}
+
+.mobile-product-info h4 {
+    font-size: 12px;
+    margin: 0;
+    color: #333;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+/* Toggle Button Fix for MeanMenu */
+.mean-container .mean-bar .meanmenu-reveal {
+    display: none !important;
+    /* Hide default MeanMenu reveal */
+}
+
+.main-responsive-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.custom-mobile-toggle {
+    display: none;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    z-index: 10001;
+    pointer-events: auto;
+}
+
+@media screen and (max-width: 1199px) {
+    .custom-mobile-toggle {
+        display: block;
+    }
+}

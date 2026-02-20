@@ -1,0 +1,191 @@
+/* Mega Menu Specific Styles */
+.main-navbar .navbar .navbar-nav .nav-item.mega-menu-item {
+    position: static;
+}
+
+.main-navbar .navbar .navbar-nav .nav-item .mega-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    background-color: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+    padding: 30px 0;
+    border-top: 2px solid #e65100;
+    left: 50%;
+    transform: translateX(-50%);
+    max-height: 80vh;
+    /* Make it scrollable if too long */
+    overflow-y: auto;
+}
+
+.main-navbar .navbar .navbar-nav .nav-item.mega-menu-item:hover .mega-menu {
+    opacity: 1;
+    visibility: visible;
+    margin-top: 0;
+}
+
+.mega-menu-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    gap: 30px;
+}
+
+.mega-menu-content {
+    flex: 9;
+    column-count: 4;
+    /* Masonry effect to fill gaps */
+    column-gap: 30px;
+}
+
+.mega-menu-column {
+    break-inside: avoid-column;
+    /* Keep categories together */
+    margin-bottom: 25px;
+    display: inline-block;
+    width: 100%;
+}
+
+.mega-menu-column-image {
+    flex: 3;
+    position: sticky;
+    /* Keep image visible while scrolling content */
+    top: 0;
+}
+
+.mega-menu-column h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eeeeee;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mega-menu-column h3 i {
+    font-size: 14px;
+    color: var(--main-color);
+}
+
+.mega-menu-column ul {
+    padding-left: 0 !important;
+    list-style: none !important;
+}
+
+.mega-menu-column ul li {
+    margin-bottom: 8px !important;
+}
+
+.mega-menu-column ul li a {
+    padding: 0 !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    color: var(--paragraph-color) !important;
+    display: block;
+    transition: var(--transition);
+    position: relative;
+    border: none !important;
+}
+
+.mega-menu-column ul li a::after {
+    display: none !important;
+}
+
+.mega-menu-column ul li a:hover {
+    color: var(--main-color) !important;
+    padding-left: 5px !important;
+}
+
+.mega-menu-image-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.mega-menu-image-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.mega-menu-image-card .card-body {
+    padding: 15px;
+}
+
+.mega-menu-image-card h4 {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Header link styling for mega menu parents */
+.main-navbar .navbar .navbar-nav .nav-item.mega-menu-item:hover>a,
+.main-navbar .navbar .navbar-nav .nav-item.mega-menu-item>a.active {
+    background-color: #e65100;
+    /* Deep orange to match screenshot */
+    color: #fff !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    border-radius: 4px;
+}
+
+.main-navbar .navbar .navbar-nav .nav-item.mega-menu-item:hover>a i,
+.main-navbar .navbar .navbar-nav .nav-item.mega-menu-item>a.active i {
+    color: #fff !important;
+}
+
+.main-navbar .navbar .navbar-nav .nav-item.mega-menu-item>a::after {
+    display: none !important;
+}
+
+/* Most Popular Section in Mega Menu */
+.mega-menu-popular {
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    text-align: left;
+}
+
+.mega-menu-popular h5 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.popular-items-grid {
+    display: flex;
+    gap: 10px;
+}
+
+.popular-item {
+    flex: 1;
+    height: 60px;
+    background: #f5f5f5;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.popular-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Hide mega menu items on mobile, use default meanmenu */
+@media screen and (max-width: 1199px) {
+    .mega-menu {
+        display: none !important;
+    }
+}

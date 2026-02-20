@@ -34,6 +34,8 @@
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/style.css') }}">
     <!-- <link rel="stylesheet" href="https://templates.envytheme.com/coze/default/assets/css/navbar.css"> -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/navbar.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/mega-menu.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/mobile-menu.css') }}">
     <!-- <link rel="stylesheet" href="https://templates.envytheme.com/coze/default/assets/css/footer.css"> -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/footer.css') }}">
     <!-- <link rel="stylesheet" href="https://templates.envytheme.com/coze/default/assets/css/dark.css"> -->

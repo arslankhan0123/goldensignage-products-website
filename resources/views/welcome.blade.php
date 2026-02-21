@@ -1483,12 +1483,12 @@
 <section class="trusted-section">
     <div class="container">
         <div class="section-title text-center" style="margin: 0 auto 45px; text-align: center;">
-            <h2>Businesses that Trust Deluxe Printing</h2>
+            <h2>Businesses that Trust Golden Signage</h2>
         </div>
 
         <div class="owl-carousel trusted-carousel">
             <div class="logo-item">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/BMW.svg" alt="BMW" style="height: 80px; width: auto; margin: 0 auto;">
+                <img src="	https://skycolors.pk/wp-content/uploads/2025/02/Skycolors-logo-187x222-2.png" alt="BMW" style="height: 80px; width: auto; margin: 0 auto;">
             </div>
 
             <div class="logo-item">
@@ -1500,7 +1500,7 @@
             </div>
 
             <div class="logo-item">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" style="height: 80px; width: auto; margin: 0 auto;">
+                <img src="	https://signset.com.pk/wp-content/uploads/2021/06/SIGNSET-Pvt-Ltd-Logo.png" alt="Amazon" style="height: 80px; width: auto; margin: 0 auto;">
             </div>
 
             <div class="logo-item">
@@ -1508,11 +1508,11 @@
             </div>
 
             <div class="logo-item">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Coca-Cola_logo.svg" alt="Coca-Cola" style="height: 80px; width: auto; margin: 0 auto;">
+                <img src="https://masssign.pk/wp-content/uploads/2022/11/Mass-Sign-Logo.jpg" alt="Coca-Cola" style="height: 80px; width: auto; margin: 0 auto;">
             </div>
 
             <div class="logo-item">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" alt="Nike" style="height: 80px; width: auto; margin: 0 auto;">
+                <img src="	https://signmaster.com.pk/wp-content/uploads/2022/06/THE-SIGN-MASTER-LOGO-14-01-2020..png" alt="Nike" style="height: 80px; width: auto; margin: 0 auto;">
             </div>
 
             <div class="logo-item">

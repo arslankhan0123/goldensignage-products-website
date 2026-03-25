@@ -27,17 +27,9 @@ $teamMembers = [
 'name' => 'Amir Riaz',
 'title' => 'CEO',
 'image' => asset('amir.jpeg'),
-'description' => 'Visionary leader driving innovation and strategic growth.',
+'description' => 'Visionary leader with a passion for innovation and growth.',
 'experience' => '15+ Years',
-'specialization' => 'Business Strategy, Leadership'
-],
-[
-'name' => 'Jane Smith',
-'title' => 'CTO',
-'image' => 'https://randomuser.me/api/portraits/women/44.jpg',
-'description' => 'Leads our technical team and technology vision.',
-'experience' => '12+ Years',
-'specialization' => 'Software Architecture, Cloud Solutions'
+'specialization' => 'Business development manager and Marketing expert'
 ],
 [
 'name' => 'Arslan Khan',

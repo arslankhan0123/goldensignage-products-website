@@ -26,7 +26,7 @@ $teamMembers = [
 [
 'name' => 'Amir Riaz',
 'title' => 'CEO',
-'image' => 'https://carewellsigns.ae/wp-content/uploads/2025/07/18242648-1236-4b11-ba0e-83b49c4cf40c-229x300-removebg-preview.png',
+'image' => asset('amir.jpeg'),
 'description' => 'Visionary leader driving innovation and strategic growth.',
 'experience' => '15+ Years',
 'specialization' => 'Business Strategy, Leadership'
@@ -45,23 +45,15 @@ $teamMembers = [
 'image' => 'https://arslankhan.net/frontend/assets/Profile-Pic.png',
 'description' => 'Builds scalable applications using cutting-edge tech.',
 'experience' => '8+ Years',
-'specialization' => 'Laravel, React, Vue.js'
+'specialization' => 'Laravel, React, Vue.js, DevOps, CI/CD, API Development'
 ],
 [
-'name' => 'Sara Ahmed',
-'title' => 'Marketing Expert',
-'image' => 'https://randomuser.me/api/portraits/women/68.jpg',
-'description' => 'Crafts campaigns that drive brand engagement and growth.',
-'experience' => '10+ Years',
-'specialization' => 'Digital Marketing, SEO, Social Media'
-],
-[
-'name' => 'Imran Malik',
-'title' => 'WordPress Developer',
-'image' => 'https://randomuser.me/api/portraits/men/66.jpg',
-'description' => 'Expert in WordPress themes, plugins and site builds.',
-'experience' => '7+ Years',
-'specialization' => 'WordPress, WooCommerce, Plugin Development'
+'name' => 'Ali Aqeel Nasir',
+'title' => 'Master of Digital Marketing',
+'image' => asset('ali.jpeg'),
+'description' => 'Drives our digital marketing strategy and online presence.',
+'experience' => '6+ Years',
+'specialization' => 'Master of Digital Marketing, SEO, Social Media Strategy',
 ],
 ];
 @endphp
@@ -95,7 +87,7 @@ $teamMembers = [
                                 Experience: {{ $member['experience'] }}
                             </div>
                             <div class="specialization">
-                                Specialization: WordPress, WooCommerce, Plugin Development
+                                Specialization: {{ $member['specialization'] }}
                             </div>
 
                         </div>
@@ -130,7 +122,7 @@ $teamMembers = [
     .team-img {
         width: 200px;
         height: 200px;
-        object-fit: cover;
+        object-fit: contain;
         border-radius: 50%;
         box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
     }

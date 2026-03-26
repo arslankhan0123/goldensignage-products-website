@@ -27,25 +27,33 @@ $teamMembers = [
 'name' => 'Amir Riaz',
 'title' => 'CEO',
 'image' => asset('amir.jpeg'),
-'description' => 'Visionary leader with a passion for innovation and growth.',
+'description' => 'Visionary leader with a proven track record of driving business growth and innovation.',
 'experience' => '15+ Years',
-'specialization' => 'Business development manager and Marketing expert'
+'specialization' => 'Business strategy and leadership expertise'
+],
+[
+'name' => 'Aqeel Nasir',
+'title' => 'Director',
+'image' => asset('aqeel.jpeg'),
+'description' => 'Experienced director with a strong background in strategic planning and operations management.',
+'experience' => '15+ Years',
+'specialization' => 'Strategic planning and operations management expertise'
 ],
 [
 'name' => 'Arslan Khan',
-'title' => 'Fullstack Developer',
+'title' => 'Sales Manager and Software Engineer',
 'image' => 'https://arslankhan.net/frontend/assets/Profile-Pic.png',
-'description' => 'Builds scalable applications using cutting-edge tech.',
+'description' => 'Leads sales strategy and software development initiatives to drive business growth.',
 'experience' => '8+ Years',
-'specialization' => 'Laravel, React, Vue.js, DevOps, CI/CD, API Development'
+'specialization' => 'Sales management and Software engineering expertise',
 ],
 [
 'name' => 'Ali Aqeel Nasir',
-'title' => 'Master of Digital Marketing',
-'image' => asset('ali.jpeg'),
-'description' => 'Drives our digital marketing strategy and online presence.',
+'title' => 'Group Business Development Manager',
+'image' => asset('ali2.jpeg'),
+'description' => 'Drives growth through strategic partnerships and market expansion.',
 'experience' => '6+ Years',
-'specialization' => 'Master of Digital Marketing, SEO, Social Media Strategy',
+'specialization' => 'Business development manager and Marketing expert',
 ],
 ];
 @endphp

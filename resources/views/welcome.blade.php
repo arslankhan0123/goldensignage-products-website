@@ -111,8 +111,7 @@
         display: inline-block;
         margin-top: 10px;
         padding: 10px 18px;
-        /* background: #ff4d00; */
-        background: linear-gradient(135deg, #6ee7ff, #7c3aed);
+        background: linear-gradient(135deg, #009A44, #EF3340);
         color: #fff !important;
         font-size: 14px;
         font-weight: 600;
@@ -123,11 +122,9 @@
     }
 
     .order-btn:hover {
-        /* background: #e04300; */
         color: #fff;
-        /* transform: translateY(-2px); */
-        background: linear-gradient(135deg, #5bd4ff, #6d28d9);
-        box-shadow: 0 6px 18px rgba(124, 58, 237, 0.4);
+        background: linear-gradient(135deg, #007a35, #c42030);
+        box-shadow: 0 6px 18px rgba(239, 51, 64, 0.45);
         transform: translateY(-2px);
     }
 </style>
@@ -628,7 +625,7 @@
     .section-header .underline {
         width: 60px;
         height: 3px;
-        background: #ff4d00;
+        background: linear-gradient(90deg, #009A44, #EF3340);
         display: block;
     }
 
@@ -639,9 +636,8 @@
     }
 
     .trade-image {
-        background: #f3f3f3;
+        background: #f0f9f4;
         height: 220px;
-        /* Same image box height */
         display: flex;
         align-items: center;
         justify-content: center;
@@ -652,7 +648,6 @@
         max-height: 100%;
         max-width: 100%;
         object-fit: contain;
-        /* Image distort nahi hogi */
     }
 
     .trade-card h3 {
@@ -661,12 +656,13 @@
     }
 
     .trade-card a {
-        color: #ff4d00;
+        color: #009A44;
         font-size: 14px;
         text-decoration: none;
     }
 
     .trade-card a:hover {
+        color: #EF3340;
         text-decoration: underline;
     }
 </style>
@@ -700,8 +696,13 @@
 
     .section-title {
         font-size: 26px;
-        font-weight: 600;
+        font-weight: 700;
         margin-bottom: 25px;
+        background: linear-gradient(90deg, #009A44, #EF3340);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        display: inline-block;
     }
 
     .workspace-item {
@@ -713,6 +714,11 @@
         height: 240px;
         object-fit: cover;
         border-radius: 6px;
+        transition: transform 0.3s ease;
+    }
+
+    .workspace-item img:hover {
+        transform: scale(1.03);
     }
 
     .workspace-item p {
@@ -723,15 +729,13 @@
 
     .order-btn {
         display: block;
-        /* full width enable */
         width: 100%;
         margin-top: 10px;
         padding: 10px 0;
         font-size: 14px;
         font-weight: 600;
         color: #fff;
-        /* background: #ff4d00; */
-        background: linear-gradient(135deg, #6ee7ff, #7c3aed);
+        background: linear-gradient(135deg, #009A44, #EF3340);
         border-radius: 5px;
         text-decoration: none;
         text-align: center;
@@ -739,9 +743,8 @@
     }
 
     .order-btn:hover {
-        /* background: #e64400; */
-        background: linear-gradient(135deg, #5bd4ff, #6d28d9);
-        box-shadow: 0 6px 18px rgba(124, 58, 237, 0.4);
+        background: linear-gradient(135deg, #007a35, #c42030);
+        box-shadow: 0 6px 18px rgba(239, 51, 64, 0.4);
         transform: translateY(-2px);
         color: #fff;
     }
@@ -859,14 +862,22 @@
 
     .explore-btn {
         display: inline-block;
-        /* background: #ff4d00; */
-        background: linear-gradient(135deg, #6ee7ff, #7c3aed);
+        background: linear-gradient(135deg, #009A44, #EF3340);
         color: #fff;
         padding: 10px 22px;
         border-radius: 30px;
         text-decoration: none;
         font-weight: 600;
         width: fit-content;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 154, 68, 0.3);
+    }
+
+    .explore-btn:hover {
+        background: linear-gradient(135deg, #007a35, #c42030);
+        box-shadow: 0 6px 20px rgba(239, 51, 64, 0.4);
+        transform: translateY(-2px);
+        color: #fff;
     }
 
     /* Right Cards */
@@ -972,8 +983,7 @@
     .image-box {
         width: 100%;
         height: 220px;
-        /* SAME HEIGHT FOR ALL */
-        background: #f5f5f5;
+        background: #f0f9f4;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -985,7 +995,6 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        /* no distortion */
     }
 
     /* TITLE SAME HEIGHT */
@@ -994,12 +1003,11 @@
         font-size: 15px;
         font-weight: 600;
         min-height: 40px;
-        /* equal titles */
         display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
-        color: black;
+        color: #1a1a1a;
     }
 
     /* BUTTON ALWAYS BOTTOM */
@@ -1010,8 +1018,7 @@
         font-size: 14px;
         font-weight: 600;
         color: #fff;
-        /* background: #ff4d00; */
-        background: linear-gradient(135deg, #6ee7ff, #7c3aed);
+        background: linear-gradient(135deg, #009A44, #EF3340);
         border-radius: 6px;
         text-decoration: none;
         text-align: center;
@@ -1019,9 +1026,8 @@
     }
 
     .order-btn:hover {
-        /* background: #e64400; */
-        background: linear-gradient(135deg, #5bd4ff, #6d28d9);
-        box-shadow: 0 6px 18px rgba(124, 58, 237, 0.4);
+        background: linear-gradient(135deg, #007a35, #c42030);
+        box-shadow: 0 6px 18px rgba(239, 51, 64, 0.4);
         transform: translateY(-2px);
     }
 
@@ -1045,8 +1051,7 @@
     .exhibition-carousel .owl-nav button {
         width: 45px;
         height: 45px;
-        /* background: #ff4d00 !important; */
-        background: linear-gradient(135deg, #6ee7ff, #7c3aed) !important;
+        background: linear-gradient(135deg, #009A44, #EF3340) !important;
         border-radius: 50%;
         color: #fff !important;
         font-size: 22px;
@@ -1077,9 +1082,8 @@
     .printing-marketing-carousel .owl-nav button:hover,
     .officestore-carousel .owl-nav button:hover,
     .exhibition-carousel .owl-nav button:hover {
-        /* background: #e64400 !important; */
-        background: linear-gradient(135deg, #5bd4ff, #6d28d9);
-        box-shadow: 0 6px 18px rgba(124, 58, 237, 0.4);
+        background: linear-gradient(135deg, #007a35, #c42030) !important;
+        box-shadow: 0 6px 18px rgba(239, 51, 64, 0.4);
         transform: scale(1.1);
     }
 </style>
@@ -1398,49 +1402,59 @@
 </section>
 <style>
     .order-process-section {
-        /* background: #f2f2f2; */
-        background: #7c3aed;
+        background: linear-gradient(135deg, #000000 0%, #009A44 50%, #EF3340 100%);
         padding: 70px 0;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .order-process-section::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(0,0,0,0.7), rgba(0,154,68,0.3), rgba(239,51,64,0.2));
+        pointer-events: none;
     }
 
     .section-title h2 {
         font-size: 36px;
-        font-weight: 600;
+        font-weight: 700;
         margin-bottom: 50px;
         color: white;
+        text-shadow: 0 2px 8px rgba(0,0,0,0.3);
     }
 
     .process-item {
         margin-bottom: 40px;
+        position: relative;
+        z-index: 1;
     }
 
     .process-icon {
         width: 70px;
         height: 70px;
         margin: 0 auto 15px;
-        border: 2px solid #000;
+        border: 2px solid rgba(255,255,255,0.5);
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
         font-size: 30px;
-        /* thora size increase */
-        background: #fff;
-    }
-
-    .process-icon {
-        background: #fff;
-        border: 2px solid #000;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(6px);
         transition: 0.3s ease;
     }
 
     .process-icon i {
-        color: #000;
-        font-size: 30px;
+        color: #ffffff;
+        font-size: 28px;
     }
 
     .process-item:hover .process-icon {
-        background: #000;
+        background: linear-gradient(135deg, #009A44, #EF3340);
+        border-color: #fff;
+        transform: scale(1.1);
+        box-shadow: 0 8px 24px rgba(239, 51, 64, 0.4);
     }
 
     .process-item:hover .process-icon i {
@@ -1455,7 +1469,7 @@
 
     .process-item p {
         font-size: 14px;
-        color: white;
+        color: rgba(255,255,255,0.85);
     }
 </style>
 
@@ -1523,17 +1537,20 @@
 </section>
 <style>
     .trusted-section {
-        /* background: #f2f2f2; */
-        background: #f3f3f3;
+        background: linear-gradient(135deg, #f0f9f4, #fff5f5);
         padding: 60px 0;
-        /* color: black; */
+        border-top: 3px solid transparent;
+        border-image: linear-gradient(90deg, #009A44, #EF3340) 1;
     }
 
     .trusted-section h2 {
         font-size: 36px;
-        font-weight: 600;
+        font-weight: 700;
         margin-bottom: 40px;
-        color: black;
+        background: linear-gradient(90deg, #009A44, #EF3340);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
     }
 
     .logo-item {
@@ -1546,13 +1563,14 @@
         max-height: 70px;
         width: auto;
         filter: grayscale(100%);
-        opacity: 0.8;
+        opacity: 0.7;
         transition: 0.3s ease;
     }
 
     .logo-item img:hover {
         filter: grayscale(0%);
         opacity: 1;
+        transform: scale(1.08);
     }
 </style>
 

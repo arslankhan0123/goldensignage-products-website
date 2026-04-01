@@ -12,30 +12,36 @@
 
                     <ul class="widget-social">
                         <li>
-                            <a href="https://www.facebook.com" target="_blank">
+                            <a href="https://www.facebook.com/profile.php?id=61575774910473" target="_blank">
                                 <i class="ri-facebook-fill"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="https://twitter.com/?lang=en" target="_blank">
+                            <a href="https://x.com/goldensignage01" target="_blank">
                                 <i class="ri-twitter-fill"></i>
                             </a>
                         </li>
 
-                        <li>
+                        <!-- <li>
                             <a href="https://www.youtube.com/" target="_blank">
                                 <i class="ri-youtube-fill"></i>
                             </a>
-                        </li>
+                        </li> -->
 
-                        <li>
+                        <!-- <li>
                             <a href="https://vimeo.com/" target="_blank">
                                 <i class="ri-vimeo-fill"></i>
+                            </a>
+                        </li> -->
+
+                        <li>
+                            <a href="https://wa.me/971543569914" target="_blank">
+                                <i class="ri-whatsapp-line"></i>
                             </a>
                         </li>
 
                         <li>
-                            <a href="https://www.instagram.com/" target="_blank">
+                            <a href="https://www.instagram.com/goldensignage.uae/" target="_blank">
                                 <i class="ri-instagram-line"></i>
                             </a>
                         </li>

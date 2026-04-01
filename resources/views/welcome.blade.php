@@ -111,7 +111,8 @@
         display: inline-block;
         margin-top: 10px;
         padding: 10px 18px;
-        background: linear-gradient(135deg, #009A44, #EF3340);
+        /* background: #ff4d00; */
+        background: linear-gradient(135deg, #6ee7ff, #7c3aed);
         color: #fff !important;
         font-size: 14px;
         font-weight: 600;
@@ -122,9 +123,11 @@
     }
 
     .order-btn:hover {
+        /* background: #e04300; */
         color: #fff;
-        background: linear-gradient(135deg, #007a35, #c42030);
-        box-shadow: 0 6px 18px rgba(239, 51, 64, 0.45);
+        /* transform: translateY(-2px); */
+        background: linear-gradient(135deg, #5bd4ff, #6d28d9);
+        box-shadow: 0 6px 18px rgba(124, 58, 237, 0.4);
         transform: translateY(-2px);
     }
 </style>
@@ -625,7 +628,7 @@
     .section-header .underline {
         width: 60px;
         height: 3px;
-        background: linear-gradient(90deg, #009A44, #EF3340);
+        background: #ff4d00;
         display: block;
     }
 
@@ -636,8 +639,9 @@
     }
 
     .trade-image {
-        background: #f0f9f4;
+        background: #f3f3f3;
         height: 220px;
+        /* Same image box height */
         display: flex;
         align-items: center;
         justify-content: center;
@@ -648,6 +652,7 @@
         max-height: 100%;
         max-width: 100%;
         object-fit: contain;
+        /* Image distort nahi hogi */
     }
 
     .trade-card h3 {
@@ -656,13 +661,12 @@
     }
 
     .trade-card a {
-        color: #009A44;
+        color: #ff4d00;
         font-size: 14px;
         text-decoration: none;
     }
 
     .trade-card a:hover {
-        color: #EF3340;
         text-decoration: underline;
     }
 </style>
@@ -696,13 +700,8 @@
 
     .section-title {
         font-size: 26px;
-        font-weight: 700;
+        font-weight: 600;
         margin-bottom: 25px;
-        background: linear-gradient(90deg, #009A44, #EF3340);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        display: inline-block;
     }
 
     .workspace-item {
@@ -714,11 +713,6 @@
         height: 240px;
         object-fit: cover;
         border-radius: 6px;
-        transition: transform 0.3s ease;
-    }
-
-    .workspace-item img:hover {
-        transform: scale(1.03);
     }
 
     .workspace-item p {
@@ -729,13 +723,15 @@
 
     .order-btn {
         display: block;
+        /* full width enable */
         width: 100%;
         margin-top: 10px;
         padding: 10px 0;
         font-size: 14px;
         font-weight: 600;
         color: #fff;
-        background: linear-gradient(135deg, #009A44, #EF3340);
+        /* background: #ff4d00; */
+        background: linear-gradient(135deg, #6ee7ff, #7c3aed);
         border-radius: 5px;
         text-decoration: none;
         text-align: center;
@@ -743,8 +739,9 @@
     }
 
     .order-btn:hover {
-        background: linear-gradient(135deg, #007a35, #c42030);
-        box-shadow: 0 6px 18px rgba(239, 51, 64, 0.4);
+        /* background: #e64400; */
+        background: linear-gradient(135deg, #5bd4ff, #6d28d9);
+        box-shadow: 0 6px 18px rgba(124, 58, 237, 0.4);
         transform: translateY(-2px);
         color: #fff;
     }
@@ -862,22 +859,14 @@
 
     .explore-btn {
         display: inline-block;
-        background: linear-gradient(135deg, #009A44, #EF3340);
+        /* background: #ff4d00; */
+        background: linear-gradient(135deg, #6ee7ff, #7c3aed);
         color: #fff;
         padding: 10px 22px;
         border-radius: 30px;
         text-decoration: none;
         font-weight: 600;
         width: fit-content;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 15px rgba(0, 154, 68, 0.3);
-    }
-
-    .explore-btn:hover {
-        background: linear-gradient(135deg, #007a35, #c42030);
-        box-shadow: 0 6px 20px rgba(239, 51, 64, 0.4);
-        transform: translateY(-2px);
-        color: #fff;
     }
 
     /* Right Cards */
@@ -983,7 +972,8 @@
     .image-box {
         width: 100%;
         height: 220px;
-        background: #f0f9f4;
+        /* SAME HEIGHT FOR ALL */
+        background: #f5f5f5;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -995,6 +985,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        /* no distortion */
     }
 
     /* TITLE SAME HEIGHT */
@@ -1003,11 +994,12 @@
         font-size: 15px;
         font-weight: 600;
         min-height: 40px;
+        /* equal titles */
         display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
-        color: #1a1a1a;
+        color: black;
     }
 
     /* BUTTON ALWAYS BOTTOM */
@@ -1018,7 +1010,8 @@
         font-size: 14px;
         font-weight: 600;
         color: #fff;
-        background: linear-gradient(135deg, #009A44, #EF3340);
+        /* background: #ff4d00; */
+        background: linear-gradient(135deg, #6ee7ff, #7c3aed);
         border-radius: 6px;
         text-decoration: none;
         text-align: center;
@@ -1026,8 +1019,9 @@
     }
 
     .order-btn:hover {
-        background: linear-gradient(135deg, #007a35, #c42030);
-        box-shadow: 0 6px 18px rgba(239, 51, 64, 0.4);
+        /* background: #e64400; */
+        background: linear-gradient(135deg, #5bd4ff, #6d28d9);
+        box-shadow: 0 6px 18px rgba(124, 58, 237, 0.4);
         transform: translateY(-2px);
     }
 
@@ -1051,7 +1045,8 @@
     .exhibition-carousel .owl-nav button {
         width: 45px;
         height: 45px;
-        background: linear-gradient(135deg, #009A44, #EF3340) !important;
+        /* background: #ff4d00 !important; */
+        background: linear-gradient(135deg, #6ee7ff, #7c3aed) !important;
         border-radius: 50%;
         color: #fff !important;
         font-size: 22px;
@@ -1082,8 +1077,9 @@
     .printing-marketing-carousel .owl-nav button:hover,
     .officestore-carousel .owl-nav button:hover,
     .exhibition-carousel .owl-nav button:hover {
-        background: linear-gradient(135deg, #007a35, #c42030) !important;
-        box-shadow: 0 6px 18px rgba(239, 51, 64, 0.4);
+        /* background: #e64400 !important; */
+        background: linear-gradient(135deg, #5bd4ff, #6d28d9);
+        box-shadow: 0 6px 18px rgba(124, 58, 237, 0.4);
         transform: scale(1.1);
     }
 </style>
@@ -1402,59 +1398,49 @@
 </section>
 <style>
     .order-process-section {
-        background: linear-gradient(135deg, #000000 0%, #009A44 50%, #EF3340 100%);
+        /* background: #f2f2f2; */
+        background: #7c3aed;
         padding: 70px 0;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .order-process-section::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(135deg, rgba(0,0,0,0.7), rgba(0,154,68,0.3), rgba(239,51,64,0.2));
-        pointer-events: none;
     }
 
     .section-title h2 {
         font-size: 36px;
-        font-weight: 700;
+        font-weight: 600;
         margin-bottom: 50px;
         color: white;
-        text-shadow: 0 2px 8px rgba(0,0,0,0.3);
     }
 
     .process-item {
         margin-bottom: 40px;
-        position: relative;
-        z-index: 1;
     }
 
     .process-icon {
         width: 70px;
         height: 70px;
         margin: 0 auto 15px;
-        border: 2px solid rgba(255,255,255,0.5);
+        border: 2px solid #000;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
         font-size: 30px;
-        background: rgba(255, 255, 255, 0.15);
-        backdrop-filter: blur(6px);
+        /* thora size increase */
+        background: #fff;
+    }
+
+    .process-icon {
+        background: #fff;
+        border: 2px solid #000;
         transition: 0.3s ease;
     }
 
     .process-icon i {
-        color: #ffffff;
-        font-size: 28px;
+        color: #000;
+        font-size: 30px;
     }
 
     .process-item:hover .process-icon {
-        background: linear-gradient(135deg, #009A44, #EF3340);
-        border-color: #fff;
-        transform: scale(1.1);
-        box-shadow: 0 8px 24px rgba(239, 51, 64, 0.4);
+        background: #000;
     }
 
     .process-item:hover .process-icon i {
@@ -1469,7 +1455,7 @@
 
     .process-item p {
         font-size: 14px;
-        color: rgba(255,255,255,0.85);
+        color: white;
     }
 </style>
 
@@ -1501,9 +1487,9 @@
         </div>
 
         <div class="owl-carousel trusted-carousel">
-            <div class="logo-item">
+            <!-- <div class="logo-item">
                 <img src="	https://skycolors.pk/wp-content/uploads/2025/02/Skycolors-logo-187x222-2.png" alt="BMW" style="height: 80px; width: auto; margin: 0 auto;">
-            </div>
+            </div> -->
 
             <div class="logo-item">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/500px-Google_%22G%22_logo.svg.png" alt="Google" style="height: 80px; width: auto; margin: 0 auto;">
@@ -1525,9 +1511,9 @@
                 <img src="https://masssign.pk/wp-content/uploads/2022/11/Mass-Sign-Logo.jpg" alt="Coca-Cola" style="height: 80px; width: auto; margin: 0 auto;">
             </div>
 
-            <div class="logo-item">
+            <!-- <div class="logo-item">
                 <img src="	https://signmaster.com.pk/wp-content/uploads/2022/06/THE-SIGN-MASTER-LOGO-14-01-2020..png" alt="Nike" style="height: 80px; width: auto; margin: 0 auto;">
-            </div>
+            </div> -->
 
             <div class="logo-item">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Mercedes-Logo.svg/500px-Mercedes-Logo.svg.png" alt="Mercedes" style="height: 80px; width: auto; margin: 0 auto;">
@@ -1537,20 +1523,17 @@
 </section>
 <style>
     .trusted-section {
-        background: linear-gradient(135deg, #f0f9f4, #fff5f5);
+        /* background: #f2f2f2; */
+        background: #f3f3f3;
         padding: 60px 0;
-        border-top: 3px solid transparent;
-        border-image: linear-gradient(90deg, #009A44, #EF3340) 1;
+        /* color: black; */
     }
 
     .trusted-section h2 {
         font-size: 36px;
-        font-weight: 700;
+        font-weight: 600;
         margin-bottom: 40px;
-        background: linear-gradient(90deg, #009A44, #EF3340);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+        color: black;
     }
 
     .logo-item {
@@ -1563,14 +1546,13 @@
         max-height: 70px;
         width: auto;
         filter: grayscale(100%);
-        opacity: 0.7;
+        opacity: 0.8;
         transition: 0.3s ease;
     }
 
     .logo-item img:hover {
         filter: grayscale(0%);
         opacity: 1;
-        transform: scale(1.08);
     }
 </style>
 

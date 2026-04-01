@@ -174,10 +174,10 @@
                 <div class="col-6 col-md-3 social-box">
                     <p class="mb-1" style="font-size: 12px; font-weight: bold;">Follow Us</p>
                     <div class="social-icons">
-                        <a href="#"><i class="ri-facebook-circle-fill"></i></a>
-                        <a href="#"><i class="ri-instagram-line"></i></a>
-                        <a href="#"><i class="ri-whatsapp-line"></i></a>
-                        <a href="#"><i class="ri-twitter-x-fill"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61575774910473"><i class="ri-facebook-circle-fill"></i></a>
+                        <a href="https://www.instagram.com/goldensignage.uae/"><i class="ri-instagram-line"></i></a>
+                        <a href="https://wa.me/971543569914"><i class="ri-whatsapp-line"></i></a>
+                        <a href="https://x.com/goldensignage01"><i class="ri-twitter-x-fill"></i></a>
                     </div>
                 </div>
 

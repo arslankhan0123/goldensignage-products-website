@@ -29,10 +29,10 @@
                     </ul>
                 </div>
                 <ul class="sidebar-social-list">
-                    <li><a href="#" target="_blank"><i class="ri-facebook-fill"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="ri-twitter-fill"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="ri-linkedin-fill"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="ri-instagram-fill"></i></a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=61575774910473" target="_blank"><i class="ri-facebook-fill"></i></a></li>
+                    <li><a href="https://x.com/goldensignage01" target="_blank"><i class="ri-twitter-fill"></i></a></li>
+                    <li><a href="https://wa.me/971543569914" target="_blank"><i class="ri-whatsapp-fill"></i></a></li>
+                    <li><a href="https://www.instagram.com/goldensignage.uae/" target="_blank"><i class="ri-instagram-fill"></i></a></li>
                 </ul>
                 <div class="contact-form">
                     <h3>Ready to Get Started?</h3>

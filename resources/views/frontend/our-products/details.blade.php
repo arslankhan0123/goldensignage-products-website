@@ -98,9 +98,10 @@
     .product-gallery-section .gallery-item .gallery-image img {
         width: 100%;
         height: auto;
-        min-height: 220px;
-        object-fit: cover;
+        /* min-height: 220px; */
+        object-fit: contain; /* Show full image */
         display: block;
+        background: #f9f9f9;
     }
     @media (max-width: 991px) {
         .product-detail-hero .product-title { font-size: 1.65rem; }
@@ -108,7 +109,7 @@
     }
     @media (max-width: 576px) {
         .product-detail-hero { padding: 40px 0 50px; }
-        .product-gallery-section .gallery-item .gallery-image img { min-height: 180px; }
+        .product-gallery-section .gallery-item .gallery-image img { min-height: auto; }
     }
     /* Floating contact buttons - right side stack */
     .floating-contact-wrap {
@@ -164,10 +165,32 @@
     .floating-contact-buttons.is-hidden {
         display: none !important;
     }
+    
+    /* Overlay for better text readability on banner */
+    .page-banner-area {
+        position: relative;
+        z-index: 1;
+    }
+    .page-banner-area::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.72); /* Much darker overlay for maximum text contrast */
+        z-index: -1;
+    }
+    .page-banner-content h2, 
+    .page-banner-content ul li,
+    .page-banner-content ul li a {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Extra pop for text */
+        color: #ffffff !important;
+    }
 </style>
 
 <!-- Start Page Banner Area -->
-<div class="page-banner-area bg-5 jarallax" data-jarallax='{"speed": 0.3}'>
+<div class="page-banner-area jarallax" data-jarallax='{"speed": 0.3}' style="background-image: url('{{ asset($product->image) }}');">
     <div class="container">
         <div class="page-banner-content" data-aos="fade-right" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
             <h2>{{ $product->name }}</h2>
@@ -196,7 +219,7 @@
             <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
                 <div class="main-image-wrap">
                     <a data-fancybox="gallery" href="{{ asset($product->image) }}">
-                        <img src="{{ asset($product->image) }}" alt="{{ $product->name }}">
+                        <img src="{{ asset($product->image) }}" alt="{{ $product->name }}" style="object-fit: contain; width: 100%; height: auto; background: #f9f9f9;">
                     </a>
                 </div>
             </div>

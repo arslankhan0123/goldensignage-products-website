@@ -150,18 +150,18 @@
             <div class="row align-items-center text-center">
 
                 <div class="col-6 col-md-3 border-end">
-                    <span style="color:white">
+                    <span style="color:#111111">
                         <i class="ri-phone-fill"></i> Phone:
-                        <a style="color:white" href="tel:{{ preg_replace('/\D+/', '', ($adminDetails->phone ?? '')) }}">
+                        <a style="color:#111111" href="tel:{{ preg_replace('/\D+/', '', ($adminDetails->phone ?? '')) }}">
                             {{ $adminDetails->phone ?? '' }}
                         </a>
                     </span>
                 </div>
 
                 <div class="col-6 col-md-3 border-end">
-                    <span style="color:white">
+                    <span style="color:#111111">
                         <i class="ri-mail-fill"></i> Email:
-                        <a style="color:white" href="mailto:{{ $adminDetails->email ?? '' }}">
+                        <a style="color:#111111" href="mailto:{{ $adminDetails->email ?? '' }}">
                             {{ $adminDetails->email ?? 'info@example.com' }}
                         </a>
                     </span>
@@ -192,21 +192,21 @@
             bottom: 0;
             left: 0;
             width: 100%;
-            /* background-color: #83a59a; */
-            background: linear-gradient(135deg, #6ee7ff, #7c3aed);
+            background-color: #e0e0e0;
+            /* background: linear-gradient(135deg, #6ee7ff, #7c3aed); */
             /* White background */
             z-index: 2000;
             /* Taaki sabse upar rahe */
             padding: 10px 0;
-            box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.08);
             /* Top shadow */
-            border-top: 2px solid #f1f1f1;
+            border-top: 1px solid #f0f0f0;
         }
 
         .fixed-bottom-bar p {
             font-size: 14px;
             font-weight: 600;
-            color: white;
+            color: #111111;
             margin-bottom: 5px !important;
         }
 
@@ -252,7 +252,7 @@
             font-size: 20px;
             /* Icon ka size */
             margin: 0 5px;
-            color: white;
+            color: #111111;
             /* Default color */
             transition: 0.3s;
             display: inline-block;

@@ -182,7 +182,7 @@
 .custom-mobile-toggle {
     display: none;
     font-size: 30px;
-    color: #fff;
+    color: #111111;
     cursor: pointer;
     position: relative;
     z-index: 10001;

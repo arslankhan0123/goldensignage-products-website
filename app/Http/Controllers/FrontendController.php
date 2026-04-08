@@ -16,10 +16,22 @@ class FrontendController extends Controller
         return view('frontend.about.index', compact('adminDetails'));
     }
 
+    public function management()
+    {
+        $adminDetails = AdminDetail::first();
+        return view('frontend.management.index', compact('adminDetails'));
+    }
+
     public function contact()
     {
         $adminDetails = AdminDetail::first();
         return view('frontend.contact.index', compact('adminDetails'));
+    }
+
+    public function faq()
+    {
+        $adminDetails = AdminDetail::first();
+        return view('frontend.faq.index', compact('adminDetails'));
     }
 
     public function ourProducts(Request $request)

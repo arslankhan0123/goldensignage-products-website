@@ -21,6 +21,50 @@ class NavbarComposer
             }])
             ->get();
 
-        $view->with('signageCategories', $signageCategories);
+
+        $flagsCategories = ProductCategory::whereRaw('LOWER(type) = ?', ['flags'])
+            ->orderBy('order', 'asc')
+            ->with(['products' => function ($query) {
+                $query->orderBy('id');
+            }])
+            ->get();
+
+        $printingCategories = ProductCategory::whereRaw('LOWER(type) = ?', ['Printing/Marketing'])
+            ->orderBy('order', 'asc')
+            ->with(['products' => function ($query) {
+                $query->orderBy('id');
+            }])
+            ->get();
+
+        $officeStoreCategories = ProductCategory::whereRaw('LOWER(type) = ?', ['officestore'])
+            ->orderBy('order', 'asc')
+            ->with(['products' => function ($query) {
+                $query->orderBy('id');
+            }])
+            ->get();
+
+        $backdropsExhibitionCategories = ProductCategory::whereRaw('LOWER(type) = ?', ['BackdropsExhibition'])
+            ->orderBy('order', 'asc')
+            ->with(['products' => function ($query) {
+                $query->orderBy('id');
+            }])
+            ->get();
+
+
+        $corporateGiftsBagsCategories = ProductCategory::whereRaw('LOWER(type) = ?', ['CorporateGiftsBags'])
+            ->orderBy('order', 'asc')
+            ->with(['products' => function ($query) {
+                $query->orderBy('id');
+            }])
+            ->get();
+
+        $view->with([
+            'signageCategories' => $signageCategories,
+            'flagsCategories'   => $flagsCategories,
+            'printingCategories'   => $printingCategories,
+            'officeStoreCategories'   => $officeStoreCategories,
+            'backdropsExhibitionCategories'   => $backdropsExhibitionCategories,
+            'corporateGiftsBagsCategories'   => $corporateGiftsBagsCategories,
+        ]);
     }
 }

@@ -9,19 +9,54 @@ use App\Http\Controllers\ProductCategoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServicesController;
+use App\Models\AdminDetail;
 use App\Models\Blog;
 use App\Models\Product;
+use App\Models\ProductCategory;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $products = Product::latest()->take(4)->get();
     $blogs = Blog::latest()->take(3)->get();
-    return view('welcome', compact('products', 'blogs'));
+    $adminDetails = AdminDetail::first();
+    $SignageProducts = Product::whereHas('category', function ($query) {
+        $query->where('type', 'Signage');
+    })
+    // ->latest()
+    // ->take(12)
+    ->get();
+
+    $PrintingMarketingProducts = Product::whereHas('category', function ($query) {
+        $query->where('type', 'Printing/Marketing');
+    })
+    ->latest()
+    ->take(12)
+    ->get();
+    
+    $OfficeStoreProducts = Product::whereHas('category', function ($query) {
+        $query->where('type', 'OfficeStore');
+    })
+    ->latest()
+    ->take(12)
+    ->get();
+
+    $backdropsExhibitionProducts = Product::whereHas('category', function ($query) {
+        $query->where('type', 'BackdropsExhibition');
+    })
+    ->latest()
+    ->get();
+
+    $categories = ProductCategory::where('type', 'Signage')->get();
+
+// dd($categories->pluck('name')->unique());
+    return view('welcome', compact('products', 'blogs', 'adminDetails', 'SignageProducts', 'PrintingMarketingProducts', 'OfficeStoreProducts', 'backdropsExhibitionProducts'));
 })->name('home');
 
 Route::prefix('/frontend')->group(function () {
     Route::get('/about', [FrontendController::class, 'about'])->name('frontend.about');
     Route::get('/contact', [FrontendController::class, 'contact'])->name('frontend.contact');
+    Route::get('/faq', [FrontendController::class, 'faq'])->name('frontend.faq');
+    Route::get('/management', [FrontendController::class, 'management'])->name('frontend.management');
     Route::get('/our-products', [FrontendController::class, 'ourProducts'])->name('frontend.our-products');
     Route::get('/our-products/{id}', [FrontendController::class, 'productDetails'])->name('frontend.product-details');
     Route::get('/our-services', [FrontendController::class, 'ourServices'])->name('frontend.our-services');

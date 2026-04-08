@@ -241,8 +241,8 @@ Section Title CSS
 =================================================*/
 .section-title {
     max-width: 630px;
-    margin: 0 auto 45px;
-    text-align: center;
+    /* margin: 0 auto 45px; */
+    /* text-align: center; */
     position: relative;
 }
 
@@ -335,7 +335,8 @@ Preloader Area CSS
     width: 5px;
     height: 20px;
     border-radius: 20%;
-    background: var(--main-color);
+    background: #7c3aed;
+    /* background: var(--main-color); */
 }
 
 .preloader .lds-spinner div:nth-child(1) {
@@ -647,7 +648,8 @@ Main Hero Area CSS
 }
 
 .main-hero-item {
-    background-image: url('/frontend/assets/img/hero-bg-1.jpg');
+    /* background-image: url('/frontend/assets/img/hero-bg-1.jpg'); */
+    background-image: url('/images/products/1769812094_310b4f66f19cd5e71ed75370804c2e32.jpg');
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -658,7 +660,8 @@ Main Hero Area CSS
 }
 
 .main-hero-item.item-bg-2 {
-    background-image: url('/frontend/assets/img/hero-bg-2.jpg');
+    /* background-image: url('/frontend/assets/img/hero-bg-2.jpg'); */
+    background-image: url('/images/products/1769887534_i-1.webp');
 }
 
 .main-hero-item.item-bg-3 {
@@ -1167,7 +1170,7 @@ Services Area CSS
 }
 
 .services-area.bg-with-14042C-color {
-    background-color: var(--black-color);
+    background-color: #262424;
     border-radius: 0 0 100px 100px;
 }
 

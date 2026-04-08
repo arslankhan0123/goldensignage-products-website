@@ -24,7 +24,7 @@
 @php
 $teamMembers = [
 [
-'name' => 'Amir Riaz',
+'name' => 'Muhammad Aamir Riaz',
 'title' => 'CEO',
 'image' => asset('amir.jpeg'),
 'description' => 'Visionary leader with a proven track record of driving business growth and innovation.',

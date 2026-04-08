@@ -79,7 +79,7 @@
                         </div>
                     </div>
                 </div>
-                </div>
+            </div>
         </div>
     </div>
 
@@ -109,21 +109,37 @@
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         let chart;
-        
+
         // Initial data
         const initialData = {
-            categories: {{$totalCategories}},
-            mainProducts: {{$totalMainProducts}},
-            childProducts: {{$totalChildProducts}},
-            blogs: {{$totalBlogs}}
+            categories: {
+                {
+                    $totalCategories
+                }
+            },
+            mainProducts: {
+                {
+                    $totalMainProducts
+                }
+            },
+            childProducts: {
+                {
+                    $totalChildProducts
+                }
+            },
+            blogs: {
+                {
+                    $totalBlogs
+                }
+            }
         };
 
         // Different colors for each category
         const colors = {
-            categories: '#17a2b8',      // Cyan/Teal
-            mainProducts: '#6c5ce7',   // Purple
-            childProducts: '#00b894',  // Green
-            blogs: '#e17055'           // Orange/Red
+            categories: '#17a2b8', // Cyan/Teal
+            mainProducts: '#6c5ce7', // Purple
+            childProducts: '#00b894', // Green
+            blogs: '#e17055' // Orange/Red
         };
 
         function renderChart(data) {
@@ -176,7 +192,7 @@
                 },
                 tooltip: {
                     y: {
-                        formatter: function (val) {
+                        formatter: function(val) {
                             return val + " items"
                         }
                     }
@@ -211,7 +227,7 @@
         // Handle period filter change
         document.getElementById('periodFilter').addEventListener('change', function() {
             const period = this.value;
-            
+
             // Show loading state
             if (chart) {
                 chart.updateSeries([{
@@ -222,21 +238,21 @@
 
             // Fetch filtered data
             fetch(`{{route('dashboard.filtered-data')}}?period=${period}`, {
-                method: 'GET',
-                headers: {
-                    'X-Requested-With': 'XMLHttpRequest',
-                    'Accept': 'application/json',
-                }
-            })
-            .then(response => response.json())
-            .then(data => {
-                renderChart(data);
-            })
-            .catch(error => {
-                console.error('Error fetching filtered data:', error);
-                // Fallback to initial data on error
-                renderChart(initialData);
-            });
+                    method: 'GET',
+                    headers: {
+                        'X-Requested-With': 'XMLHttpRequest',
+                        'Accept': 'application/json',
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    renderChart(data);
+                })
+                .catch(error => {
+                    console.error('Error fetching filtered data:', error);
+                    // Fallback to initial data on error
+                    renderChart(initialData);
+                });
         });
     });
 </script>

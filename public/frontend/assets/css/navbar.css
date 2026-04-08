@@ -157,8 +157,14 @@ Navbar Area CSS
     padding: 10px 0;
 }
 
+.navbar-area {
+    border-bottom: 5px solid #7c3aed;
+}
+
 .main-navbar.navbar-with-black-color {
-    background-color: #e0e0e0;
+    background: #ffffff;
+    border-bottom: none !important;
+    /* Removed to prevent stacking with parent border */
 }
 
 .main-navbar .container-fluid {
@@ -548,8 +554,9 @@ Navbar Area CSS
     left: 0;
     width: 100%;
     z-index: 999;
-    background: #e0e0e0 !important;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    background: #ffffff !important;
+    box-shadow: 0 4px 20px rgba(124, 58, 237, 0.15);
+    border-bottom: 5px solid #7c3aed;
     animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
     transition: var(--transition);
 }
@@ -1219,11 +1226,11 @@ Sidebar Modal CSS
     }
 
     .navbar-area {
-        background-color: #e0e0e0;
-        /* background-color: var(--black-color); */
+        background: #ffffff;
         padding-top: 15px;
         padding-bottom: 15px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        border-bottom: 5px solid #7c3aed;
     }
 
     .main-navbar {

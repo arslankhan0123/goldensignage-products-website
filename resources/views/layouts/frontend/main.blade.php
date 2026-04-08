@@ -192,15 +192,14 @@
             bottom: 0;
             left: 0;
             width: 100%;
-            background-color: #e0e0e0;
-            /* background: linear-gradient(135deg, #6ee7ff, #7c3aed); */
+            background: #e8dcdc !important;
             /* White background */
             z-index: 2000;
             /* Taaki sabse upar rahe */
             padding: 10px 0;
-            box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 -4px 20px rgba(124, 58, 237, 0.15);
             /* Top shadow */
-            border-top: 1px solid #f0f0f0;
+            border-top: 5px solid #7c3aed !important;
         }
 
         .fixed-bottom-bar p {

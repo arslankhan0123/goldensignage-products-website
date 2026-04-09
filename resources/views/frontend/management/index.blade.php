@@ -109,6 +109,25 @@ $teamMembers = [
 
 <!-- ================= Responsive CSS ================= -->
 <style>
+    .page-banner-area {
+        position: relative;
+        z-index: 1;
+    }
+    .page-banner-area::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: -1;
+    }
+    .page-banner-content {
+        position: relative;
+        z-index: 1;
+    }
+
     .team-card {
         border-radius: 16px;
         transition: transform 0.3s ease, box-shadow 0.3s ease;

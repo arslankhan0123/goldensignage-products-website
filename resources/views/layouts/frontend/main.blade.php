@@ -192,7 +192,7 @@
             bottom: 0;
             left: 0;
             width: 100%;
-            background: #8f7777 !important;
+            background: #3d3b3b !important;
             /* White background */
             z-index: 2000;
             /* Taaki sabse upar rahe */

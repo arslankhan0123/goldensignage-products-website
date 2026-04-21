@@ -162,7 +162,7 @@ Navbar Area CSS
 }
 
 .main-navbar.navbar-with-black-color {
-    background: #8f7777 !important;
+    background: #3d3b3b !important;
     border-bottom: none !important;
     /* Removed to prevent stacking with parent border */
 }
@@ -508,7 +508,7 @@ Navbar Area CSS
 .main-navbar .navbar .others-options .option-item .search-btn {
     cursor: pointer;
     transition: var(--transition);
-    color: #333333;
+    color: white;
     font-size: 25px;
     position: relative;
     top: 3.5px;
@@ -537,7 +537,7 @@ Navbar Area CSS
 
 .main-navbar .navbar .others-options .option-item .side-menu-btn i {
     font-size: 25px;
-    color: #333333;
+    color: white;
     cursor: pointer;
     transition: var(--transition);
     position: relative;
@@ -706,7 +706,8 @@ Navbar Area CSS
 }
 
 .navbar-style-two-with-color .main-navbar .navbar .others-options .option-item .search-btn {
-    color: var(--black-color);
+    color: white;
+    /* color: var(--black-color); */
 }
 
 .navbar-style-two-with-color .main-navbar .navbar .others-options .option-item .search-btn:hover {
@@ -726,7 +727,7 @@ Navbar Area CSS
 }
 
 .navbar-style-two-with-color .main-navbar .navbar .others-options .option-item .side-menu-btn i {
-    color: var(--black-color);
+    color: white;
 }
 
 .navbar-style-two-with-color .main-navbar .navbar .others-options .option-item .side-menu-btn i:hover {

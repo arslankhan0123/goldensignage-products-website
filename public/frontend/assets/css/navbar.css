@@ -162,7 +162,7 @@ Navbar Area CSS
 }
 
 .main-navbar.navbar-with-black-color {
-    background: #e8dcdc !important;
+    background: #8f7777 !important;
     border-bottom: none !important;
     /* Removed to prevent stacking with parent border */
 }
@@ -194,7 +194,7 @@ Navbar Area CSS
 }
 
 .main-navbar .navbar .navbar-nav .nav-item a {
-    color: #333333;
+    color: white;
     font-size: var(--font-size);
     font-weight: 600;
     padding-left: 0;
@@ -567,7 +567,8 @@ Navbar Area CSS
 }
 
 .navbar-style-two-with-color .main-navbar .navbar .navbar-nav .nav-item a {
-    color: var(--black-color);
+    color: white;
+    /* color: var(--black-color); */
 }
 
 .navbar-style-two-with-color .main-navbar .navbar .navbar-nav .nav-item a:hover,

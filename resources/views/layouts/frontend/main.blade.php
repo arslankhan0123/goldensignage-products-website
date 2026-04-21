@@ -150,18 +150,18 @@
             <div class="row align-items-center text-center">
 
                 <div class="col-6 col-md-3 border-end">
-                    <span style="color:#111111">
+                    <span style="color:white">
                         <i class="ri-phone-fill"></i> Phone:
-                        <a style="color:#111111" href="tel:{{ preg_replace('/\D+/', '', ($adminDetails->phone ?? '')) }}">
+                        <a style="color:white" href="tel:{{ preg_replace('/\D+/', '', ($adminDetails->phone ?? '')) }}">
                             {{ $adminDetails->phone ?? '' }}
                         </a>
                     </span>
                 </div>
 
                 <div class="col-6 col-md-3 border-end">
-                    <span style="color:#111111">
+                    <span style="color:white">
                         <i class="ri-mail-fill"></i> Email:
-                        <a style="color:#111111" href="mailto:{{ $adminDetails->email ?? '' }}">
+                        <a style="color:white" href="mailto:{{ $adminDetails->email ?? '' }}">
                             {{ $adminDetails->email ?? 'info@example.com' }}
                         </a>
                     </span>
@@ -192,7 +192,7 @@
             bottom: 0;
             left: 0;
             width: 100%;
-            background: #e8dcdc !important;
+            background: #8f7777 !important;
             /* White background */
             z-index: 2000;
             /* Taaki sabse upar rahe */
@@ -200,12 +200,13 @@
             box-shadow: 0 -4px 20px rgba(124, 58, 237, 0.15);
             /* Top shadow */
             border-top: 5px solid #7c3aed !important;
+            color: white;
         }
 
         .fixed-bottom-bar p {
             font-size: 14px;
             font-weight: 600;
-            color: #111111;
+            color: white;
             margin-bottom: 5px !important;
         }
 

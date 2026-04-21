@@ -252,7 +252,7 @@
             font-size: 20px;
             /* Icon ka size */
             margin: 0 5px;
-            color: #111111;
+            color: white;
             /* Default color */
             transition: 0.3s;
             display: inline-block;

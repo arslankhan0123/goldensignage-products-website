@@ -181,7 +181,7 @@
 <div class="container ptb-100">
     <div class="map-location">
         <iframe
-            src="https://www.google.com/maps?q=Office%20No%20M3-02%20Key%20Business%20Center%2022A%20Street%20Al%20Khubaisi%20Next%20To%20Hyundai%20Showroom%20Dubai&output=embed"
+            src="https://www.google.com/maps?q=Crystal%20Tower%20701%20C%20Bohira%20Cornech%20Sharjah&output=embed"
             width="100%"
             height="450"
             style="border:0;"

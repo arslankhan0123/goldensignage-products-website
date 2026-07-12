@@ -17,7 +17,7 @@
                     </li>
                     <li>
                         <i class="ri-map-pin-line"></i>
-                        <span>Address: {{ $adminDetails->address ?? '413 North Las Vegas, NV 89032' }}</span>
+                        <span>Address: {{ $adminDetails->address ?? 'Crystal Tower 701 C Bohira Cornech Sharjah' }}</span>
                     </li>
                 </ul>
             </div>

@@ -400,7 +400,7 @@
                         <div class="about-content" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
                             <span>WHO WE ARE</span>
                             <h3>We Are All In One IT Solution & Technology Company <span class="overlay"></span></h3>
-                            <p>Golden Signage is a professional signage and branding solutions company based in Dubai, UAE, dedicated to helping businesses stand out with impactful visual communication. We specialize in designing and delivering high-quality custom signage, including 3D signs, neon signs, indoor and outdoor branding, and illuminated and non-illuminated displays.</p>
+                            <p>Golden Prime Advertising L.L.C is a professional signage and branding solutions company based in Sharjah, UAE, dedicated to helping businesses stand out with impactful visual communication. We specialize in designing and delivering high-quality custom signage, including 3D signs, neon signs, indoor and outdoor branding, and illuminated and non-illuminated displays.</p>
                             <div class="about-btn">
                                 <a href="{{ route('frontend.about') }}" class="default-btn">Know More About Us</a>
                             </div>
@@ -1352,7 +1352,7 @@
 <section class="trusted-section">
     <div class="container">
         <div class="section-title text-center" style="margin: 0 auto 45px; text-align: center;">
-            <h2 style="color:black">Businesses that Trust Golden Signage</h2>
+            <h2 style="color:black">Businesses that Trust Golden Prime Advertising L.L.C</h2>
         </div>
 
         <div class="owl-carousel trusted-carousel">

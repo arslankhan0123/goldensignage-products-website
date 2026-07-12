@@ -40,7 +40,7 @@
                 </h2>
                 <div id="g1" class="accordion-collapse collapse" data-bs-parent="#generalAccordion">
                     <div class="accordion-body">
-                        With 25+ years of experience, cutting-edge printing technology, and a commitment to quality, Deluxe Printing ensures top-notch results. Plus, our in-store experience lets you see products firsthand, making us a trusted choice for all your printing needs.
+                        With 25+ years of experience, cutting-edge printing technology, and a commitment to quality, Golden Prime Advertising L.L.C ensures top-notch results. Plus, our in-store experience lets you see products firsthand, making us a trusted choice for all your printing needs.
                     </div>
                 </div>
             </div>
@@ -98,7 +98,7 @@
                 </h2>
                 <div id="g4" class="accordion-collapse collapse" data-bs-parent="#generalAccordion">
                     <div class="accordion-body">
-                        Our store is located in Al Qusais Industrial Area 2, Dubai, UAE. Yes, you’re welcome to visit us to explore our products, check print samples, and discuss your requirements in person.
+                        Our store is located in Crystal Tower 701 C, Bohira Cornech, Sharjah, UAE. Yes, you’re welcome to visit us to explore our products, check print samples, and discuss your requirements in person.
                     </div>
                 </div>
             </div>
@@ -317,7 +317,7 @@
                     aria-labelledby="ordersHeadingThree"
                     data-bs-parent="#ordersAccordion">
                     <div class="accordion-body">
-                        Absolutely! Deluxe Printing offers urgent printing services to meet your time-sensitive needs, subject to certain conditions.
+                        Absolutely! Golden Prime Advertising L.L.C offers urgent printing services to meet your time-sensitive needs, subject to certain conditions.
                     </div>
                 </div>
             </div>

@@ -1403,16 +1403,13 @@
 @endif
 
 <!-- Trusted Businesses Section -->
-<section class="trusted-section">
+<!-- <section class="trusted-section">
     <div class="container">
         <div class="section-title text-center" style="margin: 0 auto 45px; text-align: center;">
             <h2 style="color:white">Businesses that Trust Golden Prime Advertising L.L.C</h2>
         </div>
 
         <div class="owl-carousel trusted-carousel">
-            <!-- <div class="logo-item">
-                        <img src="	https://skycolors.pk/wp-content/uploads/2025/02/Skycolors-logo-187x222-2.png" alt="BMW" style="height: 80px; width: auto; margin: 0 auto;">
-                    </div> -->
 
             <div class="logo-item">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/500px-Google_%22G%22_logo.svg.png"
@@ -1439,17 +1436,13 @@
                     style="height: 80px; width: auto; margin: 0 auto;">
             </div>
 
-            <!-- <div class="logo-item">
-                        <img src="	https://signmaster.com.pk/wp-content/uploads/2022/06/THE-SIGN-MASTER-LOGO-14-01-2020..png" alt="Nike" style="height: 80px; width: auto; margin: 0 auto;">
-                    </div> -->
-
             <div class="logo-item">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Mercedes-Logo.svg/500px-Mercedes-Logo.svg.png"
                     alt="Mercedes" style="height: 80px; width: auto; margin: 0 auto;">
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <style>
     .trusted-section {
         /* background: #f2f2f2; */

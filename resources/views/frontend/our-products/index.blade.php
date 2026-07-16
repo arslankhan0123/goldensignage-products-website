@@ -13,13 +13,133 @@
         object-fit: cover;
         display: block;
     }
-
-    /* Slightly shorter on smaller screens */
     @media (max-width: 768px) {
-        .products-image img {
-            height: 200px;
-        }
+        .products-image img { height: 200px; }
     }
+
+    /* Page Banner Dark Overlay */
+    .page-banner-area {
+        position: relative;
+        z-index: 1;
+    }
+    .page-banner-area::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.72);
+        z-index: -1;
+    }
+    .page-banner-content h2, 
+    .page-banner-content ul li,
+    .page-banner-content ul li a {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        color: #ffffff !important;
+    }
+
+    /* Products Area Dark Theme */
+    body { background: #111; color: #ddd; }
+    .products-area { background: #111; }
+    .result-count p { color: #fff; }
+    
+    .single-products-card {
+        text-align: center;
+        background: #151515;
+        border-radius: 14px;
+        padding: 0;
+        overflow: hidden;
+        border: 1px solid #333;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+        margin-bottom: 30px;
+    }
+    .single-products-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(200, 155, 60, 0.2);
+        border-color: #C89B3C;
+    }
+    .single-products-card .products-image img {
+        transition: transform 0.6s ease;
+        border-bottom: 2px solid #C89B3C;
+        background: #151515 !important;
+    }
+    .single-products-card:hover .products-image img {
+        transform: scale(1.08);
+    }
+    .single-products-card .products-content {
+        padding: 25px 15px 20px;
+        position: relative;
+        background: #151515;
+        z-index: 2;
+        border-top: 2px solid #C89B3C;
+    }
+    .single-products-card .products-content h3 a {
+        color: #fff;
+        font-size: 18px;
+        font-weight: 700;
+        text-transform: capitalize;
+        transition: 0.3s;
+    }
+    .single-products-card .products-content h3 a:hover {
+        color: #C89B3C;
+    }
+    .single-products-card .products-content span {
+        color: #C89B3C;
+        font-weight: 600;
+        display: block;
+        margin-top: 8px;
+    }
+    .single-products-card .add-to-cart-btn {
+        position: absolute;
+        bottom: -50px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        z-index: 3;
+    }
+    .single-products-card:hover .add-to-cart-btn {
+        bottom: 120px;
+    }
+    .single-products-card .add-to-cart-btn a.default-btn {
+        display: inline-block;
+        background: linear-gradient(135deg, #f5b82e, #C89B3C) !important;
+        color: #111 !important;
+        font-weight: 700;
+        border-radius: 8px;
+        border: none;
+        transition: 0.3s;
+        box-shadow: 0 4px 10px rgba(200, 155, 60, 0.3);
+        padding: 10px 25px;
+    }
+    .single-products-card .add-to-cart-btn a.default-btn:hover {
+        background: linear-gradient(135deg, #ffd15c, #D4AF37) !important;
+        color: #000 !important;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(212, 175, 55, 0.6);
+    }
+    /* Heart icons */
+    .heart-line a i, .heart-fill a i {
+        color: #C89B3C !important;
+    }
+
+    /* Overview Section */
+    .overview-area { background: #181818; }
+    .overview-card {
+        background: #111;
+        border-radius: 12px;
+        padding: 30px;
+        text-align: center;
+        border: 1px solid #333;
+        transition: 0.3s;
+    }
+    .overview-card:hover { border-color: #C89B3C; transform: translateY(-5px); }
+    .overview-card h3 { color: #fff; margin-bottom: 15px; font-weight: 700; }
+    .overview-card span, .overview-card span a { color: #C89B3C; font-weight: 600; text-decoration: none; }
 </style>
 <!-- Start Page Banner Area -->
 <div class="page-banner-area bg-4 jarallax" data-jarallax='{"speed": 0.3}'>

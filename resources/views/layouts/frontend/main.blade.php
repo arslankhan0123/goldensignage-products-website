@@ -48,6 +48,11 @@
     <!-- <link rel="icon" type="image/png" href="https://templates.envytheme.com/coze/default/assets/images/favicon.png"> -->
     <link rel="icon" type="image/png" href="{{ asset('logo.png') }}">
     <style>
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+
         /* 1. Navbar ko Bottom Bar se upar lane ke liye */
         .navbar-area {
             z-index: 3000 !important;

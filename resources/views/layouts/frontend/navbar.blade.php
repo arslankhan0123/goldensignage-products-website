@@ -224,8 +224,10 @@
             menu.toggleClass('active');
             if (menu.hasClass('active')) {
                 $('body').css('overflow', 'hidden');
+                $('#mobile-menu-btn i').removeClass('ri-menu-line').addClass('ri-close-line');
             } else {
                 $('body').css('overflow', '');
+                $('#mobile-menu-btn i').removeClass('ri-close-line').addClass('ri-menu-line');
             }
         }
 

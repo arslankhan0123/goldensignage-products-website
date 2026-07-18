@@ -187,7 +187,7 @@ $teamMembers = [
 
     .member-media {
         width: 100%;
-        height: 220px;
+        height: 350px;
         display: flex;
         align-items: center;
         justify-content: center;

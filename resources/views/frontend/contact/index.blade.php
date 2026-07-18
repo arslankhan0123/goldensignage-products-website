@@ -4,6 +4,47 @@
 @endsection
 
 @section('content')
+<style>
+    .talk-area {
+        background-color: #0a0a0a !important;
+        border-top: 1px solid #222;
+        border-bottom: 1px solid #222;
+    }
+    .talk-content span {
+        color: #C89B3C !important;
+        font-weight: 700;
+    }
+    .talk-content h3 {
+        color: #fff !important;
+    }
+    .talk-content .form-group .form-control {
+        background-color: #151515 !important;
+        color: #fff !important;
+        border: 1px solid #333 !important;
+        border-radius: 6px;
+    }
+    .talk-content .form-group .form-control::placeholder {
+        color: #888 !important;
+    }
+    .talk-content .form-group .form-control:focus {
+        border-color: #C89B3C !important;
+        box-shadow: 0 0 8px rgba(200, 155, 60, 0.2) !important;
+    }
+    
+    .talk-content .default-btn {
+        background: linear-gradient(135deg, #C89B3C, #8B6914) !important;
+        color: #fff !important;
+        border: none !important;
+        border-radius: 6px;
+        font-weight: 600;
+    }
+    .talk-content .default-btn:hover {
+        background: linear-gradient(135deg, #D4AF37, #997A15) !important;
+        box-shadow: 0 6px 18px rgba(212, 175, 55, 0.4) !important;
+        color: #fff !important;
+    }
+</style>
+
 <!-- Start Page Banner Area -->
 <div class="page-banner-area bg-5 jarallax" data-jarallax='{"speed": 0.3}'>
     <div class="container">

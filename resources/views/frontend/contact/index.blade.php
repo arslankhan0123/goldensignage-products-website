@@ -181,7 +181,7 @@
 <div class="container ptb-100">
     <div class="map-location">
         <iframe
-            src="https://www.google.com/maps?q=Crystal%20Tower%20701%20C%20Bohira%20Cornech%20Sharjah&output=embed"
+            src="https://www.google.com/maps?q=Crystal%20Plaza%20Building%20C,%20Corniche%20St,%20Sharjah&output=embed"
             width="100%"
             height="450"
             style="border:0;"

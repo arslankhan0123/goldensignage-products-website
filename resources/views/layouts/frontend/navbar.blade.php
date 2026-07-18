@@ -1,4 +1,4 @@
-<div class="navbar-area">
+<div class="navbar-area" style="background-color: #000;">
     <div class="main-responsive-nav">
         <div class="container">
             <div class="main-responsive-menu">
@@ -8,7 +8,7 @@
                     </a>
                 </div>
                 <!-- Custom Mobile Toggle -->
-                <div class="custom-mobile-toggle" id="mobile-menu-btn">
+                <div class="custom-mobile-toggle" style="color: white;" id="mobile-menu-btn">
                     <i class="ri-menu-line"></i>
                 </div>
             </div>
@@ -17,7 +17,7 @@
 
     <!-- Custom Mobile Tabbed Menu Overlay -->
     <div id="mobileCustomMenu">
-        <div class="mobile-menu-header">
+        <div class="mobile-menu-header" style="background-color: #000;">
             <img src="{{ asset('logo.png') }}" alt="Logo">
             <div class="mobile-menu-close" onclick="toggleMobileMenu()">
                 <i class="ri-close-line"></i>
@@ -583,13 +583,13 @@
 
     <div class="others-option-for-responsive">
         <div class="container">
-            <div class="dot-menu">
+            <!-- <div class="dot-menu">
                 <div class="inner">
                     <div class="circle circle-one"></div>
                     <div class="circle circle-two"></div>
                     <div class="circle circle-three"></div>
                 </div>
-            </div>
+            </div> -->
 
             <div class="container">
                 <div class="option-inner">

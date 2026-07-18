@@ -1225,7 +1225,7 @@ Sidebar Modal CSS
     .main-responsive-nav .logo {
         position: relative;
         z-index: 999;
-        max-width: 100px;
+        max-width: 350px;
     }
 
     .navbar-area {

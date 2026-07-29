@@ -149,13 +149,16 @@ $teamMembers = [
     }
 
     .team-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
+        display: flex;
+        flex-wrap: wrap;
         justify-content: center;
+        gap: 20px;
+        margin: 0 auto;
     }
 
     .member-card {
+        flex: 0 0 calc(25% - 15px);
+        max-width: calc(25% - 15px);
         background: linear-gradient(145deg, #1e1f22, #121315);
         border: 1px solid #2a2b2e;
         border-radius: 8px;
@@ -287,21 +290,26 @@ $teamMembers = [
 
     /* Responsive Grid */
     @media (max-width: 1200px) {
-        .team-grid {
-            grid-template-columns: repeat(4, 1fr);
+        .member-card {
+            flex-basis: calc(25% - 15px);
+            max-width: calc(25% - 15px);
         }
     }
 
     @media (max-width: 992px) {
-        .team-grid {
-            grid-template-columns: repeat(3, 1fr);
+        .member-card {
+            flex-basis: calc(33.333% - 14px);
+            max-width: calc(33.333% - 14px);
         }
     }
 
     @media (max-width: 768px) {
         .team-grid {
-            grid-template-columns: repeat(2, 1fr);
             gap: 15px;
+        }
+        .member-card {
+            flex-basis: calc(50% - 8px);
+            max-width: calc(50% - 8px);
         }
         .team-title {
             font-size: 28px;
@@ -310,9 +318,12 @@ $teamMembers = [
 
     @media (max-width: 480px) {
         .team-grid {
-            grid-template-columns: 1fr;
             max-width: 280px;
             margin: 0 auto;
+        }
+        .member-card {
+            flex-basis: 100%;
+            max-width: 100%;
         }
     }
 </style>

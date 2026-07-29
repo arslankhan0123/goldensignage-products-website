@@ -24,9 +24,9 @@
 @php
 $teamMembers = [
     [
-        'name' => 'Muhammad Aamir Riaz',
+        'name' => 'Salem Shamsi',
         'title' => 'CEO',
-        'image' => asset('amir.jpeg'),
+        'image' => asset('salem.jpeg'),
         'initials' => 'MAR',
         'phone' => '',
         'is_ceo' => true,
@@ -34,9 +34,9 @@ $teamMembers = [
         'specialization' => 'Business strategy and leadership expertise'
     ],
     [
-        'name' => 'Aqeel Nasir',
+        'name' => 'Muhammad Aamir Riaz',
         'title' => 'Director',
-        'image' => asset('aqeel.jpeg'),
+        'image' => asset('amir.jpeg'),
         'initials' => 'AN',
         'phone' => '',
         'experience' => '15+ Years',
@@ -50,15 +50,6 @@ $teamMembers = [
         'phone' => '',
         'experience' => '8+ Years',
         'specialization' => 'Sales management and Software engineering expertise'
-    ],
-    [
-        'name' => 'Ali Aqeel Nasir',
-        'title' => 'Group Business Development Manager',
-        'image' => asset('ali2.jpeg'),
-        'initials' => 'AAN',
-        'phone' => '',
-        'experience' => '6+ Years',
-        'specialization' => 'Business development manager and Marketing expert'
     ],
 ];
 @endphp

@@ -9,10 +9,14 @@
     $gallery = is_array($gallery) ? $gallery : [];
 @endphp
 <style>
-    /* Product details page - screenshot style */
+    /* Product details page - dark theme */
+    body {
+        background: #111;
+        color: #ddd;
+    }
     .product-detail-hero {
         padding: 60px 0 80px;
-        background: #fff;
+        background: #111;
     }
     .product-detail-hero .headings-row {
         margin-bottom: 1.5rem;
@@ -20,18 +24,22 @@
     .product-detail-hero .product-title {
         font-size: 2rem;
         font-weight: 700;
-        color: #1a1a1a;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 1px;
     }
     .product-detail-hero .about-heading {
         font-size: 1.35rem;
         font-weight: 700;
-        color: #1a1a1a;
+        color: #C89B3C;
     }
     .product-detail-hero .main-image-wrap {
         width: 100%;
         border-radius: 12px;
         overflow: hidden;
-        background: #f5f5f5;
+        background: #151515;
+        border: 1px solid #333;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.4);
     }
     .product-detail-hero .main-image-wrap a {
         display: block;
@@ -42,10 +50,12 @@
         height: auto;
         display: block;
         vertical-align: top;
+        background: #151515 !important;
+        border-bottom: 2px solid #C89B3C;
     }
     .product-detail-about .about-content {
         margin-top: 0;
-        color: #444;
+        color: #ddd;
         line-height: 1.7;
         margin-bottom: 1.5rem;
     }
@@ -56,7 +66,7 @@
     .product-detail-about .about-content strong {
         font-size: 1.05rem;
         font-weight: 700;
-        color: #1a1a1a;
+        color: #fff;
         margin-top: 1.25rem;
         margin-bottom: 0.35rem;
     }
@@ -70,7 +80,7 @@
     /* Gallery section */
     .product-gallery-section {
         padding: 0 0 80px;
-        background: #fff;
+        background: #111;
     }
     .product-gallery-section .gallery-grid {
         display: grid;
@@ -78,30 +88,30 @@
         gap: 2rem;
     }
     .product-gallery-section .gallery-item {
-        background: #fff;
+        background: #111;
     }
     .product-gallery-section .gallery-item .gallery-title {
         font-size: 1.1rem;
         font-weight: 600;
-        color: #1a1a1a;
+        color: #fff;
         margin-bottom: 0.75rem;
         padding-bottom: 0.35rem;
-        border-bottom: 2px solid #c00;
+        border-bottom: 2px solid #C89B3C;
         display: inline-block;
     }
     .product-gallery-section .gallery-item .gallery-image {
         width: 100%;
         border-radius: 8px;
         overflow: hidden;
-        background: #f5f5f5;
+        background: #151515;
+        border: 1px solid #333;
     }
     .product-gallery-section .gallery-item .gallery-image img {
         width: 100%;
         height: auto;
-        /* min-height: 220px; */
-        object-fit: contain; /* Show full image */
+        object-fit: contain;
         display: block;
-        background: #f9f9f9;
+        background: #151515 !important;
     }
     @media (max-width: 991px) {
         .product-detail-hero .product-title { font-size: 1.65rem; }
@@ -187,6 +197,88 @@
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Extra pop for text */
         color: #ffffff !important;
     }
+
+    /* Related Products & Overview Area Dark Theme */
+    .products-area { background: #111; }
+    .related-title h2 { color: #fff; text-align: center; margin-bottom: 40px; font-weight: 800; text-transform: uppercase; }
+    .related-title h2::after { content:''; display:block; width:80px; height:4px; background:linear-gradient(135deg, #C89B3C, #8B6914); margin:15px auto 0; border-radius:2px; }
+
+    .single-products-card {
+        text-align: center;
+        background: #151515;
+        border-radius: 14px;
+        padding: 0;
+        overflow: hidden;
+        border: 1px solid #333;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+        margin-bottom: 30px;
+    }
+    .single-products-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(200, 155, 60, 0.2);
+        border-color: #C89B3C;
+    }
+    .single-products-card .products-image img {
+        transition: transform 0.6s ease;
+        border-bottom: 2px solid #C89B3C;
+        background: #151515 !important;
+    }
+    .single-products-card:hover .products-image img {
+        transform: scale(1.08);
+    }
+    .single-products-card .products-content {
+        padding: 25px 15px 20px;
+        position: relative;
+        background: #151515;
+        z-index: 2;
+        border-top: 2px solid #C89B3C;
+    }
+    .single-products-card .products-content h3 a {
+        color: #fff;
+        font-size: 18px;
+        font-weight: 700;
+        text-transform: capitalize;
+        transition: 0.3s;
+    }
+    .single-products-card .products-content h3 a:hover {
+        color: #C89B3C;
+    }
+    .single-products-card .add-to-cart-btn a.default-btn {
+        display: block;
+        width: calc(100% - 40px);
+        margin: 15px auto 0;
+        background: linear-gradient(135deg, #f5b82e, #C89B3C) !important;
+        color: #111 !important;
+        font-weight: 700;
+        border-radius: 8px;
+        border: none;
+        transition: 0.3s;
+        box-shadow: 0 4px 10px rgba(200, 155, 60, 0.3);
+        padding: 10px 0;
+    }
+    .single-products-card .add-to-cart-btn a.default-btn:hover {
+        background: linear-gradient(135deg, #ffd15c, #D4AF37) !important;
+        color: #000 !important;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(212, 175, 55, 0.6);
+    }
+
+    /* Overview Section */
+    .overview-area { background: #181818; }
+    .overview-card {
+        background: #111;
+        border-radius: 12px;
+        padding: 30px;
+        text-align: center;
+        border: 1px solid #333;
+        transition: 0.3s;
+    }
+    .overview-card:hover { border-color: #C89B3C; transform: translateY(-5px); }
+    .overview-card h3 { color: #fff; margin-bottom: 15px; font-weight: 700; }
+    .overview-card span, .overview-card span a { color: #C89B3C; font-weight: 600; text-decoration: none; }
 </style>
 
 <!-- Start Page Banner Area -->

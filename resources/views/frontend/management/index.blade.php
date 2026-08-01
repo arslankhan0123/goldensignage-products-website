@@ -23,95 +23,99 @@
 
 @php
 $teamMembers = [
-[
-'name' => 'Muhammad Aamir Riaz',
-'title' => 'CEO',
-'image' => asset('amir.jpeg'),
-'description' => 'Visionary leader with a proven track record of driving business growth and innovation.',
-'experience' => '15+ Years',
-'specialization' => 'Business strategy and leadership expertise'
-],
-[
-'name' => 'Aqeel Nasir',
-'title' => 'Director',
-'image' => asset('aqeel.jpeg'),
-'description' => 'Experienced director with a strong background in strategic planning and operations management.',
-'experience' => '15+ Years',
-'specialization' => 'Strategic planning and operations management expertise'
-],
-[
-'name' => 'Arslan Khan',
-'title' => 'Sales Manager and Software Engineer',
-'image' => 'https://arslankhan.net/frontend/assets/Profile-Pic.png',
-'description' => 'Leads sales strategy and software development initiatives to drive business growth.',
-'experience' => '8+ Years',
-'specialization' => 'Sales management and Software engineering expertise',
-],
-[
-'name' => 'Ali Aqeel Nasir',
-'title' => 'Group Business Development Manager',
-'image' => asset('ali2.jpeg'),
-'description' => 'Drives growth through strategic partnerships and market expansion.',
-'experience' => '6+ Years',
-'specialization' => 'Business development manager and Marketing expert',
-],
+    [
+        'name' => 'Salem Shamsi',
+        'title' => 'CEO',
+        'image' => asset('salem.jpeg'),
+        'initials' => 'MAR',
+        'phone' => '',
+        'is_ceo' => true,
+        'experience' => '15+ Years',
+        'specialization' => 'Business strategy and leadership expertise'
+    ],
+    [
+        'name' => 'Muhammad Aamir Riaz',
+        'title' => 'Director',
+        'image' => asset('amir.jpeg'),
+        'initials' => 'AN',
+        'phone' => '',
+        'experience' => '15+ Years',
+        'specialization' => 'Strategic planning and operations management expertise'
+    ],
+    [
+        'name' => 'Muhammad Qasim',
+        'title' => 'Office Manager',
+        'image' => asset('qasim.jpeg'),
+        'initials' => 'MQ',
+        'phone' => '',
+        'experience' => '5+ Years',
+        'specialization' => 'Office management expertise'
+    ],
+    [
+        'name' => 'Arslan Khan',
+        'title' => 'Sales Manager and Software Engineer',
+        'image' => 'https://arslankhan.net/frontend/assets/Profile-Pic.png',
+        'initials' => 'AK',
+        'phone' => '',
+        'experience' => '8+ Years',
+        'specialization' => 'Sales management and Software engineering expertise'
+    ],
 ];
 @endphp
 
 <!-- ================= Team Section ================= -->
-<div class="team-section py-5" style="background:#f8f9fa;">
+<div class="team-section">
     <div class="container">
-        <h2 class="text-center mb-5 fw-bold">Meet Our Team</h2>
+        <h2 class="team-title">Meet Our Team</h2>
 
-        @foreach($teamMembers as $member)
-        <div class="card mb-5 border-0 shadow-lg team-card">
-            <div class="row g-0 align-items-center p-3 team-row">
-
-                <!-- Image -->
-                <div class="col-md-4 text-center mb-3 mb-md-0">
-                    <img src="{{ $member['image'] }}"
-                        alt="{{ $member['name'] }}"
-                        class="team-img img-fluid">
+        <div class="team-grid">
+            @foreach($teamMembers as $member)
+            <div class="member-card">
+                @if(isset($member['is_ceo']) && $member['is_ceo'])
+                <span class="member-badge">👑 CEO</span>
+                @endif
+                
+                <div class="member-media">
+                    @if(!empty($member['image']))
+                        <img src="{{ $member['image'] }}" alt="{{ $member['name'] }}" class="member-img">
+                    @else
+                        <div class="member-initials-circle">
+                            {{ $member['initials'] }}
+                        </div>
+                    @endif
                 </div>
 
-                <!-- Content -->
-                <div class="col-md-8 text-center text-md-start">
-                    <div class="card-body">
-                        <h4 class="fw-bold mb-1">{{ $member['name'] }}</h4>
-                        <h6 class="text-primary fw-semibold mb-2">{{ $member['title'] }}</h6>
-                        <p class="text-muted mb-3">{{ $member['description'] }}</p>
+                <div class="member-divider"></div>
 
-                        <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-md-start">
-                            <!-- <span class="badge bg-secondary" style="padding: 8px 12px; text-align:center">Experience: {{ $member['experience'] }}</span> -->
-                            <div class="experience">
-                                Experience: {{ $member['experience'] }}
-                            </div>
-                            <div class="specialization">
-                                Specialization: {{ $member['specialization'] }}
-                            </div>
+                <div class="member-info">
+                    <h4 class="member-name">{{ $member['name'] }}</h4>
+                    <h6 class="member-role">{{ $member['title'] }}</h6>
+                    
+                    @if(!empty($member['experience']))
+                    <p class="member-meta-text"><strong>Experience:</strong> {{ $member['experience'] }}</p>
+                    @endif
+                    @if(!empty($member['specialization']))
+                    <p class="member-meta-text"><strong>Specialization:</strong> {{ $member['specialization'] }}</p>
+                    @endif
 
-                        </div>
-
-                        <!-- Social Icons -->
-                        <div class="mt-3">
-                            <a href="#" class="me-3 text-dark"><i class="bi bi-linkedin fs-5"></i></a>
-                            <a href="#" class="me-3 text-dark"><i class="bi bi-twitter fs-5"></i></a>
-                            <a href="#" class="text-dark"><i class="bi bi-facebook fs-5"></i></a>
-                        </div>
-                    </div>
+                    @if(!empty($member['phone']))
+                    <a href="tel:{{ $member['phone'] }}" class="member-phone-btn">
+                        <i class="ri-phone-line me-1"></i> {{ $member['phone'] }}
+                    </a>
+                    @endif
                 </div>
-
             </div>
+            @endforeach
         </div>
-        @endforeach
     </div>
 </div>
 
-<!-- ================= Responsive CSS ================= -->
+<!-- ================= CSS Styles ================= -->
 <style>
     .page-banner-area {
         position: relative;
         z-index: 1;
+        background-color: #000 !important;
     }
     .page-banner-area::before {
         content: "";
@@ -120,7 +124,7 @@ $teamMembers = [
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.6);
         z-index: -1;
     }
     .page-banner-content {
@@ -128,111 +132,208 @@ $teamMembers = [
         z-index: 1;
     }
 
-    .team-card {
-        border-radius: 16px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    .team-section {
+        background-color: #111215 !important;
+        padding: 80px 0;
+    }
+    
+    .team-title {
+        color: #fff;
+        font-size: 36px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-align: center;
+        margin-bottom: 50px;
+        position: relative;
+    }
+    
+    .team-title::after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 3px;
+        background: #C89B3C;
+        margin: 15px auto 0;
     }
 
-    .team-card:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    .team-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin: 0 auto;
     }
 
-    .team-img {
-        width: 200px;
-        height: 200px;
-        object-fit: contain;
+    .member-card {
+        flex: 0 0 calc(25% - 15px);
+        max-width: calc(25% - 15px);
+        background: linear-gradient(145deg, #1e1f22, #121315);
+        border: 1px solid #2a2b2e;
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        transition: all 0.3s ease;
+        padding-bottom: 20px;
+        position: relative;
+        height: 100%;
+    }
+
+    .member-card:hover {
+        transform: translateY(-8px);
+        border-color: #C89B3C;
+        box-shadow: 0 10px 25px rgba(200, 155, 60, 0.15);
+    }
+
+    .member-media {
+        width: 100%;
+        height: 350px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #151619;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .member-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .member-initials-circle {
+        width: 90px;
+        height: 90px;
+        border: 2px solid #C89B3C;
         border-radius: 50%;
-        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #C89B3C;
+        font-size: 26px;
+        font-weight: 700;
+        background: transparent;
+        letter-spacing: 1px;
     }
 
-    /* Mobile */
+    .member-divider {
+        width: 100%;
+        height: 2px;
+        background-color: #C89B3C;
+        margin-bottom: 20px;
+    }
+
+    .member-info {
+        padding: 0 15px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .member-name {
+        color: #fff;
+        font-size: 15px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+        letter-spacing: 0.5px;
+        line-height: 1.3;
+    }
+
+    .member-role {
+        color: #C89B3C;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        letter-spacing: 0.5px;
+        line-height: 1.3;
+    }
+
+    .member-meta-text {
+        color: #aaa;
+        font-size: 12px;
+        margin-bottom: 6px;
+        line-height: 1.4;
+    }
+
+    .member-badge {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: rgba(200, 155, 60, 0.95);
+        color: #000;
+        padding: 3px 8px;
+        font-size: 10px;
+        font-weight: 700;
+        border-radius: 4px;
+        text-transform: uppercase;
+        z-index: 5;
+    }
+
+    .member-phone-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #C89B3C;
+        color: #000 !important;
+        padding: 5px 12px;
+        font-size: 11px;
+        font-weight: 700;
+        border-radius: 20px;
+        text-decoration: none !important;
+        transition: all 0.3s ease;
+    }
+
+    .member-phone-btn:hover {
+        background-color: #dcb35c;
+        transform: scale(1.05);
+    }
+
+    /* Responsive Grid */
+    @media (max-width: 1200px) {
+        .member-card {
+            flex-basis: calc(25% - 15px);
+            max-width: calc(25% - 15px);
+        }
+    }
+
+    @media (max-width: 992px) {
+        .member-card {
+            flex-basis: calc(33.333% - 14px);
+            max-width: calc(33.333% - 14px);
+        }
+    }
+
     @media (max-width: 768px) {
-        .team-img {
-            width: 140px;
-            height: 140px;
+        .team-grid {
+            gap: 15px;
         }
-
-        .team-card {
-            text-align: center;
+        .member-card {
+            flex-basis: calc(50% - 8px);
+            max-width: calc(50% - 8px);
         }
-
-        .team-card .card-body {
-            padding-top: 0.5rem;
-        }
-    }
-
-    @media (max-width: 576px) {
-        .team-img {
-            width: 120px;
-            height: 120px;
-        }
-
-        .team-card h4 {
-            font-size: 1.1rem;
-        }
-
-        .team-card h6 {
-            font-size: 0.95rem;
-        }
-
-        .team-card p {
-            font-size: 0.9rem;
+        .team-title {
+            font-size: 28px;
         }
     }
 
     @media (max-width: 480px) {
-        .specialization {
-            font-size: 12px;
-            padding: 6px 10px;
+        .team-grid {
+            max-width: 280px;
+            margin: 0 auto;
         }
-    }
-
-
-    .specialization {
-        background: #00cfe8;
-        color: #000;
-        font-size: 14px;
-        font-weight: 600;
-
-        padding: 8px 12px;
-        border-radius: 6px;
-
-        text-align: center;
-
-        /* 🔥 RESPONSIVE FIX */
-        white-space: normal;
-        /* allow wrap */
-        word-break: break-word;
-        /* break long words */
-        overflow-wrap: anywhere;
-        /* force wrap if needed */
-        line-height: 1.4;
-
-        max-width: 100%;
-    }
-
-    .experience {
-        background: #6c757d;
-        color: white;
-        font-size: 14px;
-        font-weight: 600;
-
-        padding: 8px 12px;
-        border-radius: 6px;
-
-        text-align: center;
-
-        /* 🔥 RESPONSIVE FIX */
-        white-space: normal;
-        /* allow wrap */
-        word-break: break-word;
-        /* break long words */
-        overflow-wrap: anywhere;
-        /* force wrap if needed */
-        line-height: 1.4;
-
-        max-width: 100%;
+        .member-card {
+            flex-basis: 100%;
+            max-width: 100%;
+        }
     }
 </style>
 

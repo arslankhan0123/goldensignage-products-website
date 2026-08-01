@@ -45,7 +45,7 @@
 <style>
     .home-banner {
         width: 100%;
-        background: #f7f7f7;
+        background: #111;
     }
 
     .banner-slide {
@@ -58,7 +58,7 @@
         height: 420px;
         object-fit: contain;
         /* screenshot jaisa */
-        background: #f7f7f7;
+        background: #111;
     }
 
     /* Center overlay text */
@@ -112,7 +112,7 @@
         margin-top: 10px;
         padding: 10px 18px;
         /* background: #ff4d00; */
-        background: linear-gradient(135deg, #6ee7ff, #7c3aed);
+        background: linear-gradient(135deg, #C89B3C, #8B6914);
         color: #fff !important;
         font-size: 14px;
         font-weight: 600;
@@ -126,8 +126,8 @@
         /* background: #e04300; */
         color: #fff;
         /* transform: translateY(-2px); */
-        background: linear-gradient(135deg, #5bd4ff, #6d28d9);
-        box-shadow: 0 6px 18px rgba(124, 58, 237, 0.4);
+        background: linear-gradient(135deg, #D4AF37, #997A15);
+        box-shadow: 0 6px 18px rgba(212, 175, 55, 0.4);
         transform: translateY(-2px);
     }
 </style>
@@ -698,52 +698,97 @@
         background: #fff;
     }
 
-    .section-title {
-        font-size: 26px;
-        font-weight: 600;
-        margin-bottom: 25px;
+    h2.section-title, .section-title h2 {
+        font-size: 32px !important;
+        font-weight: 800 !important;
+        margin-bottom: 40px !important;
+        color: #111;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        position: relative;
+    }
+    h2.section-title::after, .section-title h2::after {
+        content: '';
+        display: block;
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(135deg, #C89B3C, #8B6914);
+        margin: 15px auto 0;
+        border-radius: 2px;
     }
 
     .workspace-item {
         text-align: center;
+        background: #151515;
+        border-radius: 14px;
+        padding: 0;
+        overflow: hidden;
+        border: 1px solid #333;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    }
+    
+    .workspace-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(200, 155, 60, 0.2);
+        border-color: #C89B3C;
     }
 
     .workspace-item img {
         width: 100%;
-        height: 240px;
+        height: 220px;
         object-fit: cover;
-        border-radius: 6px;
+        border-radius: 0;
+        transition: transform 0.6s ease;
+    }
+
+    .workspace-item:hover img {
+        transform: scale(1.08);
     }
 
     .workspace-item p {
-        margin-top: 12px;
-        font-size: 15px;
-        font-weight: 500;
+        margin: 0;
+        padding: 25px 15px 20px;
+        font-size: 18px;
+        font-weight: 700;
+        color: #fff;
+        line-height: 1.4;
+        text-transform: capitalize;
+        letter-spacing: 0.5px;
+        position: relative;
+        background: #151515;
+        z-index: 2;
+        border-top: 2px solid #C89B3C;
     }
 
-    .order-btn {
+    .workspace-item .order-btn {
         display: block;
-        /* full width enable */
-        width: 100%;
-        margin-top: 10px;
-        padding: 10px 0;
-        font-size: 14px;
-        font-weight: 600;
-        color: #fff;
-        /* background: #ff4d00; */
-        background: linear-gradient(135deg, #6ee7ff, #7c3aed);
-        border-radius: 5px;
+        width: calc(100% - 40px);
+        margin: auto auto 25px;
+        padding: 12px 0;
+        font-size: 15px;
+        font-weight: 700;
+        color: #111;
+        background: linear-gradient(135deg, #f5b82e, #C89B3C);
+        border-radius: 8px;
         text-decoration: none;
         text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1px;
         transition: all 0.3s ease;
+        box-shadow: 0 4px 10px rgba(200, 155, 60, 0.3);
+        z-index: 2;
+        position: relative;
     }
 
-    .order-btn:hover {
-        /* background: #e64400; */
-        background: linear-gradient(135deg, #5bd4ff, #6d28d9);
-        box-shadow: 0 6px 18px rgba(124, 58, 237, 0.4);
+    .workspace-item .order-btn:hover {
+        background: linear-gradient(135deg, #ffd15c, #D4AF37);
+        box-shadow: 0 8px 25px rgba(212, 175, 55, 0.6);
         transform: translateY(-2px);
-        color: #fff;
+        color: #000;
     }
 </style>
 
@@ -799,7 +844,7 @@
 <style>
     .signage-showcase {
         padding: 60px 0;
-        background: #fff;
+        background: #111;
     }
 
     .signage-grid {
@@ -813,6 +858,7 @@
         position: relative;
         overflow: hidden;
         border-radius: 14px;
+        border: 1px solid #2a2a2a;
     }
 
     .signage-large img,
@@ -831,12 +877,12 @@
     .signage-large .overlay {
         position: absolute;
         inset: 0;
-        background: linear-gradient(90deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.1));
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.1) 100%);
         color: #fff;
         padding: 40px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-end;
     }
 
     .signage-large h2 {
@@ -849,6 +895,7 @@
         font-size: 32px;
         font-weight: 700;
         color: white;
+        margin-bottom: 20px;
     }
 
     .signage-large p {
@@ -859,13 +906,19 @@
     .explore-btn {
         display: inline-block;
         /* background: #ff4d00; */
-        background: linear-gradient(135deg, #6ee7ff, #7c3aed);
+        background: linear-gradient(135deg, #C89B3C, #8B6914);
         color: #fff;
         padding: 10px 22px;
         border-radius: 30px;
         text-decoration: none;
         font-weight: 600;
         width: fit-content;
+        transition: all 0.3s ease;
+    }
+
+    .explore-btn:hover {
+        background: linear-gradient(135deg, #D4AF37, #997A15);
+        transform: translateY(-2px);
     }
 
     /* Right Cards */
@@ -882,12 +935,12 @@
     .card-overlay {
         position: absolute;
         inset: 0;
-        /* background: rgba(255, 255, 255, 0.75); */
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.1) 100%);
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: center;
-        /* backdrop-filter: blur(2px); */
+        padding-bottom: 30px;
         text-align: center;
         color: white;
     }
@@ -1009,7 +1062,7 @@
         font-weight: 600;
         color: #fff;
         /* background: #ff4d00; */
-        background: linear-gradient(135deg, #6ee7ff, #7c3aed);
+        background: linear-gradient(135deg, #C89B3C, #8B6914);
         border-radius: 6px;
         text-decoration: none;
         text-align: center;
@@ -1018,8 +1071,8 @@
 
     .order-btn:hover {
         /* background: #e64400; */
-        background: linear-gradient(135deg, #5bd4ff, #6d28d9);
-        box-shadow: 0 6px 18px rgba(124, 58, 237, 0.4);
+        background: linear-gradient(135deg, #D4AF37, #997A15);
+        box-shadow: 0 6px 18px rgba(212, 175, 55, 0.4);
         transform: translateY(-2px);
     }
 
@@ -1029,7 +1082,7 @@
     .officestore-carousel .owl-nav,
     .exhibition-carousel .owl-nav {
         position: absolute;
-        top: 40%;
+        top: 35%;
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -1041,13 +1094,13 @@
     .printing-marketing-carousel .owl-nav button,
     .officestore-carousel .owl-nav button,
     .exhibition-carousel .owl-nav button {
-        width: 45px;
-        height: 45px;
-        /* background: #ff4d00 !important; */
-        background: linear-gradient(135deg, #6ee7ff, #7c3aed) !important;
+        width: 40px;
+        height: 40px;
+        background: #111 !important;
+        border: 2px solid #C89B3C !important;
         border-radius: 50%;
-        color: #fff !important;
-        font-size: 22px;
+        color: #C89B3C !important;
+        font-size: 18px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1075,9 +1128,10 @@
     .printing-marketing-carousel .owl-nav button:hover,
     .officestore-carousel .owl-nav button:hover,
     .exhibition-carousel .owl-nav button:hover {
-        /* background: #e64400 !important; */
-        background: linear-gradient(135deg, #5bd4ff, #6d28d9);
-        box-shadow: 0 6px 18px rgba(124, 58, 237, 0.4);
+        background: linear-gradient(135deg, #C89B3C, #8B6914) !important;
+        color: #fff !important;
+        border-color: transparent !important;
+        box-shadow: 0 6px 18px rgba(212, 175, 55, 0.4);
         transform: scale(1.1);
     }
 </style>
@@ -1349,16 +1403,13 @@
 @endif
 
 <!-- Trusted Businesses Section -->
-<section class="trusted-section">
+<!-- <section class="trusted-section">
     <div class="container">
         <div class="section-title text-center" style="margin: 0 auto 45px; text-align: center;">
-            <h2 style="color:black">Businesses that Trust Golden Prime Advertising L.L.C</h2>
+            <h2 style="color:white">Businesses that Trust Golden Prime Advertising L.L.C</h2>
         </div>
 
         <div class="owl-carousel trusted-carousel">
-            <!-- <div class="logo-item">
-                        <img src="	https://skycolors.pk/wp-content/uploads/2025/02/Skycolors-logo-187x222-2.png" alt="BMW" style="height: 80px; width: auto; margin: 0 auto;">
-                    </div> -->
 
             <div class="logo-item">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/500px-Google_%22G%22_logo.svg.png"
@@ -1385,30 +1436,38 @@
                     style="height: 80px; width: auto; margin: 0 auto;">
             </div>
 
-            <!-- <div class="logo-item">
-                        <img src="	https://signmaster.com.pk/wp-content/uploads/2022/06/THE-SIGN-MASTER-LOGO-14-01-2020..png" alt="Nike" style="height: 80px; width: auto; margin: 0 auto;">
-                    </div> -->
-
             <div class="logo-item">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Mercedes-Logo.svg/500px-Mercedes-Logo.svg.png"
                     alt="Mercedes" style="height: 80px; width: auto; margin: 0 auto;">
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <style>
     .trusted-section {
         /* background: #f2f2f2; */
-        background: #f3f3f3;
+        background: #111;
         padding: 60px 0;
         /* color: black; */
     }
 
     .trusted-section h2 {
-        font-size: 36px;
-        font-weight: 600;
-        margin-bottom: 40px;
-        color: black;
+        font-size: 32px !important;
+        font-weight: 800 !important;
+        margin-bottom: 40px !important;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        position: relative;
+    }
+    .trusted-section h2::after {
+        content: '';
+        display: block;
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(135deg, #C89B3C, #8B6914);
+        margin: 15px auto 0;
+        border-radius: 2px;
     }
 
     .logo-item {
@@ -1517,15 +1576,27 @@
 <style>
     .order-process-section {
         /* background: #f2f2f2; */
-        background: #7c3aed;
+        background: #181818;
         padding: 70px 0;
     }
 
     .section-title h2 {
-        font-size: 36px;
-        font-weight: 600;
-        margin-bottom: 50px;
+        font-size: 32px !important;
+        font-weight: 800 !important;
+        margin-bottom: 50px !important;
         color: white;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        position: relative;
+    }
+    .section-title h2::after {
+        content: '';
+        display: block;
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(135deg, #C89B3C, #8B6914);
+        margin: 15px auto 0;
+        border-radius: 2px;
     }
 
     .process-item {
@@ -1536,33 +1607,28 @@
         width: 70px;
         height: 70px;
         margin: 0 auto 15px;
-        border: 2px solid #000;
+        border: 2px solid #C89B3C;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
         font-size: 30px;
         /* thora size increase */
-        background: #fff;
-    }
-
-    .process-icon {
-        background: #fff;
-        border: 2px solid #000;
+        background: #111;
         transition: 0.3s ease;
     }
 
     .process-icon i {
-        color: #000;
+        color: #C89B3C;
         font-size: 30px;
     }
 
     .process-item:hover .process-icon {
-        background: #000;
+        background: #C89B3C;
     }
 
     .process-item:hover .process-icon i {
-        color: #fff;
+        color: #111;
     }
 
     .process-item h5 {

@@ -43,6 +43,15 @@ $teamMembers = [
         'specialization' => 'Strategic planning and operations management expertise'
     ],
     [
+        'name' => 'Ikram Raza',
+        'title' => 'Production Manager',
+        'image' => asset('ikram.jpeg'),
+        'initials' => 'IR',
+        'phone' => '',
+        'experience' => '5+ Years',
+        'specialization' => 'Production management expertise'
+    ],
+    [
         'name' => 'Muhammad Qasim',
         'title' => 'Office Manager',
         'image' => asset('qasim.jpeg'),

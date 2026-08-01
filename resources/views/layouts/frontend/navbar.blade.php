@@ -1,4 +1,4 @@
-<div class="navbar-area" style="background-color: #000;">
+<div class="navbar-area" style="background-color: #000 !important;">
     <div class="main-responsive-nav">
         <div class="container">
             <div class="main-responsive-menu">

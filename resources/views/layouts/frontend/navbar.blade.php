@@ -1,4 +1,4 @@
-<div class="navbar-area" style="background-color: #000 !important;">
+<div class="navbar-area" style="background-color: #84BF93 !important;">
     <div class="main-responsive-nav">
         <div class="container">
             <div class="main-responsive-menu">
@@ -17,7 +17,7 @@
 
     <!-- Custom Mobile Tabbed Menu Overlay -->
     <div id="mobileCustomMenu">
-        <div class="mobile-menu-header" style="background-color: #000;">
+        <div class="mobile-menu-header" style="background-color: #84BF93;">
             <img src="{{ asset('logo.png') }}" alt="Logo">
             <div class="mobile-menu-close" onclick="toggleMobileMenu()">
                 <i class="ri-close-line"></i>

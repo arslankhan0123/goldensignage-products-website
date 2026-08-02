@@ -177,7 +177,7 @@
                 </div>
 
                 <div class="col-6 col-md-3 social-box">
-                    <p class="mb-1" style="font-size: 12px; font-weight: bold;">Follow Us</p>
+                    <p class="mb-1" style="font-weight: bold;">Follow Us</p>
                     <div class="social-icons">
                         <a href="https://www.facebook.com/profile.php?id=61575774910473"><i class="ri-facebook-circle-fill"></i></a>
                         <a href="https://www.instagram.com/goldensignage.uae/"><i class="ri-instagram-line"></i></a>
@@ -197,7 +197,7 @@
             bottom: 0;
             left: 0;
             width: 100%;
-            background: black !important;
+            background: #84BF93 !important;
             /* background: #3d3b3b !important; */
             /* White background */
             z-index: 2000;
@@ -216,13 +216,17 @@
             margin-bottom: 5px !important;
         }
 
+        .fixed-bottom-bar span {
+            font-size: 18px;
+        }
+
         .btn-orange {
             background-color: #ff8c00;
             /* Orange color */
             color: #fff;
             border-radius: 4px;
             padding: 4px 12px;
-            font-size: 12px;
+            font-size: 14px;
             transition: 0.3s;
             text-transform: uppercase;
         }
@@ -240,11 +244,11 @@
         /* Mobile responsive adjustments */
         @media (max-width: 768px) {
             .fixed-bottom-bar p {
-                font-size: 10px;
+                font-size: 11px;
             }
 
             .btn-orange {
-                font-size: 10px;
+                font-size: 11px;
                 padding: 3px 6px;
             }
 
@@ -255,7 +259,7 @@
 
         /* Social Icons Styling */
         .social-icons a {
-            font-size: 20px;
+            font-size: 22px;
             /* Icon ka size */
             margin: 0 5px;
             color: white;
@@ -280,12 +284,12 @@
         /* Mobile responsive fixes */
         @media (max-width: 768px) {
             .social-icons a {
-                font-size: 16px;
+                font-size: 18px;
                 margin: 0 3px;
             }
 
             .fixed-bottom-bar span {
-                font-size: 10px;
+                font-size: 11px;
             }
         }
     </style>

@@ -166,7 +166,7 @@
 
         <!-- Slide 1 -->
         <div class="banner-slide">
-            <img src="{{ asset('/banner/31.png') }}" alt="Roll Up Banner">
+            <img src="{{ asset('/banner/34.png') }}" alt="Roll Up Banner">
             <!-- <div class="banner-overlay">
                         <h2>Outlit 3D Signage</h2>
                     </div> -->

@@ -155,18 +155,18 @@
             <div class="row align-items-center text-center">
 
                 <div class="col-6 col-md-3 border-end">
-                    <span style="color:white">
+                    <span class="bottom-contact-detail">
                         <i class="ri-phone-fill"></i> Phone:
-                        <a style="color:white" href="tel:{{ preg_replace('/\D+/', '', ($adminDetails->phone ?? '')) }}">
+                        <a href="tel:{{ preg_replace('/\D+/', '', ($adminDetails->phone ?? '')) }}">
                             {{ $adminDetails->phone ?? '' }}
                         </a>
                     </span>
                 </div>
 
                 <div class="col-6 col-md-3 border-end">
-                    <span style="color:white">
+                    <span class="bottom-contact-detail">
                         <i class="ri-mail-fill"></i> Email:
-                        <a style="color:white" href="mailto:{{ $adminDetails->email ?? '' }}">
+                        <a href="mailto:{{ $adminDetails->email ?? '' }}">
                             {{ $adminDetails->email ?? 'info@example.com' }}
                         </a>
                     </span>
@@ -220,6 +220,12 @@
             font-size: 18px;
         }
 
+        .fixed-bottom-bar .bottom-contact-detail,
+        .fixed-bottom-bar .bottom-contact-detail a {
+            color: #111111;
+            font-weight: 700;
+        }
+
         .btn-orange {
             background-color: #ff8c00;
             /* Orange color */
@@ -259,13 +265,21 @@
 
         /* Social Icons Styling */
         .social-icons a {
-            font-size: 22px;
-            /* Icon ka size */
-            margin: 0 5px;
-            color: white;
-            /* Default color */
+            width: 28px;
+            height: 28px;
+            margin: 0 4px;
+            border-radius: 50%;
+            color: #ffffff;
             transition: 0.3s;
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            vertical-align: middle;
+        }
+
+        .social-icons a i {
+            font-size: 18px;
+            line-height: 1;
         }
 
         .social-icons a:hover {
@@ -273,6 +287,35 @@
             /* Hover par orange color */
             transform: translateY(-3px);
             /* Halka sa upar move hoga */
+        }
+
+        .social-icons a:nth-child(1),
+        .social-icons a:nth-child(1):hover {
+            color: #ffffff;
+            background: #1877f2;
+        }
+
+        .social-icons a:nth-child(2),
+        .social-icons a:nth-child(2):hover {
+            color: #ffffff;
+            background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+        }
+
+        .social-icons a:nth-child(2) i {
+            background: none;
+            color: #ffffff;
+        }
+
+        .social-icons a:nth-child(3),
+        .social-icons a:nth-child(3):hover {
+            color: #ffffff;
+            background: #25d366;
+        }
+
+        .social-icons a:nth-child(4),
+        .social-icons a:nth-child(4):hover {
+            color: #ffffff;
+            background: #000000;
         }
 
         /* Icons aur text ki alignment */
@@ -284,12 +327,23 @@
         /* Mobile responsive fixes */
         @media (max-width: 768px) {
             .social-icons a {
-                font-size: 18px;
+                width: 27px;
+                height: 27px;
                 margin: 0 3px;
+            }
+
+            .social-icons a i {
+                font-size: 17px;
             }
 
             .fixed-bottom-bar span {
                 font-size: 11px;
+            }
+
+            .fixed-bottom-bar .bottom-contact-detail,
+            .fixed-bottom-bar .bottom-contact-detail a {
+                font-size: 14px;
+                line-height: 1.35;
             }
         }
     </style>

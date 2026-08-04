@@ -242,6 +242,15 @@
             color: #fff;
         }
 
+        /* Keep every Order Now button on the website in the brand orange. */
+        .order-btn,
+        .order-btn:hover,
+        .order-btn:focus,
+        .order-btn:active {
+            background: #F7941D !important;
+            background-color: #F7941D !important;
+        }
+
         /* Page content ko bar ke piche chhupne se bachane ke liye */
         body {
             padding-bottom: 60px !important;

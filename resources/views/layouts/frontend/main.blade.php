@@ -358,7 +358,7 @@
     </style>
 
     <!-- Floating Contact Buttons (Phone, WhatsApp, Email) -->
-    <!-- <div class="floating-contact-wrap">
+    <div class="floating-contact-wrap">
         <div class="floating-contact-buttons is-hidden" id="floatingContactButtons">
             <a href="tel:+971543569914" class="floating-contact-btn-phone" title="Call Us" aria-label="Call">
                 <i class="ri-phone-fill"></i>
@@ -376,7 +376,7 @@
         <button type="button" class="floating-contact-toggle" id="floatingContactToggle" title="Contact Options" aria-label="Open contact options">
             <i class="ri-chat-smile-2-fill"></i>
         </button>
-    </div> -->
+    </div>
     <script>
         (function() {
             var toggle = document.getElementById('floatingContactToggle');

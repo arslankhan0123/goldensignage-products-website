@@ -471,7 +471,7 @@
                                 <img src="{{ asset($product->image) }}" alt="{{ $product->name }}">
                             </div>
                             <h3>{{ $product->name }}</h3>
-                            <a href="{{ route('frontend.product-details', $product->id) }}" class="order-btn">
+                            <a href="https://wa.me/971543569914?text={{ urlencode('I want to buy this product: ' . $product->name) }}" class="order-btn" target="_blank" rel="noopener noreferrer">
                                 Order Now
                             </a>
                         </div>
@@ -549,7 +549,7 @@
 
                 <p class="product-title">{{ $product->name }}</p>
 
-                <a href="{{ route('frontend.product-details', $product->id) }}" class="order-btn">
+                <a href="https://wa.me/971543569914?text={{ urlencode('I want to buy this product: ' . $product->name) }}" class="order-btn" target="_blank" rel="noopener noreferrer">
                     Order Now
                 </a>
             </div>
@@ -846,7 +846,7 @@
 
                 <p class="product-title">{{ $product->name }}</p>
 
-                <a href="{{ route('frontend.product-details', $product->id) }}" class="order-btn">
+                <a href="https://wa.me/971543569914?text={{ urlencode('I want to buy this product: ' . $product->name) }}" class="order-btn" target="_blank" rel="noopener noreferrer">
                     Order Now
                 </a>
             </div>
@@ -865,7 +865,7 @@
             <div class="workspace-item">
                 <img src="{{ asset($product->image) }}" alt="{{ $product->name }}">
                 <p class="product-title">{{ $product->name }}</p>
-                <a href="{{ route('frontend.product-details', $product->id) }}" class="order-btn">
+                <a href="https://wa.me/971543569914?text={{ urlencode('I want to buy this product: ' . $product->name) }}" class="order-btn" target="_blank" rel="noopener noreferrer">
                     Order Now
                 </a>
             </div>
@@ -1024,7 +1024,7 @@
                                 </h3>
                                 <p>{{ \Illuminate\Support\Str::limit($product->short_description, 60) }}</p>
                                 <a href="{{ route('frontend.product-details', $product->id) }}" class="services-btn">View More</a>
-                                <a href="{{ route('frontend.product-details', $product->id) }}" class="order-btn">
+                                <a href="https://wa.me/971543569914?text={{ urlencode('I want to buy this product: ' . $product->name) }}" class="order-btn" target="_blank" rel="noopener noreferrer">
                                     Order Now
                                 </a>
                             </div>
@@ -1064,7 +1064,7 @@
                                     <a href="{{ route('frontend.product-details', $product->id) }}">{{ $product->name }}</a>
                                 </h3>
                                 <p>{{ \Illuminate\Support\Str::limit($product->short_description, 60) }}</p>
-                                <a href="{{ route('frontend.product-details', $product->id) }}" class="order-btn">
+                                <a href="https://wa.me/971543569914?text={{ urlencode('I want to buy this product: ' . $product->name) }}" class="order-btn" target="_blank" rel="noopener noreferrer">
                                     Order Now
                                 </a>
                             </div>
@@ -1257,7 +1257,7 @@
             <div class="workspace-item">
                 <img src="{{ asset($product->image) }}" alt="{{ $product->name }}">
                 <p class="product-title">{{ $product->name }}</p>
-                <a href="{{ route('frontend.product-details', $product->id) }}" class="order-btn">
+                <a href="https://wa.me/971543569914?text={{ urlencode('I want to buy this product: ' . $product->name) }}" class="order-btn" target="_blank" rel="noopener noreferrer">
                     Order Now
                 </a>
             </div>

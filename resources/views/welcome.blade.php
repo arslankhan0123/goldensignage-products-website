@@ -604,7 +604,7 @@
 
     .workspace-item img {
         width: 100%;
-        height: 220px;
+        height: 260px;
         object-fit: cover;
         border-radius: 0;
         transition: transform 0.6s ease;
@@ -616,8 +616,8 @@
 
     .workspace-item p {
         margin: 0;
-        padding: 25px 15px 20px;
-        font-size: 18px;
+        padding: 14px 12px 10px;
+        font-size: 17px;
         font-weight: 700;
         color: #fff;
         line-height: 1.4;
@@ -632,8 +632,8 @@
     .workspace-item .order-btn {
         display: block;
         width: calc(100% - 40px);
-        margin: auto auto 25px;
-        padding: 12px 0;
+        margin: auto auto 14px;
+        padding: 10px 0;
         font-size: 15px;
         font-weight: 700;
         color: #111;

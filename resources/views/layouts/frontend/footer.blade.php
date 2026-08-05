@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-3 col-md-6">
-                <div class="single-footer-widget" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+                <div class="single-footer-widget">
                     <div class="widget-logo">
                         <a href="{{ route('home') }}"><img src="{{ asset('logo.png') }}" alt="image"></a>
                     </div>
@@ -50,7 +50,7 @@
             </div>
 
             <div class="col-lg-3 col-md-6">
-                <div class="single-footer-widget ps-5" data-aos="fade-up" data-aos-delay="60" data-aos-duration="600" data-aos-once="true">
+                <div class="single-footer-widget ps-5">
                     <h3>Links</h3>
 
                     <ul class="quick-links">
@@ -64,7 +64,7 @@
             </div>
 
             <div class="col-lg-3 col-md-6">
-                <div class="single-footer-widget ps-5" data-aos="fade-up" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
+                <div class="single-footer-widget ps-5">
                     <h3>Pages</h3>
 
                     <ul class="quick-links">
@@ -78,7 +78,7 @@
             </div>
 
             <div class="col-lg-3 col-md-6">
-                <div class="single-footer-widget" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                <div class="single-footer-widget">
                     <h3>Our Location</h3>
 
                     <div class="footer-map" style="margin-top:15px;">

@@ -1,10 +1,41 @@
 <footer class="footer-area with-black-background margin-zero pt-100"
     style="background: url('{{ asset('bg_footer-map.webp') }}') center center / cover no-repeat;">
 
+    @if($adminDetails)
+    <div class="container footer-contact-details">
+        <div class="row justify-content-center g-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-contact-card">
+                    <h3>Call Us</h3>
+                    <a href="tel:{{ preg_replace('/\D+/', '', $adminDetails->phone ?? '') }}">{{ $adminDetails->phone ?? '' }}</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-contact-card">
+                    <h3>Email Us</h3>
+                    <a href="mailto:{{ $adminDetails->email ?? '' }}">{{ $adminDetails->email ?? '' }}</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-contact-card">
+                    <h3>Tech Support</h3>
+                    <a href="tel:{{ preg_replace('/\D+/', '', $adminDetails->support ?? '') }}">{{ $adminDetails->support ?? '' }}</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-contact-card">
+                    <h3>Visit Us</h3>
+                    <span>{{ $adminDetails->address ?? '' }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    @endif
+
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-3 col-md-6">
-                <div class="single-footer-widget" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+                <div class="single-footer-widget">
                     <div class="widget-logo">
                         <a href="{{ route('home') }}"><img src="{{ asset('logo.png') }}" alt="image"></a>
                     </div>
@@ -50,7 +81,7 @@
             </div>
 
             <div class="col-lg-3 col-md-6">
-                <div class="single-footer-widget ps-5" data-aos="fade-up" data-aos-delay="60" data-aos-duration="600" data-aos-once="true">
+                <div class="single-footer-widget ps-5">
                     <h3>Links</h3>
 
                     <ul class="quick-links">
@@ -64,7 +95,7 @@
             </div>
 
             <div class="col-lg-3 col-md-6">
-                <div class="single-footer-widget ps-5" data-aos="fade-up" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
+                <div class="single-footer-widget ps-5">
                     <h3>Pages</h3>
 
                     <ul class="quick-links">
@@ -78,7 +109,7 @@
             </div>
 
             <div class="col-lg-3 col-md-6">
-                <div class="single-footer-widget" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                <div class="single-footer-widget">
                     <h3>Our Location</h3>
 
                     <div class="footer-map" style="margin-top:15px;">

@@ -47,8 +47,22 @@
 
     <!-- <link rel="icon" type="image/png" href="https://templates.envytheme.com/coze/default/assets/images/favicon.png"> -->
     <link rel="icon" type="image/png" href="{{ asset('logo.png') }}">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18264634888"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'AW-18264634888');
+    </script>
     <style>
-        html, body {
+        html,
+        body {
             overflow-x: hidden;
             width: 100%;
         }
@@ -150,7 +164,7 @@
     </div>
     <!-- End Go Top Area -->
 
-    <div class="fixed-bottom-bar">
+    <!-- <div class="fixed-bottom-bar">
         <div class="container">
             <div class="row align-items-center text-center">
 
@@ -189,7 +203,7 @@
             </div>
 
         </div>
-    </div>
+    </div> -->
     <style>
         /* Custom Fixed Bottom Bar Styling */
         .fixed-bottom-bar {
@@ -253,7 +267,7 @@
 
         /* Page content ko bar ke piche chhupne se bachane ke liye */
         body {
-            padding-bottom: 60px !important;
+            /* padding-bottom: 60px !important; */
         }
 
         /* Mobile responsive adjustments */

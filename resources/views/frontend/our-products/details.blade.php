@@ -246,6 +246,29 @@
     .single-products-card .products-content h3 a:hover {
         color: #C89B3C;
     }
+    .single-products-card .related-order-btn {
+        display: block;
+        width: 100%;
+        margin-top: 14px;
+        padding: 10px 15px;
+        color: #fff !important;
+        background: #F7941D;
+        border-radius: 8px;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 1.4;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: 0.3s;
+        box-shadow: 0 4px 10px rgba(247, 148, 29, 0.3);
+    }
+    .single-products-card .related-order-btn:hover {
+        color: #fff !important;
+        background: #df7f0b;
+        transform: translateY(-2px);
+        box-shadow: 0 7px 18px rgba(247, 148, 29, 0.45);
+    }
     .single-products-card .add-to-cart-btn a.default-btn {
         display: block;
         width: calc(100% - 40px);
@@ -367,14 +390,15 @@
                         <a href="{{ route('frontend.product-details', $relatedProduct->id) }}">
                             <img src="{{ asset($relatedProduct->image) }}" alt="{{ $relatedProduct->name }}" style="width:100%;height:200px;object-fit:cover;">
                         </a>
-                        <div class="add-to-cart-btn">
-                            <a href="{{ route('frontend.contact') }}" class="default-btn">Contact Us</a>
-                        </div>
                     </div>
                     <div class="products-content">
                         <h3>
                             <a href="{{ route('frontend.product-details', $relatedProduct->id) }}">{{ $relatedProduct->name }}</a>
                         </h3>
+                        <a href="https://wa.me/971543569914?text={{ urlencode('I want to buy this product: ' . $relatedProduct->name) }}"
+                            class="related-order-btn" target="_blank" rel="noopener noreferrer">
+                            Order Now
+                        </a>
                     </div>
                 </div>
             </div>
@@ -385,42 +409,4 @@
 @endif
 <!-- End Related Products Area -->
 
-<!-- Start Overview Area -->
-@if(isset($adminDetails))
-<div class="overview-area pt-100 pb-75">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-3 col-md-6">
-                <div class="overview-card">
-                    <h3>Call Us</h3>
-                    <span><a href="tel:{{ $adminDetails->phone ?? '' }}">{{ $adminDetails->phone ?? '' }}</a></span>
-                    <div class="overview-shape"><img src="{{ asset('frontend/assets/img/overview-shape.png') }}" alt="image"></div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="overview-card">
-                    <h3>Email Us</h3>
-                    <span><a href="mailto:{{ $adminDetails->email ?? '' }}">{{ $adminDetails->email ?? '' }}</a></span>
-                    <div class="overview-shape"><img src="{{ asset('frontend/assets/img/overview-shape.png') }}" alt="image"></div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="overview-card">
-                    <h3>Tech Support</h3>
-                    <span><a href="tel:{{ $adminDetails->support ?? '' }}">{{ $adminDetails->support ?? '' }}</a></span>
-                    <div class="overview-shape"><img src="{{ asset('frontend/assets/img/overview-shape.png') }}" alt="image"></div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="overview-card">
-                    <h3>Visit Us</h3>
-                    <span>{{ $adminDetails->address ?? '' }}</span>
-                    <div class="overview-shape"><img src="{{ asset('frontend/assets/img/overview-shape.png') }}" alt="image"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-@endif
-<!-- End Overview Area -->
 @endsection

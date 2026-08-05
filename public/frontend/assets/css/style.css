@@ -88,6 +88,19 @@ body {
     font-size: var(--font-size);
 }
 
+/*
+Desktop screens were rendering the complete storefront too large at the
+browser's normal 100% zoom.  Scaling the shared page root keeps every
+frontend page consistent and gives the layout the same density as an 80%
+browser zoom, without changing the user's browser settings.  Smaller screens
+keep their natural scale so the existing responsive breakpoints still work.
+*/
+@media only screen and (min-width: 1200px) {
+    body {
+        zoom: 0.8;
+    }
+}
+
 a {
     text-decoration: none;
     transition: var(--transition);

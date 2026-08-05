@@ -23,6 +23,42 @@ Footer Area CSS
     border-radius: 0;
 }
 
+.footer-contact-details {
+    margin-bottom: 90px;
+}
+
+.footer-contact-card {
+    min-height: 135px;
+    height: 100%;
+    padding: 28px 20px;
+    text-align: center;
+    background: #111111;
+    border: 1px solid #333333;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-contact-card h3 {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.footer-contact-card a,
+.footer-contact-card span {
+    color: #C89B3C;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.footer-contact-card a:hover {
+    color: #FEB302;
+}
+
 .single-footer-widget {
     margin-bottom: 25px;
 }
@@ -218,6 +254,10 @@ Footer Area CSS
 }
 
 @media only screen and (max-width: 767px) {
+    .footer-contact-details {
+        margin-bottom: 50px;
+    }
+
     .footer-area.with-black-background {
         margin-left: 0;
         margin-right: 0;

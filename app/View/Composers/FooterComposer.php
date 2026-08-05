@@ -2,6 +2,7 @@
 
 namespace App\View\Composers;
 
+use App\Models\AdminDetail;
 use App\Models\ProductCategory;
 use Illuminate\View\View;
 
@@ -12,6 +13,8 @@ class FooterComposer
      */
     public function compose(View $view): void
     {
+        $adminDetails = AdminDetail::first();
+
         $signageCategories = ProductCategory::whereRaw('LOWER(type) = ?', ['signage'])
             ->orderBy('order', 'asc')
             ->get();
@@ -39,6 +42,7 @@ class FooterComposer
         $categories = ProductCategory::where('type', 'Signage')->get();
 
         $view->with([
+            'adminDetails' => $adminDetails,
             'footerSignageCategories' => $signageCategories,
             'footerFlagsCategories' => $flagsCategories,
             'footerPrintingCategories' => $printingCategories,

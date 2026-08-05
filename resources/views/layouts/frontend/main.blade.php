@@ -47,8 +47,22 @@
 
     <!-- <link rel="icon" type="image/png" href="https://templates.envytheme.com/coze/default/assets/images/favicon.png"> -->
     <link rel="icon" type="image/png" href="{{ asset('logo.png') }}">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18264634888"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'AW-18264634888');
+    </script>
     <style>
-        html, body {
+        html,
+        body {
             overflow-x: hidden;
             width: 100%;
         }

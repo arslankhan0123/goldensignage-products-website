@@ -39,4 +39,14 @@ class Product extends Model
     {
         return $this->hasMany(Product::class, 'parent_id');
     }
+
+    protected static function booted()
+    {
+        $clearCache = function () {
+            \Illuminate\Support\Facades\Cache::forget('navbar_categories');
+        };
+
+        static::saved($clearCache);
+        static::deleted($clearCache);
+    }
 }

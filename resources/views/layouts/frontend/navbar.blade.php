@@ -1,4 +1,4 @@
-<div class="navbar-area" style="background-color: #84BF93 !important;">
+<div class="navbar-area" style="background-color: #ffffff !important;">
     <div class="main-responsive-nav">
         <div class="container">
             <div class="main-responsive-menu">
@@ -8,7 +8,7 @@
                     </a>
                 </div>
                 <!-- Custom Mobile Toggle -->
-                <div class="custom-mobile-toggle" style="color: white;" id="mobile-menu-btn">
+                <div class="custom-mobile-toggle" style="color: #222222;" id="mobile-menu-btn">
                     <i class="ri-menu-line"></i>
                 </div>
             </div>
@@ -215,8 +215,6 @@
             </div>
         </div>
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         function toggleMobileMenu() {
             console.log('Toggle called');

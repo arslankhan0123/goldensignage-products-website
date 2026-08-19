@@ -18,4 +18,15 @@ class ProductCategory extends Model
     {
         return $this->hasMany(Product::class, 'category_id');
     }
+
+    protected static function booted()
+    {
+        $clearCache = function () {
+            \Illuminate\Support\Facades\Cache::forget('navbar_categories');
+            \Illuminate\Support\Facades\Cache::forget('footer_categories');
+        };
+
+        static::saved($clearCache);
+        static::deleted($clearCache);
+    }
 }

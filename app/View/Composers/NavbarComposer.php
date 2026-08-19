@@ -4,6 +4,7 @@ namespace App\View\Composers;
 
 use App\Models\ProductCategory;
 use Illuminate\View\View;
+use Illuminate\Support\Facades\Cache;
 
 class NavbarComposer
 {
@@ -12,51 +13,39 @@ class NavbarComposer
      */
     public function compose(View $view): void
     {
-        // Get Signage categories (type = Signage) with their products
-        // Eager load products for each category - case insensitive type match
-        $signageCategories = ProductCategory::whereRaw('LOWER(type) = ?', ['signage'])
-            ->orderBy('order', 'asc')
-            ->with(['products' => function ($query) {
-                $query->orderBy('id');
-            }])
-            ->get();
+        // Cache categories with eager-loaded products for 1 hour
+        $categories = Cache::remember('navbar_categories', 3600, function () {
+            return ProductCategory::orderBy('order', 'asc')
+                ->with(['products' => function ($query) {
+                    $query->orderBy('id');
+                }])
+                ->get();
+        });
 
+        // Filter collections in-memory (highly performant, zero extra queries)
+        $signageCategories = $categories->filter(function ($category) {
+            return strtolower($category->type) === 'signage';
+        });
 
-        $flagsCategories = ProductCategory::whereRaw('LOWER(type) = ?', ['flags'])
-            ->orderBy('order', 'asc')
-            ->with(['products' => function ($query) {
-                $query->orderBy('id');
-            }])
-            ->get();
+        $flagsCategories = $categories->filter(function ($category) {
+            return strtolower($category->type) === 'flags';
+        });
 
-        $printingCategories = ProductCategory::whereRaw('LOWER(type) = ?', ['Printing/Marketing'])
-            ->orderBy('order', 'asc')
-            ->with(['products' => function ($query) {
-                $query->orderBy('id');
-            }])
-            ->get();
+        $printingCategories = $categories->filter(function ($category) {
+            return strtolower($category->type) === 'printing/marketing';
+        });
 
-        $officeStoreCategories = ProductCategory::whereRaw('LOWER(type) = ?', ['officestore'])
-            ->orderBy('order', 'asc')
-            ->with(['products' => function ($query) {
-                $query->orderBy('id');
-            }])
-            ->get();
+        $officeStoreCategories = $categories->filter(function ($category) {
+            return strtolower($category->type) === 'officestore';
+        });
 
-        $backdropsExhibitionCategories = ProductCategory::whereRaw('LOWER(type) = ?', ['BackdropsExhibition'])
-            ->orderBy('order', 'asc')
-            ->with(['products' => function ($query) {
-                $query->orderBy('id');
-            }])
-            ->get();
+        $backdropsExhibitionCategories = $categories->filter(function ($category) {
+            return strtolower($category->type) === 'backdropsexhibition';
+        });
 
-
-        $corporateGiftsBagsCategories = ProductCategory::whereRaw('LOWER(type) = ?', ['CorporateGiftsBags'])
-            ->orderBy('order', 'asc')
-            ->with(['products' => function ($query) {
-                $query->orderBy('id');
-            }])
-            ->get();
+        $corporateGiftsBagsCategories = $categories->filter(function ($category) {
+            return strtolower($category->type) === 'corporategiftsbags';
+        });
 
         $view->with([
             'signageCategories' => $signageCategories,

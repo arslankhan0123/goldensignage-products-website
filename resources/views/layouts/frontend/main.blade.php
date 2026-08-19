@@ -43,6 +43,7 @@
     <!-- <link rel="stylesheet" href="https://templates.envytheme.com/coze/default/assets/css/responsive.css"> -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/responsive.css') }}">
 
+    <script src="{{ asset('frontend/assets/js/jquery.min.js') }}"></script>
     <title>@yield('title', 'Home')</title>
 
     <!-- <link rel="icon" type="image/png" href="https://templates.envytheme.com/coze/default/assets/images/favicon.png"> -->
@@ -67,10 +68,38 @@
             width: 100%;
         }
 
-        /* 1. Navbar ko Bottom Bar se upar lane ke liye */
+        /* White & Orange Premium Header Overrides */
         .navbar-area {
+            background-color: #ffffff !important;
+            border-bottom: 4px solid #F7941D !important;
             z-index: 3000 !important;
-            /* Bottom bar 2000 par hai, isay 3000 kar diya */
+        }
+        .main-navbar.navbar-with-black-color {
+            background: #ffffff !important;
+        }
+        .main-navbar .navbar .navbar-nav .nav-item a {
+            color: #222222 !important;
+        }
+        .main-navbar .navbar .navbar-nav .nav-item a:hover,
+        .main-navbar .navbar .navbar-nav .nav-item a:focus,
+        .main-navbar .navbar .navbar-nav .nav-item a.active,
+        .main-navbar .navbar .navbar-nav .nav-item:hover > a {
+            color: #F7941D !important;
+        }
+        .main-navbar .navbar .navbar-nav .nav-item a::after {
+            background: #F7941D !important;
+        }
+        .main-navbar .navbar .others-options .option-item .search-btn,
+        .main-navbar .navbar .others-options .option-item .side-menu-btn i {
+            color: #222222 !important;
+        }
+        .main-navbar .navbar .others-options .option-item .search-btn:hover,
+        .main-navbar .navbar .others-options .option-item .side-menu-btn i:hover {
+            color: #F7941D !important;
+        }
+        .navbar-area.is-sticky {
+            border-bottom: 4px solid #F7941D !important;
+            box-shadow: 0 4px 20px rgba(247, 148, 29, 0.15) !important;
         }
 
         /* 2. Mobile Menu (MeanMenu) ko sabse upar rakhne ke liye */
@@ -622,7 +651,6 @@
     <!-- Links of JS files -->
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <!-- <script src="https://templates.envytheme.com/coze/default/assets/js/jquery.min.js"></script> -->
-    <script src="{{ asset('frontend/assets/js/jquery.min.js') }}"></script>
     <!-- <script src="https://templates.envytheme.com/coze/default/assets/js/bootstrap.bundle.min.js"></script> -->
     <script src="{{ asset('frontend/assets/js/bootstrap.bundle.min.js') }}"></script>
     <!-- <script src="https://templates.envytheme.com/coze/default/assets/js/jquery.meanmenu.js"></script> -->
@@ -665,38 +693,7 @@
     <script src="{{ asset('frontend/assets/js/wow.min.js') }}"></script>
     <!-- <script src="https://templates.envytheme.com/coze/default/assets/js/main.js"></script> -->
     <script src="{{ asset('frontend/assets/js/main.js') }}"></script>
-    <script>
-        (function() {
-            function c() {
-                var b = a.contentDocument || a.contentWindow.document;
-                if (b) {
-                    var d = b.createElement('script');
-                    d.innerHTML = "window.__CF$cv$params={r:'9b7298928d66e23c',t:'MTc2NzI3NjU4Mg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
-                    b.getElementsByTagName('head')[0].appendChild(d)
-                }
-            }
-            if (document.body) {
-                var a = document.createElement('iframe');
-                a.height = 1;
-                a.width = 1;
-                a.style.position = 'absolute';
-                a.style.top = 0;
-                a.style.left = 0;
-                a.style.border = 'none';
-                a.style.visibility = 'hidden';
-                document.body.appendChild(a);
-                if ('loading' !== document.readyState) c();
-                else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c);
-                else {
-                    var e = document.onreadystatechange || function() {};
-                    document.onreadystatechange = function(b) {
-                        e(b);
-                        'loading' !== document.readyState && (document.onreadystatechange = e, c())
-                    }
-                }
-            }
-        })();
-    </script>
+
     <style>
         .site-logo {
             height: 80px;

@@ -68,10 +68,38 @@
             width: 100%;
         }
 
-        /* 1. Navbar ko Bottom Bar se upar lane ke liye */
+        /* White & Orange Premium Header Overrides */
         .navbar-area {
+            background-color: #ffffff !important;
+            border-bottom: 4px solid #F7941D !important;
             z-index: 3000 !important;
-            /* Bottom bar 2000 par hai, isay 3000 kar diya */
+        }
+        .main-navbar.navbar-with-black-color {
+            background: #ffffff !important;
+        }
+        .main-navbar .navbar .navbar-nav .nav-item a {
+            color: #222222 !important;
+        }
+        .main-navbar .navbar .navbar-nav .nav-item a:hover,
+        .main-navbar .navbar .navbar-nav .nav-item a:focus,
+        .main-navbar .navbar .navbar-nav .nav-item a.active,
+        .main-navbar .navbar .navbar-nav .nav-item:hover > a {
+            color: #F7941D !important;
+        }
+        .main-navbar .navbar .navbar-nav .nav-item a::after {
+            background: #F7941D !important;
+        }
+        .main-navbar .navbar .others-options .option-item .search-btn,
+        .main-navbar .navbar .others-options .option-item .side-menu-btn i {
+            color: #222222 !important;
+        }
+        .main-navbar .navbar .others-options .option-item .search-btn:hover,
+        .main-navbar .navbar .others-options .option-item .side-menu-btn i:hover {
+            color: #F7941D !important;
+        }
+        .navbar-area.is-sticky {
+            border-bottom: 4px solid #F7941D !important;
+            box-shadow: 0 4px 20px rgba(247, 148, 29, 0.15) !important;
         }
 
         /* 2. Mobile Menu (MeanMenu) ko sabse upar rakhne ke liye */

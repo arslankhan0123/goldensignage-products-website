@@ -5,6 +5,7 @@ namespace App\View\Composers;
 use App\Models\AdminDetail;
 use App\Models\ProductCategory;
 use Illuminate\View\View;
+use Illuminate\Support\Facades\Cache;
 
 class FooterComposer
 {
@@ -13,33 +14,45 @@ class FooterComposer
      */
     public function compose(View $view): void
     {
-        $adminDetails = AdminDetail::first();
+        // Cache admin details for 1 hour
+        $adminDetails = Cache::remember('admin_details', 3600, function () {
+            return AdminDetail::first();
+        });
 
-        $signageCategories = ProductCategory::whereRaw('LOWER(type) = ?', ['signage'])
-            ->orderBy('order', 'asc')
-            ->get();
+        // Cache all categories for footer (cached for 1 hour)
+        $categories = Cache::remember('footer_categories', 3600, function () {
+            return ProductCategory::orderBy('order', 'asc')->get();
+        });
 
-        $flagsCategories = ProductCategory::whereRaw('LOWER(type) = ?', ['flags'])
-            ->orderBy('order', 'asc')
-            ->get();
+        // Filter the cached categories collection in-memory
+        $signageCategories = $categories->filter(function ($category) {
+            return strtolower($category->type) === 'signage';
+        });
 
-        $printingCategories = ProductCategory::whereRaw('LOWER(type) = ?', ['printing/marketing'])
-            ->orderBy('order', 'asc')
-            ->get();
+        $flagsCategories = $categories->filter(function ($category) {
+            return strtolower($category->type) === 'flags';
+        });
 
-        $officeStoreCategories = ProductCategory::whereRaw('LOWER(type) = ?', ['officestore'])
-            ->orderBy('order', 'asc')
-            ->get();
+        $printingCategories = $categories->filter(function ($category) {
+            return strtolower($category->type) === 'printing/marketing';
+        });
 
-        $backdropsExhibitionCategories = ProductCategory::whereRaw('LOWER(type) = ?', ['backdropsexhibition'])
-            ->orderBy('order', 'asc')
-            ->get();
+        $officeStoreCategories = $categories->filter(function ($category) {
+            return strtolower($category->type) === 'officestore';
+        });
 
-        $corporateGiftsBagsCategories = ProductCategory::whereRaw('LOWER(type) = ?', ['corporategiftsbags'])
-            ->orderBy('order', 'asc')
-            ->get();
+        $backdropsExhibitionCategories = $categories->filter(function ($category) {
+            return strtolower($category->type) === 'backdropsexhibition';
+        });
 
-        $categories = ProductCategory::where('type', 'Signage')->get();
+        $corporateGiftsBagsCategories = $categories->filter(function ($category) {
+            return strtolower($category->type) === 'corporategiftsbags';
+        });
+
+        // General Signage category lists
+        $signageList = $categories->filter(function ($category) {
+            return $category->type === 'Signage';
+        });
 
         $view->with([
             'adminDetails' => $adminDetails,
@@ -49,7 +62,7 @@ class FooterComposer
             'footerOfficeStoreCategories' => $officeStoreCategories,
             'footerBackdropsExhibitionCategories' => $backdropsExhibitionCategories,
             'footerCorporateGiftsBagsCategories' => $corporateGiftsBagsCategories,
-            'categories' => $categories,
+            'categories' => $signageList,
         ]);
     }
 }

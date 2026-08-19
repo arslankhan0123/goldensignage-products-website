@@ -500,6 +500,10 @@ jQuery(function ($) {
 	jQuery(window).on('load',function(){
 		jQuery(".preloader").fadeOut(500);
 	});
+	// Fallback to prevent stuck spinner if images/assets take too long to load
+	setTimeout(function(){
+		jQuery(".preloader").fadeOut(500);
+	}, 800);
 
 	// Switch Btn
 	$('body').append("<div class='switch-box' style='display: none;'><label id='switch' class='switch'><input type='checkbox' onchange='toggleTheme()' id='slider'><span class='slider round'></span></label></div>"); 

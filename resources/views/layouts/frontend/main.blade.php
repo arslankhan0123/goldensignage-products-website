@@ -43,6 +43,7 @@
     <!-- <link rel="stylesheet" href="https://templates.envytheme.com/coze/default/assets/css/responsive.css"> -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/responsive.css') }}">
 
+    <script src="{{ asset('frontend/assets/js/jquery.min.js') }}"></script>
     <title>@yield('title', 'Home')</title>
 
     <!-- <link rel="icon" type="image/png" href="https://templates.envytheme.com/coze/default/assets/images/favicon.png"> -->
@@ -622,7 +623,6 @@
     <!-- Links of JS files -->
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <!-- <script src="https://templates.envytheme.com/coze/default/assets/js/jquery.min.js"></script> -->
-    <script src="{{ asset('frontend/assets/js/jquery.min.js') }}"></script>
     <!-- <script src="https://templates.envytheme.com/coze/default/assets/js/bootstrap.bundle.min.js"></script> -->
     <script src="{{ asset('frontend/assets/js/bootstrap.bundle.min.js') }}"></script>
     <!-- <script src="https://templates.envytheme.com/coze/default/assets/js/jquery.meanmenu.js"></script> -->
@@ -665,38 +665,7 @@
     <script src="{{ asset('frontend/assets/js/wow.min.js') }}"></script>
     <!-- <script src="https://templates.envytheme.com/coze/default/assets/js/main.js"></script> -->
     <script src="{{ asset('frontend/assets/js/main.js') }}"></script>
-    <script>
-        (function() {
-            function c() {
-                var b = a.contentDocument || a.contentWindow.document;
-                if (b) {
-                    var d = b.createElement('script');
-                    d.innerHTML = "window.__CF$cv$params={r:'9b7298928d66e23c',t:'MTc2NzI3NjU4Mg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
-                    b.getElementsByTagName('head')[0].appendChild(d)
-                }
-            }
-            if (document.body) {
-                var a = document.createElement('iframe');
-                a.height = 1;
-                a.width = 1;
-                a.style.position = 'absolute';
-                a.style.top = 0;
-                a.style.left = 0;
-                a.style.border = 'none';
-                a.style.visibility = 'hidden';
-                document.body.appendChild(a);
-                if ('loading' !== document.readyState) c();
-                else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c);
-                else {
-                    var e = document.onreadystatechange || function() {};
-                    document.onreadystatechange = function(b) {
-                        e(b);
-                        'loading' !== document.readyState && (document.onreadystatechange = e, c())
-                    }
-                }
-            }
-        })();
-    </script>
+
     <style>
         .site-logo {
             height: 80px;

@@ -15,6 +15,17 @@
     "brand": { "@type": "Brand", "name": "Golden Signage" }
 }
 </script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ route('home') }}" },
+        { "@type": "ListItem", "position": 2, "name": "Products", "item": "{{ route('frontend.our-products') }}" },
+        { "@type": "ListItem", "position": 3, "name": @json($product->name), "item": "{{ url()->current() }}" }
+    ]
+}
+</script>
 @endsection
 
 @section('content')

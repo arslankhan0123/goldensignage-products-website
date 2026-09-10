@@ -1,5 +1,6 @@
 @extends('layouts.frontend.main')
-@section('title', 'Contact Us')
+@section('title', 'Contact Golden Signage UAE')
+@section('description', 'Contact Golden Signage for custom signage, printing, branding and display solution enquiries in the UAE.')
 @section('meta')
 @endsection
 

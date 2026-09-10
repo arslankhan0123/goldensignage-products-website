@@ -1,6 +1,20 @@
 @extends('layouts.frontend.main')
-@section('title', $product->name . ' - Product Details')
+@section('title', $product->name . ' | Custom Signage Product UAE')
+@section('description', \Illuminate\Support\Str::limit(trim(strip_tags($product->short_description ?: $product->long_description ?: ($product->name . ' by Golden Signage.'))), 155))
+@section('social_image', asset($product->image))
+@section('open_graph_type', 'product')
 @section('meta')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": @json($product->name),
+    "description": @json(trim(strip_tags($product->short_description ?: $product->long_description ?: $product->name))),
+    "image": ["{{ asset($product->image) }}"],
+    "url": "{{ url()->current() }}",
+    "brand": { "@type": "Brand", "name": "Golden Signage" }
+}
+</script>
 @endsection
 
 @section('content')

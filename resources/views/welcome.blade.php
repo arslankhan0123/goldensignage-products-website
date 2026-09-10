@@ -1,6 +1,25 @@
 @extends('layouts.frontend.main')
-@section('title', 'Home')
+@section('title', 'Custom Signage & Branding Solutions in UAE')
+@section('description', 'Golden Signage creates custom 3D signs, illuminated signage, shop signs, printing, exhibition displays and corporate branding solutions across the UAE.')
 @section('meta')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Golden Signage",
+    "url": "{{ url('/') }}",
+    "logo": "{{ asset('logo.png') }}",
+    "image": "{{ asset('logo.png') }}",
+    "description": "Custom signage, printing and branding solutions in the UAE.",
+    "telephone": "{{ $adminDetails->phone ?? '+971543569914' }}",
+    "email": "{{ $adminDetails->email ?? 'info@goldensignage.ae' }}",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "{{ $adminDetails->address ?? 'UAE' }}",
+        "addressCountry": "AE"
+    }
+}
+</script>
 @endsection
 
 @section('content')

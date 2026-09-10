@@ -21,7 +21,7 @@
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid #eee;
-    background: #f8f9fa;
+    background: #ffffff;
 }
 
 .mobile-menu-header img {
@@ -190,6 +190,11 @@
     position: relative;
     z-index: 10001;
     pointer-events: auto;
+}
+
+/* The menu has its own close button. Hide the underlying navbar toggle while open. */
+body.mobile-menu-open #mobile-menu-btn {
+    display: none;
 }
 
 @media screen and (max-width: 1199px) {

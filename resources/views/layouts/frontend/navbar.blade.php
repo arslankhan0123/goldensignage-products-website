@@ -17,7 +17,7 @@
 
     <!-- Custom Mobile Tabbed Menu Overlay -->
     <div id="mobileCustomMenu">
-        <div class="mobile-menu-header" style="background-color: #84BF93;">
+        <div class="mobile-menu-header">
             <img src="{{ asset('logo.png') }}" alt="Logo">
             <div class="mobile-menu-close" onclick="toggleMobileMenu()">
                 <i class="ri-close-line"></i>
@@ -221,10 +221,10 @@
             const menu = $('#mobileCustomMenu');
             menu.toggleClass('active');
             if (menu.hasClass('active')) {
-                $('body').css('overflow', 'hidden');
+                $('body').css('overflow', 'hidden').addClass('mobile-menu-open');
                 $('#mobile-menu-btn i').removeClass('ri-menu-line').addClass('ri-close-line');
             } else {
-                $('body').css('overflow', '');
+                $('body').css('overflow', '').removeClass('mobile-menu-open');
                 $('#mobile-menu-btn i').removeClass('ri-close-line').addClass('ri-menu-line');
             }
         }

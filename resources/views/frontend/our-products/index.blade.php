@@ -1,5 +1,6 @@
 @extends('layouts.frontend.main')
-@section('title', 'Our Products')
+@section('title', 'Signage, Printing & Branding Products in UAE')
+@section('description', 'Explore Golden Signage products: custom signs, display solutions, printing, corporate branding, office and exhibition products for UAE businesses.')
 @section('meta')
 @endsection
 

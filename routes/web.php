@@ -52,6 +52,24 @@ Route::get('/', function () {
     return view('welcome', compact('products', 'blogs', 'adminDetails', 'SignageProducts', 'PrintingMarketingProducts', 'OfficeStoreProducts', 'backdropsExhibitionProducts'));
 })->name('home');
 
+Route::get('/sitemap.xml', function () {
+    $pages = [
+        route('home'),
+        route('frontend.about'),
+        route('frontend.contact'),
+        route('frontend.faq'),
+        route('frontend.management'),
+        route('frontend.our-products'),
+        route('frontend.our-services'),
+    ];
+
+    $products = Product::select('id', 'updated_at')->get();
+
+    return response()
+        ->view('sitemap', compact('pages', 'products'))
+        ->header('Content-Type', 'application/xml');
+})->name('sitemap');
+
 Route::prefix('/frontend')->group(function () {
     Route::get('/about', [FrontendController::class, 'about'])->name('frontend.about');
     Route::get('/contact', [FrontendController::class, 'contact'])->name('frontend.contact');

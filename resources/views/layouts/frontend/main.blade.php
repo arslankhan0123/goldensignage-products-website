@@ -1,10 +1,34 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    @php
+        $siteName = 'Golden Signage';
+        $pageTitle = trim($__env->yieldContent('title', $siteName));
+        $fullTitle = str_contains($pageTitle, $siteName) ? $pageTitle : $pageTitle . ' | ' . $siteName;
+        $defaultDescription = 'Golden Signage provides custom signage, branding, printing and display solutions for businesses across the UAE.';
+        $pageDescription = trim($__env->yieldContent('description', $defaultDescription));
+        $canonicalUrl = url()->current();
+        $socialImage = trim($__env->yieldContent('social_image', asset('logo.png')));
+        $openGraphType = trim($__env->yieldContent('open_graph_type', 'website'));
+    @endphp
+    <meta name="description" content="{{ $pageDescription }}">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="{{ $canonicalUrl }}">
+    <meta property="og:locale" content="en_AE">
+    <meta property="og:type" content="{{ $openGraphType }}">
+    <meta property="og:site_name" content="{{ $siteName }}">
+    <meta property="og:title" content="{{ $fullTitle }}">
+    <meta property="og:description" content="{{ $pageDescription }}">
+    <meta property="og:url" content="{{ $canonicalUrl }}">
+    <meta property="og:image" content="{{ $socialImage }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ $fullTitle }}">
+    <meta name="twitter:description" content="{{ $pageDescription }}">
+    <meta name="twitter:image" content="{{ $socialImage }}">
 
     <!-- Links of CSS files -->
     <!-- <link rel="stylesheet" href="https://templates.envytheme.com/coze/default/assets/css/bootstrap.min.css"> -->
@@ -44,7 +68,7 @@
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/responsive.css') }}">
 
     <script src="{{ asset('frontend/assets/js/jquery.min.js') }}"></script>
-    <title>@yield('title', 'Home')</title>
+    <title>{{ $fullTitle }}</title>
 
     <!-- <link rel="icon" type="image/png" href="https://templates.envytheme.com/coze/default/assets/images/favicon.png"> -->
     <link rel="icon" type="image/png" href="{{ asset('logo.png') }}">
@@ -143,6 +167,7 @@
             border-radius: 10px;
         }
     </style>
+    @yield('meta')
 </head>
 
 <body>

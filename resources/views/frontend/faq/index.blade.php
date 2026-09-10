@@ -4,6 +4,48 @@
 @section('description', 'Find answers to common questions about Golden Signage products, printing, branding and custom signage services in the UAE.')
 
 @section('meta')
+@php
+    $faqSchema = [
+        [
+            'question' => 'Why should I choose you over other printing companies in Dubai?',
+            'answer' => 'With 25+ years of experience, cutting-edge printing technology, and a commitment to quality, Golden Prime Advertising L.L.C ensures top-notch results. Plus, our in-store experience lets you see products firsthand, making us a trusted choice for all your printing needs.',
+        ],
+        [
+            'question' => 'Can I place an order over the phone?',
+            'answer' => 'The easiest way to place an order is through WhatsApp. You can also reach out via email or phone if needed.',
+        ],
+        [
+            'question' => 'What are your working hours?',
+            'answer' => 'Monday to Saturday: 9:00 AM to 1:00 PM and 2:00 PM to 7:00 PM. Friday afternoon hours are 2:30 PM to 7:00 PM.',
+        ],
+        [
+            'question' => 'Where is your store located, and can I visit in person?',
+            'answer' => 'Our store is located in Crystal Tower 701 C, Bohira Cornech, Sharjah, UAE. You are welcome to visit to explore products, check print samples and discuss your requirements.',
+        ],
+        [
+            'question' => 'Do you offer graphic design services?',
+            'answer' => 'We assist clients by providing pictorial representations or drafts for their review and approval.',
+        ],
+    ];
+@endphp
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        @foreach ($faqSchema as $faq)
+        {
+            "@type": "Question",
+            "name": @json($faq['question']),
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": @json($faq['answer'])
+            }
+        }@if (! $loop->last),@endif
+        @endforeach
+    ]
+}
+</script>
 @endsection
 
 @section('content')
